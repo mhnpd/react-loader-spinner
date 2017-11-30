@@ -31,6 +31,8 @@ react-loader-spinner component has following types of spinner.
 
 ### PropTypes Aviliable
 react-loader-spinner component accept following props. Instructions on how to use them are below.
+
+
 | PropType | Detail |
 | ------ | ------ |
 | type | Type of spinner you want to display. View the type in Types of Spinner section. |
