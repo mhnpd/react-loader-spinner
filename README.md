@@ -19,15 +19,15 @@ react-loader-spinner component has following types of spinner.
 | ------ | ------ |
 | Audio|``` <Loader type={Audio} color={#somecolor} height={80} width={80} />``` |
 | Ball-Triangle | ``` <Loader type={Ball-Triangle} color={#somecolor} height={80} width={80} /> ```|
-| Bars | ```<Loader type={Bars} color={#somecolor} height={80} width={80} />``` |
-| Circles | ```<Loader type={Circles}  color={#somecolor} height={80} width={80}/>``` |
-| Grid|```<Loader type={Grid} color={#somecolor} height={80} width={80} />``` |
-|Hearts|```<Loader type={Hearts} color={#somecolor} height={80} width={80} />```|
-|Oval|```<Loader type={Oval} color={#somecolor} height={80} width={80} />```|
-|Puff|```<Loader type={Puff} color={#somecolor} height={80} width={80} />```|
-|Rings|```<Loader type={Rings} color={#somecolor} height={80} width={80} />```|
-|TailSpin|```<Loader type={TailSpin} color={#somecolor} height={80} width={80} />```|
-|ThreeDots|```<Loader type={ThreeDots} color={#somecolor} height={80} width={80} />```|
+| Bars | ```<Loader type="Bars" color="#somecolor" height={80} width={80} />``` |
+| Circles | ```<Loader type="Circles" color="#somecolor" height={80} width={80}/>``` |
+| Grid|```<Loader type="Grid" color="#somecolor" height={80} width={80} />``` |
+|Hearts|```<Loader type="Hearts" color="#somecolor" height={80} width={80} />```|
+|Oval|```<Loader type="Oval" color="#somecolor" height={80} width={80} />```|
+|Puff|```<Loader type="Puff" color="#somecolor" height={80} width={80} />```|
+|Rings|```<Loader type="Rings" color="#somecolor" height={80} width={80} />```|
+|TailSpin|```<Loader type="TailSpin" color="#somecolor" height={80} width={80} />```|
+|ThreeDots|```<Loader type="ThreeDots" color="#somecolor" height={80} width={80} />```|
 
 ### PropTypes Aviliable
 react-loader-spinner component accept following props. Instructions on how to use them are below.
