@@ -12,6 +12,26 @@ All the icon and spinner used in the Package are from SamHerbert [svg-loader] pr
 ```sh
 $ npm install react-loader-spinner --save
 ```
+
+### Usage
+```
+ import Loader from 'react-loader-spinner'
+
+ export default class App extends React.component {
+    //other logic
+    render() {
+    	return(
+			<Loader 
+			   type="Puff"
+			   color="#00BFFF"
+			   height="100"	
+			   width="100"
+			/>   
+    	);
+    }
+ }
+```
+
 ### Types of Spinner
 react-loader-spinner component has following types of spinner.
 
