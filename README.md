@@ -1,4 +1,4 @@
-                  ![N|Solid](https://image.ibb.co/fAuwZb/react_loader_spinner.png)
+                  ![React-loader-spinner](https://image.ibb.co/fAuwZb/react_loader_spinner.png)
 
  react-spinner-loader provides simple React.js spinner component which can be implemented for async wait operation before data load to the view. 
 
