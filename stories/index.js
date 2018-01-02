@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 import  Loader  from '../src/index.js'
 storiesOf('Loader', module)
-	.add('Audio', () => <Loader width={200} height={200} type="Audio"/>)
+	.add('Audio', () => <Loader width={200} height={200} type="Audio" visible="false"/>)
 	.add('Ball Triangle', () => <Loader width={200} heigth={300} color={"#cef442"} type="Ball-Triangle"/>)
 	.add('Bars', () => <Loader width={200} heigth={200}  color="green" type="Bars"/>)
 	.add('Circles', () => <Loader color="green" width={200} heigth={200}  type="Circles"/>)

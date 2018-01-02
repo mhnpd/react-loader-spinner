@@ -15,7 +15,6 @@ export default class Loader extends React.Component {
   static propTypes = {
       color: PropTypes.string,
       type:PropTypes.string,
-      visible:PropTypes.boolean,
       height:PropTypes.oneOfType([
         PropTypes.number,
         PropTypes.string,
@@ -33,54 +32,51 @@ export default class Loader extends React.Component {
     visible:true
   };
   svg =(type, visible)=> {
-    if(type==="Audio" && visible){
+    if(type==="Audio"){
       return(Audio(this.props));
     }
-    else if(type==="Ball-Triangle" && visible){
+    else if(type==="Ball-Triangle"){
       return(BallTrangle(this.props));
     }
-    else if(type==="Bars" && visible){
+    else if(type==="Bars"){
       return(Bars(this.props));
     }
-    else if(type==="Circles" && visible){
+    else if(type==="Circles"){
       return(Circles(this.props));
     }
-    else if(type==="Grid" && visible){
+    else if(type==="Grid"){
       return(Grid(this.props));
     }
-    else if(type==="Hearts" && visible){
+    else if(type==="Hearts"){
       return(Hearts(this.props));
     }
-    else if(type==="Oval" && visible){
+    else if(type==="Oval"){
       return(Oval(this.props));
     }
-    else if(type==="Puff" && visible){
+    else if(type==="Puff"){
       return(Puff(this.props));
     }
-    else if(type==="Rings" && visible){
+    else if(type==="Rings"){
       return(Rings(this.props));
     }
-    else if(type==="TailSpin" && visible){
+    else if(type==="TailSpin"){
       return(TailSpin(this.props));
     }
-    else if(type==="ThreeDots" && visible){
+    else if(type==="ThreeDots"){
       return(ThreeDots(this.props));
-    }
-    else if(!visible){
-      return null;
     }
     else {
       return(<div><p>Loading...Please Wait</p><small><i>Note:No specfic svg type exist</i></small></div>)
     }    
   }
   render() {
-    const { color, type, height, width, visible} = this.props;
+    const { color, type, height, width} = this.props;
     const style = {
         fill:color,
         height,
         width 
     }
-    return (<div>{this.svg(type, visible)}</div>);
+    return (<div>{this.svg(type)}</div>);
   }
 }
 
