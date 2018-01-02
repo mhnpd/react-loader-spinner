@@ -60,7 +60,6 @@ react-loader-spinner component accept following props. Instructions on how to us
 | height | Height props define the height of the svg spinner. Default height is 80px.|
 | width | Width props define the width of the spinner. Default Width is 80px. |
 | color | [Color Props is provide color to the spinner. Default color is light blue. |
-| visible |By default visible props is true. ```<Loader visible={false} />```  |
 
 
 License
