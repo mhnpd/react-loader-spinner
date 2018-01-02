@@ -15,7 +15,7 @@ All the icon and spinner used in the Package are from SamHerbert [svg-loader] pr
 $ npm install react-loader-spinner --save
 ```
 ### Github page
-https://mhnpd.github.io/react-loader-spinner/
+[View in page]
 
 
 
@@ -76,4 +76,5 @@ MIT
 
    [svg-loader]: <https://github.com/SamHerbert/SVG-Loaders>
    [here]: <http://samherbert.net/svg-loaders>
+   [View in page]: https://mhnpd.github.io/react-loader-spinner/
    
