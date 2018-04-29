@@ -20,7 +20,7 @@ describe('Shallow Rendering', () => {
     it('simulates click events', () => {
         const buttonClick = sinon.spy();
         const wrapper = shallow(
-          <MyComponent handleClick={buttonClick} />
+            <MyComponent handleClick={buttonClick} />
         );
         wrapper.find('button').simulate('click');
         expect(buttonClick.calledOnce).to.equal(true);
