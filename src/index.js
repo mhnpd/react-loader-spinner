@@ -31,34 +31,36 @@ export default class Loader extends React.Component {
       width:80,
       visible:true
   };
-  svg =(type, visible)=> {
-      if (type==='Audio') {
-          return (Audio(this.props));
-      } else if (type==='Ball-Triangle') {
-          return (BallTrangle(this.props));
-      } else if (type==='Bars') {
-          return (Bars(this.props));
-      } else if (type==='Circles') {
-          return (Circles(this.props));
-      } else if (type==='Grid') {
-          return (Grid(this.props));
-      } else if (type==='Hearts') {
-          return (Hearts(this.props));
-      } else if (type==='Oval') {
-          return (Oval(this.props));
-      } else if (type==='Puff') {
-          return (Puff(this.props));
-      } else if (type==='Rings') {
-          return (Rings(this.props));
-      } else if (type==='TailSpin') {
-          return (TailSpin(this.props));
-      } else if (type==='ThreeDots') {
-          return (ThreeDots(this.props));
+
+  svgRenderer =(type)=> {
+      switch (type) {
+      case 'Audio':
+          return (Audio(this.props)); 
+      case 'Ball-Triangle':
+          return (BallTrangle(this.props)); 
+      case 'Bars':
+          return (Bars(this.props)); 
+      case 'Circles':
+          return (Circles(this.props)); 
+      case 'Grid':
+          return (Grid(this.props)); 
+      case 'Hearts':
+          return (Hearts(this.props)); 
+      case 'Oval':
+          return (Oval(this.props)); 
+      case 'Puff':
+          return (Puff(this.props));  
+      case 'Rings':
+          return (Rings(this.props)); 
+      case 'TailSpin':
+          return (TailSpin(this.props));   
+      case 'ThreeDots':
+          return (ThreeDots(this.props));                
+      default:
+          return (<div><p>Loading...Please Wait</p><small><i>Note:No specfic svg type exist</i></small></div>)
       }
-    
-      return (<div><p>Loading...Please Wait</p><small><i>Note:No specfic svg type exist</i></small></div>)
-        
   }
+
   render() {
       const { color, type, height, width} = this.props;
       const style = {
@@ -66,7 +68,8 @@ export default class Loader extends React.Component {
           height,
           width 
       }
-      return (<div>{this.svg(type)}</div>);
+      alert(color)
+      return (<div>{this.svgRenderer(type)}</div>);
   }
 }
 

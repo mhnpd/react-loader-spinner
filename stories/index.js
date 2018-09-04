@@ -13,7 +13,7 @@ storiesOf('Loader', module)
     .add('Oval', () => <Loader color="green" width={200} heigth={200}  type="Oval"/>) 
     .add('Puff', () => <Loader color="green" width={200} heigth={200}  type="Puff"/>) 
     .add('Rings', () => <Loader color="green"width={200} heigth={200}  type="Rings"/>) 
-    .add('TailSpin', () => <Loader color="green" width={200} heigth={200}  type="TailSpin"/>) 
+    .add('TailSpin', () =>(<div> <Loader color="#00BFFF" width={200} heigth={200}  type="TailSpin"/> <Loader type="TailSpin" color="#939248" height="100" width="100" /> </div>)) 
     .add('ThreeDots', () => <Loader color="green" width={200} heigth={200}  type="ThreeDots"/>); 
 
 

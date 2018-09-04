@@ -54,7 +54,12 @@
     "react": "^16.2.0",
     "react-addons-test-utils": "^15.0.0",
     "react-dom": "^16.2.0",
-    "sinon": "^4.4.8"
+    "sinon": "^4.4.8",
+    "eslint": "*",
+    "eslint-config-equimper": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-prettier": "*",
+    "prettier": "*"
   },
   "peerDependencies": {
     "prop-types": "^15.6.1",
