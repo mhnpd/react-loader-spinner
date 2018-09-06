@@ -1,75 +1,91 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {audio as Audio} from './loader/audio';
-import {ballTrangle as BallTrangle } from './loader/ball-triangle';
-import {bars as Bars} from './loader/bars';
-import {circles as Circles} from './loader/circles';
-import {grid as Grid } from './loader/grid';
-import {hearts as Hearts} from './loader/hearts';
-import {oval as Oval } from './loader/oval';
-import {puff as Puff} from './loader/puff';
-import {rings as Rings} from './loader/rings';
-import {tailSpin as TailSpin} from './loader/tail-spin';
-import {threeDots as ThreeDots } from './loader/three-dots';
+import React from "react";
+import PropTypes from "prop-types";
+import { Audio } from "./loader/Audio";
+import { BallTriangle } from "./loader/BallTriangle";
+import { Bars } from "./loader/Bars";
+import { Circles } from "./loader/Circles";
+import { Grid } from "./loader/Grid";
+import { Hearts } from "./loader/Hearts";
+import { Oval } from "./loader/Oval";
+import { Puff } from "./loader/Puff";
+import { Rings } from "./loader/Rings";
+import { TailSpin } from "./loader/TailSpin";
+import { ThreeDots } from "./loader/ThreeDots";
+import { Watch } from "./loader/Watch";
+import { RevolvingDot } from "./loader/RevolvingDot";
+import { CradleLoader } from "./loader/CradleLoader";
+import { Triangle } from "./loader/Triangle";
+import { Plane } from "./loader/Plane";
+import { MutatingDot } from "./loader/MutatingDot";
+
 export default class Loader extends React.Component {
   static propTypes = {
-      color: PropTypes.string,
-      type:PropTypes.string,
-      height:PropTypes.oneOfType([
-          PropTypes.number,
-          PropTypes.string,
-      ]),
-      width:PropTypes.oneOfType([
-          PropTypes.number,
-          PropTypes.string,
-      ]),
-  };
-  static defaultProps = {
-      color:'blue',
-      type:'audio',
-      height:80,
-      width:80,
-      visible:true
+    color: PropTypes.string,
+    type: PropTypes.string,
+    height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   };
 
-  svgRenderer =(type)=> {
-      switch (type) {
-      case 'Audio':
-          return (Audio(this.props)); 
-      case 'Ball-Triangle':
-          return (BallTrangle(this.props)); 
-      case 'Bars':
-          return (Bars(this.props)); 
-      case 'Circles':
-          return (Circles(this.props)); 
-      case 'Grid':
-          return (Grid(this.props)); 
-      case 'Hearts':
-          return (Hearts(this.props)); 
-      case 'Oval':
-          return (Oval(this.props)); 
-      case 'Puff':
-          return (Puff(this.props));  
-      case 'Rings':
-          return (Rings(this.props)); 
-      case 'TailSpin':
-          return (TailSpin(this.props));   
-      case 'ThreeDots':
-          return (ThreeDots(this.props));                
+  static defaultProps = {
+    color: "#71238",
+    type: "Audio",
+    height: 80,
+    width: 80
+  };
+
+  svgRenderer = type => {
+    switch (type) {
+      case "Audio":
+        return <Audio {...this.props} />;
+      case "Ball-Triangle":
+        return <BallTriangle {...this.props} />;
+      case "Bars":
+        return <Bars {...this.props} />;
+      case "Circles":
+        return <Circles {...this.props} />;
+      case "Grid":
+        return <Grid {...this.props} />;
+      case "Hearts":
+        return <Hearts {...this.props} />;
+      case "Oval":
+        return <Oval {...this.props} />;
+      case "Puff":
+        return <Puff {...this.props} />;
+      case "Rings":
+        return <Rings {...this.props} />;
+      case "TailSpin":
+        return <TailSpin {...this.props} />;
+      case "ThreeDots":
+        return <ThreeDots {...this.props} />;
+      case "Watch":
+        return <Watch {...this.props} />;
+      case "RevolvingDot":
+        return <RevolvingDot {...this.props} />;
+      case "CradleLoader":
+        return <CradleLoader {...this.props} />;
+      case "Triangle":
+        return <Triangle {...this.props} />;
+      case "Plane":
+        return <Plane {...this.props} />;
+      case "MutatingDot":
+        return <MutatingDot {...this.props} />;
       default:
-          return (<div><p>Loading...Please Wait</p><small><i>Note:No specfic svg type exist</i></small></div>)
-      }
-  }
+        return (
+          <div>
+            <span style={{ color: "Green" }}>LOADING</span>
+            <small>
+              <i>
+                <br />
+                Note:No specific svg type exist
+              </i>
+            </small>
+          </div>
+        );
+    }
+  };
 
   render() {
-      const { color, type, height, width} = this.props;
-      const style = {
-          fill:color,
-          height,
-          width 
-      }
-      return (<div>{this.svgRenderer(type)}</div>);
+    const { type } = this.props;
+    return <div>{this.svgRenderer(type)}</div>;
   }
 }
-
-

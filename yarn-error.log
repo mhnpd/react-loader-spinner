@@ -1,5 +1,5 @@
 Arguments: 
-  /home/linuxbrew/.linuxbrew/Cellar/node/9.10.1/bin/node /home/linuxbrew/.linuxbrew/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js
+  /home/linuxbrew/.linuxbrew/Cellar/node/9.10.1/bin/node /home/linuxbrew/.linuxbrew/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js storybook
 
 PATH: 
   /home/mhn/.rvm/gems/ruby-2.5.0/bin:/home/mhn/.rvm/gems/ruby-2.5.0@global/bin:/home/mhn/.rvm/rubies/ruby-2.5.0/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/bin:/sbin:/bin:/sbin:/home/mhn/bin:/home/mhn/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/mhn/.rvm/bin:/home/mhn/Android/Sdk/tools:/home/mhn/Android/Sdk/platform-tools:/opt/WebStorm-181.4892.44/bin:./opt/android-sdk/tools/:./arc/arcanist/bin/:/home/mhn/.rvm/bin
@@ -16,7 +16,7 @@ Platform:
 npm manifest: 
   {
     "name": "react-loader-spinner",
-    "version": "2.0.0",
+    "version": "2.0.2",
     "description": " react-spinner-loader provides simple React.js spinner component which can be implemented for async wait operation before data load to the view.",
     "repository": {
       "type": "git",
@@ -61,9 +61,7 @@ npm manifest:
       "babel-preset-stage-2": "^6.5.0",
       "chai": "^4.1.2",
       "enzyme": "^3.3.0",
-      "eslint": "^4.19.1",
       "eslint-plugin-babel": "^4.1.2",
-      "eslint-plugin-react": "^7.7.0",
       "jsdom": "^11.6.2",
       "mocha": "^5.0.5",
       "nodemon": "^1.17.2",
@@ -72,10 +70,15 @@ npm manifest:
       "react-dom": "^16.2.0",
       "sinon": "^4.4.8",
       "eslint": "*",
+      "prettier": "*",
+      "redux-logger": "*",
       "eslint-config-equimper": "*",
+      "eslint-plugin-react": "^7.10.0",
       "eslint-config-prettier": "*",
+      "eslint-config-airbnb": "^17.0.0",
       "eslint-plugin-prettier": "*",
-      "prettier": "*"
+      "eslint-plugin-import": "^2.13.0",
+      "eslint-plugin-jsx-a11y": "^6.1.1"
     },
     "peerDependencies": {
       "prop-types": "^15.6.1",
@@ -83,7 +86,8 @@ npm manifest:
       "react-dom": "^16.2.0"
     },
     "dependencies": {
-      "babel-runtime": "^6.6.1"
+      "babel-runtime": "^6.6.1",
+      "prop-types": "^15.6.2"
     }
   }
 
@@ -8407,9 +8411,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit code: 127
   Command: sh
-  Arguments: -c babel --plugins transform-es2015-modules-umd src --ignore __tests__ --out-dir ./dist
+  Arguments: -c start-storybook -p 6006
   Directory: /home/mhn/Videos/reactspinner
   Output:
   
