@@ -11,6 +11,12 @@ import { Puff } from "./loader/Puff";
 import { Rings } from "./loader/Rings";
 import { TailSpin } from "./loader/TailSpin";
 import { ThreeDots } from "./loader/ThreeDots";
+import { Watch } from "./loader/Watch";
+import { RevolvingDot } from "./loader/RevolvingDot";
+import { CradleLoader } from "./loader/CradleLoader";
+import { Triangle } from "./loader/Triangle";
+import { Plane } from "./loader/Plane";
+import { MutatingDot } from "./loader/MutatingDot";
 
 export default class Loader extends React.Component {
   static propTypes = {
@@ -51,6 +57,18 @@ export default class Loader extends React.Component {
         return <TailSpin {...this.props} />;
       case "ThreeDots":
         return <ThreeDots {...this.props} />;
+      case "Watch":
+        return <Watch {...this.props} />;
+      case "RevolvingDot":
+        return <RevolvingDot {...this.props} />;
+      case "CradleLoader":
+        return <CradleLoader {...this.props} />;
+      case "Triangle":
+        return <Triangle {...this.props} />;
+      case "Plane":
+        return <Plane {...this.props} />;
+      case "MutatingDot":
+        return <MutatingDot {...this.props} />;
       default:
         return (
           <div>
