@@ -1,6 +1,6 @@
 {
   "name": "react-loader-spinner",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": " react-spinner-loader provides simple React.js spinner component which can be implemented for async wait operation before data load to the view.",
   "repository": {
     "type": "git",
@@ -45,9 +45,7 @@
     "babel-preset-stage-2": "^6.5.0",
     "chai": "^4.1.2",
     "enzyme": "^3.3.0",
-    "eslint": "^4.19.1",
     "eslint-plugin-babel": "^4.1.2",
-    "eslint-plugin-react": "^7.7.0",
     "jsdom": "^11.6.2",
     "mocha": "^5.0.5",
     "nodemon": "^1.17.2",
@@ -56,10 +54,15 @@
     "react-dom": "^16.2.0",
     "sinon": "^4.4.8",
     "eslint": "*",
+    "prettier": "*",
+    "redux-logger": "*",
     "eslint-config-equimper": "*",
+    "eslint-plugin-react": "^7.10.0",
     "eslint-config-prettier": "*",
+    "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-prettier": "*",
-    "prettier": "*"
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1"
   },
   "peerDependencies": {
     "prop-types": "^15.6.1",
