@@ -1,6 +1,5 @@
 import React from 'react';
-export function ballTrangle(svg) {
-    return ( 
+export const BallTriangle = svg => (
         <svg height={svg.height} width={svg.width} stroke={svg.color} viewBox="0 0 57 57" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fillRule="evenodd">
                 <g transform="translate(1 1)" strokeWidth="2">
@@ -46,5 +45,4 @@ export function ballTrangle(svg) {
                 </g>
             </g>
         </svg>
-    );
-}
+    )
