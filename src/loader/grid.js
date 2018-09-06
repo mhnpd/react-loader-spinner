@@ -1,6 +1,6 @@
 import React from 'react';
 export function grid(svg) {
-    return (    
+    return (
         <svg width={svg.width} height={svg.height} viewBox="0 0 105 105" fill={svg.color}>
             <circle cx="12.5" cy="12.5" r="12.5">
                 <animate attributeName="fillOpacity"
