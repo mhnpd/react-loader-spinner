@@ -5,11 +5,6 @@
 
  react-spinner-loader provides simple React.js spinner component which can be implemented for async wait operation before data load to the view. 
 
-> Important Note: This release is compatible with React 1.4 and higher. If you're working with an older version of React, this package might not work for you.
-
-
-All the icon and spinner used in the Package are from SamHerbert [svg-loader] project on github. All the loading icon and spinner is built in pure svg. Preview of the all the available loader can be viewed on SamHerbert website [here]
-
 ### Installation
 
 ```sh
