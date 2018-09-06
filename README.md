@@ -2,7 +2,6 @@
   <img src="https://user-images.githubusercontent.com/33191954/33469873-6f57e560-d68d-11e7-8036-f2cb63175cc7.png" alt="title"/>
 </p>
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
 
  react-spinner-loader provides simple React.js spinner component which can be implemented for async wait operation before data load to the view. 
 
