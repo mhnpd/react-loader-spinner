@@ -30,7 +30,8 @@
     "test-watch": "npm run testonly -- --watch --watch-extensions js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "storybook-build": "build-storybook -c .storybook -o ./docs"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.15",
