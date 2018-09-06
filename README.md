@@ -62,6 +62,10 @@ react-loader-spinner component accept following props. Instructions on how to us
 | width | Width props define the width of the spinner. Default Width is 80px. |
 | color | [Color Props is provide color to the spinner. Default color is light blue. |
 
+### TODO LIST
+* Update Readme Table With New Component
+* Change Docs on Storybooks
+
 
 License
 ----
