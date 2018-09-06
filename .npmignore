@@ -11,4 +11,5 @@ lib
 .storybook
 stories
 .gitignore
+docs
 
