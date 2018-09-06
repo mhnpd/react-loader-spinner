@@ -68,7 +68,6 @@ export default class Loader extends React.Component {
           height,
           width 
       }
-      alert(color)
       return (<div>{this.svgRenderer(type)}</div>);
   }
 }
