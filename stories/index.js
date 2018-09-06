@@ -1,9 +1,11 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import centered from '@storybook/addon-centered';
 
 import Loader from "../src/index";
 
 storiesOf("Loader", module)
+  .addDecorator(centered)
   .add("Audio", () => <Loader width={200} height={200} type="Audio" visible="false" />)
   .add("Ball Triangle", () => (
     <Loader width={200} heigth={300} color="#cef442" type="Ball-Triangle" />
