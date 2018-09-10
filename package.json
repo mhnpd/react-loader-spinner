@@ -22,7 +22,8 @@
     "mocha": "--require scripts/mocha_runner src/**/__tests__/**/*.js"
   },
   "scripts": {
-    "prepublish": "babel --plugins transform-es2015-modules-umd src --ignore __tests__ --out-dir ./dist",
+    "prepublish": "babel --plugins transform-es2015-modules-umd src --ignore __tests__ --out-dir ./dist --copy-files",
+    "build": "babel --plugins transform-es2015-modules-umd src --ignore __tests__ --out-dir ./dist --copy-files",
     "lint": "eslint ./src",
     "lintfix": "eslint ./src --fix",
     "testonly": "mocha $npm_package_options_mocha",
@@ -45,7 +46,7 @@
     "babel-eslint": "^8.2.2",
     "babel-plugin-transform-es2015-modules-umd": "^6.6.5",
     "babel-polyfill": "^6.7.4",
-    "babel-preset-env": "^6.6.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-2": "^6.5.0",
     "chai": "^4.1.2",
