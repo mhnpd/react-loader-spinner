@@ -23,7 +23,8 @@ export default class Loader extends React.Component {
     color: PropTypes.string,
     type: PropTypes.string,
     height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    style: PropTypes.shape({})
   };
 
   static defaultProps = {
@@ -86,6 +87,6 @@ export default class Loader extends React.Component {
 
   render() {
     const { type } = this.props;
-    return <div>{this.svgRenderer(type)}</div>;
+    return <div className={this.props.style}>{this.svgRenderer(type)}</div>;
   }
 }
