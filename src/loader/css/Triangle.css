@@ -1,10 +1,10 @@
 
-svg {
+.svg svg {
   -webkit-transform-origin: 50% 65%;
           transform-origin: 50% 65%;
 }
 
-svg polygon {
+.svg svg polygon {
   stroke-dasharray: 17;
   -webkit-animation: dash 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
           animation: dash 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;

@@ -76,7 +76,7 @@
     "react-dom": "^16.2.0"
   },
   "dependencies": {
-    "babel-runtime": "^6.6.1",
+    "babel-runtime": "^6.26.0",
     "prop-types": "^15.6.2"
   }
 }
