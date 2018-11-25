@@ -19,7 +19,7 @@ $ npm install react-loader-spinner --save
 ### Usage
 ```
  import Loader from 'react-loader-spinner'
- export default class App extends React.component {
+ export default class App extends React.Component {
   //other logic
     render() {
 	 return(
