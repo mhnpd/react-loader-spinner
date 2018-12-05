@@ -4,7 +4,7 @@ export const Grid = svg => (
   <svg width={svg.width} height={svg.height} viewBox="0 0 105 105" fill={svg.color}>
     <circle cx="12.5" cy="12.5" r="12.5">
       <animate
-        attributeName="fillOpacity"
+        attributeName="fill-opacity"
         begin="0s"
         dur="1s"
         values="1;.2;1"
