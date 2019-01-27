@@ -34,6 +34,10 @@ $ npm install react-loader-spinner --save
  }
 ```
 
+### IF Webpack throw issue with css 
+Change webpack congiguration as:
+```  test: /\.scss$/ to test: /\.s?css$/ ```
+
 ### Types of Spinner
 react-loader-spinner component has following types of spinner.
 
