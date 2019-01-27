@@ -35,7 +35,7 @@ $ npm install react-loader-spinner --save
 ```
 
 ### IF Webpack throw issue with css 
-Change webpack congiguration as:
+Change webpack config as:
 ```  test: /\.scss$/ to test: /\.s?css$/ ```
 
 ### Types of Spinner
