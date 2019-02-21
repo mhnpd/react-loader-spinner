@@ -10,11 +10,15 @@
 ```sh
 $ npm install react-loader-spinner --save
 ```
+
+#### [Play with and install loaders via Bit](https://bitsrc.io/mhnpd/react-loader-spinner)
+
+<p align="center">
+  <a href="https://bitsrc.io/mhnpd/react-loader-spinner"><img src="https://i.imagesup.co/images2/0__05c6e931ed2fea.jpg"></a>
+</p>
+
 #  Demo
 [View in page]
-
-
-
 
 ### Usage
 ```
