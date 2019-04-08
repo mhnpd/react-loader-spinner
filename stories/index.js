@@ -14,7 +14,7 @@ storiesOf("Loader", module)
   .add("Circles", () => <Loader color="green" width={200} heigth={200} type="Circles" />)
   .add("Grid", () => <Loader color="green" width={200} heigth={200} type="Grid" />)
   .add("Hearts", () => <Loader color="green" width={200} heigth={200} type="Hearts" />)
-  .add("Oval", () => <Loader color="green" width={200} heigth={200} type="Oval" />)
+  .add("Oval", () => <Loader className="test" color="green" width={200} heigth={200} type="Oval" />)
   .add("Puff", () => <Loader color="green" width={200} heigth={200} type="Puff" />)
   .add("Rings", () => <Loader color="green" width={200} heigth={200} type="Rings" />)
   .add("TailSpin", () => (
