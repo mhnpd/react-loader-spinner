@@ -12,6 +12,7 @@ export const RevolvingDot = svg => (
     viewBox="0 0 100 100"
     enableBackground="new 0 0 0 0"
     xmlSpace="preserve"
+    aria-label={svg.label}
   >
     <circle
       fill="none"

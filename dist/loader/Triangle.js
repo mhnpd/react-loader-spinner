@@ -29,10 +29,10 @@
   var Triangle = exports.Triangle = function Triangle(svg) {
     return _react2.default.createElement(
       "div",
-      { className: "svg" },
+      { className: "react-spinner-loader-svg" },
       _react2.default.createElement(
         "svg",
-        { id: "triangle", width: svg.height, height: svg.height, viewBox: "-3 -4 39 39" },
+        { id: "triangle", width: svg.height, height: svg.height, viewBox: "-3 -4 39 39", "aria-label": svg.label },
         _react2.default.createElement("polygon", { fill: "transparent", stroke: svg.color, strokeWidth: "1", points: "16,0 32,32 0,32" })
       )
     );

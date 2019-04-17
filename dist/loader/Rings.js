@@ -34,7 +34,8 @@
         height: svg.height,
         viewBox: "0 0 45 45",
         xmlns: "http://www.w3.org/2000/svg",
-        stroke: svg.color
+        stroke: svg.color,
+        "aria-label": svg.label
       },
       _react2.default.createElement(
         "g",

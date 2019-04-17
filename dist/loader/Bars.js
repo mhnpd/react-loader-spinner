@@ -30,11 +30,12 @@
     return _react2.default.createElement(
       "svg",
       {
-        width: svg.height,
-        height: svg.width,
+        width: svg.width,
+        height: svg.height,
         fill: svg.color,
         viewBox: "0 0 135 140",
-        xmlns: "http://www.w3.org/2000/svg"
+        xmlns: "http://www.w3.org/2000/svg",
+        "aria-label": svg.label
       },
       _react2.default.createElement(
         "rect",

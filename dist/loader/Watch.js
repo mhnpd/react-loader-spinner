@@ -39,7 +39,8 @@
         y: "0px",
         viewBox: "0 0 100 100",
         enableBackground: "new 0 0 100 100",
-        xmlSpace: "preserve"
+        xmlSpace: "preserve",
+        "aria-label": svg.label
       },
       _react2.default.createElement("circle", {
         fill: "none",

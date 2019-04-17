@@ -7,6 +7,7 @@ export const BallTriangle = svg => (
     stroke={svg.color}
     viewBox="0 0 57 57"
     xmlns="http://www.w3.org/2000/svg"
+    aria-label={svg.label}
   >
     <g fill="none" fillRule="evenodd">
       <g transform="translate(1 1)" strokeWidth="2">

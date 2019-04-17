@@ -29,7 +29,7 @@
   var TailSpin = exports.TailSpin = function TailSpin(svg) {
     return _react2.default.createElement(
       "svg",
-      { width: svg.width, height: svg.height, viewBox: "0 0 38 38", xmlns: "http://www.w3.org/2000/svg" },
+      { width: svg.width, height: svg.height, viewBox: "0 0 38 38", xmlns: "http://www.w3.org/2000/svg", "aria-label": svg.label },
       _react2.default.createElement(
         "defs",
         null,
