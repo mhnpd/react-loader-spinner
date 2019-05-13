@@ -1,8 +1,8 @@
 import React from "react";
 import "./css/CradleLoader.css";
 
-export const CradleLoader = () => (
-  <div aria-busy="true" aria-label="Loading" role="progressbar" className="container">
+export const CradleLoader = (prop) => (
+  <div aria-label={prop.label} role="progressbar" className="container">
     <div className="react-spinner-loader-swing">
       <div className="react-spinner-loader-swing-l" />
       <div />

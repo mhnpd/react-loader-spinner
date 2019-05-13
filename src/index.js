@@ -23,14 +23,16 @@ export default class Loader extends React.Component {
     color: PropTypes.string,
     type: PropTypes.string,
     height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    label: PropTypes.string
   };
 
   static defaultProps = {
     color: "#71238",
     type: "Audio",
     height: 80,
-    width: 80
+    width: 80,
+    label: "Loading content, please wait."
   };
 
   svgRenderer = type => {
@@ -71,8 +73,8 @@ export default class Loader extends React.Component {
         return <MutatingDot {...this.props} />;
       default:
         return (
-          <div>
-            <span style={{ color: "Green" }}>LOADING</span>
+          <div aria-busy="true">
+            <span style={{ color: "Green" }}>Loading content, please wait.</span>
             <small>
               <i>
                 <br />
@@ -86,6 +88,6 @@ export default class Loader extends React.Component {
 
   render() {
     const { className, style, type } = this.props;
-    return <div className={className} style={style}>{this.svgRenderer(type)}</div>;
+    return <div aria-busy="true" className={className} style={style}>{this.svgRenderer(type)}</div>;
   }
 }

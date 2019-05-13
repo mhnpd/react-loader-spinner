@@ -32,25 +32,25 @@
       { "aria-busy": "true", "aria-label": "Loading", role: "progressbar", className: "container" },
       _react2.default.createElement(
         "div",
-        { className: "swing" },
-        _react2.default.createElement("div", { className: "swing-l" }),
+        { className: "react-spinner-loader-swing" },
+        _react2.default.createElement("div", { className: "react-spinner-loader-swing-l" }),
         _react2.default.createElement("div", null),
         _react2.default.createElement("div", null),
         _react2.default.createElement("div", null),
         _react2.default.createElement("div", null),
         _react2.default.createElement("div", null),
-        _react2.default.createElement("div", { className: "swing-r" })
+        _react2.default.createElement("div", { className: "react-spinner-loader-swing-r" })
       ),
       _react2.default.createElement(
         "div",
-        { className: "shadow" },
-        _react2.default.createElement("div", { className: "shadow-l" }),
+        { className: "react-spinner-loader-shadow" },
+        _react2.default.createElement("div", { className: "react-spinner-loader-shadow-l" }),
         _react2.default.createElement("div", null),
         _react2.default.createElement("div", null),
         _react2.default.createElement("div", null),
         _react2.default.createElement("div", null),
         _react2.default.createElement("div", null),
-        _react2.default.createElement("div", { className: "shadow-r" })
+        _react2.default.createElement("div", { className: "react-spinner-loader-shadow-r" })
       )
     );
   };

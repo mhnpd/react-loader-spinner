@@ -29,7 +29,7 @@
   var MutatingDot = exports.MutatingDot = function MutatingDot(svg) {
     return _react2.default.createElement(
       "svg",
-      { id: "goo-loader", width: svg.width, height: svg.height },
+      { id: "goo-loader", width: svg.width, height: svg.height, fill: svg.color, "aria-label": svg.label },
       _react2.default.createElement(
         "filter",
         { id: "fancy-goo" },

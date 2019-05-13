@@ -128,11 +128,11 @@
           default:
             return _react2.default.createElement(
               "div",
-              null,
+              { "aria-busy": "true" },
               _react2.default.createElement(
                 "span",
                 { style: { color: "Green" } },
-                "LOADING"
+                "Loading content, please wait."
               ),
               _react2.default.createElement(
                 "small",
@@ -152,11 +152,14 @@
     _createClass(Loader, [{
       key: "render",
       value: function render() {
-        var type = this.props.type;
+        var _props = this.props,
+            className = _props.className,
+            style = _props.style,
+            type = _props.type;
 
         return _react2.default.createElement(
           "div",
-          { className: this.props.style },
+          { "aria-busy": "true", className: className, style: style },
           this.svgRenderer(type)
         );
       }
@@ -169,14 +172,14 @@
     color: _propTypes2.default.string,
     type: _propTypes2.default.string,
     height: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]),
-    width: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]),
-    style: _propTypes2.default.shape({})
+    width: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string])
   };
   Loader.defaultProps = {
     color: "#71238",
     type: "Audio",
     height: 80,
-    width: 80
+    width: 80,
+    label: 'Loading content, please wait.'
   };
   exports.default = Loader;
 });

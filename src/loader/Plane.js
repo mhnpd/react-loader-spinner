@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./css/Plane.css";
 
 export const Plane = props => (
-  <svg className="react-spinner-loader-svg-calLoader" xmlns="http://www.w3.org/2000/svg" width="230" height="230">
+  <svg className="react-spinner-loader-svg-calLoader" xmlns="http://www.w3.org/2000/svg" width="230" height="230" aria-label={props.label}>
     <path
       className="react-spinner-loader-cal-loader__path"
       style={{ stroke: props.secondaryColor }}

@@ -12,6 +12,7 @@ export const Watch = svg => (
     viewBox="0 0 100 100"
     enableBackground="new 0 0 100 100"
     xmlSpace="preserve"
+    aria-label={svg.label}
   >
     <circle
       fill="none"

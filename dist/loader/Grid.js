@@ -29,12 +29,12 @@
   var Grid = exports.Grid = function Grid(svg) {
     return _react2.default.createElement(
       "svg",
-      { width: svg.width, height: svg.height, viewBox: "0 0 105 105", fill: svg.color },
+      { width: svg.width, height: svg.height, viewBox: "0 0 105 105", fill: svg.color, "aria-label": svg.label },
       _react2.default.createElement(
         "circle",
         { cx: "12.5", cy: "12.5", r: "12.5" },
         _react2.default.createElement("animate", {
-          attributeName: "fillOpacity",
+          attributeName: "fill-opacity",
           begin: "0s",
           dur: "1s",
           values: "1;.2;1",
