@@ -3,7 +3,7 @@
 </p>
 
 
- react-spinner-loader provides simple React.js spinner component which can be implemented for async wait operation before data load to the view. 
+ react-spinner-loader provides simple React.js spinner component which can be implemented for async wait operation before data load to the view.
 
 ### Installation
 
@@ -23,18 +23,18 @@ $ npm install react-loader-spinner --save
   //other logic
     render() {
 	 return(
-	  <Loader 
+	  <Loader
 	     type="Puff"
 	     color="#00BFFF"
-	     height="100"	
+	     height="100"
 	     width="100"
-	  />   
+	  />
 	 );
     }
  }
 ```
 
-### IF Webpack throw issue with css 
+### IF Webpack throw issue with css
 Change webpack config as:
 ```  test: /\.scss$/ to test: /\.s?css$/ ```
 
@@ -67,8 +67,8 @@ react-loader-spinner component accept following props. Instructions on how to us
 | color | [Color Props is provide color to the spinner. Default color is light blue. |
 
 ### TODO LIST
-* Update Readme Table With New Component
 * Change Docs on Storybooks
+* Optimize css implementation
 
 
 License
@@ -81,4 +81,4 @@ MIT
    [svg-loader]: <https://github.com/SamHerbert/SVG-Loaders>
    [here]: <http://samherbert.net/svg-loaders>
    [View in page]: https://mhnpd.github.io/react-loader-spinner/
-   
+

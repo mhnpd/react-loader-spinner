@@ -172,14 +172,15 @@
     color: _propTypes2.default.string,
     type: _propTypes2.default.string,
     height: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]),
-    width: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string])
+    width: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]),
+    label: _propTypes2.default.string
   };
   Loader.defaultProps = {
     color: "#71238",
     type: "Audio",
     height: 80,
     width: 80,
-    label: 'Loading content, please wait.'
+    label: "Loading content, please wait."
   };
   exports.default = Loader;
 });

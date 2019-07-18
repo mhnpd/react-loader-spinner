@@ -26,10 +26,10 @@
     };
   }
 
-  var CradleLoader = exports.CradleLoader = function CradleLoader() {
+  var CradleLoader = exports.CradleLoader = function CradleLoader(prop) {
     return _react2.default.createElement(
       "div",
-      { "aria-busy": "true", "aria-label": "Loading", role: "progressbar", className: "container" },
+      { "aria-label": prop.label, role: "progressbar", className: "container" },
       _react2.default.createElement(
         "div",
         { className: "react-spinner-loader-swing" },
