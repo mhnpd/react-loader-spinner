@@ -88,6 +88,10 @@ export default class Loader extends React.Component {
 
   render() {
     const { className, style, type } = this.props;
-    return <div aria-busy="true" className={className} style={style}>{this.svgRenderer(type)}</div>;
+    return (
+      <div aria-busy="true" className={className} style={style}>
+        {this.svgRenderer(type)}
+      </div>
+    );
   }
 }

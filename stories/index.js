@@ -1,8 +1,9 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import centered from '@storybook/addon-centered';
+import centered from "@storybook/addon-centered";
 
 import Loader from "../src/index";
+import "../src/loader/css/react-spinner-loader.css";
 
 storiesOf("Loader", module)
   .addDecorator(centered)

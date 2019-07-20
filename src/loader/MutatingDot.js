@@ -1,7 +1,7 @@
 import React from "react";
 
 export const MutatingDot = svg => (
-  <svg id="goo-loader" width={svg.width} height={svg.height} fill={svg.color} aria-label={svg.label}>
+  <svg id="goo-loader" width={svg.width} height={90} fill={svg.color} aria-label={svg.label}>
     <filter id="fancy-goo">
       <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
       <feColorMatrix

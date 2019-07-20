@@ -1,7 +1,6 @@
 import React from "react";
-import "./css/CradleLoader.css";
 
-export const CradleLoader = (prop) => (
+export const CradleLoader = prop => (
   <div aria-label={prop.label} role="progressbar" className="container">
     <div className="react-spinner-loader-swing">
       <div className="react-spinner-loader-swing-l" />

@@ -9,6 +9,7 @@ export const Plane = props => (
     height="230"
     aria-label={props.label}
   >
+    <desc>Plane animation. Loading </desc>
     <path
       className="react-spinner-loader-cal-loader__path"
       style={{ stroke: props.secondaryColor }}
