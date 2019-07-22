@@ -1,16 +1,16 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["exports", "react"], factory);
+    define(["exports", "react", "prop-types"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require("react"));
+    factory(exports, require("react"), require("prop-types"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.react);
+    factory(mod.exports, global.react, global.propTypes);
     global.Audio = mod.exports;
   }
-})(this, function (exports, _react) {
+})(this, function (exports, _react, _propTypes) {
   "use strict";
 
   Object.defineProperty(exports, "__esModule", {
@@ -20,22 +20,24 @@
 
   var _react2 = _interopRequireDefault(_react);
 
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
       default: obj
     };
   }
 
-  var Audio = exports.Audio = function Audio(svg) {
+  var Audio = exports.Audio = function Audio(props) {
     return _react2.default.createElement(
       "svg",
       {
-        height: svg.height,
-        width: svg.width,
-        fill: svg.color,
+        height: props.height,
+        width: props.width,
+        fill: props.color,
         viewBox: "0 0 55 80",
         xmlns: "http://www.w3.org/2000/svg",
-        "aria-label": svg.label
+        "aria-label": props.label
       },
       _react2.default.createElement(
         "g",
@@ -90,5 +92,19 @@
         )
       )
     );
+  };
+
+  Audio.propTypes = {
+    height: _propTypes2.default.number,
+    width: _propTypes2.default.number,
+    color: _propTypes2.default.string,
+    label: _propTypes2.default.string
+  };
+
+  Audio.defaultProps = {
+    height: 80,
+    width: 80,
+    color: "green",
+    label: "audio-loading"
   };
 });

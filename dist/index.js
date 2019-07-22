@@ -1,16 +1,16 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["exports", "react", "prop-types", "./loader/Audio", "./loader/BallTriangle", "./loader/Bars", "./loader/Circles", "./loader/Grid", "./loader/Hearts", "./loader/Oval", "./loader/Puff", "./loader/Rings", "./loader/TailSpin", "./loader/ThreeDots", "./loader/Watch", "./loader/RevolvingDot", "./loader/CradleLoader", "./loader/Triangle", "./loader/Plane", "./loader/MutatingDot"], factory);
+    define(["exports", "react", "prop-types", "./loader/Audio", "./loader/BallTriangle", "./loader/Bars", "./loader/Circles", "./loader/Grid", "./loader/Hearts", "./loader/Oval", "./loader/Puff", "./loader/Rings", "./loader/TailSpin", "./loader/ThreeDots", "./loader/Watch", "./loader/RevolvingDot", "./loader/CradleLoader", "./loader/Triangle", "./loader/Plane", "./loader/MutatingDot", "./loader"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require("react"), require("prop-types"), require("./loader/Audio"), require("./loader/BallTriangle"), require("./loader/Bars"), require("./loader/Circles"), require("./loader/Grid"), require("./loader/Hearts"), require("./loader/Oval"), require("./loader/Puff"), require("./loader/Rings"), require("./loader/TailSpin"), require("./loader/ThreeDots"), require("./loader/Watch"), require("./loader/RevolvingDot"), require("./loader/CradleLoader"), require("./loader/Triangle"), require("./loader/Plane"), require("./loader/MutatingDot"));
+    factory(exports, require("react"), require("prop-types"), require("./loader/Audio"), require("./loader/BallTriangle"), require("./loader/Bars"), require("./loader/Circles"), require("./loader/Grid"), require("./loader/Hearts"), require("./loader/Oval"), require("./loader/Puff"), require("./loader/Rings"), require("./loader/TailSpin"), require("./loader/ThreeDots"), require("./loader/Watch"), require("./loader/RevolvingDot"), require("./loader/CradleLoader"), require("./loader/Triangle"), require("./loader/Plane"), require("./loader/MutatingDot"), require("./loader"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.react, global.propTypes, global.Audio, global.BallTriangle, global.Bars, global.Circles, global.Grid, global.Hearts, global.Oval, global.Puff, global.Rings, global.TailSpin, global.ThreeDots, global.Watch, global.RevolvingDot, global.CradleLoader, global.Triangle, global.Plane, global.MutatingDot);
+    factory(mod.exports, global.react, global.propTypes, global.Audio, global.BallTriangle, global.Bars, global.Circles, global.Grid, global.Hearts, global.Oval, global.Puff, global.Rings, global.TailSpin, global.ThreeDots, global.Watch, global.RevolvingDot, global.CradleLoader, global.Triangle, global.Plane, global.MutatingDot, global.loader);
     global.index = mod.exports;
   }
-})(this, function (exports, _react, _propTypes, _Audio, _BallTriangle, _Bars, _Circles, _Grid, _Hearts, _Oval, _Puff, _Rings, _TailSpin, _ThreeDots, _Watch, _RevolvingDot, _CradleLoader, _Triangle, _Plane, _MutatingDot) {
+})(this, function (exports, _react, _propTypes, _Audio, _BallTriangle, _Bars, _Circles, _Grid, _Hearts, _Oval, _Puff, _Rings, _TailSpin, _ThreeDots, _Watch, _RevolvingDot, _CradleLoader, _Triangle, _Plane, _MutatingDot, _loader) {
   "use strict";
 
   Object.defineProperty(exports, "__esModule", {
@@ -26,6 +26,20 @@
       default: obj
     };
   }
+
+  var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -75,13 +89,38 @@
     if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
   }
 
-  var Loader = function (_React$Component) {
-    _inherits(Loader, _React$Component);
+  function Load(Component) {
+    return function (_React$Component) {
+      _inherits(_class, _React$Component);
+
+      function _class() {
+        _classCallCheck(this, _class);
+
+        return _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).apply(this, arguments));
+      }
+
+      _createClass(_class, [{
+        key: "render",
+        value: function render() {
+          var _this2 = this;
+
+          return _react2.default.createElement(Loader, { render: function render(mouse) {
+              return _react2.default.createElement(Component, _extends({}, _this2.props, { mouse: mouse }));
+            } });
+        }
+      }]);
+
+      return _class;
+    }(_react2.default.Component);
+  }
+
+  var Loader = function (_React$Component2) {
+    _inherits(Loader, _React$Component2);
 
     function Loader() {
       var _ref;
 
-      var _temp, _this, _ret;
+      var _temp, _this3, _ret;
 
       _classCallCheck(this, Loader);
 
@@ -89,42 +128,42 @@
         args[_key] = arguments[_key];
       }
 
-      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Loader.__proto__ || Object.getPrototypeOf(Loader)).call.apply(_ref, [this].concat(args))), _this), _this.svgRenderer = function (type) {
+      return _ret = (_temp = (_this3 = _possibleConstructorReturn(this, (_ref = Loader.__proto__ || Object.getPrototypeOf(Loader)).call.apply(_ref, [this].concat(args))), _this3), _this3.svgRenderer = function (type) {
         switch (type) {
           case "Audio":
-            return _react2.default.createElement(_Audio.Audio, _this.props);
+            return _react2.default.createElement(_Audio.Audio, _this3.props);
           case "Ball-Triangle":
-            return _react2.default.createElement(_BallTriangle.BallTriangle, _this.props);
+            return _react2.default.createElement(_BallTriangle.BallTriangle, _this3.props);
           case "Bars":
-            return _react2.default.createElement(_Bars.Bars, _this.props);
+            return _react2.default.createElement(_Bars.Bars, _this3.props);
           case "Circles":
-            return _react2.default.createElement(_Circles.Circles, _this.props);
+            return _react2.default.createElement(_Circles.Circles, _this3.props);
           case "Grid":
-            return _react2.default.createElement(_Grid.Grid, _this.props);
+            return _react2.default.createElement(_Grid.Grid, _this3.props);
           case "Hearts":
-            return _react2.default.createElement(_Hearts.Hearts, _this.props);
+            return _react2.default.createElement(_Hearts.Hearts, _this3.props);
           case "Oval":
-            return _react2.default.createElement(_Oval.Oval, _this.props);
+            return _react2.default.createElement(_Oval.Oval, _this3.props);
           case "Puff":
-            return _react2.default.createElement(_Puff.Puff, _this.props);
+            return _react2.default.createElement(_Puff.Puff, _this3.props);
           case "Rings":
-            return _react2.default.createElement(_Rings.Rings, _this.props);
+            return _react2.default.createElement(_Rings.Rings, _this3.props);
           case "TailSpin":
-            return _react2.default.createElement(_TailSpin.TailSpin, _this.props);
+            return _react2.default.createElement(_TailSpin.TailSpin, _this3.props);
           case "ThreeDots":
-            return _react2.default.createElement(_ThreeDots.ThreeDots, _this.props);
+            return _react2.default.createElement(_ThreeDots.ThreeDots, _this3.props);
           case "Watch":
-            return _react2.default.createElement(_Watch.Watch, _this.props);
+            return _react2.default.createElement(_Watch.Watch, _this3.props);
           case "RevolvingDot":
-            return _react2.default.createElement(_RevolvingDot.RevolvingDot, _this.props);
+            return _react2.default.createElement(_RevolvingDot.RevolvingDot, _this3.props);
           case "CradleLoader":
-            return _react2.default.createElement(_CradleLoader.CradleLoader, _this.props);
+            return _react2.default.createElement(_CradleLoader.CradleLoader, _this3.props);
           case "Triangle":
-            return _react2.default.createElement(_Triangle.Triangle, _this.props);
+            return _react2.default.createElement(_Triangle.Triangle, _this3.props);
           case "Plane":
-            return _react2.default.createElement(_Plane.Plane, _this.props);
+            return _react2.default.createElement(_Plane.Plane, _this3.props);
           case "MutatingDot":
-            return _react2.default.createElement(_MutatingDot.MutatingDot, _this.props);
+            return _react2.default.createElement(_MutatingDot.MutatingDot, _this3.props);
           default:
             return _react2.default.createElement(
               "div",
@@ -146,7 +185,7 @@
               )
             );
         }
-      }, _temp), _possibleConstructorReturn(_this, _ret);
+      }, _temp), _possibleConstructorReturn(_this3, _ret);
     }
 
     _createClass(Loader, [{
@@ -160,7 +199,7 @@
         return _react2.default.createElement(
           "div",
           { "aria-busy": "true", className: className, style: style },
-          this.svgRenderer(type)
+          _react2.default.createElement(_loader.Spinner[type])
         );
       }
     }]);

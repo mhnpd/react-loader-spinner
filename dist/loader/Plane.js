@@ -1,13 +1,13 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["exports", "react", "prop-types", "./css/Plane.css"], factory);
+    define(["exports", "react", "prop-types"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require("react"), require("prop-types"), require("./css/Plane.css"));
+    factory(exports, require("react"), require("prop-types"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.react, global.propTypes, global.Plane);
+    factory(mod.exports, global.react, global.propTypes);
     global.Plane = mod.exports;
   }
 })(this, function (exports, _react, _propTypes) {
@@ -31,7 +31,18 @@
   var Plane = exports.Plane = function Plane(props) {
     return _react2.default.createElement(
       "svg",
-      { className: "react-spinner-loader-svg-calLoader", xmlns: "http://www.w3.org/2000/svg", width: "230", height: "230", "aria-label": props.label },
+      {
+        className: "react-spinner-loader-svg-calLoader",
+        xmlns: "http://www.w3.org/2000/svg",
+        width: "230",
+        height: "230",
+        "aria-label": props.label
+      },
+      _react2.default.createElement(
+        "desc",
+        null,
+        "Plane animation. Loading "
+      ),
       _react2.default.createElement("path", {
         className: "react-spinner-loader-cal-loader__path",
         style: { stroke: props.secondaryColor },
@@ -55,11 +66,13 @@
 
   Plane.propTypes = {
     secondaryColor: _propTypes2.default.string,
-    color: _propTypes2.default.string
+    color: _propTypes2.default.string,
+    label: _propTypes2.default
   };
 
   Plane.defaultProps = {
     secondaryColor: "grey",
-    color: "#FFA500"
+    color: "#FFA500",
+    label: "async-loading"
   };
 });

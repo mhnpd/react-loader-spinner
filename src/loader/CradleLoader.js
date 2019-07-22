@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export const CradleLoader = prop => (
   <div aria-label={prop.label} role="progressbar" className="container">

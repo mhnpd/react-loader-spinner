@@ -1,16 +1,16 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["exports", "react", "./css/CradleLoader.css"], factory);
+    define(["exports", "react", "prop-types"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require("react"), require("./css/CradleLoader.css"));
+    factory(exports, require("react"), require("prop-types"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.react, global.CradleLoader);
+    factory(mod.exports, global.react, global.propTypes);
     global.CradleLoader = mod.exports;
   }
-})(this, function (exports, _react) {
+})(this, function (exports, _react, _propTypes) {
   "use strict";
 
   Object.defineProperty(exports, "__esModule", {
@@ -19,6 +19,8 @@
   exports.CradleLoader = undefined;
 
   var _react2 = _interopRequireDefault(_react);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
 
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {

@@ -1,16 +1,16 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["exports", "react"], factory);
+    define(["exports", "react", "prop-types"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require("react"));
+    factory(exports, require("react"), require("prop-types"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.react);
+    factory(mod.exports, global.react, global.propTypes);
     global.RevolvingDot = mod.exports;
   }
-})(this, function (exports, _react) {
+})(this, function (exports, _react, _propTypes) {
   "use strict";
 
   Object.defineProperty(exports, "__esModule", {
@@ -19,6 +19,8 @@
   exports.RevolvingDot = undefined;
 
   var _react2 = _interopRequireDefault(_react);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
 
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -33,13 +35,9 @@
         version: "1.1",
         width: svg.width,
         height: svg.height,
-        id: "L3",
         xmlns: "http://www.w3.org/2000/svg",
         x: "0px",
         y: "0px",
-        viewBox: "0 0 100 100",
-        enableBackground: "new 0 0 0 0",
-        xmlSpace: "preserve",
         "aria-label": svg.label
       },
       _react2.default.createElement("circle", {

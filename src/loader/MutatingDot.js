@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export const MutatingDot = svg => (
   <svg id="goo-loader" width={svg.width} height={90} fill={svg.color} aria-label={svg.label}>
