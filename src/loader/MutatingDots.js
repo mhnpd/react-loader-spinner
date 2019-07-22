@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const MutatingDot = svg => (
+export const MutatingDots = svg => (
   <svg id="goo-loader" width={svg.width} height={90} fill={svg.color} aria-label={svg.label}>
     <filter id="fancy-goo">
       <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />

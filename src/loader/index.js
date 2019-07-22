@@ -6,7 +6,7 @@ import { Bars } from "./Bars";
 import { CradleLoader } from "./CradleLoader";
 import { Grid } from "./Grid";
 import { Hearts } from "./Hearts";
-import { MutatingDot } from "./MutatingDot";
+import { MutatingDots } from "./MutatingDots";
 import { Oval } from "./Oval";
 import { Plane } from "./Plane";
 import { Puff } from "./Puff";
@@ -24,7 +24,7 @@ export const Spinner = {
   CradleLoader,
   Grid,
   Hearts,
-  MutatingDot,
+  MutatingDots,
   Oval,
   Plane,
   Puff,

@@ -26,8 +26,9 @@ storiesOf("Loader", module)
   .add("Triangle", () => <Loader color="green" width={200} height={200} type="Triangle" />)
   .add("Plane", () => <Loader color="#FFA500" width={200} height={200} type="Plane" />)
   .add("Mutating Dots", () => (
-    <Loader color="#FFA500" width={100} height={100} type="MutatingDot" />
+    <Loader color="#FFA500" width={100} height={100} type="MutatingDots" />
   ))
 
   .add("CradleLoader", () => <Loader color="green" width={200} height={200} type="CradleLoader" />)
+  .add("None", () => <Loader color="green" width={200} height={200} type="  " />)
   .add("NotSpecified", () => <Loader color="green" width={200} height={200} />);
