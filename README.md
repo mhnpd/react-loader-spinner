@@ -7,9 +7,23 @@
 
 ### Installation
 
+##### Using NPM:
+#
 ```sh
 $ npm install react-loader-spinner --save
 ```
+##### Using yarn
+#
+```sh
+$ yarn add ract-loader-spinner
+```
+
+##### Import required css
+#
+```sh
+ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+```
+
 #  Demo
 [View in page]
 
