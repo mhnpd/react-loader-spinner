@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const Rings = svg => (
+export const Rings = props => (
   <svg
-    width={svg.width}
-    height={svg.height}
+    width={props.width}
+    height={props.height}
     viewBox="0 0 45 45"
     xmlns="http://www.w3.org/2000/svg"
-    stroke={svg.color}
-    aria-label={svg.label}
+    stroke={props.color}
+    aria-label={props.label}
   >
     <g fill="none" fillRule="evenodd" transform="translate(1 1)" strokeWidth="2">
       <circle cx="22" cy="22" r="6" strokeOpacity="0">
@@ -76,3 +76,17 @@ export const Rings = svg => (
     </g>
   </svg>
 );
+
+Rings.propTypes = {
+  height: PropTypes.number,
+  width: PropTypes.number,
+  color: PropTypes.string,
+  label: PropTypes.string
+};
+
+Rings.defaultProps = {
+  height: 80,
+  width: 80,
+  color: "green",
+  label: "audio-loading"
+};

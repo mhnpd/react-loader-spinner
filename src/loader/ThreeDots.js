@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const ThreeDots = svg => (
+export const ThreeDots = props => (
   <svg
-    width={svg.width}
-    height={svg.height}
+    width={props.width}
+    height={props.height}
     viewBox="0 0 120 30"
     xmlns="http://www.w3.org/2000/svg"
-    fill={svg.color}
-    aria-label={svg.label}
+    fill={props.color}
+    aria-label={props.label}
   >
     <circle cx="15" cy="15" r="15">
       <animate
@@ -78,3 +78,17 @@ export const ThreeDots = svg => (
     </circle>
   </svg>
 );
+
+ThreeDots.propTypes = {
+  height: PropTypes.number,
+  width: PropTypes.number,
+  color: PropTypes.string,
+  label: PropTypes.string
+};
+
+ThreeDots.defaultProps = {
+  height: 80,
+  width: 80,
+  color: "green",
+  label: "audio-loading"
+};

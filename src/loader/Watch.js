@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const Watch = svg => (
+export const Watch = props => (
   <svg
-    width={svg.width}
-    height={svg.height}
+    width={props.width}
+    height={props.height}
     version="1.1"
     id="L2"
     xmlns="http://www.w3.org/2000/svg"
@@ -13,11 +13,11 @@ export const Watch = svg => (
     viewBox="0 0 100 100"
     enableBackground="new 0 0 100 100"
     xmlSpace="preserve"
-    aria-label={svg.label}
+    aria-label={props.label}
   >
     <circle
       fill="none"
-      stroke={svg.color}
+      stroke={props.color}
       strokeWidth="4"
       strokeMiterlimit="10"
       cx="50"
@@ -47,7 +47,7 @@ export const Watch = svg => (
     <line
       fill="none"
       strokeLinecap="round"
-      stroke={svg.color}
+      stroke={props.color}
       strokeWidth="4"
       strokeMiterlimit="10"
       x1="50"
@@ -66,3 +66,17 @@ export const Watch = svg => (
     </line>
   </svg>
 );
+
+Watch.propTypes = {
+  height: PropTypes.number,
+  width: PropTypes.number,
+  color: PropTypes.string,
+  label: PropTypes.string
+};
+
+Watch.defaultProps = {
+  height: 80,
+  width: 80,
+  color: "green",
+  label: "audio-loading"
+};

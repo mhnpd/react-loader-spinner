@@ -44,11 +44,7 @@ Loader.propTypes = {
 };
 
 Loader.defaultProps = {
-  // color: "#71238",
   type: "Audio",
   style: {},
   className: ""
-  // height: 80,
-  // width: 80,
-  // label: "Loading content, please wait."
 };
