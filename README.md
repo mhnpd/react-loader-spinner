@@ -71,7 +71,7 @@ react-loader-spinner component has following types of spinner.
 |TailSpin|```<Loader type="TailSpin" color="#somecolor" height={80} width={80} />```|
 |ThreeDots|```<Loader type="ThreeDots" color="#somecolor" height={80} width={80} />```|
 
-~ There are more. View [storybook] to see all list.
+>>> There are more. View [storybook] to see all list.
 
 ### PropTypes Available
 react-loader-spinner component accept following props. Instructions on how to use them are below.
