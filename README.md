@@ -48,9 +48,10 @@ $ yarn add ract-loader-spinner
  }
 ```
 
-### IF Webpack throw issue with css
+### If webpack throw issue with css. (For older version of this package)
 Change webpack config as:
 ```  test: /\.scss$/ to test: /\.s?css$/ ```
+<small>Newer version just import css file from node modules to app.js<small>
 
 ### Types of Spinner
 react-loader-spinner component has following types of spinner.
