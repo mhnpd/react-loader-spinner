@@ -77,7 +77,7 @@ react-loader-spinner component has following types of spinner.
 react-loader-spinner component accept following props. Instructions on how to use them are below.
 
 
-| PropType |Props Types | default | Detail |
+| name | types | default | Detail |
 | ------ | ------ |-----|------|------|
 | type | String  | "Audio" | Type of spinner you want to display. View the type in Types of Spinner section. |
 | height | Number  | 80 |  Height props define the height of the svg spinner. Default height is 80px.|
