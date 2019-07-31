@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { visible } from "ansi-colors";
 import { Spinner } from "./loader";
 
 const componentNames = [
@@ -40,11 +41,13 @@ export default function Loader(props) {
 Loader.propTypes = {
   type: PropTypes.oneOf([...componentNames]),
   style: PropTypes.objectOf(PropTypes.string),
-  className: PropTypes.string
+  className: PropTypes.string,
+  visible: PropTypes.bool
 };
 
 Loader.defaultProps = {
   type: "Audio",
   style: {},
-  className: ""
+  className: "",
+  visible: true
 };

@@ -1,16 +1,16 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["exports", "react", "prop-types", "./loader"], factory);
+    define(["exports", "react", "prop-types", "ansi-colors", "./loader"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require("react"), require("prop-types"), require("./loader"));
+    factory(exports, require("react"), require("prop-types"), require("ansi-colors"), require("./loader"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.react, global.propTypes, global.loader);
+    factory(mod.exports, global.react, global.propTypes, global.ansiColors, global.loader);
     global.index = mod.exports;
   }
-})(this, function (exports, _react, _propTypes, _loader) {
+})(this, function (exports, _react, _propTypes, _ansiColors, _loader) {
   "use strict";
 
   Object.defineProperty(exports, "__esModule", {
@@ -62,12 +62,14 @@
   Loader.propTypes = {
     type: _propTypes2.default.oneOf([].concat(componentNames)),
     style: _propTypes2.default.objectOf(_propTypes2.default.string),
-    className: _propTypes2.default.string
+    className: _propTypes2.default.string,
+    visible: _propTypes2.default.bool
   };
 
   Loader.defaultProps = {
     type: "Audio",
     style: {},
-    className: ""
+    className: "",
+    visible: true
   };
 });
