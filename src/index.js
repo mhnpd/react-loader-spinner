@@ -31,6 +31,9 @@ function componentName(type) {
 }
 
 export default function Loader(props) {
+  if (!props.visible || props.visible === "false") {
+    return null;
+  }
   return (
     <div aria-busy="true" className={props.className} style={props.style}>
       {React.createElement(componentName(props.type), { ...props })}
@@ -42,7 +45,7 @@ Loader.propTypes = {
   type: PropTypes.oneOf([...componentNames]),
   style: PropTypes.objectOf(PropTypes.string),
   className: PropTypes.string,
-  visible: PropTypes.bool
+  visible: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
 };
 
 Loader.defaultProps = {
