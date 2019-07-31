@@ -1,7 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export const Grid = svg => (
-  <svg width={svg.width} height={svg.height} viewBox="0 0 105 105" fill={svg.color} aria-label={svg.label}>
+export const Grid = props => (
+  <svg
+    width={props.width}
+    height={props.height}
+    viewBox="0 0 105 105"
+    fill={props.color}
+    aria-label={props.label}
+  >
     <circle cx="12.5" cy="12.5" r="12.5">
       <animate
         attributeName="fill-opacity"
@@ -94,3 +101,17 @@ export const Grid = svg => (
     </circle>
   </svg>
 );
+
+Grid.propTypes = {
+  height: PropTypes.number,
+  width: PropTypes.number,
+  color: PropTypes.string,
+  label: PropTypes.string
+};
+
+Grid.defaultProps = {
+  height: 80,
+  width: 80,
+  color: "green",
+  label: "audio-loading"
+};

@@ -8,7 +8,7 @@
       exports: {}
     };
     factory(mod.exports, global.react, global.propTypes);
-    global.MutatingDot = mod.exports;
+    global.MutatingDots = mod.exports;
   }
 })(this, function (exports, _react, _propTypes) {
   "use strict";
@@ -16,7 +16,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.MutatingDot = undefined;
+  exports.MutatingDots = undefined;
 
   var _react2 = _interopRequireDefault(_react);
 
@@ -28,10 +28,10 @@
     };
   }
 
-  var MutatingDot = exports.MutatingDot = function MutatingDot(svg) {
+  var MutatingDots = exports.MutatingDots = function MutatingDots(props) {
     return _react2.default.createElement(
       "svg",
-      { id: "goo-loader", width: svg.width, height: 90, fill: svg.color, "aria-label": svg.label },
+      { id: "goo-loader", width: props.width, height: 90, fill: props.color, "aria-label": props.label },
       _react2.default.createElement(
         "filter",
         { id: "fancy-goo" },
@@ -89,5 +89,17 @@
         )
       )
     );
+  };
+
+  MutatingDots.propTypes = {
+    width: _propTypes2.default.number,
+    color: _propTypes2.default.string,
+    label: _propTypes2.default.string
+  };
+
+  MutatingDots.defaultProps = {
+    width: 80,
+    color: "green",
+    label: "audio-loading"
   };
 });

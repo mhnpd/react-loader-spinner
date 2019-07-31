@@ -1,29 +1,26 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export const RevolvingDot = svg => (
+export const RevolvingDot = props => (
   <svg
     version="1.1"
-    width={svg.width}
-    height={svg.height}
-    id="L3"
+    width={props.width}
+    height={props.height}
     xmlns="http://www.w3.org/2000/svg"
     x="0px"
     y="0px"
-    viewBox="0 0 100 100"
-    enableBackground="new 0 0 0 0"
-    xmlSpace="preserve"
-    aria-label={svg.label}
+    aria-label={props.label}
   >
     <circle
       fill="none"
-      stroke={svg.color}
+      stroke={props.color}
       strokeWidth="4"
       cx="50"
       cy="50"
       r="44"
       style={{ opacity: 0.5 }}
     />
-    <circle fill={svg.color} stroke={svg.color} strokeWidth="3" cx="8" cy="54" r="6">
+    <circle fill={props.color} stroke={props.color} strokeWidth="3" cx="8" cy="54" r="6">
       <animateTransform
         attributeName="transform"
         dur="2s"
@@ -35,3 +32,17 @@ export const RevolvingDot = svg => (
     </circle>
   </svg>
 );
+
+RevolvingDot.propTypes = {
+  height: PropTypes.number,
+  width: PropTypes.number,
+  color: PropTypes.string,
+  label: PropTypes.string
+};
+
+RevolvingDot.defaultProps = {
+  height: 80,
+  width: 80,
+  color: "green",
+  label: "audio-loading"
+};

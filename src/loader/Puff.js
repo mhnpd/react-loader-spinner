@@ -1,13 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export const Puff = svg => (
+export const Puff = props => (
   <svg
-    width={svg.width}
-    height={svg.height}
+    width={props.width}
+    height={props.height}
     viewBox="0 0 44 44"
     xmlns="http://www.w3.org/2000/svg"
-    stroke={svg.color}
-    aria-label={svg.label}
+    stroke={props.color}
+    aria-label={props.label}
   >
     <g fill="none" fillRule="evenodd" strokeWidth="2">
       <circle cx="22" cy="22" r="1">
@@ -57,3 +58,18 @@ export const Puff = svg => (
     </g>
   </svg>
 );
+
+
+Puff.propTypes = {
+  height: PropTypes.number,
+  width: PropTypes.number,
+  color: PropTypes.string,
+  label: PropTypes.string
+};
+
+Puff.defaultProps = {
+  height: 80,
+  width: 80,
+  color: "green",
+  label: "audio-loading"
+};

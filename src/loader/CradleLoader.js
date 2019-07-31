@@ -1,8 +1,8 @@
 import React from "react";
-import "./css/CradleLoader.css";
+import PropTypes from "prop-types";
 
-export const CradleLoader = (prop) => (
-  <div aria-label={prop.label} role="progressbar" className="container">
+export const CradleLoader = props => (
+  <div aria-label={props.label} role="presentation" className="container">
     <div className="react-spinner-loader-swing">
       <div className="react-spinner-loader-swing-l" />
       <div />
@@ -23,3 +23,11 @@ export const CradleLoader = (prop) => (
     </div>
   </div>
 );
+
+CradleLoader.propTypes = {
+  label: PropTypes.string
+};
+
+CradleLoader.defaultProps = {
+  label: "audio-loading"
+};

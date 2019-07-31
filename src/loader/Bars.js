@@ -1,13 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export const Bars = svg => (
+export const Bars = props => (
   <svg
-    width={svg.width}
-    height={svg.height}
-    fill={svg.color}
+    width={props.width}
+    height={props.height}
+    fill={props.color}
     viewBox="0 0 135 140"
     xmlns="http://www.w3.org/2000/svg"
-    aria-label={svg.label}
+    aria-label={props.label}
   >
     <rect y="10" width="15" height="120" rx="6">
       <animate
@@ -101,3 +102,17 @@ export const Bars = svg => (
     </rect>
   </svg>
 );
+
+Bars.propTypes = {
+  height: PropTypes.number,
+  width: PropTypes.number,
+  color: PropTypes.string,
+  label: PropTypes.string
+};
+
+Bars.defaultProps = {
+  height: 80,
+  width: 80,
+  color: "green",
+  label: "audio-loading"
+};
