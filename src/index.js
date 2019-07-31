@@ -23,7 +23,7 @@ const componentNames = [
 ];
 
 function componentName(type) {
-  if (componentNames.includes[type]) {
+  if (componentNames.includes(type)) {
     return Spinner[type];
   }
   return Spinner.Audio;
