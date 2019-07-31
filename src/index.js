@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { visible } from "ansi-colors";
 import { Spinner } from "./loader";
 
 const componentNames = [
@@ -30,6 +31,9 @@ function componentName(type) {
 }
 
 export default function Loader(props) {
+  if (!props.visible || props.visible === "false") {
+    return null;
+  }
   return (
     <div aria-busy="true" className={props.className} style={props.style}>
       {React.createElement(componentName(props.type), { ...props })}
@@ -40,11 +44,13 @@ export default function Loader(props) {
 Loader.propTypes = {
   type: PropTypes.oneOf([...componentNames]),
   style: PropTypes.objectOf(PropTypes.string),
-  className: PropTypes.string
+  className: PropTypes.string,
+  visible: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
 };
 
 Loader.defaultProps = {
   type: "Audio",
   style: {},
-  className: ""
+  className: "",
+  visible: true
 };
