@@ -28,16 +28,16 @@
     };
   }
 
-  var Oval = exports.Oval = function Oval(svg) {
+  var Oval = exports.Oval = function Oval(props) {
     return _react2.default.createElement(
       "svg",
       {
-        width: svg.width,
-        height: svg.height,
+        width: props.width,
+        height: props.height,
         viewBox: "0 0 38 38",
         xmlns: "http://www.w3.org/2000/svg",
-        stroke: svg.color,
-        "aria-label": svg.label
+        stroke: props.color,
+        "aria-label": props.label
       },
       _react2.default.createElement(
         "g",
@@ -61,5 +61,19 @@
         )
       )
     );
+  };
+
+  Oval.propTypes = {
+    height: _propTypes2.default.number,
+    width: _propTypes2.default.number,
+    color: _propTypes2.default.string,
+    label: _propTypes2.default.string
+  };
+
+  Oval.defaultProps = {
+    height: 80,
+    width: 80,
+    color: "green",
+    label: "audio-loading"
   };
 });

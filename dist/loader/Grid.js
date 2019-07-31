@@ -28,15 +28,15 @@
     };
   }
 
-  var Grid = exports.Grid = function Grid(svg) {
+  var Grid = exports.Grid = function Grid(props) {
     return _react2.default.createElement(
       "svg",
       {
-        width: svg.width,
-        height: svg.height,
+        width: props.width,
+        height: props.height,
         viewBox: "0 0 105 105",
-        fill: svg.color,
-        "aria-label": svg.label
+        fill: props.color,
+        "aria-label": props.label
       },
       _react2.default.createElement(
         "circle",
@@ -147,5 +147,19 @@
         })
       )
     );
+  };
+
+  Grid.propTypes = {
+    height: _propTypes2.default.number,
+    width: _propTypes2.default.number,
+    color: _propTypes2.default.string,
+    label: _propTypes2.default.string
+  };
+
+  Grid.defaultProps = {
+    height: 80,
+    width: 80,
+    color: "green",
+    label: "audio-loading"
   };
 });

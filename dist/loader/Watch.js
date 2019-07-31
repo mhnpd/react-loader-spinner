@@ -28,12 +28,12 @@
     };
   }
 
-  var Watch = exports.Watch = function Watch(svg) {
+  var Watch = exports.Watch = function Watch(props) {
     return _react2.default.createElement(
       "svg",
       {
-        width: svg.width,
-        height: svg.height,
+        width: props.width,
+        height: props.height,
         version: "1.1",
         id: "L2",
         xmlns: "http://www.w3.org/2000/svg",
@@ -42,11 +42,11 @@
         viewBox: "0 0 100 100",
         enableBackground: "new 0 0 100 100",
         xmlSpace: "preserve",
-        "aria-label": svg.label
+        "aria-label": props.label
       },
       _react2.default.createElement("circle", {
         fill: "none",
-        stroke: svg.color,
+        stroke: props.color,
         strokeWidth: "4",
         strokeMiterlimit: "10",
         cx: "50",
@@ -80,7 +80,7 @@
         {
           fill: "none",
           strokeLinecap: "round",
-          stroke: svg.color,
+          stroke: props.color,
           strokeWidth: "4",
           strokeMiterlimit: "10",
           x1: "50",
@@ -98,5 +98,19 @@
         })
       )
     );
+  };
+
+  Watch.propTypes = {
+    height: _propTypes2.default.number,
+    width: _propTypes2.default.number,
+    color: _propTypes2.default.string,
+    label: _propTypes2.default.string
+  };
+
+  Watch.defaultProps = {
+    height: 80,
+    width: 80,
+    color: "green",
+    label: "audio-loading"
   };
 });

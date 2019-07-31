@@ -42,31 +42,32 @@
     return target;
   };
 
+  var componentNames = ["Audio", "BallTriangle", "Bars", "Circles", "Grid", "Hearts", "Oval", "Puff", "Rings", "TailSpin", "ThreeDots", "Watch", "RevolvingDot", "Triangle", "Plane", "MutatingDots", "CradleLoader"];
+
+  function componentName(type) {
+    if (componentNames.includes[type]) {
+      return _loader.Spinner[type];
+    }
+    return _loader.Spinner.Audio;
+  }
+
   function Loader(props) {
     return _react2.default.createElement(
       "div",
-      null,
-      _react2.default.createElement(
-        "div",
-        { "aria-busy": "true", className: props.className, style: props.style },
-        _react2.default.createElement(_loader.Spinner[props.type], _extends({}, props))
-      )
+      { "aria-busy": "true", className: props.className, style: props.style },
+      _react2.default.createElement(componentName(props.type), _extends({}, props))
     );
   }
 
   Loader.propTypes = {
-    type: _propTypes2.default.string,
+    type: _propTypes2.default.oneOf([].concat(componentNames)),
     style: _propTypes2.default.objectOf(_propTypes2.default.string),
     className: _propTypes2.default.string
   };
 
   Loader.defaultProps = {
-    // color: "#71238",
     type: "Audio",
     style: {},
     className: ""
-    // height: 80,
-    // width: 80,
-    // label: "Loading content, please wait."
   };
 });

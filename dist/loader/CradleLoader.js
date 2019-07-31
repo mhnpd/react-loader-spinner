@@ -28,10 +28,10 @@
     };
   }
 
-  var CradleLoader = exports.CradleLoader = function CradleLoader(prop) {
+  var CradleLoader = exports.CradleLoader = function CradleLoader(props) {
     return _react2.default.createElement(
       "div",
-      { "aria-label": prop.label, role: "progressbar", className: "container" },
+      { "aria-label": props.label, role: "presentation", className: "container" },
       _react2.default.createElement(
         "div",
         { className: "react-spinner-loader-swing" },
@@ -55,5 +55,13 @@
         _react2.default.createElement("div", { className: "react-spinner-loader-shadow-r" })
       )
     );
+  };
+
+  CradleLoader.propTypes = {
+    label: _propTypes2.default.string
+  };
+
+  CradleLoader.defaultProps = {
+    label: "audio-loading"
   };
 });

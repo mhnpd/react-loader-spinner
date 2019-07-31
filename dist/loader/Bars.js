@@ -28,16 +28,16 @@
     };
   }
 
-  var Bars = exports.Bars = function Bars(svg) {
+  var Bars = exports.Bars = function Bars(props) {
     return _react2.default.createElement(
       "svg",
       {
-        width: svg.width,
-        height: svg.height,
-        fill: svg.color,
+        width: props.width,
+        height: props.height,
+        fill: props.color,
         viewBox: "0 0 135 140",
         xmlns: "http://www.w3.org/2000/svg",
-        "aria-label": svg.label
+        "aria-label": props.label
       },
       _react2.default.createElement(
         "rect",
@@ -140,5 +140,19 @@
         })
       )
     );
+  };
+
+  Bars.propTypes = {
+    height: _propTypes2.default.number,
+    width: _propTypes2.default.number,
+    color: _propTypes2.default.string,
+    label: _propTypes2.default.string
+  };
+
+  Bars.defaultProps = {
+    height: 80,
+    width: 80,
+    color: "green",
+    label: "audio-loading"
   };
 });

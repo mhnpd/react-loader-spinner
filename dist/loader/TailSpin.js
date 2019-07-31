@@ -28,15 +28,15 @@
     };
   }
 
-  var TailSpin = exports.TailSpin = function TailSpin(svg) {
+  var TailSpin = exports.TailSpin = function TailSpin(props) {
     return _react2.default.createElement(
       "svg",
       {
-        width: svg.width,
-        height: svg.height,
+        width: props.width,
+        height: props.height,
         viewBox: "0 0 38 38",
         xmlns: "http://www.w3.org/2000/svg",
-        "aria-label": svg.label
+        "aria-label": props.label
       },
       _react2.default.createElement(
         "defs",
@@ -44,9 +44,9 @@
         _react2.default.createElement(
           "linearGradient",
           { x1: "8.042%", y1: "0%", x2: "65.682%", y2: "23.865%", id: "a" },
-          _react2.default.createElement("stop", { stopColor: svg.color, stopOpacity: "0", offset: "0%" }),
-          _react2.default.createElement("stop", { stopColor: svg.color, stopOpacity: ".631", offset: "63.146%" }),
-          _react2.default.createElement("stop", { stopColor: svg.color, offset: "100%" })
+          _react2.default.createElement("stop", { stopColor: props.color, stopOpacity: "0", offset: "0%" }),
+          _react2.default.createElement("stop", { stopColor: props.color, stopOpacity: ".631", offset: "63.146%" }),
+          _react2.default.createElement("stop", { stopColor: props.color, offset: "100%" })
         )
       ),
       _react2.default.createElement(
@@ -57,7 +57,7 @@
           { transform: "translate(1 1)" },
           _react2.default.createElement(
             "path",
-            { d: "M36 18c0-9.94-8.06-18-18-18", id: "Oval-2", stroke: svg.color, strokeWidth: "2" },
+            { d: "M36 18c0-9.94-8.06-18-18-18", id: "Oval-2", stroke: props.color, strokeWidth: "2" },
             _react2.default.createElement("animateTransform", {
               attributeName: "transform",
               type: "rotate",
@@ -82,5 +82,19 @@
         )
       )
     );
+  };
+
+  TailSpin.propTypes = {
+    height: _propTypes2.default.number,
+    width: _propTypes2.default.number,
+    color: _propTypes2.default.string,
+    label: _propTypes2.default.string
+  };
+
+  TailSpin.defaultProps = {
+    height: 80,
+    width: 80,
+    color: "green",
+    label: "audio-loading"
   };
 });

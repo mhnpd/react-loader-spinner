@@ -28,21 +28,21 @@
     };
   }
 
-  var RevolvingDot = exports.RevolvingDot = function RevolvingDot(svg) {
+  var RevolvingDot = exports.RevolvingDot = function RevolvingDot(props) {
     return _react2.default.createElement(
       "svg",
       {
         version: "1.1",
-        width: svg.width,
-        height: svg.height,
+        width: props.width,
+        height: props.height,
         xmlns: "http://www.w3.org/2000/svg",
         x: "0px",
         y: "0px",
-        "aria-label": svg.label
+        "aria-label": props.label
       },
       _react2.default.createElement("circle", {
         fill: "none",
-        stroke: svg.color,
+        stroke: props.color,
         strokeWidth: "4",
         cx: "50",
         cy: "50",
@@ -51,7 +51,7 @@
       }),
       _react2.default.createElement(
         "circle",
-        { fill: svg.color, stroke: svg.color, strokeWidth: "3", cx: "8", cy: "54", r: "6" },
+        { fill: props.color, stroke: props.color, strokeWidth: "3", cx: "8", cy: "54", r: "6" },
         _react2.default.createElement("animateTransform", {
           attributeName: "transform",
           dur: "2s",
@@ -62,5 +62,19 @@
         })
       )
     );
+  };
+
+  RevolvingDot.propTypes = {
+    height: _propTypes2.default.number,
+    width: _propTypes2.default.number,
+    color: _propTypes2.default.string,
+    label: _propTypes2.default.string
+  };
+
+  RevolvingDot.defaultProps = {
+    height: 80,
+    width: 80,
+    color: "green",
+    label: "audio-loading"
   };
 });

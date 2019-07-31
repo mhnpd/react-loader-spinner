@@ -28,7 +28,7 @@
     };
   }
 
-  var Triangle = exports.Triangle = function Triangle(svg) {
+  var Triangle = exports.Triangle = function Triangle(props) {
     return _react2.default.createElement(
       "div",
       { className: "react-spinner-loader-svg" },
@@ -36,13 +36,27 @@
         "svg",
         {
           id: "triangle",
-          width: svg.height,
-          height: svg.height,
+          width: props.width,
+          height: props.height,
           viewBox: "-3 -4 39 39",
-          "aria-label": svg.label
+          "aria-label": props.label
         },
-        _react2.default.createElement("polygon", { fill: "transparent", stroke: svg.color, strokeWidth: "1", points: "16,0 32,32 0,32" })
+        _react2.default.createElement("polygon", { fill: "transparent", stroke: props.color, strokeWidth: "1", points: "16,0 32,32 0,32" })
       )
     );
+  };
+
+  Triangle.propTypes = {
+    height: _propTypes2.default.number,
+    width: _propTypes2.default.number,
+    color: _propTypes2.default.string,
+    label: _propTypes2.default.string
+  };
+
+  Triangle.defaultProps = {
+    height: 80,
+    width: 80,
+    color: "green",
+    label: "audio-loading"
   };
 });
