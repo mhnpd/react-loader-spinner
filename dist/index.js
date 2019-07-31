@@ -52,6 +52,9 @@
   }
 
   function Loader(props) {
+    if (!props.visible || props.visible === "false") {
+      return null;
+    }
     return _react2.default.createElement(
       "div",
       { "aria-busy": "true", className: props.className, style: props.style },
@@ -63,7 +66,7 @@
     type: _propTypes2.default.oneOf([].concat(componentNames)),
     style: _propTypes2.default.objectOf(_propTypes2.default.string),
     className: _propTypes2.default.string,
-    visible: _propTypes2.default.bool
+    visible: _propTypes2.default.oneOfType([_propTypes2.default.bool, _propTypes2.default.string])
   };
 
   Loader.defaultProps = {
