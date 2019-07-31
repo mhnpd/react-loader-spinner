@@ -1,13 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export const Audio = svg => (
+export const Audio = props => (
   <svg
-    height={svg.height}
-    width={svg.width}
-    fill={svg.color}
+    height={props.height}
+    width={props.width}
+    fill={props.color}
     viewBox="0 0 55 80"
     xmlns="http://www.w3.org/2000/svg"
-    aria-label={svg.label}
+    aria-label={props.label}
   >
     <g transform="matrix(1 0 0 -1 0 80)">
       <rect width="10" height="20" rx="3">
@@ -53,3 +54,17 @@ export const Audio = svg => (
     </g>
   </svg>
 );
+
+Audio.propTypes = {
+  height: PropTypes.number,
+  width: PropTypes.number,
+  color: PropTypes.string,
+  label: PropTypes.string
+};
+
+Audio.defaultProps = {
+  height: 80,
+  width: 80,
+  color: "green",
+  label: "audio-loading"
+};

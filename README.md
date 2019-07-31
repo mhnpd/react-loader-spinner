@@ -3,13 +3,27 @@
 </p>
 
 
- react-spinner-loader provides simple React.js spinner component which can be implemented for async wait operation before data load to the view. 
+ react-spinner-loader provides simple React.js spinner component which can be implemented for async wait operation before data load to the view.
 
 ### Installation
 
+##### Using NPM:
+#
 ```sh
 $ npm install react-loader-spinner --save
 ```
+##### Using yarn
+#
+```sh
+$ yarn add ract-loader-spinner
+```
+
+##### Import required css
+#
+```sh
+ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+```
+
 #  Demo
 [View in page]
 
@@ -23,20 +37,22 @@ $ npm install react-loader-spinner --save
   //other logic
     render() {
 	 return(
-	  <Loader 
+	  <Loader
 	     type="Puff"
 	     color="#00BFFF"
-	     height="100"	
+	     height="100"
 	     width="100"
-	  />   
+	  />
 	 );
     }
  }
 ```
 
-### IF Webpack throw issue with css 
+### If webpack throw issue with css. (For older version of this package)
 Change webpack config as:
 ```  test: /\.scss$/ to test: /\.s?css$/ ```
+<br/><br/>
+<small>Newer version just import css file from node modules to app.js<small>
 
 ### Types of Spinner
 react-loader-spinner component has following types of spinner.
@@ -55,20 +71,22 @@ react-loader-spinner component has following types of spinner.
 |TailSpin|```<Loader type="TailSpin" color="#somecolor" height={80} width={80} />```|
 |ThreeDots|```<Loader type="ThreeDots" color="#somecolor" height={80} width={80} />```|
 
+> There are more. View [storybook] to see all list.
+
 ### PropTypes Available
 react-loader-spinner component accept following props. Instructions on how to use them are below.
 
 
-| PropType | Detail |
-| ------ | ------ |
-| type | Type of spinner you want to display. View the type in Types of Spinner section. |
-| height | Height props define the height of the svg spinner. Default height is 80px.|
-| width | Width props define the width of the spinner. Default Width is 80px. |
-| color | [Color Props is provide color to the spinner. Default color is light blue. |
+| name | types | default | Detail |
+| ------ | ------ |------|------|
+| type | String  | "Audio" | Type of spinner you want to display. View the type in Types of Spinner section. |
+| height | Number  | 80 |  Height props define the height of the svg spinner. Default height is 80px.|
+| width | Number  | 80 |  Width props define the width of the spinner.  |
+| color | String  | Blue" |  [Color Props is provide color to the spinner |
 
 ### TODO LIST
-* Update Readme Table With New Component
 * Change Docs on Storybooks
+* Optimize css implementation
 
 
 License
@@ -81,4 +99,5 @@ MIT
    [svg-loader]: <https://github.com/SamHerbert/SVG-Loaders>
    [here]: <http://samherbert.net/svg-loaders>
    [View in page]: https://mhnpd.github.io/react-loader-spinner/
-   
+   [storybook]: https://mhnpd.github.io/react-loader-spinner/
+

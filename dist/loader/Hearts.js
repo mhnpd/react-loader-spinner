@@ -1,16 +1,16 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["exports", "react"], factory);
+    define(["exports", "react", "prop-types"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require("react"));
+    factory(exports, require("react"), require("prop-types"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.react);
+    factory(mod.exports, global.react, global.propTypes);
     global.Hearts = mod.exports;
   }
-})(this, function (exports, _react) {
+})(this, function (exports, _react, _propTypes) {
   "use strict";
 
   Object.defineProperty(exports, "__esModule", {
@@ -20,22 +20,24 @@
 
   var _react2 = _interopRequireDefault(_react);
 
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
       default: obj
     };
   }
 
-  var Hearts = exports.Hearts = function Hearts(svg) {
+  var Hearts = exports.Hearts = function Hearts(props) {
     return _react2.default.createElement(
       "svg",
       {
-        width: svg.width,
-        height: svg.height,
+        width: props.width,
+        height: props.height,
         viewBox: "0 0 140 64",
         xmlns: "http://www.w3.org/2000/svg",
-        fill: svg.color,
-        "aria-label": svg.label
+        fill: props.color,
+        "aria-label": props.label
       },
       _react2.default.createElement(
         "path",
@@ -73,5 +75,19 @@
       ),
       _react2.default.createElement("path", { d: "M67.408 57.834l-23.01-24.98c-5.864-6.15-5.864-16.108 0-22.248 5.86-6.14 15.37-6.14 21.234 0L70 16.168l4.368-5.562c5.863-6.14 15.375-6.14 21.235 0 5.863 6.14 5.863 16.098 0 22.247l-23.007 24.98c-1.43 1.556-3.757 1.556-5.188 0z" })
     );
+  };
+
+  Hearts.propTypes = {
+    height: _propTypes2.default.number,
+    width: _propTypes2.default.number,
+    color: _propTypes2.default.string,
+    label: _propTypes2.default.string
+  };
+
+  Hearts.defaultProps = {
+    height: 80,
+    width: 80,
+    color: "green",
+    label: "audio-loading"
   };
 });

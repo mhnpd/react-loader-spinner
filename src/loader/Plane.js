@@ -1,9 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./css/Plane.css";
 
 export const Plane = props => (
-  <svg className="react-spinner-loader-svg-calLoader" xmlns="http://www.w3.org/2000/svg" width="230" height="230" aria-label={props.label}>
+  <svg
+    className="react-spinner-loader-svg-calLoader"
+    xmlns="http://www.w3.org/2000/svg"
+    width="230"
+    height="230"
+    aria-label={props.label}
+  >
+    <desc>Plane animation. Loading </desc>
     <path
       className="react-spinner-loader-cal-loader__path"
       style={{ stroke: props.secondaryColor }}
@@ -27,10 +33,12 @@ export const Plane = props => (
 
 Plane.propTypes = {
   secondaryColor: PropTypes.string,
-  color: PropTypes.string
+  color: PropTypes.string,
+  label: PropTypes
 };
 
 Plane.defaultProps = {
   secondaryColor: "grey",
-  color: "#FFA500"
+  color: "#FFA500",
+  label: "async-loading"
 };

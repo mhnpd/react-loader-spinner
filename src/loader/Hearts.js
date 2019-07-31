@@ -1,13 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export const Hearts = svg => (
+export const Hearts = props => (
   <svg
-    width={svg.width}
-    height={svg.height}
+    width={props.width}
+    height={props.height}
     viewBox="0 0 140 64"
     xmlns="http://www.w3.org/2000/svg"
-    fill={svg.color}
-    aria-label={svg.label}
+    fill={props.color}
+    aria-label={props.label}
   >
     <path
       d="M30.262 57.02L7.195 40.723c-5.84-3.976-7.56-12.06-3.842-18.063 3.715-6 11.467-7.65 17.306-3.68l4.52 3.76 2.6-5.274c3.717-6.002 11.47-7.65 17.305-3.68 5.84 3.97 7.56 12.054 3.842 18.062L34.49 56.118c-.897 1.512-2.793 1.915-4.228.9z"
@@ -42,3 +43,17 @@ export const Hearts = svg => (
     <path d="M67.408 57.834l-23.01-24.98c-5.864-6.15-5.864-16.108 0-22.248 5.86-6.14 15.37-6.14 21.234 0L70 16.168l4.368-5.562c5.863-6.14 15.375-6.14 21.235 0 5.863 6.14 5.863 16.098 0 22.247l-23.007 24.98c-1.43 1.556-3.757 1.556-5.188 0z" />
   </svg>
 );
+
+Hearts.propTypes = {
+  height: PropTypes.number,
+  width: PropTypes.number,
+  color: PropTypes.string,
+  label: PropTypes.string
+};
+
+Hearts.defaultProps = {
+  height: 80,
+  width: 80,
+  color: "green",
+  label: "audio-loading"
+};
