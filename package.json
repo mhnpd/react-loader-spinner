@@ -35,15 +35,15 @@
     "storybook-build": "build-storybook -c .storybook -o ./docs"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.3.15",
-    "@storybook/addon-centered": "^3.4.10",
-    "@storybook/addon-links": "^3.3.15",
-    "@storybook/addon-options": "^3.4.10",
-    "@storybook/react": "^3.3.15",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-centered": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addon-options": "^5.1.9",
+    "@storybook/react": "^5.1.9",
     "@storybook/storybook-deployer": "^2.3.0",
     "babel-cli": "^6.6.4",
     "babel-core": "^6.7.4",
-    "babel-eslint": "^8.2.2",
+    "babel-eslint": "^10.0.2",
     "babel-plugin-transform-es2015-modules-umd": "^6.6.5",
     "babel-polyfill": "^6.7.4",
     "babel-preset-env": "^1.7.0",
@@ -55,25 +55,21 @@
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-equimper": "*",
     "eslint-config-prettier": "*",
-    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "*",
     "eslint-plugin-react": "^7.10.0",
-    "jsdom": "^11.6.2",
-    "mocha": "^5.0.5",
+    "mocha": "^6.2.0",
     "nodemon": "^1.17.2",
     "prettier": "*",
-    "react": "^16.2.0",
-    "react-addons-test-utils": "^15.0.0",
-    "react-dom": "^16.2.0",
     "redux-logger": "*",
-    "sinon": "^4.4.8"
+    "sinon": "^7.3.2"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "prop-types": "^15.6.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",

@@ -45,7 +45,7 @@
   var componentNames = ["Audio", "BallTriangle", "Bars", "Circles", "Grid", "Hearts", "Oval", "Puff", "Rings", "TailSpin", "ThreeDots", "Watch", "RevolvingDot", "Triangle", "Plane", "MutatingDots", "CradleLoader"];
 
   function componentName(type) {
-    if (componentNames.includes[type]) {
+    if (componentNames.includes(type)) {
       return _loader.Spinner[type];
     }
     return _loader.Spinner.Audio;
