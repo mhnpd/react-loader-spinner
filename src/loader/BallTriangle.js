@@ -1,13 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export const BallTriangle = svg => (
+export const BallTriangle = props => (
   <svg
-    height={svg.height}
-    width={svg.width}
-    stroke={svg.color}
+    height={props.height}
+    width={props.width}
+    stroke={props.color}
     viewBox="0 0 57 57"
     xmlns="http://www.w3.org/2000/svg"
-    aria-label={svg.label}
+    aria-label={props.label}
   >
     <g fill="none" fillRule="evenodd">
       <g transform="translate(1 1)" strokeWidth="2">
@@ -75,3 +76,17 @@ export const BallTriangle = svg => (
     </g>
   </svg>
 );
+
+BallTriangle.propTypes = {
+  height: PropTypes.number,
+  width: PropTypes.number,
+  color: PropTypes.string,
+  label: PropTypes.string
+};
+
+BallTriangle.defaultProps = {
+  height: 80,
+  width: 80,
+  color: "green",
+  label: "audio-loading"
+};

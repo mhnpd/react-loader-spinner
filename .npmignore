@@ -12,4 +12,10 @@ lib
 stories
 .gitignore
 docs
+src
+scripts
+.vscode
+_config.yml
+.editorconfig
+
 
