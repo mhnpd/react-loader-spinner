@@ -58,7 +58,7 @@
         {
           fill: "none",
           strokeLinecap: "round",
-          stroke: svg.color,
+          stroke: props.color,
           strokeWidth: "4",
           strokeMiterlimit: "10",
           x1: "50",
