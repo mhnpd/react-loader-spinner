@@ -15,7 +15,7 @@ $ npm install react-loader-spinner --save
 ##### Using yarn
 #
 ```sh
-$ yarn add ract-loader-spinner
+$ yarn add react-loader-spinner
 ```
 
 ##### Import required css
