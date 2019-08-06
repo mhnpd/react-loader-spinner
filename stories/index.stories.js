@@ -29,4 +29,4 @@ storiesOf("Loader", module)
 
   .add("CradleLoader", () => <Loader color="green" width={200} height={200} type="CradleLoader" />)
   .add("None", () => <Loader color="green" width={200} height={200} type="  " />)
-  .add("NotSpecified", () => <Loader color="green" width={200} height={200} />);
+  .add("NotSpecified", () => <Loader color="green" width={200} height={200} delay={2000}/>);
