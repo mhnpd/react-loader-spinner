@@ -15,7 +15,7 @@ $ npm install react-loader-spinner --save
 ##### Using yarn
 #
 ```sh
-$ yarn add ract-loader-spinner
+$ yarn add react-loader-spinner
 ```
 
 ##### Import required css
@@ -88,6 +88,8 @@ react-loader-spinner component accept following props. Instructions on how to us
 ### TODO LIST
 * Change Docs on Storybooks
 * Optimize css implementation
+* Add support for Typescript.
+* Optimization for multiple color support.
 
 
 License
