@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import PropTypes from "prop-types";
 import { visible } from "ansi-colors";
 import { Spinner } from "./loader";
@@ -30,62 +30,36 @@ function componentName(type) {
   return Spinner.Audio;
 }
 
-export default class Loader extends React.Component {
-  state = {
-    display: (!this.props.delay || this.props.delay < 0 || this.props.delay === 0)
-  };
+/**
+ * @return {null}
+ */
+export default function Loader(props) {
+  const [display, setDisplay] = useState(true);
 
-  componentDidMount() {
-    if (this.props.delay > 0) {
-      setTimeout(() => {
-        this.setState({ display: true });
-      }, this.props.delay);
+  useEffect(() => {
+    if (props.timeout && props.timeout > 0) {
+      setTimeout(async () => {
+        await setDisplay(false);
+      }, props.timeout)
     }
+  })
+
+  if (!props.visible || props.visible === "false") {
+    return null;
   }
-
-
-  render() {
-    let { props } = this;
-    if (!props.visible || props.visible === "false" || !this.state.display) {
-      return null;
-    }
-
-    return (
-      <div aria-busy="true" className={props.className} style={props.style}>
-        {React.createElement(componentName(props.type), { ...props })}
-      </div>
-    );
-  }
+  return display ? (
+    <div aria-busy="true" className={props.className} style={props.style}>
+      {React.createElement(componentName(props.type), { ...props })}
+    </div>
+  ) : null;
 }
-
-// export default function Loader(props) {
-//   const [display, setDisplay] = useState(!props.delay || props.delay < 0 || props.delay === 0);
-//
-//   if (props.delay && props.delay > 0) {
-//     setTimeout(() => {
-//       setDisplay(true);
-//     }, props.delay);
-//   }
-//
-//   if (!props.visible || props.visible === "false") {
-//     return null;
-//   }
-//
-//   return (
-//     display ? (
-//       <div aria-busy="true" className={props.className} style={props.style}>
-//         {React.createElement(componentName(props.type), { ...props })}
-//       </div>
-//     ) : null
-//   );
-// }
 
 Loader.propTypes = {
   type: PropTypes.oneOf([...componentNames]),
   style: PropTypes.objectOf(PropTypes.string),
   className: PropTypes.string,
   visible: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  delay: PropTypes.number
+  timeout: PropTypes.number,
 };
 
 Loader.defaultProps = {
@@ -93,5 +67,5 @@ Loader.defaultProps = {
   style: {},
   className: "",
   visible: true,
-  delay: 0
+  timeout: 0,
 };

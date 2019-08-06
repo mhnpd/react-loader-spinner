@@ -63,7 +63,6 @@
     "mocha": "^6.2.0",
     "nodemon": "^1.17.2",
     "prettier": "*",
-    "react": "^16.8.6",
     "redux-logger": "*",
     "sinon": "^7.3.2"
   },
