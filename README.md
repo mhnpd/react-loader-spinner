@@ -40,8 +40,9 @@ $ yarn add react-loader-spinner
 	  <Loader
 	     type="Puff"
 	     color="#00BFFF"
-	     height="100"
-	     width="100"
+	     height={100}
+	     width={100}
+	     timeout={3000} //3 secs
 	  />
 	 );
     }
@@ -83,7 +84,8 @@ react-loader-spinner component accept following props. Instructions on how to us
 | type | String  | "Audio" | Type of spinner you want to display. View the type in Types of Spinner section. |
 | height | Number  | 80 |  Height props define the height of the svg spinner. Default height is 80px.|
 | width | Number  | 80 |  Width props define the width of the spinner.  |
-| color | String  | Blue" |  [Color Props is provide color to the spinner |
+| color | String  | "Blue" |  [Color Props is provide color to the spinner |
+| timeout | Number  | 0 |  Duration in miliseconds after which spinner is disabled |
 
 ### TODO LIST
 * Change Docs on Storybooks
