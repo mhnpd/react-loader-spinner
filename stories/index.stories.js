@@ -6,7 +6,7 @@ import "../src/loader/css/react-spinner-loader.css";
 
 storiesOf("Loader", module)
   .addDecorator(centered)
-  .add("Audio", () => <Loader width={200} height={200} color="red" type="Audio" />)
+  .add("Audio", () => <Loader width={200} height={200} color="green" type="Audio" />)
   .add("Ball Triangle", () => (
     <Loader width={200} height={300} color="#cef442" type="BallTriangle" />
   ))
