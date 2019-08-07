@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { visible } from "ansi-colors";
 import { Spinner } from "./loader";
@@ -38,11 +38,11 @@ export default function Loader(props) {
 
   useEffect(() => {
     if (props.timeout && props.timeout > 0) {
-      setTimeout(async () => {
-        await setDisplay(false);
-      }, props.timeout)
+      setTimeout(() => {
+        setDisplay(false);
+      }, props.timeout);
     }
-  })
+  });
 
   if (!props.visible || props.visible === "false") {
     return null;
@@ -59,7 +59,7 @@ Loader.propTypes = {
   style: PropTypes.objectOf(PropTypes.string),
   className: PropTypes.string,
   visible: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  timeout: PropTypes.number,
+  timeout: PropTypes.number
 };
 
 Loader.defaultProps = {
@@ -67,5 +67,5 @@ Loader.defaultProps = {
   style: {},
   className: "",
   visible: true,
-  timeout: 0,
+  timeout: 0
 };
