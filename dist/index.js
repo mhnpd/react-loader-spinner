@@ -42,6 +42,35 @@
     return target;
   };
 
+  function _asyncToGenerator(fn) {
+    return function () {
+      var gen = fn.apply(this, arguments);
+      return new Promise(function (resolve, reject) {
+        function step(key, arg) {
+          try {
+            var info = gen[key](arg);
+            var value = info.value;
+          } catch (error) {
+            reject(error);
+            return;
+          }
+
+          if (info.done) {
+            resolve(value);
+          } else {
+            return Promise.resolve(value).then(function (value) {
+              step("next", value);
+            }, function (err) {
+              step("throw", err);
+            });
+          }
+        }
+
+        return step("next");
+      });
+    };
+  }
+
   var _slicedToArray = function () {
     function sliceIterator(arr, i) {
       var _arr = [];
@@ -89,22 +118,40 @@
     return _loader.Spinner.Audio;
   }
 
+  /**
+   * @return {null}
+   */
   function Loader(props) {
-    var _useState = (0, _react.useState)(false),
+    var _this = this;
+
+    var _useState = (0, _react.useState)(true),
         _useState2 = _slicedToArray(_useState, 2),
         display = _useState2[0],
         setDisplay = _useState2[1];
 
     (0, _react.useEffect)(function () {
-      if (!props.delay || props.delay === 0) {
-        setDisplay(true);
+      if (props.timeout && props.timeout > 0) {
+        setTimeout(_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+          return regeneratorRuntime.wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  _context.next = 2;
+                  return setDisplay(false);
+
+                case 2:
+                case "end":
+                  return _context.stop();
+              }
+            }
+          }, _callee, _this);
+        })), props.timeout);
       }
     });
 
     if (!props.visible || props.visible === "false") {
       return null;
     }
-
     return display ? _react2.default.createElement(
       "div",
       { "aria-busy": "true", className: props.className, style: props.style },
@@ -117,7 +164,7 @@
     style: _propTypes2.default.objectOf(_propTypes2.default.string),
     className: _propTypes2.default.string,
     visible: _propTypes2.default.oneOfType([_propTypes2.default.bool, _propTypes2.default.string]),
-    delay: _propTypes2.default.number
+    timeout: _propTypes2.default.number
   };
 
   Loader.defaultProps = {
@@ -125,6 +172,6 @@
     style: {},
     className: "",
     visible: true,
-    delay: 0
+    timeout: 0
   };
 });
