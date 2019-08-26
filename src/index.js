@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { visible } from "ansi-colors";
 import { Spinner } from "./loader";
 
 const componentNames = [
