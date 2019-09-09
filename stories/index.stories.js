@@ -6,7 +6,7 @@ import "../src/loader/css/react-spinner-loader.css";
 
 storiesOf("Loader", module)
   .addDecorator(centered)
-  .add("Audio", () => <Loader width={200} height={200} color="red" type="Audio" />)
+  .add("Audio", () => <Loader width={200} height={200} color="green" type="Audio" />)
   .add("Ball Triangle", () => (
     <Loader width={200} height={300} color="#cef442" type="BallTriangle" />
   ))
@@ -29,4 +29,4 @@ storiesOf("Loader", module)
 
   .add("CradleLoader", () => <Loader color="green" width={200} height={200} type="CradleLoader" />)
   .add("None", () => <Loader color="green" width={200} height={200} type="  " />)
-  .add("NotSpecified", () => <Loader color="green" width={200} height={200} />);
+  .add("NotSpecified", () => <Loader color="green" width={200} height={200}/>);
