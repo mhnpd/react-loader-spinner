@@ -1,6 +1,6 @@
 {
   "name": "react-loader-spinner",
-  "version": "3.1.3",
+  "version": "3.1.4",
   "description": " react-spinner-loader provides simple React.js spinner component which can be implemented for async wait operation before data load to the view.",
   "unpkg": "dist/index.js",
   "jsdelivr": "dist/index.js",
@@ -23,6 +23,11 @@
     "spinner",
     "react"
   ],
+  "company": {
+    "name": "The Coders Blog",
+    "url": "https://thecodersblog.com",
+    "feed": "https://thecodersblog.com/feed"
+  },
   "options": {
     "mocha": "--require scripts/mocha_runner src/**/__tests__/**/*.js"
   },
