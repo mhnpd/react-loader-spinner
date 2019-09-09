@@ -1,16 +1,16 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["exports", "react", "prop-types", "ansi-colors", "./loader"], factory);
+    define(["exports", "react", "prop-types", "./loader"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require("react"), require("prop-types"), require("ansi-colors"), require("./loader"));
+    factory(exports, require("react"), require("prop-types"), require("./loader"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.react, global.propTypes, global.ansiColors, global.loader);
+    factory(mod.exports, global.react, global.propTypes, global.loader);
     global.index = mod.exports;
   }
-})(this, function (exports, _react, _propTypes, _ansiColors, _loader) {
+})(this, function (exports, _react, _propTypes, _loader) {
   "use strict";
 
   Object.defineProperty(exports, "__esModule", {

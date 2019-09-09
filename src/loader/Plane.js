@@ -34,7 +34,7 @@ export const Plane = props => (
 Plane.propTypes = {
   secondaryColor: PropTypes.string,
   color: PropTypes.string,
-  label: PropTypes
+  label: PropTypes.string
 };
 
 Plane.defaultProps = {

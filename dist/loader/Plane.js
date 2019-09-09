@@ -67,7 +67,7 @@
   Plane.propTypes = {
     secondaryColor: _propTypes2.default.string,
     color: _propTypes2.default.string,
-    label: _propTypes2.default
+    label: _propTypes2.default.string
   };
 
   Plane.defaultProps = {
