@@ -8,7 +8,10 @@
     "type": "git",
     "url": "https://github.com/mhnpd/react-loader-spinner"
   },
-  "author": "Mohan Upadhyay",
+  "author": {
+    "name": "Mohan Upadhyay",
+    "url": "https://thecodersblog.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mhnpd/react-loader-spinner"
