@@ -36,11 +36,16 @@ export default function Loader(props) {
   const [display, setDisplay] = useState(true);
 
   useEffect(() => {
+    let timer;
     if (props.timeout && props.timeout > 0) {
-      setTimeout(() => {
+      timer = setTimeout(() => {
         setDisplay(false);
       }, props.timeout);
     }
+
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
   });
 
   if (!props.visible || props.visible === "false") {

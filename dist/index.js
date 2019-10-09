@@ -99,11 +99,16 @@
         setDisplay = _useState2[1];
 
     (0, _react.useEffect)(function () {
+      var timer = void 0;
       if (props.timeout && props.timeout > 0) {
-        setTimeout(function () {
+        timer = setTimeout(function () {
           setDisplay(false);
         }, props.timeout);
       }
+
+      return function () {
+        if (timer) clearTimeout(timer);
+      };
     });
 
     if (!props.visible || props.visible === "false") {
