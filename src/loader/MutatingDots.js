@@ -24,7 +24,7 @@ export const MutatingDots = props => (
         dur="1.2s"
         repeatCount="indefinite"
       />
-      <circle cx="50%" cy="40" r="11" fill={props.color} >
+      <circle cx="50%" cy="40" r={props.radius} fill={props.color} >
         <animate
           id="cAnim1"
           attributeType="XML"
@@ -37,7 +37,7 @@ export const MutatingDots = props => (
           keySplines="0.175, 0.885, 0.320, 1.5; 0.175, 0.885, 0.320, 1.5"
         />
       </circle>
-      <circle cx="50%" cy="60" r="11" fill={props.secondaryColor}>
+      <circle cx="50%" cy="60" r={props.radius} fill={props.secondaryColor}>
         <animate
           id="cAnim2"
           attributeType="XML"
@@ -59,6 +59,7 @@ MutatingDots.propTypes = {
   secondaryColor: PropTypes.string,
   height:PropTypes.number,
   color: PropTypes.string,
+  radius:PropTypes.number,
   label: PropTypes.string
 };
 
@@ -66,6 +67,7 @@ MutatingDots.defaultProps = {
   width: 80,
   height:90,
   color: "green",
+  radius:11,
   secondaryColor: "green",
   label: "audio-loading"
 };

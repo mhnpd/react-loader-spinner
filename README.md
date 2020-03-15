@@ -88,6 +88,7 @@ react-loader-spinner component accepts the following props. Instructions on how 
 | color | String  | "Blue" |  color props is add color to the spinner |
 | secondaryColor | String  | "Grey" |  secondaryColor props  for now is available on Plane and MutatingDots loaders  |
 | timeout | Number  | 0 |  Duration in miliseconds after which spinner is disabled |
+| radius | Number  | value varies | Set radius if the loader has a circle element in it |
 
 ### TODO LIST
 * Change Docs on Storybooks

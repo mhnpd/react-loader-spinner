@@ -20,7 +20,7 @@ storiesOf("Loader", module)
   .add("TailSpin", () => <Loader type="TailSpin" color="#939248" height="100" width="100" />)
   .add("ThreeDots", () => <Loader color="green" width={200} height={200} type="ThreeDots" />)
   .add("Watch", () => <Loader color="green" width={200} height={200} type="Watch" />)
-  .add("RevolvingDot", () => <Loader color="green" width={200} height={200} type="RevolvingDot" />)
+  .add("RevolvingDot", () => <Loader color="green" width={200} height={200} radius={15} type="RevolvingDot" />)
   .add("Triangle", () => <Loader color="green" width={200} height={200} type="Triangle" />)
   .add("Plane", () => <Loader color="#FFA500" width={200} height={200} type="Plane" />)
   .add("Mutating Dots", () => (
