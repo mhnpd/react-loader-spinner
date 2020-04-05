@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const Plane = props => (
-  <svg
+  <svg 
+    class={props.svgClass}
     className="react-spinner-loader-svg-calLoader"
     xmlns="http://www.w3.org/2000/svg"
     width="230"

@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const Watch = props => (
-  <svg
+  <svg 
+    class={props.svgClass}
     width={props.width}
     height={props.height}
     version="1.1"

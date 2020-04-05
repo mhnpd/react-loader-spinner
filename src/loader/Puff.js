@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const Puff = props => (
-  <svg
+  <svg 
+    class={props.svgClass}
     width={props.width}
     height={props.height}
     viewBox="0 0 44 44"

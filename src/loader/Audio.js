@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const Audio = props => (
-  <svg
+  <svg 
+    class={props.svgClass}
     height={props.height}
     width={props.width}
     fill={props.color}

@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const RevolvingDot = props => (
-  <svg
+  <svg 
+    class={props.svgClass}
     version="1.1"
     width={props.width}
     height={props.height}

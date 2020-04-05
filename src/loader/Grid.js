@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const Grid = props => (
-  <svg
+  <svg 
+    class={props.svgClass}
     width={props.width}
     height={props.height}
     viewBox="0 0 105 105"

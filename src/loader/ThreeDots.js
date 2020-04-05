@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const ThreeDots = props => (
-  <svg
+  <svg 
+    class={props.svgClass}
     width={props.width}
     height={props.height}
     viewBox="0 0 120 30"

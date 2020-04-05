@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 
 export const Triangle = props => (
   <div className="react-spinner-loader-svg">
-    <svg
+    <svg 
+    class={props.svgClass}
       id="triangle"
       width={props.width}
       height={props.height}
