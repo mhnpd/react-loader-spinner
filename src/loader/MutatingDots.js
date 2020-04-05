@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const MutatingDots = props => (
   <svg 
-    class={props.svgClass} id="goo-loader" width={props.width} height={90} fill={props.color} aria-label={props.label}>
+    className={props.svgClass} id="goo-loader" width={props.width} height={90} fill={props.color} aria-label={props.label}>
     <filter id="fancy-goo">
       <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
       <feColorMatrix
@@ -56,12 +56,14 @@ export const MutatingDots = props => (
 );
 
 MutatingDots.propTypes = {
+  svgClass: PropTypes.string,
   width: PropTypes.number,
   color: PropTypes.string,
   label: PropTypes.string
 };
 
 MutatingDots.defaultProps = {
+  svgClass: "svg-loader-lement",
   width: 80,
   color: "green",
   label: "audio-loading"

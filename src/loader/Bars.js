@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const Bars = props => (
   <svg 
-    class={props.svgClass}
+    className={props.svgClass}
     width={props.width}
     height={props.height}
     fill={props.color}
@@ -105,6 +105,7 @@ export const Bars = props => (
 );
 
 Bars.propTypes = {
+  svgClass: PropTypes.string,
   height: PropTypes.number,
   width: PropTypes.number,
   color: PropTypes.string,
@@ -112,6 +113,7 @@ Bars.propTypes = {
 };
 
 Bars.defaultProps = {
+  svgClass: "svg-loader-lement",
   height: 80,
   width: 80,
   color: "green",

@@ -1,20 +1,20 @@
 {
-  "name": "react-loader-spinner",
-  "version": "3.1.5",
+  "name": "react-loader-spinner-svg",
+  "version": "1.0.1",
   "description": " react-spinner-loader provides simple React.js spinner component which can be implemented for async wait operation before data load to the view.",
   "unpkg": "dist/index.js",
   "jsdelivr": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mhnpd/react-loader-spinner"
+    "url": "https://github.com/vishalsaugat/react-loader-spinner"
   },
   "author": {
-    "name": "Mohan Upadhyay",
-    "url": "https://thecodersblog.com"
+    "name": "Vishal Saugat",
+    "url": "https://vishalsaugat.xyz"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mhnpd/react-loader-spinner"
+    "url": "https://github.com/vishalsaugat/react-loader-spinner"
   },
   "homepage": "https://mhnpd.github.io/react-loader-spinner/",
   "keywords": [
@@ -24,9 +24,8 @@
     "react"
   ],
   "company": {
-    "name": "The Coders Blog",
-    "url": "https://thecodersblog.com",
-    "feed": "https://thecodersblog.com/feed"
+    "name": "Vishal Saugat",
+    "url": "https://vishalsaugat.xyz"
   },
   "options": {
     "mocha": "--require scripts/mocha_runner src/**/__tests__/**/*.js"

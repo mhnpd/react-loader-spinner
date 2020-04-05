@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const Grid = props => (
   <svg 
-    class={props.svgClass}
+    className={props.svgClass}
     width={props.width}
     height={props.height}
     viewBox="0 0 105 105"
@@ -104,6 +104,7 @@ export const Grid = props => (
 );
 
 Grid.propTypes = {
+  svgClass: PropTypes.string,
   height: PropTypes.number,
   width: PropTypes.number,
   color: PropTypes.string,
@@ -111,6 +112,7 @@ Grid.propTypes = {
 };
 
 Grid.defaultProps = {
+  svgClass: "svg-loader-lement",
   height: 80,
   width: 80,
   color: "green",

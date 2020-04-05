@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export const Triangle = props => (
   <div className="react-spinner-loader-svg">
     <svg 
-    class={props.svgClass}
+    className={props.svgClass}
       id="triangle"
       width={props.width}
       height={props.height}
@@ -17,6 +17,7 @@ export const Triangle = props => (
 );
 
 Triangle.propTypes = {
+  svgClass: PropTypes.string,
   height: PropTypes.number,
   width: PropTypes.number,
   color: PropTypes.string,
@@ -24,6 +25,7 @@ Triangle.propTypes = {
 };
 
 Triangle.defaultProps = {
+  svgClass: "svg-loader-lement",
   height: 80,
   width: 80,
   color: "green",

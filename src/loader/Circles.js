@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const Circles = props => (
   <svg 
-    class={props.svgClass}
+    className={props.svgClass}
     width={props.width}
     height={props.height}
     viewBox="0 0 135 135"
@@ -35,6 +35,7 @@ export const Circles = props => (
 );
 
 Circles.propTypes = {
+  svgClass: PropTypes.string,
   height: PropTypes.number,
   width: PropTypes.number,
   color: PropTypes.string,
@@ -42,6 +43,7 @@ Circles.propTypes = {
 };
 
 Circles.defaultProps = {
+  svgClass: "svg-loader-lement",
   height: 80,
   width: 80,
   color: "green",

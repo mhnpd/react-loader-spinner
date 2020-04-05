@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const TailSpin = props => (
   <svg 
-    class={props.svgClass}
+    className={props.svgClass}
     width={props.width}
     height={props.height}
     viewBox="0 0 38 38"
@@ -45,6 +45,7 @@ export const TailSpin = props => (
 );
 
 TailSpin.propTypes = {
+  svgClass: PropTypes.string,
   height: PropTypes.number,
   width: PropTypes.number,
   color: PropTypes.string,
@@ -52,6 +53,7 @@ TailSpin.propTypes = {
 };
 
 TailSpin.defaultProps = {
+  svgClass: "svg-loader-lement",
   height: 80,
   width: 80,
   color: "green",

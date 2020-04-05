@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const BallTriangle = props => (
   <svg 
-    class={props.svgClass}
+    className={props.svgClass}
     height={props.height}
     width={props.width}
     stroke={props.color}
@@ -79,6 +79,7 @@ export const BallTriangle = props => (
 );
 
 BallTriangle.propTypes = {
+  svgClass: PropTypes.string,
   height: PropTypes.number,
   width: PropTypes.number,
   color: PropTypes.string,
@@ -86,6 +87,7 @@ BallTriangle.propTypes = {
 };
 
 BallTriangle.defaultProps = {
+  svgClass: "svg-loader-lement",
   height: 80,
   width: 80,
   color: "green",

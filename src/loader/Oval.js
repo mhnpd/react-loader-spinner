@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const Oval = props => (
   <svg 
-    class={props.svgClass}
+    className={props.svgClass}
     width={props.width}
     height={props.height}
     viewBox="0 0 38 38"
@@ -30,6 +30,7 @@ export const Oval = props => (
 );
 
 Oval.propTypes = {
+  svgClass: PropTypes.string,
   height: PropTypes.number,
   width: PropTypes.number,
   color: PropTypes.string,
@@ -37,6 +38,7 @@ Oval.propTypes = {
 };
 
 Oval.defaultProps = {
+  svgClass: "svg-loader-lement",
   height: 80,
   width: 80,
   color: "green",

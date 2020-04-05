@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const Audio = props => (
   <svg 
-    class={props.svgClass}
+    className={props.svgClass}
     height={props.height}
     width={props.width}
     fill={props.color}
@@ -57,6 +57,7 @@ export const Audio = props => (
 );
 
 Audio.propTypes = {
+  svgClass: PropTypes.string,
   height: PropTypes.number,
   width: PropTypes.number,
   color: PropTypes.string,
@@ -64,6 +65,7 @@ Audio.propTypes = {
 };
 
 Audio.defaultProps = {
+  svgClass: "svg-loader-lement",
   height: 80,
   width: 80,
   color: "green",

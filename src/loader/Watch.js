@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const Watch = props => (
   <svg 
-    class={props.svgClass}
+    className={props.svgClass}
     width={props.width}
     height={props.height}
     version="1.1"
@@ -69,6 +69,7 @@ export const Watch = props => (
 );
 
 Watch.propTypes = {
+  svgClass: PropTypes.string,
   height: PropTypes.number,
   width: PropTypes.number,
   color: PropTypes.string,
@@ -76,6 +77,7 @@ Watch.propTypes = {
 };
 
 Watch.defaultProps = {
+  svgClass: "svg-loader-lement",
   height: 80,
   width: 80,
   color: "green",

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const RevolvingDot = props => (
   <svg 
-    class={props.svgClass}
+    className={props.svgClass}
     version="1.1"
     width={props.width}
     height={props.height}
@@ -35,6 +35,7 @@ export const RevolvingDot = props => (
 );
 
 RevolvingDot.propTypes = {
+  svgClass: PropTypes.string,
   height: PropTypes.number,
   width: PropTypes.number,
   color: PropTypes.string,
@@ -42,6 +43,7 @@ RevolvingDot.propTypes = {
 };
 
 RevolvingDot.defaultProps = {
+  svgClass: "svg-loader-lement",
   height: 80,
   width: 80,
   color: "green",

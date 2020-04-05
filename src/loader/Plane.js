@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const Plane = props => (
   <svg 
-    class={props.svgClass}
+    className={props.svgClass}
     className="react-spinner-loader-svg-calLoader"
     xmlns="http://www.w3.org/2000/svg"
     width="230"
@@ -33,12 +33,14 @@ export const Plane = props => (
 );
 
 Plane.propTypes = {
+  svgClass: PropTypes.string,
   secondaryColor: PropTypes.string,
   color: PropTypes.string,
   label: PropTypes.string
 };
 
 Plane.defaultProps = {
+  svgClass: "svg-loader-lement",
   secondaryColor: "grey",
   color: "#FFA500",
   label: "async-loading"
