@@ -88,7 +88,7 @@ react-loader-spinner component accept following props. Instructions on how to us
 | width | Number  | 80 |  Width props define the width of the spinner.  |
 | color | String  | "Blue" |  [Color Props is provide color to the spinner |
 | timeout | Number  | 0 |  Duration in miliseconds after which spinner is disabled |
-| timeout | String  | "svg-loader-lement" |  Class that will be applied to the svg element |
+| svgClass | String  | "svg-loader-lement" |  Class that will be applied to the svg element |
 
 ### TODO LIST
 * Change Docs on Storybooks
