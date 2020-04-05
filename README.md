@@ -1,10 +1,11 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/33191954/33469873-6f57e560-d68d-11e7-8036-f2cb63175cc7.png" alt="title"/>
+  <img src="https://raw.githubusercontent.com/vishalsaugat/react-loader-spinner/master/react-loader-spinner.png" alt="title"/>
 </p>
 
 
  react-spinner-loader provides simple React.js spinner component which can be implemented for async wait operation before data load to the view.
 
+ This is originally a fork from https://github.com/mhnpd/react-loader-spinner
 ### Installation
 
 ##### Using NPM:
@@ -43,7 +44,7 @@ $ yarn add react-loader-spinner
 	     height={100}
 	     width={100}
 	     timeout={3000} //3 secs
-
+		 svgClass="my-custom-class"
 	  />
 	 );
     }
@@ -87,6 +88,7 @@ react-loader-spinner component accept following props. Instructions on how to us
 | width | Number  | 80 |  Width props define the width of the spinner.  |
 | color | String  | "Blue" |  [Color Props is provide color to the spinner |
 | timeout | Number  | 0 |  Duration in miliseconds after which spinner is disabled |
+| timeout | String  | "svg-loader-lement" |  Class that will be applied to the svg element |
 
 ### TODO LIST
 * Change Docs on Storybooks
