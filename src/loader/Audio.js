@@ -56,8 +56,8 @@ export const Audio = props => (
 );
 
 Audio.propTypes = {
-  height: PropTypes.oneOf(PropTypes.string, PropTypes.number),
-  width: PropTypes.oneOf(PropTypes.string, PropTypes.number),
+  height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
   label: PropTypes.string
 };
