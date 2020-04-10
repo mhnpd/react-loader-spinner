@@ -103,8 +103,8 @@ export const Grid = props => (
 );
 
 Grid.propTypes = {
-  height: PropTypes.number,
-  width: PropTypes.number,
+  height: PropTypes.oneOf(PropTypes.string, PropTypes.number),
+  width: PropTypes.oneOf(PropTypes.string, PropTypes.number),
   color: PropTypes.string,
   label: PropTypes.string
 };
