@@ -78,17 +78,17 @@ export const BallTriangle = props => (
 );
 
 BallTriangle.propTypes = {
-  height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
-  width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
   label: PropTypes.string,
-  radius:PropTypes.number
+  radius: PropTypes.number
 };
 
 BallTriangle.defaultProps = {
   height: 80,
   width: 80,
   color: "green",
-  radius:5,
+  radius: 5,
   label: "audio-loading"
 };

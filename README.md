@@ -20,7 +20,7 @@ $ yarn add react-loader-spinner
 
 ##### Import required css
 #
-```sh
+```js
  import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 ```
 
