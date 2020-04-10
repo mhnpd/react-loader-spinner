@@ -72,7 +72,7 @@ Watch.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
   label: PropTypes.string,
-  radius:PropTypes.number
+  radius: PropTypes.number
 };
 
 Watch.defaultProps = {
@@ -80,5 +80,5 @@ Watch.defaultProps = {
   width: 80,
   color: "green",
   label: "audio-loading",
-  radius:48
+  radius: 48
 };

@@ -33,7 +33,7 @@ Oval.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
   label: PropTypes.string,
-  radius:PropTypes.number
+  radius: PropTypes.number
 };
 
 Oval.defaultProps = {

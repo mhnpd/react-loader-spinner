@@ -17,7 +17,7 @@ export const RevolvingDot = props => (
       strokeWidth="4"
       cx="50"
       cy="50"
-      r={props.radius+38}
+      r={props.radius + 38}
       style={{ opacity: 0.5 }}
     />
     <circle fill={props.color} stroke={props.color} strokeWidth="3" cx="8" cy="54" r={props.radius}>
@@ -38,7 +38,7 @@ RevolvingDot.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
   label: PropTypes.string,
-  radius:PropTypes.number
+  radius: PropTypes.number
 };
 
 RevolvingDot.defaultProps = {
@@ -46,5 +46,5 @@ RevolvingDot.defaultProps = {
   width: 80,
   color: "green",
   label: "audio-loading",
-  radius:6
+  radius: 6
 };

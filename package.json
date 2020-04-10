@@ -76,12 +76,12 @@
     "sinon": "^7.3.2"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.2",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.7.2"
   }
 }

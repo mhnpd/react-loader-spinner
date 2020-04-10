@@ -82,13 +82,13 @@ Rings.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
   label: PropTypes.string,
-  radius:PropTypes.number
+  radius: PropTypes.number
 };
 
 Rings.defaultProps = {
   height: 80,
   width: 80,
   color: "green",
-  radius:6,
+  radius: 6,
   label: "audio-loading"
 };

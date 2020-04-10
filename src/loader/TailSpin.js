@@ -48,13 +48,13 @@ TailSpin.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
   label: PropTypes.string,
-  radius:PropTypes.number
+  radius: PropTypes.number
 };
 
 TailSpin.defaultProps = {
   height: 80,
   width: 80,
   color: "green",
-  radius:1,
+  radius: 1,
   label: "audio-loading"
 };
