@@ -12,7 +12,7 @@ export const Oval = props => (
   >
     <g fill="none" fillRule="evenodd">
       <g transform="translate(1 1)" strokeWidth="2">
-        <circle strokeOpacity=".5" cx="18" cy="18" r="18" />
+        <circle strokeOpacity=".5" cx="18" cy="18" r={props.radius} />
         <path d="M36 18c0-9.94-8.06-18-18-18">
           <animateTransform
             attributeName="transform"
@@ -32,12 +32,14 @@ Oval.propTypes = {
   height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.string,
+  radius:PropTypes.number
 };
 
 Oval.defaultProps = {
   height: 80,
   width: 80,
   color: "green",
-  label: "audio-loading"
+  label: "audio-loading",
+  radius:18
 };

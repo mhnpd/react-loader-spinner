@@ -11,7 +11,7 @@ export const Rings = props => (
     aria-label={props.label}
   >
     <g fill="none" fillRule="evenodd" transform="translate(1 1)" strokeWidth="2">
-      <circle cx="22" cy="22" r="6" strokeOpacity="0">
+      <circle cx="22" cy="22" r={props.radius} strokeOpacity="0">
         <animate
           attributeName="r"
           begin="1.5s"
@@ -37,7 +37,7 @@ export const Rings = props => (
           repeatCount="indefinite"
         />
       </circle>
-      <circle cx="22" cy="22" r="6" strokeOpacity="0">
+      <circle cx="22" cy="22" r={props.radius} strokeOpacity="0">
         <animate
           attributeName="r"
           begin="3s"
@@ -63,7 +63,7 @@ export const Rings = props => (
           repeatCount="indefinite"
         />
       </circle>
-      <circle cx="22" cy="22" r="8">
+      <circle cx="22" cy="22" r={props.radius + 2}>
         <animate
           attributeName="r"
           begin="0s"
@@ -81,12 +81,14 @@ Rings.propTypes = {
   height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.string,
+  radius:PropTypes.number
 };
 
 Rings.defaultProps = {
   height: 80,
   width: 80,
   color: "green",
+  radius:6,
   label: "audio-loading"
 };

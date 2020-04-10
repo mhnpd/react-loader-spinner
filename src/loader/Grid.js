@@ -9,7 +9,7 @@ export const Grid = props => (
     fill={props.color}
     aria-label={props.label}
   >
-    <circle cx="12.5" cy="12.5" r="12.5">
+    <circle cx="12.5" cy="12.5" r={props.radius}>
       <animate
         attributeName="fill-opacity"
         begin="0s"
@@ -19,7 +19,7 @@ export const Grid = props => (
         repeatCount="indefinite"
       />
     </circle>
-    <circle cx="12.5" cy="52.5" r="12.5">
+    <circle cx="12.5" cy="52.5" r={props.radius}>
       <animate
         attributeName="fill-opacity"
         begin="100ms"
@@ -29,7 +29,7 @@ export const Grid = props => (
         repeatCount="indefinite"
       />
     </circle>
-    <circle cx="52.5" cy="12.5" r="12.5">
+    <circle cx="52.5" cy="12.5" r={props.radius}>
       <animate
         attributeName="fill-opacity"
         begin="300ms"
@@ -39,7 +39,7 @@ export const Grid = props => (
         repeatCount="indefinite"
       />
     </circle>
-    <circle cx="52.5" cy="52.5" r="12.5">
+    <circle cx="52.5" cy="52.5" r={props.radius}>
       <animate
         attributeName="fill-opacity"
         begin="600ms"
@@ -49,7 +49,7 @@ export const Grid = props => (
         repeatCount="indefinite"
       />
     </circle>
-    <circle cx="92.5" cy="12.5" r="12.5">
+    <circle cx="92.5" cy="12.5" r={props.radius}>
       <animate
         attributeName="fill-opacity"
         begin="800ms"
@@ -59,7 +59,7 @@ export const Grid = props => (
         repeatCount="indefinite"
       />
     </circle>
-    <circle cx="92.5" cy="52.5" r="12.5">
+    <circle cx="92.5" cy="52.5" r={props.radius}>
       <animate
         attributeName="fill-opacity"
         begin="400ms"
@@ -69,7 +69,7 @@ export const Grid = props => (
         repeatCount="indefinite"
       />
     </circle>
-    <circle cx="12.5" cy="92.5" r="12.5">
+    <circle cx="12.5" cy="92.5" r={props.radius}>
       <animate
         attributeName="fill-opacity"
         begin="700ms"
@@ -79,7 +79,7 @@ export const Grid = props => (
         repeatCount="indefinite"
       />
     </circle>
-    <circle cx="52.5" cy="92.5" r="12.5">
+    <circle cx="52.5" cy="92.5" r={props.radius}>
       <animate
         attributeName="fill-opacity"
         begin="500ms"
@@ -89,7 +89,7 @@ export const Grid = props => (
         repeatCount="indefinite"
       />
     </circle>
-    <circle cx="92.5" cy="92.5" r="12.5">
+    <circle cx="92.5" cy="92.5" r={props.radius}>
       <animate
         attributeName="fill-opacity"
         begin="200ms"
@@ -106,12 +106,14 @@ Grid.propTypes = {
   height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.string,
+  radius:PropTypes.number
 };
 
 Grid.defaultProps = {
   height: 80,
   width: 80,
   color: "green",
+  radius:12.5,
   label: "audio-loading"
 };

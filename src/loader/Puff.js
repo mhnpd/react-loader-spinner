@@ -11,7 +11,7 @@ export const Puff = props => (
     aria-label={props.label}
   >
     <g fill="none" fillRule="evenodd" strokeWidth="2">
-      <circle cx="22" cy="22" r="1">
+      <circle cx="22" cy="22" r={props.radius}>
         <animate
           attributeName="r"
           begin="0s"
@@ -33,7 +33,7 @@ export const Puff = props => (
           repeatCount="indefinite"
         />
       </circle>
-      <circle cx="22" cy="22" r="1">
+      <circle cx="22" cy="22" r={props.radius}>
         <animate
           attributeName="r"
           begin="-0.9s"
@@ -64,12 +64,14 @@ Puff.propTypes = {
   height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.string,
+  radius:PropTypes.number
 };
 
 Puff.defaultProps = {
   height: 80,
   width: 80,
   color: "green",
-  label: "audio-loading"
+  label: "audio-loading",
+  radius:1
 };

@@ -28,7 +28,7 @@ export const TailSpin = props => (
             repeatCount="indefinite"
           />
         </path>
-        <circle fill="#fff" cx="36" cy="18" r="1">
+        <circle fill="#fff" cx="36" cy="18" r={props.radius}>
           <animateTransform
             attributeName="transform"
             type="rotate"
@@ -47,12 +47,14 @@ TailSpin.propTypes = {
   height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.string,
+  radius:PropTypes.number
 };
 
 TailSpin.defaultProps = {
   height: 80,
   width: 80,
   color: "green",
+  radius:1,
   label: "audio-loading"
 };

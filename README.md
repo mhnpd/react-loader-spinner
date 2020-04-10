@@ -3,7 +3,7 @@
 </p>
 
 
- react-spinner-loader provides simple React.js spinner component which can be implemented for async wait operation before data load to the view.
+ react-spinner-loader provides simple React.js spinner component which can be implemented for async await operation before data loads to the view.
 
 ### Installation
 
@@ -50,14 +50,14 @@ $ yarn add react-loader-spinner
  }
 ```
 
-### If webpack throw issue with css. (For older version of this package)
+### If webpack throws issue with css. (For older version of this package)
 Change webpack config as:
 ```  test: /\.scss$/ to test: /\.s?css$/ ```
 <br/><br/>
 <small>Newer version just import css file from node modules to app.js<small>
 
 ### Types of Spinner
-react-loader-spinner component has following types of spinner.
+react-loader-spinner component has the following types of spinners.
 
 | Spinner Type | Implementation |
 | ------ | ------ |
@@ -73,10 +73,10 @@ react-loader-spinner component has following types of spinner.
 |TailSpin|```<Loader type="TailSpin" color="#somecolor" height={80} width={80} />```|
 |ThreeDots|```<Loader type="ThreeDots" color="#somecolor" height={80} width={80} />```|
 
-> There are more. View [storybook] to see all list.
+> There are more. View [storybook] to see the full list.
 
 ### PropTypes Available
-react-loader-spinner component accept following props. Instructions on how to use them are below.
+react-loader-spinner component accepts the following props. Instructions on how to use them are below.
 
 
 | name | types | default | Detail |
@@ -85,8 +85,10 @@ react-loader-spinner component accept following props. Instructions on how to us
 | type | String  | "Audio" | Type of spinner you want to display. View the type in Types of Spinner section. |
 | height | Number  | 80 |  Height props define the height of the svg spinner. Default height is 80px.|
 | width | Number  | 80 |  Width props define the width of the spinner.  |
-| color | String  | "Blue" |  [Color Props is provide color to the spinner |
+| color | String  | "Blue" |  color props is add color to the spinner |
+| secondaryColor | String  | "Grey" |  secondaryColor props  for now is available on Plane and MutatingDots loaders  |
 | timeout | Number  | 0 |  Duration in miliseconds after which spinner is disabled |
+| radius | Number  | value varies | Set radius if the loader has a circle element in it |
 
 ### TODO LIST
 * Change Docs on Storybooks

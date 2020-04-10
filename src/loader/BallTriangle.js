@@ -12,7 +12,7 @@ export const BallTriangle = props => (
   >
     <g fill="none" fillRule="evenodd">
       <g transform="translate(1 1)" strokeWidth="2">
-        <circle cx="5" cy="50" r="5">
+        <circle cx="5" cy="50" r={props.radius}>
           <animate
             attributeName="cy"
             begin="0s"
@@ -30,7 +30,7 @@ export const BallTriangle = props => (
             repeatCount="indefinite"
           />
         </circle>
-        <circle cx="27" cy="5" r="5">
+        <circle cx="27" cy="5" r={props.radius}>
           <animate
             attributeName="cy"
             begin="0s"
@@ -52,7 +52,7 @@ export const BallTriangle = props => (
             repeatCount="indefinite"
           />
         </circle>
-        <circle cx="49" cy="50" r="5">
+        <circle cx="49" cy="50" r={props.radius}>
           <animate
             attributeName="cy"
             begin="0s"
@@ -81,12 +81,14 @@ BallTriangle.propTypes = {
   height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.string,
+  radius:PropTypes.number
 };
 
 BallTriangle.defaultProps = {
   height: 80,
   width: 80,
   color: "green",
+  radius:5,
   label: "audio-loading"
 };

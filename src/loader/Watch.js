@@ -22,7 +22,7 @@ export const Watch = props => (
       strokeMiterlimit="10"
       cx="50"
       cy="50"
-      r="48"
+      r={props.radius}
     />
     <line
       fill="none"
@@ -71,12 +71,14 @@ Watch.propTypes = {
   height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.string,
+  radius:PropTypes.number
 };
 
 Watch.defaultProps = {
   height: 80,
   width: 80,
   color: "green",
-  label: "audio-loading"
+  label: "audio-loading",
+  radius:48
 };

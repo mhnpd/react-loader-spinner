@@ -10,7 +10,7 @@ export const ThreeDots = props => (
     fill={props.color}
     aria-label={props.label}
   >
-    <circle cx="15" cy="15" r="15">
+    <circle cx="15" cy="15" r={props.radius+6}>
       <animate
         attributeName="r"
         from="15"
@@ -32,7 +32,7 @@ export const ThreeDots = props => (
         repeatCount="indefinite"
       />
     </circle>
-    <circle cx="60" cy="15" r="9" attributeName="fillOpacity" from="1" to="0.3">
+    <circle cx="60" cy="15" r={props.radius} attributeName="fillOpacity" from="1" to="0.3">
       <animate
         attributeName="r"
         from="9"
@@ -54,7 +54,7 @@ export const ThreeDots = props => (
         repeatCount="indefinite"
       />
     </circle>
-    <circle cx="105" cy="15" r="15">
+    <circle cx="105" cy="15" r={props.radius + 6}>
       <animate
         attributeName="r"
         from="15"
@@ -83,12 +83,14 @@ ThreeDots.propTypes = {
   height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.string,
+  radius:PropTypes.number
 };
 
 ThreeDots.defaultProps = {
   height: 80,
   width: 80,
   color: "green",
-  label: "audio-loading"
+  label: "audio-loading",
+  radius:9
 };

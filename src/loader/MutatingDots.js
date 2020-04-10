@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const MutatingDots = props => (
-  <svg id="goo-loader" width={props.width} height={90} fill={props.color} aria-label={props.label}>
+  <svg id="goo-loader" width={props.width} height={props.height} aria-label={props.label}>
     <filter id="fancy-goo">
       <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
       <feColorMatrix
@@ -24,7 +24,7 @@ export const MutatingDots = props => (
         dur="1.2s"
         repeatCount="indefinite"
       />
-      <circle cx="50%" cy="40" r="11">
+      <circle cx="50%" cy="40" r={props.radius} fill={props.color} >
         <animate
           id="cAnim1"
           attributeType="XML"
@@ -37,7 +37,7 @@ export const MutatingDots = props => (
           keySplines="0.175, 0.885, 0.320, 1.5; 0.175, 0.885, 0.320, 1.5"
         />
       </circle>
-      <circle cx="50%" cy="60" r="11">
+      <circle cx="50%" cy="60" r={props.radius} fill={props.secondaryColor}>
         <animate
           id="cAnim2"
           attributeType="XML"
@@ -56,12 +56,18 @@ export const MutatingDots = props => (
 
 MutatingDots.propTypes = {
   width: PropTypes.number,
+  secondaryColor: PropTypes.string,
+  height:PropTypes.number,
   color: PropTypes.string,
+  radius:PropTypes.number,
   label: PropTypes.string
 };
 
 MutatingDots.defaultProps = {
   width: 80,
+  height:90,
   color: "green",
+  radius:11,
+  secondaryColor: "green",
   label: "audio-loading"
 };
