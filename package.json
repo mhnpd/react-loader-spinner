@@ -40,7 +40,8 @@
     "test": "npm run lint && npm run testonly",
     "test-watch": "npm run testonly -- --watch --watch-extensions js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook --output-dir ./docs"
+    "build-storybook": "build-storybook --output-dir ./docs",
+    "deploy": "gh-pages -d ./example/build"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.1.10",
@@ -67,6 +68,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "*",
     "eslint-plugin-react": "^7.10.0",
+    "gh-pages": "^2.2.0",
     "mocha": "^6.2.0",
     "nodemon": "^1.17.2",
     "prettier": "*",
