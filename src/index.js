@@ -59,7 +59,7 @@ export default function Loader(props) {
 }
 
 Loader.propTypes = {
-  type: PropTypes.oneOfType([...componentNames]),
+  type: PropTypes.oneOf([...componentNames]),
   style: PropTypes.objectOf(PropTypes.string),
   className: PropTypes.string,
   visible: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
