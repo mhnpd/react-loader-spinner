@@ -8461,13 +8461,13 @@ react-is@^16.12.0, react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-loader-spinner@^3.1.11:
-  version "3.1.11"
-  resolved "https://registry.yarnpkg.com/react-loader-spinner/-/react-loader-spinner-3.1.11.tgz#1d554b31579b33aaf7254c3b347f7149aa62f17f"
-  integrity sha512-aun3ci74axARrMiuz1v3Yarl1CEDBpSCF1f0e66rQxvGobiSXV85xViHTuRQhY8+pQcEHlfhJxLQ/e6zBPIlig==
+react-loader-spinner@^3.1.13:
+  version "3.1.14"
+  resolved "https://registry.yarnpkg.com/react-loader-spinner/-/react-loader-spinner-3.1.14.tgz#2a201f07379c492766175609903c0f2ced57c720"
+  integrity sha512-7V+upnW+RVA/O94LIB/EQLK2uaz/TpZBHG5uNXlOXgvxvALxlxVYeEDmus5Oex2C58fiwrsRvSyu/4VRmLbZ9Q==
   dependencies:
     babel-runtime "^6.26.0"
-    prop-types "^15.6.2"
+    prop-types "^15.7.2"
 
 react-scripts@3.4.1:
   version "3.4.1"
