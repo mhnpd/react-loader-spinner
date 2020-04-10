@@ -3,7 +3,7 @@
 </p>
 
 
- react-spinner-loader provides simple React.js spinner component which can be implemented for async await operation before data loads to the view.
+ ```react-spinner-loader``` provides simple React SVG spinner component which can be implemented for async await operation before data loads to the view.
 
 ### Installation
 
@@ -28,10 +28,8 @@ $ yarn add react-loader-spinner
 [View in page]
 
 
-
-
 ### Usage
-```
+```js
  import Loader from 'react-loader-spinner'
  export default class App extends React.Component {
   //other logic
@@ -51,29 +49,31 @@ $ yarn add react-loader-spinner
 ```
 
 ### If webpack throws issue with css. (For older version of this package)
+
 Change webpack config as:
 ```  test: /\.scss$/ to test: /\.s?css$/ ```
 <br/><br/>
 <small>Newer version just import css file from node modules to app.js<small>
+
 
 ### Types of Spinner
 react-loader-spinner component has the following types of spinners.
 
 | Spinner Type | Implementation |
 | ------ | ------ |
-| Audio|``` <Loader type="Audio" color="#somecolor" height={80} width={80} />``` |
-| Ball-Triangle | ``` <Loader type="BallTriangle" color="#somecolor" height={80} width={80} /> ```|
-| Bars | ```<Loader type="Bars" color="#somecolor" height={80} width={80} />``` |
-| Circles | ```<Loader type="Circles" color="#somecolor" height={80} width={80}/>``` |
-| Grid|```<Loader type="Grid" color="#somecolor" height={80} width={80} />``` |
-|Hearts|```<Loader type="Hearts" color="#somecolor" height={80} width={80} />```|
-|Oval|```<Loader type="Oval" color="#somecolor" height={80} width={80} />```|
-|Puff|```<Loader type="Puff" color="#somecolor" height={80} width={80} />```|
-|Rings|```<Loader type="Rings" color="#somecolor" height={80} width={80} />```|
-|TailSpin|```<Loader type="TailSpin" color="#somecolor" height={80} width={80} />```|
-|ThreeDots|```<Loader type="ThreeDots" color="#somecolor" height={80} width={80} />```|
+| Audio|``` <Loader type="Audio" color="#00BFFF" height={80} width={80} />``` |
+| Ball-Triangle | ``` <Loader type="BallTriangle" color="#00BFFF" height={80} width={80} /> ```|
+| Bars | ```<Loader type="Bars" color="#00BFFF" height={80} width={80} />``` |
+| Circles | ```<Loader type="Circles" color="#00BFFF" height={80} width={80}/>``` |
+| Grid|```<Loader type="Grid" color="#00BFFF" height={80} width={80} />``` |
+|Hearts|```<Loader type="Hearts" color="#00BFFF" height={80} width={80} />```|
+|Oval|```<Loader type="Oval" color="#00BFFF" height={80} width={80} />```|
+|Puff|```<Loader type="Puff" color="#00BFFF" height={80} width={80} />```|
+|Rings|```<Loader type="Rings" color="#00BFFF" height={80} width={80} />```|
+|TailSpin|```<Loader type="TailSpin" color="#00BFFF" height={80} width={80} />```|
+|ThreeDots|```<Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />```|
 
-> There are more. View [storybook] to see the full list.
+> There are more. View [demo] to see the full list.
 
 ### PropTypes Available
 react-loader-spinner component accepts the following props. Instructions on how to use them are below.
@@ -90,8 +90,7 @@ react-loader-spinner component accepts the following props. Instructions on how 
 | timeout | Number  | 0 |  Duration in miliseconds after which spinner is disabled |
 | radius | Number  | value varies | Set radius if the loader has a circle element in it |
 
-### TODO LIST
-* Change Docs on Storybooks
+### Here are the list of the task for which we want PR:
 * Optimize css implementation
 * Add support for Typescript.
 * Optimization for multiple color support.
@@ -102,10 +101,8 @@ License
 
 MIT
 
-
-
-   [svg-loader]: <https://github.com/SamHerbert/SVG-Loaders>
-   [here]: <http://samherbert.net/svg-loaders>
-   [View in page]: https://mhnpd.github.io/react-loader-spinner/
-   [storybook]: https://mhnpd.github.io/react-loader-spinner/
+	[svg-loader]: <https://github.com/SamHerbert/SVG-Loaders>
+	[here]: <http://samherbert.net/svg-loaders>
+	[View in page]: https://mhnpd.github.io/react-loader-spinner/
+	[storybook]: https://mhnpd.github.io/react-loader-spinner/
 
