@@ -83,16 +83,22 @@ react-loader-spinner component accepts the following props. Instructions on how 
 | ------ | ------ |------|------|
 | visible | String or boolean  | false | Show/ Hide the loader as required. |
 | type | String  | "Audio" | Type of spinner you want to display. View the type in Types of Spinner section. |
-| height | Number  | 80 |  Height props define the height of the svg spinner. Default height is 80px.|
-| width | Number  | 80 |  Width props define the width of the spinner.  |
-| color | String  | "Blue" |  color props is add color to the spinner |
-| secondaryColor | String  | "Grey" |  secondaryColor props  for now is available on Plane and MutatingDots loaders  |
-| timeout | Number  | 0 |  Duration in miliseconds after which spinner is disabled |
+| height | Number  | 80 |  Height prop define the height of the svg spinner. Default height is 80px.|
+| width | Number  | 80 |  Width prop define the width of the spinner.  |
+| color | String  | "Blue" |  color prop is for adding color to the spinner |
+| secondaryColor | String  | "Grey" |  secondaryColor prop  for now is available on Plane and MutatingDots loaders  |
+| timeout | Number  | 0 |  Duration in milliseconds after which spinner is disabled |
 | radius | Number  | value varies | Set radius if the loader has a circle element in it |
+
+### Typescript
+Typescript support is now also available. It has full **propType intellisense** support. Just install the component library as usual and use it in any *(React) \<Typescript\>* project.Finally, you will get all sorts of propType intellisense & static typeChecking out of the box. Just like Javascript **we also ❤ Typescript**.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/61944859/89057235-1da6cf00-d37f-11ea-827e-17edbca46016.jpg" alt=""/>
+</p>
 
 ### Here are the list of the task for which we want PR:
 * Optimize css implementation
-* Add support for Typescript.
 * Optimization for multiple color support.
 
 

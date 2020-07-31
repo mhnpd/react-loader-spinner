@@ -23,6 +23,7 @@
     "spinner",
     "react"
   ],
+  "types": "dist/types/index.d.ts",
   "company": {
     "name": "The Coders Blog",
     "url": "https://thecodersblog.com",
