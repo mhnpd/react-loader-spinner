@@ -25,7 +25,7 @@ $ yarn add react-loader-spinner
 ```
 
 #  Demo
-[View in page]
+[View in page](https://mhnpd.github.io/react-loader-spinner/)
 
 
 ### Usage
