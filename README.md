@@ -4,7 +4,7 @@
 </p>
 </div>
 
-`react-spinner-loader` provides simple React SVG spinner component which can be implemented for async await operation before data loads to the view.
+`react-loader-spinner` provides simple React SVG spinner component which can be implemented for async await operation before data loads to the view.
 
 ### Installation
 
