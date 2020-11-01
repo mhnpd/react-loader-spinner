@@ -48,12 +48,12 @@ declare module "react-loader-spinner"
        * @property _height_ | Height prop define the height of the svg spinner. 
        * @default 80px
         */
-      height?: number;
+      height?: number | string;
       /**
        * @property _width_ | Width prop define the width of the spinner.
        * @default 80px
         */
-      width?: number;
+      width?: number | string;
       /**
        * @property _color_ | color prop is for adding color to the spinner
        * @default Blue
