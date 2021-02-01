@@ -1,19 +1,5 @@
 import React from "react"
-
-/**
- * Little typescript contribution from KR Tirtho...
- * Hope you will accept this ❤
- * 
- * What works?
- * Fully supported with typescript (after builds)
- * PropTypes intellisense in (React) <typescript> projects
- * Warns if user provides wrong <types> in props 
- * Short description of every props
- * 
- * Finally, thanks for making this library. It helped me a lot in one of my private project.....
- */
-
-declare module "react-loader-spinner" 
+declare module "react-loader-spinner"
 {
     // Main Interface for the props
     interface LoaderProps<T = {}> {
@@ -26,7 +12,7 @@ declare module "react-loader-spinner"
      * @property _type_ | Type of spinner you want to display
      * @default Audio
     */
-      type: 
+      type:
       "Audio"
       |"BallTriangle"
       |"Bars"
@@ -45,7 +31,7 @@ declare module "react-loader-spinner"
       |"MutatingDots"
       |"CradleLoader";
       /**
-       * @property _height_ | Height prop define the height of the svg spinner. 
+       * @property _height_ | Height prop define the height of the svg spinner.
        * @default 80px
         */
       height?: number | string;

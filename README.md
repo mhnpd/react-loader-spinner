@@ -97,6 +97,7 @@ react-loader-spinner component accepts the following props. Instructions on how 
 | secondaryColor | String             | "Grey"       |  secondaryColor prop  for now is available on Plane and MutatingDots loaders    |
 | timeout        | Number             | 0            |  Duration in milliseconds after which spinner is disabled                       |
 | radius         | Number             | value varies | Set radius if the loader has a circle element in it                             |
+
 ### Typescript
 Typescript support is now also available. It has full **propType intellisense** support. Just install the component library as usual and use it in any *(React) \<Typescript\>* project.Finally, you will get all sorts of propType intellisense & static typeChecking out of the box. Just like Javascript **we also ❤ Typescript**.
 
