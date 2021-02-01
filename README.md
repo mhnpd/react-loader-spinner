@@ -5,7 +5,7 @@
 ![issue](https://badgen.net/github/issues/mhnpd/react-loader-spinner)
 ![open-issues](https://badgen.net/github/open-issues/mhnpd/react-loader-spinner)
 ![commits](https://badgen.net/github/commits/mhnpd/react-loader-spinner)
-
+![commits](https://badgen.net/github/assets-dl/mhnpd/react-loader-spinner)
 
 
 <div style="text-align:center;">
