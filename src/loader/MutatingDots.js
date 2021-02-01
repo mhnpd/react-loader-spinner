@@ -34,7 +34,7 @@ export const MutatingDots = props => (
           calcMode="spline"
           values="40;20;40"
           keyTimes="0;0.3;1"
-          keySplines="0.175, 0.885, 0.320, 1.5; 0.175, 0.885, 0.320, 1.5"
+          keySplines="0.09, 0.45, 0.16, 1;0.09, 0.45, 0.16, 1"
         />
       </circle>
       <circle cx="50%" cy="60" r={props.radius} fill={props.secondaryColor}>
@@ -47,7 +47,7 @@ export const MutatingDots = props => (
           calcMode="spline"
           values="60;80;60"
           keyTimes="0;0.3;1"
-          keySplines="0.175, 0.885, 0.320, 1.5;0.175, 0.885, 0.320, 1.5"
+          keySplines="0.09, 0.45, 0.16, 1;0.09, 0.45, 0.16, 1"
         />
       </circle>
     </g>
