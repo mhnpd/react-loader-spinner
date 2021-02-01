@@ -2,8 +2,8 @@
 ![release](https://badgen.net/github/release/mhnpd/react-loader-spinner)
 ![tag](https://badgen.net/github/tag/mhnpd/react-loader-spinner)
 ![stars](https://badgen.net/github/stars/mhnpd/react-loader-spinner)
-![issue](https://badgen.net/github/issue/mhnpd/react-loader-spinner)
-![open-issue](https://badgen.net/github/open-issue/mhnpd/react-loader-spinner)
+![issue](https://badgen.net/github/issues/mhnpd/react-loader-spinner)
+![open-issues](https://badgen.net/github/open-issues/mhnpd/react-loader-spinner)
 
 
 
