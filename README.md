@@ -1,6 +1,6 @@
 <div style="text-align:center;">
 <p>
-  <img src="./react-loader-spinner.png" alt="title"/>
+  <img src="/logo/logo.png" alt="title"/>
 </p>
 </div>
 
@@ -107,8 +107,3 @@ react-loader-spinner component accepts the following props. Instructions on how 
 ## License
 
 MIT
-
-    [svg-loader]: <https://github.com/SamHerbert/SVG-Loaders>
-    [here]: <http://samherbert.net/svg-loaders>
-    [View in page]: https://mhnpd.github.io/react-loader-spinner/
-    [storybook]: https://mhnpd.github.io/react-loader-spinner/
