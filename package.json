@@ -25,7 +25,7 @@
     "react"
   ],
   "scripts": {
-    "build": "babel src -d dist",
+    "build": "babel src -d dist --copy-files",
     "release:major": "npm version major && git push --tags",
     "release:minor": "npm version minor && git push --tags",
     "release:patch": "npm version patch && git push --tags",
