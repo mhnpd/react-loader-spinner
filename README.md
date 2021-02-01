@@ -1,3 +1,6 @@
+![Node.js Package](https://github.com/mhnpd/react-loader-spinner/workflows/Node.js%20Package/badge.svg?branch=master)
+
+
 <div style="text-align:center;">
 <p>
   <img src="/logo/logo.png" alt="title"/>
