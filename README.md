@@ -1,5 +1,5 @@
 ![Node.js Package](https://github.com/mhnpd/react-loader-spinner/workflows/Node.js%20Package/badge.svg?branch=master)
-![release](/github/release/mhnpd/react-loader-spinner)
+![release](https://badgen.net/github/release/mhnpd/react-loader-spinner)
 
 
 <div style="text-align:center;">
