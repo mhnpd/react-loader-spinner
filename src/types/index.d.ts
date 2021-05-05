@@ -60,6 +60,17 @@ declare module "react-loader-spinner"
        * @default value_varies
         */
       radius?: number;
+      /**
+       *  @property _strokeWidth_ | set StrokeWidth for primary stroke
+       *  @default 2
+       */
+      strokeWidth?: number;
+      /**
+       *  @property _strokeWidthSecondary_ | set StrokeWidth for secondary stroke
+       *  @default 2
+       */
+      strokeWidthSecondary?: number;
+
     }
   export default class Loader extends React.Component<LoaderProps>{
     constructor(props: LoaderProps)

@@ -1,24 +1,47 @@
 import React from "react";
-import PropTypes from "prop-types";
+import PropTypes, {bool} from "prop-types";
+
+const getTranslation = (strokeWidth, radius) => {
+  return "scale(" + getScale(strokeWidth, radius) + ") translate(" + getViewboxSize(radius) * getScale(strokeWidth, radius) + "," + getViewboxSize(radius) * getScale(strokeWidth, radius) + ")";
+}
+const getScale = (strokeWidth, radius) => {
+  return (2 * radius) / (strokeWidth + 2 * radius + 2) * 100;
+}
+
+const getPath = (radius) => { //trust us it works
+  return ["M" + (radius * 2) + " " +radius+"c0-9.94-8.06",radius,radius,radius].join("-"); //Structure e.g. "M36 18c0-9.94-8.06-18-18-18"
+}
+
+const parameterViewboxSize = (radius) => {
+  return [0, 0, getViewboxSize(radius), getViewboxSize(radius)].join(" ");
+}
+const getViewboxSize = (radius) => {
+  return (radius * 2 + 2); // diameter + offset
+}
+
+const animateTransform = (degree, radius) => {
+  return [degree, radius, radius].join(" ");
+}
 
 export const Oval = props => (
   <svg
     width={props.width}
     height={props.height}
-    viewBox="0 0 38 38"
+    viewBox={parameterViewboxSize(props.radius)}
     xmlns="http://www.w3.org/2000/svg"
     stroke={props.color}
     aria-label={props.label}
   >
-    <g fill="none" fillRule="evenodd">
-      <g transform="translate(1 1)" strokeWidth="2">
-        <circle strokeOpacity=".5" cx="18" cy="18" r={props.radius} />
-        <path d="M36 18c0-9.94-8.06-18-18-18">
+    <g fill="none" fillRule="evenodd" transform={getTranslation(props.strokeWidthSecondary, props.radius)}>
+      <g transform="translate(1 1)" strokeWidth={props.strokeWidthSecondary}>
+        <circle strokeOpacity=".5" cx={props.radius} cy={props.radius} r={props.radius} stroke={props.secondaryColor}
+                strokeWidth={props.strokeWidth}/>
+        <path d={getPath(props.radius)}>
           <animateTransform
             attributeName="transform"
             type="rotate"
-            from="0 18 18"
-            to="360 18 18"
+            from={animateTransform(0, props.radius)}
+            to={animateTransform(360, props.radius)}
             dur="1s"
             repeatCount="indefinite"
           />
@@ -41,5 +64,7 @@ Oval.defaultProps = {
   width: 80,
   color: "green",
   label: "audio-loading",
-  radius:18
+  radius: 18,
+  strokeWidth: "2",
+  strokeWidthSecondary: "2",
 };

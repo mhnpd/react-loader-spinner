@@ -16,16 +16,20 @@ export default {
 };
 
 /** Ovals */
-export const Oval = (props) => {
+export const Ovals = (props) => {
   return (
     <div style={center}>
       <Loader
         className="test"
-        color="green"
+        color="#FF7F83"
+        secondaryColor="#18215F"
+        strokeWidth="1"
+        strokeWidthSecondary="6"
         width={200}
         height={200}
         type="Oval"
       />
     </div>
   );
-};
+}
+;
