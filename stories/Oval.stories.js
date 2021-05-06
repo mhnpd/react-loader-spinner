@@ -1,8 +1,6 @@
 import React from "react";
 import Loader from "../src/index";
 
-import "../src/loader/css/react-spinner-loader.css";
-
 const center = {
   display: "flex",
   alignItems: "center",
@@ -23,13 +21,12 @@ export const Ovals = (props) => {
         className="test"
         color="#FF7F83"
         secondaryColor="#18215F"
-        strokeWidth="1"
-        strokeWidthSecondary="6"
+        strokeWidth={2}
+        strokeWidthSecondary={6}
         width={200}
         height={200}
         type="Oval"
       />
     </div>
   );
-}
-;
+};
