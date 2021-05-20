@@ -1,16 +1,34 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const radius = 20;
+/**
+ * The radius of the circle
+ * The Loader size is set with the width and height of the SVG
+ * @type {number}
+ */
+const RADIUS = 20;
 
-const getPath = (radius) => { //trust us it works
-  return ["M" + radius + " 0c0-9.94-8.06", radius, radius, radius].join("-"); //Structure e.g. "M36 18c0-9.94-8.06-18-18-18"
+/**
+ * Compute Path depending on circle radius
+ * The structure with radius 20 is "M20 0c0-9.94-8.06-20-20-20"
+ * @param radius of the circle radius default 20
+ * @returns {string}
+ */
+const getPath = (radius) => {
+  return ["M" + radius + " 0c0-9.94-8.06", radius, radius, radius].join("-");
 }
-const parameterViewboxSize = (strokeWidth, secondaryStrokeWidth, radius) => {
+
+/**
+ * Compute the size of the viewbox depending on the radius and Stroke-Width
+ * @param strokeWidth Stroke-Width of the full circle
+ * @param secondaryStrokeWidth Stroke-Width of the 1/4 circle
+ * @param radius radius of the circle
+ * @returns {string}
+ */
+const getViewboxSize = (strokeWidth, secondaryStrokeWidth, radius) => {
   const maxStrokeWidth = Math.max(strokeWidth, secondaryStrokeWidth);
   const startingpoint = -radius - maxStrokeWidth / 2;
   const endpoint = Math.abs(startingpoint) * 2;
-
   return [startingpoint, startingpoint, endpoint, endpoint].join(" ");
 }
 
@@ -19,17 +37,16 @@ export const Oval = props => (
   <svg
     width={props.width}
     height={props.height}
-    viewBox={parameterViewboxSize(props.strokeWidth, props.strokeWidthSecondary, radius)}
+    viewBox={getViewboxSize(props.strokeWidth, props.strokeWidthSecondary || props.strokeWidth, RADIUS)}
     xmlns="http://www.w3.org/2000/svg"
     stroke={props.color}
     aria-label={props.label}
   >
-
     <g fill="none" fillRule="evenodd">
-      <g strokeWidth={props.strokeWidthSecondary}>
-        <circle strokeOpacity=".5" cx="0" cy="0" r={radius} stroke={props.secondaryColor}
+      <g strokeWidth={props.strokeWidthSecondary || props.strokeWidth}>
+        <circle strokeOpacity=".5" cx="0" cy="0" r={RADIUS} stroke={props.secondaryColor}
                 strokeWidth={props.strokeWidth}/>
-        <path d={getPath(radius)}>
+        <path d={getPath(RADIUS)}>
           <animateTransform
             attributeName="transform"
             type="rotate"
@@ -59,5 +76,4 @@ Oval.defaultProps = {
   color: "green",
   label: "audio-loading",
   strokeWidth: 2,
-  strokeWidthSecondary: 2,
 };

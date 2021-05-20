@@ -1,6 +1,7 @@
 import React from "react";
 import Loader from "../src/index";
 
+
 const center = {
   display: "flex",
   alignItems: "center",
@@ -21,10 +22,9 @@ export const Oval = (props) => {
         className="test"
         color= "green"
         secondaryColor="yellow"
-        strokeWidth={2}
-        strokeWidthSecondary={6}
-        width={80}
-        height={80}
+        width={200}
+        height={200}
+        strokeWidth={5}
         type="Oval"
       />
     </div>
