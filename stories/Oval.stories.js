@@ -23,8 +23,8 @@ export const Oval = (props) => {
         secondaryColor="yellow"
         strokeWidth={2}
         strokeWidthSecondary={6}
-        width={42}
-        height={42}
+        width={80}
+        height={80}
         type="Oval"
       />
     </div>
