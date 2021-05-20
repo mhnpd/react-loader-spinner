@@ -9,22 +9,22 @@ const center = {
 };
 
 export default {
-  title: "Ovals",
-  component: Ovals,
+  title: "Oval",
+  component: Oval,
 };
 
 /** Ovals */
-export const Ovals = (props) => {
+export const Oval = (props) => {
   return (
     <div style={center}>
       <Loader
         className="test"
-        color="#FF7F83"
-        secondaryColor="#18215F"
+        color= "green"
+        secondaryColor="yellow"
         strokeWidth={2}
         strokeWidthSecondary={6}
-        width={200}
-        height={200}
+        width={42}
+        height={42}
         type="Oval"
       />
     </div>
