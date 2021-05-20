@@ -14,7 +14,7 @@ export default {
   component: Oval,
 };
 
-/** Ovals */
+/* Oval */
 export const Oval = (props) => {
   return (
     <div style={center}>
