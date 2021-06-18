@@ -78,7 +78,7 @@ react-loader-spinner component has the following types of spinners.
 
 | Spinner Type | Implementation                                                          |
 | ------------ | ----------------------------------------------------------------------- |
-| Audio        | ` <Loader type="Audio" color="#00BFFF" height={80} width={80} />`       |
+| Audio        | `<Loader type="Audio" color="#00BFFF" height={80} width={80} />`        |
 | BallTriangle | `<Loader type="BallTriangle" color="#00BFFF" height={80} width={80} />` |
 | Bars         | `<Loader type="Bars" color="#00BFFF" height={80} width={80} />`         |
 | Circles      | `<Loader type="Circles" color="#00BFFF" height={80} width={80}/>`       |
