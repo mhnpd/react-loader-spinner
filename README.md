@@ -119,10 +119,9 @@ Typescript support is now also available. It has full **propType intellisense** 
 
 - Optimize css implementation
 - Optimization for multiple color support.
-
-* Optimize css implementation
-* Add support for Typescript.
-* Optimization for multiple color support.
+- Optimize css implementation
+- Add support for Typescript.
+- Optimization for multiple color support.
 
 ## License
 
