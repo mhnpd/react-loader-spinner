@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const ThreeDots = props => (
+export const ThreeDots = (props) => (
   <svg
     width={props.width}
     height={props.height}
@@ -22,7 +22,7 @@ export const ThreeDots = props => (
         repeatCount="indefinite"
       />
       <animate
-        attributeName="fillOpacity"
+        attributeName="fill-opacity"
         from="1"
         to="1"
         begin="0s"
@@ -36,7 +36,7 @@ export const ThreeDots = props => (
       cx="60"
       cy="15"
       r={props.radius}
-      attributeName="fillOpacity"
+      attributeName="fill-opacity"
       from="1"
       to="0.3"
     >
@@ -51,7 +51,7 @@ export const ThreeDots = props => (
         repeatCount="indefinite"
       />
       <animate
-        attributeName="fillOpacity"
+        attributeName="fill-opacity"
         from="0.5"
         to="0.5"
         begin="0s"
@@ -73,7 +73,7 @@ export const ThreeDots = props => (
         repeatCount="indefinite"
       />
       <animate
-        attributeName="fillOpacity"
+        attributeName="fill-opacity"
         from="1"
         to="1"
         begin="0s"
@@ -91,7 +91,7 @@ ThreeDots.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
   label: PropTypes.string,
-  radius: PropTypes.number
+  radius: PropTypes.number,
 };
 
 ThreeDots.defaultProps = {
@@ -99,5 +99,5 @@ ThreeDots.defaultProps = {
   width: 80,
   color: "green",
   label: "audio-loading",
-  radius: 9
+  radius: 9,
 };
