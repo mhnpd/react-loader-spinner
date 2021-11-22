@@ -44,7 +44,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 # Demo
 
-[View in page]
+[View in page](https://mhnpd.github.io/react-loader-spinner)
 
 ### Usage
 
