@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import { Spinner } from "./loader";
-
+import React from "react";
+import PropTypes from "prop-types"
+import { Spinner } from "./loader/Spinner";
 const componentNames = [
   "Audio",
   "BallTriangle",
@@ -33,29 +32,7 @@ function componentName(type) {
  * @return {null}
  */
 export default function Loader(props) {
-  const [display, setDisplay] = useState(true);
-
-  useEffect(() => {
-    let timer;
-    if (props.timeout && props.timeout > 0) {
-      timer = setTimeout(() => {
-        setDisplay(false);
-      }, props.timeout);
-    }
-
-    return () => {
-      if (timer) clearTimeout(timer);
-    };
-  });
-
-  if (!props.visible || props.visible === "false") {
-    return null;
-  }
-  return display ? (
-    <div aria-busy="true" className={props.className} style={props.style}>
-      {React.createElement(componentName(props.type), { ...props })}
-    </div>
-  ) : null;
+  return React.createElement(componentName(props.type), { ...props })
 }
 
 Loader.propTypes = {
@@ -63,7 +40,11 @@ Loader.propTypes = {
   style: PropTypes.objectOf(PropTypes.string),
   className: PropTypes.string,
   visible: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  timeout: PropTypes.number
+  timeout: PropTypes.number,
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  color: PropTypes.string,
+  label: PropTypes.string
 };
 
 Loader.defaultProps = {
@@ -71,5 +52,9 @@ Loader.defaultProps = {
   style: {},
   className: "",
   visible: true,
-  timeout: 0
+  timeout: 0,
+  height: 80,
+  width: 80,
+  color: "green",
+  label: "audio-loading"
 };
