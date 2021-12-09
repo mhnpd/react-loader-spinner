@@ -16,7 +16,7 @@ export default {
 };
 
 /** Ovals */
-export const Oval = (props) => {
+export const Ovals = (props) => {
   return (
     <div style={center}>
       <Loader
