@@ -1,24 +1,25 @@
 ---
-name: Audio
-route: /audio
+name: Ball-Triangle
+route: /ball-triangle
 menu: Loaders
 ---
 import { Playground, Props } from 'docz'
-import { Audio } from "../index.tsx"
+
+import { BallTriangle } from "../src/index.tsx"
 
 ## Example
 
 <Playground>
-  <Audio
+  <BallTriangle
     heigth="100"
     width="100"
     color='grey'
-    arialLabel='loading'
+    arialLabel='loading-indicator'
   />
 </Playground>
 
 ## Props
-<Props of={Audio} />
+<Props of={BallTriangle} />
 
 
 
