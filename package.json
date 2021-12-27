@@ -27,15 +27,20 @@
     "typecheck": "tsc --noEmit --skipLibCheck",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "clean": "rm -rf dist",
-    "test": "mocha \"test/**/*.unit.{jsx,tsx,ts,js}\"",
+    "test": "jest --no-cache",
     "dev": "docz dev",
     "build:doc": "docz build",
     "build:serve:doc": "docz build && docz serve",
     "deploy:doc": "yarn build:doc && gh-pages -d ./.docz/dist/"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.3",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "@types/testing-library__jest-dom": "^5.14.2",
+    "@types/testing-library__react": "^10.2.0",
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
     "docz": "^2.3.1",
@@ -46,13 +51,20 @@
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-react": "^7.28.0",
     "gh-pages": "^3.2.3",
+    "jest": "^27.4.5",
     "react": "16.8.0",
     "react-dom": "16.8.0",
+    "ts-jest": "^27.1.2",
     "typescript": "^4.5.4"
   },
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "packageManager": "yarn@3.1.1"
+  "packageManager": "yarn@3.1.1",
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    }
+  }
 }

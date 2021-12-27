@@ -7,7 +7,7 @@ export interface BaseProps {
   width: string | number,
   color: string,
   arialLabel?: string,
-  wrapperStyle: Style,
+  wrapperStyle?: Style,
   wrapperClass?: string,
   visible?:boolean
 }
