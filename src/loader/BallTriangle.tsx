@@ -14,7 +14,7 @@ const BallTriangle:FunctionComponent<BallTriangleProps> = ({
   width = 100,
   radius = 5,
   color = 'blue',
-  arialLabel,
+  arialLabel = 'ball-triangle-loading',
   wrapperClass,
   wrapperStyle,
   visible = true

@@ -14,7 +14,7 @@ export const Rings:FunctionComponent<RingsProps> = ({
   width = 80,
   radius = 6,
   color = 'green',
-  arialLabel = 'revolving-dot-loading',
+  arialLabel = 'rings-loading',
   wrapperStyle,
   wrapperClass,
   visible = true

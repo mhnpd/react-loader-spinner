@@ -11,7 +11,7 @@ const Audio: FunctionComponent<AudioProps> = ({
   height = '100',
   width = '100',
   color = 'blue',
-  arialLabel,
+  arialLabel = 'audio-loading',
   wrapperStyle = {},
   wrapperClass,
   visible = true

@@ -14,7 +14,7 @@ export const Grid:FunctionComponent<GridProps> = ({
   width = 80,
   radius = 12.5,
   color = 'green',
-  arialLabel = 'audio-loading',
+  arialLabel = 'grid-loading',
   wrapperStyle,
   wrapperClass,
   visible = true

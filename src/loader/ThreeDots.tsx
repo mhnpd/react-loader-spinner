@@ -15,7 +15,7 @@ export const ThreeDots:FunctionComponent<ThreeDotsProps> = ({
   width = 80,
   radius = 9,
   color = 'green',
-  arialLabel = 'tail-spin-loading',
+  arialLabel = 'three-dots-loading',
   wrapperStyle,
   wrapperClass,
   visible = true

@@ -12,7 +12,7 @@ const Circles:FunctionComponent<CirclesProps> = ({
   height = 80,
   width = 80,
   color = 'green',
-  arialLabel = 'audio-loading',
+  arialLabel = 'circles-loading',
   wrapperStyle,
   wrapperClass,
   visible = true

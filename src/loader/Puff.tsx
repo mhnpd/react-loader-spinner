@@ -15,7 +15,7 @@ export const Puff:FunctionComponent<PuffProps> = ({
   width = 80,
   radius = 1,
   color = 'green',
-  arialLabel = 'oval-loading',
+  arialLabel = 'puff-loading',
   wrapperStyle,
   wrapperClass,
   visible = true

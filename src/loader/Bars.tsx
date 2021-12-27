@@ -11,7 +11,7 @@ const Bars: FunctionComponent<BarsProps> = ({
   height = 80,
   width = 80,
   color = 'blue',
-  arialLabel,
+  arialLabel = 'bars-loading',
   wrapperStyle,
   wrapperClass,
   visible = true

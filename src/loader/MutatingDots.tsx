@@ -16,7 +16,7 @@ const MutatingDots:FunctionComponent<MutatingDotsProps> = ({
   radius = 12.5,
   color = 'green',
   secondaryColor = 'blue',
-  arialLabel = 'audio-loading',
+  arialLabel = 'mutating-dots-loading',
   wrapperStyle,
   wrapperClass,
   visible = true

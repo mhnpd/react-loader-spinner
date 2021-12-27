@@ -13,7 +13,7 @@ const Triangle: FunctionComponent<TraingleProps> = ({
   height = 80,
   width = 80,
   color = 'green',
-  arialLabel = 'tail-spin-loading',
+  arialLabel = 'trianle-loading',
   wrapperStyle,
   wrapperClass,
   visible = true

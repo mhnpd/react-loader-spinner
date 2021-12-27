@@ -15,7 +15,7 @@ const getDefaultStyle = (visible: boolean): Style => ({
 })
 
 const CradleLoader: FunctionComponent<CradleLoaderProps> = ({
-  arialLabel = 'audio-loading',
+  arialLabel = 'cradle-loading',
   wrapperStyle,
   wrapperClass,
   visible = true
