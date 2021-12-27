@@ -41,7 +41,7 @@ $ yarn add react-loader-spinner
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 ```
 
-# Demo
+# Documentation:
 
 [View in page](https://mhnpd.github.io/react-loader-spinner)
 
@@ -76,36 +76,20 @@ Change webpack config as:
 
 react-loader-spinner component has the following types of spinners.
 
-| Spinner Type | Implementation                                                          |
-| ------------ | ----------------------------------------------------------------------- |
-| Audio        | `<Loader type="Audio" color="#00BFFF" height={80} width={80} />`        |
-| BallTriangle | `<Loader type="BallTriangle" color="#00BFFF" height={80} width={80} />` |
-| Bars         | `<Loader type="Bars" color="#00BFFF" height={80} width={80} />`         |
-| Circles      | `<Loader type="Circles" color="#00BFFF" height={80} width={80}/>`       |
-| Grid         | `<Loader type="Grid" color="#00BFFF" height={80} width={80} />`         |
-| Hearts       | `<Loader type="Hearts" color="#00BFFF" height={80} width={80} />`       |
-| Oval         | `<Loader type="Oval" color="#00BFFF" height={80} width={80} />`         |
-| Puff         | `<Loader type="Puff" color="#00BFFF" height={80} width={80} />`         |
-| Rings        | `<Loader type="Rings" color="#00BFFF" height={80} width={80} />`        |
-| TailSpin     | `<Loader type="TailSpin" color="#00BFFF" height={80} width={80} />`     |
-| ThreeDots    | `<Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />`    |
+| Spinner Type | Implementation                                                                |
+| ------------ |-------------------------------------------------------------------------------|
+| Audio        | `<Audio type="Audio" color="#00BFFF" height={80} width={80} />`               |
+| BallTriangle | `<BallTriangle type="BallTriangle" color="#00BFFF" height={80} width={80} />` |
+| Bars         | `<Bars type="Bars" color="#00BFFF" height={80} width={80} />`                 |
+| Circles      | `<Circles type="Circles" color="#00BFFF" height={80} width={80}/>`            |
+| Grid         | `<Grid type="Grid" color="#00BFFF" height={80} width={80} />`                 |
+| Hearts       | `<Hearts type="Hearts" color="#00BFFF" height={80} width={80} />`             |
+| Oval         | `<Oval type="Oval" color="#00BFFF" height={80} width={80} />`                 |
+| Puff         | `<Puff type="Puff" color="#00BFFF" height={80} width={80} />`                 |
+| Rings        | `<Rings type="Rings" color="#00BFFF" height={80} width={80} />`               |
+| TailSpin     | `<TailSpin type="TailSpin" color="#00BFFF" height={80} width={80} />`         |
+| ThreeDots    | `<ThreeDots type="ThreeDots" color="#00BFFF" height={80} width={80} />`       |
 
-> There are more. View [demo] to see the full list.
-
-### PropTypes Available
-
-react-loader-spinner component accepts the following props. Instructions on how to use them are below.
-
-| name           | types             | default      | Detail                                                                          |
-| -------------- | ----------------- | ------------ | ------------------------------------------------------------------------------- |
-| visible        | String or boolean | false        | Show/ Hide the loader as required.                                              |
-| type           | String            | "Audio"      | Type of spinner you want to display. View the type in Types of Spinner section. |
-| height         | Number            | 80           | Height prop define the height of the svg spinner. Default height is 80px.       |
-| width          | Number            | 80           | Width prop define the width of the spinner.                                     |
-| color          | String            | "Blue"       | color prop is for adding color to the spinner                                   |
-| secondaryColor | String            | "Grey"       | secondaryColor prop for now is available on Plane and MutatingDots loaders      |
-| timeout        | Number            | 0            | Duration in milliseconds after which spinner is disabled                        |
-| radius         | Number            | value varies | Set radius if the loader has a circle element in it                             |
 
 ### Typescript
 
