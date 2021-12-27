@@ -46,23 +46,13 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 [View in page](https://mhnpd.github.io/react-loader-spinner)
 
 ### Usage
-
-```js
-import Loader from "react-loader-spinner";
-export default class App extends React.Component {
-  //other logic
-  render() {
-    return (
-      <Loader
-        type="Puff"
-        color="#00BFFF"
-        height={100}
-        width={100}
-        timeout={3000} //3 secs
-      />
-    );
-  }
-}
+```jsx
+<Audio
+    heigth="100"
+    width="100"
+    color='grey'
+    arialLabel='loading'
+  />
 ```
 
 ### If webpack throws issue with css. (For older version of this package)
