@@ -1,28 +1,31 @@
 import React from 'react'
-import Audio from '../../src/loader/Audio'
+import Bars from '../../src/loader/Bars'
 import { render, screen } from '@testing-library/react'
 
-describe('Audio Loader', () => {
+const wrapperTestId = 'bars-loading'
+const svgTestId = 'bars-svg'
+
+describe('Bars Loader', () => {
   test('should be importable correctly', () => {
-    const component = render(<Audio height={100} color={'red'} width={100} />)
+    const component = render(<Bars height={100} color={'red'} width={100} />)
     expect(component).toBeDefined()
   })
 
   test('should have a test classes', () => {
-    render(<Audio height={100} color={'red'} width={100} />)
-    const element = screen.getByTestId('audio-loading')
+    render(<Bars height={100} color={'red'} width={100} />)
+    const element = screen.getByTestId(wrapperTestId)
     expect(element).toBeVisible()
     expect(element).toContainHTML('svg')
   })
   test('should be hidden when visibile is false', () => {
-    render(<Audio height={100} color={'red'} width={100} visible={false} />)
-    const element = screen.getByTestId('audio-loading')
+    render(<Bars height={100} color={'red'} width={100} visible={false} />)
+    const element = screen.getByTestId(wrapperTestId)
     expect(element).not.toBeVisible()
   })
 
   test('should have a correct attributes', () => {
-    render(<Audio height={100} color={'red'} width={100} visible={false} />)
-    const element = screen.getByTestId('audio-svg')
+    render(<Bars height={100} color={'red'} width={100} visible={false} />)
+    const element = screen.getByTestId(svgTestId)
     expect(element).toHaveAttribute('height')
     expect(element).toHaveAttribute('width')
     expect(element).toHaveAttribute('fill')

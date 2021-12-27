@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface BallTriangleProps extends BaseProps {
-  radius: string | number,
+  radius?: string | number,
 }
 
 const getDefaultStyle = (visible:boolean):Style => ({
@@ -20,13 +20,14 @@ const BallTriangle:FunctionComponent<BallTriangleProps> = ({
   visible = true
 
 }) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass}>
+  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="ball-triangle-loading">
   <svg
     height={height}
     width={width}
     stroke={color}
     viewBox="0 0 57 57"
     xmlns="http://www.w3.org/2000/svg"
+    data-testid="ball-triangle-svg"
     aria-label={arialLabel}
   >
     <g fill="none" fillRule="evenodd">

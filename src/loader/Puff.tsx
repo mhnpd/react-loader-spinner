@@ -2,8 +2,8 @@ import React, { FunctionComponent } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface PuffProps extends BaseProps {
-  radius: string | number,
-  secondaryColor: string,
+  radius?: string | number,
+  secondaryColor?: string,
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
@@ -20,7 +20,7 @@ export const Puff:FunctionComponent<PuffProps> = ({
   wrapperClass,
   visible = true
 }) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass}>
+  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="puff-loading">
   <svg
     width={width}
     height={height}
@@ -28,6 +28,7 @@ export const Puff:FunctionComponent<PuffProps> = ({
     xmlns="http://www.w3.org/2000/svg"
     stroke={color}
     aria-label={arialLabel}
+    data-testid="puff-svg"
   >
     <g fill="none" fillRule="evenodd" strokeWidth="2">
       <circle cx="22" cy="22" r={radius}>

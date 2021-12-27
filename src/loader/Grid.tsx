@@ -2,7 +2,7 @@ import React, { FunctionComponent, ReactElement } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface GridProps extends BaseProps {
-  radius:string | number,
+  radius?:string | number,
 }
 
 const getDefaultStyle = (visible:boolean):Style => ({
@@ -19,13 +19,14 @@ export const Grid:FunctionComponent<GridProps> = ({
   wrapperClass,
   visible = true
 }):ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass}>
+  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="grid-loading">
   <svg
     width={width}
     height={height}
     viewBox="0 0 105 105"
     fill={color}
     aria-label={arialLabel}
+    data-testid="grid-svg"
   >
     <circle cx="12.5" cy="12.5" r={`${radius}`}>
       <animate

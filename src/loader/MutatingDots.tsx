@@ -2,8 +2,8 @@ import React, { FunctionComponent } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface MutatingDotsProps extends BaseProps {
-  radius: string | number,
-  secondaryColor: string,
+  radius?: string | number,
+  secondaryColor?: string,
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
@@ -21,8 +21,8 @@ const MutatingDots:FunctionComponent<MutatingDotsProps> = ({
   wrapperClass,
   visible = true
 }) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass}>
-  <svg id="goo-loader" width={width} height={height} aria-label={arialLabel}>
+  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="mutating-dots-loading">
+  <svg id="goo-loader" width={width} height={height} aria-label={arialLabel} data-testid="mutating-dots-svg">
     <filter id="fancy-goo">
       <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
       <feColorMatrix

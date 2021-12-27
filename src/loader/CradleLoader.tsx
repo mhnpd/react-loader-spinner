@@ -24,6 +24,7 @@ const CradleLoader: FunctionComponent<CradleLoaderProps> = ({
      role="presentation"
      style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
      className={`container ${wrapperClass}`}
+     data-testid="cradle-loading"
   >
     <div className="react-spinner-loader-swing">
       <div className="react-spinner-loader-swing-l"/>

@@ -2,8 +2,7 @@ import React, { FunctionComponent, ReactElement } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface OvalProps extends BaseProps {
-  radius: string | number,
-  secondaryColor: string,
+  radius?: string | number,
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
@@ -20,13 +19,14 @@ const Oval:FunctionComponent<OvalProps> = ({
   wrapperClass,
   visible = true
 }):ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass}>
+  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="oval-loading">
   <svg
     width={width}
     height={height}
     viewBox="0 0 38 38"
     xmlns="http://www.w3.org/2000/svg"
     stroke={color}
+    data-testid="oval-svg"
     aria-label={arialLabel}
   >
     <g fill="none" fillRule="evenodd">

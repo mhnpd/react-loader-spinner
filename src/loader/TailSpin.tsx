@@ -2,8 +2,7 @@ import React, { FunctionComponent, ReactElement } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface TailSpinProps extends BaseProps {
-  radius: string | number,
-  secondaryColor: string,
+  radius?: string | number,
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
@@ -20,13 +19,14 @@ export const TailSpin: FunctionComponent<TailSpinProps> = ({
   wrapperClass,
   visible = true
 }): ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass}>
+  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="tail-spin-loading">
     <svg
       width={width}
       height={height}
       viewBox="0 0 38 38"
       xmlns="http://www.w3.org/2000/svg"
       aria-label={arialLabel}
+      data-testid="tail-spin-svg"
     >
       <defs>
         <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a">

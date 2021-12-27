@@ -2,15 +2,14 @@ import React, { FunctionComponent } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface ThreeDotsProps extends BaseProps {
-  radius: string | number,
-  secondaryColor: string,
+  radius?: string | number,
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
   display: visible ? 'flex' : 'none'
 })
 
-export const ThreeDots:FunctionComponent<ThreeDotsProps> = ({
+const ThreeDots:FunctionComponent<ThreeDotsProps> = ({
   height = 80,
   width = 80,
   radius = 9,
@@ -20,7 +19,7 @@ export const ThreeDots:FunctionComponent<ThreeDotsProps> = ({
   wrapperClass,
   visible = true
 }) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass}>
+  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="three-dots-loading">
   <svg
     width={width}
     height={height}
@@ -28,6 +27,7 @@ export const ThreeDots:FunctionComponent<ThreeDotsProps> = ({
     xmlns="http://www.w3.org/2000/svg"
     fill={color}
     aria-label={arialLabel}
+    data-testid="three-dots-svg"
   >
     <circle cx="15" cy="15" r={Number(radius) + 6}>
       <animate
@@ -105,3 +105,5 @@ export const ThreeDots:FunctionComponent<ThreeDotsProps> = ({
   </svg>
   </div>
 )
+
+export default ThreeDots

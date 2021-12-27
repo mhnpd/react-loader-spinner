@@ -3,9 +3,9 @@ export type Style = {
 }
 
 export interface BaseProps {
-  height: string | number,
-  width: string | number,
-  color: string,
+  height?: string | number,
+  width?: string | number,
+  color?: string,
   arialLabel?: string,
   wrapperStyle?: Style,
   wrapperClass?: string,

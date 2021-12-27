@@ -2,8 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface RingsProps extends BaseProps {
-  radius: string | number,
-  secondaryColor: string,
+  radius?: string | number,
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
@@ -19,8 +18,7 @@ export const Rings:FunctionComponent<RingsProps> = ({
   wrapperClass,
   visible = true
 }) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass}>
-
+  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="rings-loading">
     <svg
       width={width}
       height={height}
@@ -28,6 +26,7 @@ export const Rings:FunctionComponent<RingsProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       stroke={color}
       aria-label={arialLabel}
+      data-testid="rings-svg"
     >
       <g fill="none" fillRule="evenodd" transform="translate(1 1)" strokeWidth="2">
         <circle cx="22" cy="22" r={radius} strokeOpacity="0">

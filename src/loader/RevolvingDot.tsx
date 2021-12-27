@@ -2,14 +2,14 @@ import React, { FunctionComponent, ReactElement } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface RevolvingDotProps extends BaseProps {
-  radius: string | number,
-  secondaryColor: string,
+  radius?: string | number,
+  secondaryColor?: string,
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
   display: visible ? 'flex' : 'none'
 })
-export const RevolvingDot:FunctionComponent<RevolvingDotProps> = ({
+const RevolvingDot:FunctionComponent<RevolvingDotProps> = ({
   height = 80,
   width = 80,
   radius = 6,
@@ -19,7 +19,7 @@ export const RevolvingDot:FunctionComponent<RevolvingDotProps> = ({
   wrapperClass,
   visible = true
 }):ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass}>
+  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="revolving-dot-loading">
 
   <svg
     version="1.1"
@@ -29,6 +29,7 @@ export const RevolvingDot:FunctionComponent<RevolvingDotProps> = ({
     x="0px"
     y="0px"
     aria-label={arialLabel}
+    data-testid="revolving-dot-svg"
   >
     <circle
       fill="none"
@@ -52,3 +53,5 @@ export const RevolvingDot:FunctionComponent<RevolvingDotProps> = ({
   </svg>
   </div>
 )
+
+export default RevolvingDot

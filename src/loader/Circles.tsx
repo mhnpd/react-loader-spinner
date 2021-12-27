@@ -17,7 +17,7 @@ const Circles:FunctionComponent<CirclesProps> = ({
   wrapperClass,
   visible = true
 }): ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass}>
+  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="circles-loading">
   <svg
     width={width}
     height={height}
@@ -25,6 +25,7 @@ const Circles:FunctionComponent<CirclesProps> = ({
     xmlns="http://www.w3.org/2000/svg"
     fill={color}
     aria-label={arialLabel}
+    data-testid="circles-svg"
   >
     <path d="M67.447 58c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zm9.448 9.447c0 5.523 4.477 10 10 10 5.522 0 10-4.477 10-10s-4.478-10-10-10c-5.523 0-10 4.477-10 10zm-9.448 9.448c-5.523 0-10 4.477-10 10 0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10zM58 67.447c0-5.523-4.477-10-10-10s-10 4.477-10 10 4.477 10 10 10 10-4.477 10-10z">
       <animateTransform

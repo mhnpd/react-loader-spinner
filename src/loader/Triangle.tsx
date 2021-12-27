@@ -22,6 +22,7 @@ const Triangle: FunctionComponent<TraingleProps> = ({
     role="presentation"
     style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
     className={`react-spinner-loader-svg ${wrapperClass}`}
+    data-testid="triangle-loading"
   >
     <svg
       id="triangle"
@@ -29,6 +30,7 @@ const Triangle: FunctionComponent<TraingleProps> = ({
       height={height}
       viewBox="-3 -4 39 39"
       aria-label={arialLabel}
+      data-testid="triangle-svg"
     >
       <polygon fill="transparent" stroke={color} strokeWidth="1" points="16,0 32,32 0,32"/>
     </svg>

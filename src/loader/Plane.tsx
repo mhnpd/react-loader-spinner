@@ -4,7 +4,7 @@ import { BaseProps, Style } from '../type'
 import './css/Plane.css'
 
 interface PlaneProps extends Omit<BaseProps, 'width' | 'height'> {
-  secondaryColor: string,
+  secondaryColor?: string,
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
@@ -18,13 +18,14 @@ export const Plane:FunctionComponent<PlaneProps> = ({
   wrapperClass,
   visible = true
 }):ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass}>
+  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="plane-loading">
   <svg
     className="react-spinner-loader-svg-calLoader"
     xmlns="http://www.w3.org/2000/svg"
     width="230"
     height="230"
     aria-label={arialLabel}
+    data-testid="plane-svg"
   >
     <desc>Plane animation. Loading </desc>
     <path

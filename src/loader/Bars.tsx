@@ -16,14 +16,14 @@ const Bars: FunctionComponent<BarsProps> = ({
   wrapperClass,
   visible = true
 }) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass}>
-
+  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="bars-loading">
   <svg
     width={width}
     height={height}
     fill={color}
     viewBox="0 0 135 140"
     xmlns="http://www.w3.org/2000/svg"
+    data-testid="bars-svg"
     aria-label={arialLabel}
   >
     <rect y="10" width="15" height="120" rx="6">
