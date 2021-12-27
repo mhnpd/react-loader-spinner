@@ -1,15 +1,7 @@
 import React, { FunctionComponent } from 'react'
-import { Style } from '../type'
+import { BaseProps, Style } from '../type'
 
-interface BarsProps {
-  height: string | number,
-  width: string | number,
-  color: string,
-  arialLabel?: string,
-  wrapperStyle?: Style,
-  wrapperClass?: string,
-  visible?:boolean
-}
+interface BarsProps extends BaseProps {}
 
 const getDefaultStyle = (visible:boolean):Style => ({
   display: visible ? 'flex' : 'none'

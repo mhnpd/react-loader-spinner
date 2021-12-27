@@ -1,16 +1,7 @@
 import React, { FunctionComponent } from 'react'
-import { Style } from '../type'
+import { BaseProps, Style } from '../type'
 
-interface HeartsProps {
-  height: string | number,
-  width: string | number,
-  radius: string | number,
-  color: string,
-  arialLabel?: string,
-  wrapperStyle?: Style,
-  wrapperClass?: string,
-  visible?: boolean
-}
+interface HeartsProps extends BaseProps {}
 
 const getDefaultStyle = (visible: boolean): Style => ({
   display: visible ? 'flex' : 'none'
@@ -19,7 +10,6 @@ const getDefaultStyle = (visible: boolean): Style => ({
 const Hearts: FunctionComponent<HeartsProps> = ({
   height = 80,
   width = 80,
-  radius = 12.5,
   color = 'green',
   arialLabel = 'audio-loading',
   wrapperStyle,

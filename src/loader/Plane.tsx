@@ -1,27 +1,16 @@
 import React, { FunctionComponent, ReactElement } from 'react'
 
-import { Style } from '../type'
+import { BaseProps, Style } from '../type'
 import './css/Plane.css'
 
-interface PlaneProps {
-  height: string | number,
-  width: string | number,
-  radius: string | number,
-  color: string,
+interface PlaneProps extends Omit<BaseProps, 'width' | 'height'> {
   secondaryColor: string,
-  arialLabel?: string,
-  wrapperStyle?: Style,
-  wrapperClass?: string,
-  visible?: boolean
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
   display: visible ? 'flex' : 'none'
 })
 export const Plane:FunctionComponent<PlaneProps> = ({
-  height = 80,
-  width = 80,
-  radius = 18,
   color = 'green',
   secondaryColor = 'blue',
   arialLabel = 'plane-loading',

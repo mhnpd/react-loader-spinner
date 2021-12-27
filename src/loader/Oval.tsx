@@ -1,16 +1,9 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { Style } from '../type'
+import { BaseProps, Style } from '../type'
 
-interface OvalProps {
-  height: string | number,
-  width: string | number,
+interface OvalProps extends BaseProps {
   radius: string | number,
-  color: string,
   secondaryColor: string,
-  arialLabel?: string,
-  wrapperStyle?: Style,
-  wrapperClass?: string,
-  visible?: boolean
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({

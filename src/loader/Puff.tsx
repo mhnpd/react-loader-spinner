@@ -1,16 +1,9 @@
 import React, { FunctionComponent } from 'react'
-import { Style } from '../type'
+import { BaseProps, Style } from '../type'
 
-interface PuffProps {
-  height: string | number,
-  width: string | number,
+interface PuffProps extends BaseProps {
   radius: string | number,
-  color: string,
   secondaryColor: string,
-  arialLabel?: string,
-  wrapperStyle?: Style,
-  wrapperClass?: string,
-  visible?: boolean
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({

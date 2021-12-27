@@ -1,16 +1,9 @@
 import React, { FunctionComponent } from 'react'
-import { Style } from '../type'
+import { BaseProps, Style } from '../type'
 
-interface ThreeDotsProps {
-  height: string | number,
-    width: string | number,
-    radius: string | number,
-    color: string,
-    secondaryColor: string,
-    arialLabel?: string,
-    wrapperStyle?: Style,
-    wrapperClass?: string,
-    visible?: boolean
+interface ThreeDotsProps extends BaseProps {
+  radius: string | number,
+  secondaryColor: string,
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({

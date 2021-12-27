@@ -1,18 +1,9 @@
 import React, { FunctionComponent } from 'react'
 
 import './css/Triangle.css'
-import { Style } from '../type'
+import { BaseProps, Style } from '../type'
 
-interface TraingleProps {
-  height: string | number,
-  width: string | number,
-  color: string,
-  secondaryColor: string,
-  arialLabel?: string,
-  wrapperStyle?: Style,
-  wrapperClass?: string,
-  visible?: boolean
-}
+interface TraingleProps extends BaseProps {}
 
 const getDefaultStyle = (visible: boolean): Style => ({
   display: visible ? 'flex' : 'none'

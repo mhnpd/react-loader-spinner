@@ -1,16 +1,9 @@
 import React, { FunctionComponent } from 'react'
-import { Style } from '../type'
+import { BaseProps, Style } from '../type'
 
-interface MutatingDotsProps {
-  height: string | number,
-  width: string | number,
+interface MutatingDotsProps extends BaseProps {
   radius: string | number,
-  color: string,
   secondaryColor: string,
-  arialLabel?: string,
-  wrapperStyle?: Style,
-  wrapperClass?: string,
-  visible?: boolean
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({

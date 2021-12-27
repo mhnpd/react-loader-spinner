@@ -1,14 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { Style } from '../type'
+import { BaseProps, Style } from '../type'
 
-interface CirclesProps {
-  height: string | number,
-  width: string | number,
-  color: string,
-  arialLabel?: string,
-  wrapperStyle?: Style,
-  wrapperClass?: string,
-  visible?:boolean
+interface CirclesProps extends BaseProps {
 }
 
 const getDefaultStyle = (visible:boolean):Style => ({

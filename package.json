@@ -30,7 +30,8 @@
     "test": "mocha \"test/**/*.unit.{jsx,tsx,ts,js}\"",
     "dev": "docz dev",
     "build:doc": "docz build",
-    "build:serve:doc": "docz build && docz serve"
+    "build:serve:doc": "docz build && docz serve",
+    "deploy:doc": "yarn build:doc && gh-pages -d ./.docz/dist/"
   },
   "devDependencies": {
     "@types/react": "^17.0.38",
@@ -44,6 +45,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-react": "^7.28.0",
+    "gh-pages": "^3.2.3",
     "react": "16.8.0",
     "react-dom": "16.8.0",
     "typescript": "^4.5.4"

@@ -1,16 +1,9 @@
 import React, { FunctionComponent } from 'react'
-import { Style } from '../type'
+import { BaseProps, Style } from '../type'
 
-interface RingsProps {
-  height: string | number,
-  width: string | number,
+interface RingsProps extends BaseProps {
   radius: string | number,
-  color: string,
   secondaryColor: string,
-  arialLabel?: string,
-  wrapperStyle?: Style,
-  wrapperClass?: string,
-  visible?: boolean
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
