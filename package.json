@@ -5,10 +5,7 @@
   "unpkg": "dist/index.js",
   "jsdelivr": "dist/index.js",
   "main": "dist/index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mhnpd/react-loader-spinner"
-  },
+  "types": "dist/index.d.ts",
   "author": {
     "name": "Mohan Upadhyay",
     "url": "https://mohanpd.com.np"
@@ -24,35 +21,46 @@
     "spinner",
     "react"
   ],
-  "types": "dist/types/index.d.ts",
   "scripts": {
-    "build": "babel src -d dist --copy-files",
-    "release:major": "npm version major && git push --tags",
-    "release:minor": "npm version minor && git push --tags",
-    "release:patch": "npm version patch && git push --tags",
-    "release:beta": "npm version prerelease && npm run build && npm publish --tag beta",
-    "start": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build": "rm -rf ./dist && tsc",
+    "build:watch": "tsc --watch",
+    "typecheck": "tsc --noEmit --skipLibCheck",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "clean": "rm -rf dist",
+    "test": "jest --no-cache",
+    "dev": "docz dev",
+    "build:doc": "docz build",
+    "build:serve:doc": "docz build && docz serve",
+    "deploy:doc": "yarn build:doc && gh-pages -d ./.docz/dist/"
   },
   "devDependencies": {
-    "react": "^16.13.1 || >= 17.0.0",
-    "react-is": "^16.13.1 || >= 17.0.0",
-    "react-dom": "^16.13.1 || >= 17.0.0",
-    "@babel/cli": "^7.11.6",
-    "babel-loader": "^8.1.0",
-    "@babel/core": "^7.11.6",
-    "@storybook/react": "^6.0.21",
-    "@babel/preset-env": "^7.11.5",
-    "@babel/preset-react": "^7.10.4",
-    "@storybook/addon-links": "^6.0.21",
-    "@storybook/addon-actions": "^6.0.21",
-    "@storybook/addon-essentials": "^6.0.21"
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.3",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@types/testing-library__jest-dom": "^5.14.2",
+    "@types/testing-library__react": "^10.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
+    "docz": "^2.3.1",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-react": "^7.28.0",
+    "gh-pages": "^3.2.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.4.5",
+    "react": "16.8.0",
+    "react-dom": "16.8.0",
+    "ts-jest": "^27.1.2",
+    "typescript": "^4.5.4"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-dom": "*"
+    "react": "^16.0.0 || ^17.0.0",
+    "react-dom": "^16.0.0 || ^17.0.0"
   },
-  "dependencies": {
-    "prop-types": "^15.7.2"
-  }
+  "packageManager": "yarn@3.1.1"
 }
