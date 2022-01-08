@@ -26,6 +26,7 @@ jest.config.js
 tsconfig.json
 doczrc.js
 Contribution.md
+.docz
 
 
 
