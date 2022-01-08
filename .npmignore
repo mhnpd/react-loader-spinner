@@ -5,7 +5,7 @@
 .DS_Store
 .idea
 .babelrc
-.eslintrc
+.eslintrc.json
 npm-debug.log
 lib
 .storybook
@@ -20,5 +20,13 @@ _config.yml
 example
 .github
 .idea
+logo
+test
+jest.config.js
+tsconfig.json
+doczrc.js
+Contribution.md
+
+
 
 
