@@ -22,11 +22,12 @@
     "react"
   ],
   "scripts": {
-    "build": "rm -rf ./dist && tsc",
+    "build": "yarn clean && tsc && yarn copy-files",
     "build:watch": "tsc --watch",
     "typecheck": "tsc --noEmit --skipLibCheck",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
-    "clean": "rm -rf dist",
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 src/**/*.css dist/",
     "test": "jest --no-cache",
     "dev": "docz dev",
     "build:doc": "docz build",
@@ -43,6 +44,7 @@
     "@types/testing-library__react": "^10.2.0",
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
+    "copyfiles": "^2.4.1",
     "docz": "^2.3.1",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
@@ -55,6 +57,7 @@
     "jest": "^27.4.5",
     "react": "16.8.0",
     "react-dom": "16.8.0",
+    "rimraf": "^3.0.2",
     "ts-jest": "^27.1.2",
     "typescript": "^4.5.4"
   },
