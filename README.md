@@ -85,9 +85,7 @@ react-loader-spinner component has the following types of spinners.
 | ThreeDots    | `<ThreeDots type="ThreeDots" color="#00BFFF" height={80} width={80} />`       |
 
 
-### Typescript
-
-Typescript support is now also available. It has full **propType intellisense** support. Just install the component library as usual and use it in any _(React) \<Typescript\>_ project.Finally, you will get all sorts of propType intellisense & static typeChecking out of the box. Just like Javascript **we also ❤ Typescript**.
+<iframe src="https://mhnpd.github.io/react-loader-spinner-example/" title="description"></iframe>
 
 ### Here are the list of the task for which we want PR:
 
