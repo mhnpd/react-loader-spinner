@@ -85,7 +85,6 @@ react-loader-spinner component has the following types of spinners.
 | ThreeDots    | `<ThreeDots type="ThreeDots" color="#00BFFF" height={80} width={80} />`       |
 
 
-<iframe src="https://mhnpd.github.io/react-loader-spinner-example/" title="description"></iframe>
 
 ### Here are the list of the task for which we want PR:
 
