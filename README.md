@@ -85,6 +85,8 @@ react-loader-spinner component has the following types of spinners.
 | ThreeDots    | `<ThreeDots type="ThreeDots" color="#00BFFF" height={80} width={80} />`       |
 
 
+ ![alt text](https://user-images.githubusercontent.com/33191954/148691173-a825d830-9457-4174-9b74-5c2a264906e4.gif)
+  
 
 ### Here are the list of the task for which we want PR:
 
