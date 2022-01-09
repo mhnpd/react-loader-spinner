@@ -43,7 +43,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 # Documentation:
 
-[View in page](https://mhnpd.github.io/react-loader-spinner)
+[DEMO](https://mhnpd.github.io/react-loader-spinner-example/)
 
 ### Usage
 ```jsx
