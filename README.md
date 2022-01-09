@@ -47,6 +47,10 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 ### Usage
 ```jsx
+
+import { Audio } from  'react-loader-spinner'
+
+
 <Audio
     heigth="100"
     width="100"
@@ -84,10 +88,6 @@ react-loader-spinner component has the following types of spinners.
 ### Typescript
 
 Typescript support is now also available. It has full **propType intellisense** support. Just install the component library as usual and use it in any _(React) \<Typescript\>_ project.Finally, you will get all sorts of propType intellisense & static typeChecking out of the box. Just like Javascript **we also ❤ Typescript**.
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/61944859/89057235-1da6cf00-d37f-11ea-827e-17edbca46016.jpg" alt=""/>
-</p>
 
 ### Here are the list of the task for which we want PR:
 
