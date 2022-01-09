@@ -82,11 +82,7 @@ react-loader-spinner component has the following types of spinners.
 
 ### Here are the list of the task for which we want PR:
 
-- Optimize css implementation
-- Optimization for multiple color support.
-- Optimize css implementation
-- Add support for Typescript.
-- Optimization for multiple color support.
+- Rings svg loader not supported in Safari
 
 ## License
 
