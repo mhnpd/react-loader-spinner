@@ -72,17 +72,17 @@ react-loader-spinner component has the following types of spinners.
 
 | Spinner Type | Implementation                                                                |
 | ------------ |-------------------------------------------------------------------------------|
-| Audio        | `<Audio type="Audio" color="#00BFFF" height={80} width={80} />`               |
-| BallTriangle | `<BallTriangle type="BallTriangle" color="#00BFFF" height={80} width={80} />` |
-| Bars         | `<Bars type="Bars" color="#00BFFF" height={80} width={80} />`                 |
-| Circles      | `<Circles type="Circles" color="#00BFFF" height={80} width={80}/>`            |
-| Grid         | `<Grid type="Grid" color="#00BFFF" height={80} width={80} />`                 |
-| Hearts       | `<Hearts type="Hearts" color="#00BFFF" height={80} width={80} />`             |
-| Oval         | `<Oval type="Oval" color="#00BFFF" height={80} width={80} />`                 |
-| Puff         | `<Puff type="Puff" color="#00BFFF" height={80} width={80} />`                 |
-| Rings        | `<Rings type="Rings" color="#00BFFF" height={80} width={80} />`               |
-| TailSpin     | `<TailSpin type="TailSpin" color="#00BFFF" height={80} width={80} />`         |
-| ThreeDots    | `<ThreeDots type="ThreeDots" color="#00BFFF" height={80} width={80} />`       |
+| Audio        | `<Audio color="#00BFFF" height={80} width={80} />`               |
+| BallTriangle | `<BallTriangle color="#00BFFF" height={80} width={80} />` |
+| Bars         | `<Bars color="#00BFFF" height={80} width={80} />`                 |
+| Circles      | `<Circles color="#00BFFF" height={80} width={80}/>`            |
+| Grid         | `<Grid color="#00BFFF" height={80} width={80} />`                 |
+| Hearts       | `<Hearts color="#00BFFF" height={80} width={80} />`             |
+| Oval         | `<Oval color="#00BFFF" height={80} width={80} />`                 |
+| Puff         | `<Puff color="#00BFFF" height={80} width={80} />`                 |
+| Rings        | `<Rings color="#00BFFF" height={80} width={80} />`               |
+| TailSpin     | `<TailSpin  color="#00BFFF" height={80} width={80} />`         |
+| ThreeDots    | `<ThreeDots color="#00BFFF" height={80} width={80} />`       |
 
 
  ![alt text](https://user-images.githubusercontent.com/33191954/148691173-a825d830-9457-4174-9b74-5c2a264906e4.gif)
