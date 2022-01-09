@@ -33,14 +33,6 @@ $ npm install react-loader-spinner --save
 $ yarn add react-loader-spinner
 ```
 
-##### Import required css
-
-#
-
-```js
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-```
-
 # Documentation:
 
 [DEMO](https://mhnpd.github.io/react-loader-spinner-example/)
