@@ -4,19 +4,16 @@ route: /triangle
 menu: Loaders
 ---
 
-import { Playground, Props } from "docz"
-import { Triangle } from "../lib/index.tsx"
+import { Playground, Props } from 'docz'
+import { Triangle } from '../lib/index.tsx'
+import '../lib/loader/css/react-spinner-loader.css'
 
 ## Example
 
 <Playground>
-  <Triangle
-    arialLabel='loading-indicator'
-  />
+  <Triangle arialLabel="loading-indicator" />
 </Playground>
 
 ## Props
+
 <Props of={Triangle} />
-
-
-
