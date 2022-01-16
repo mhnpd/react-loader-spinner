@@ -38,6 +38,16 @@ $ yarn add react-loader-spinner
 [DEMO](https://mhnpd.github.io/react-loader-spinner-example/)
 
 ### Usage
+
+
+##### Import required css
+Import the css to main app.js file
+
+```js
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+```
+
+
 ```jsx
 
 import { Audio } from  'react-loader-spinner'
