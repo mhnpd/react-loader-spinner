@@ -1,19 +1,18 @@
 import React, { FunctionComponent } from 'react'
 
-import './css/Triangle.css'
 import { BaseProps, Style } from '../type'
 
-interface TraingleProps extends BaseProps {}
+interface TriangleProps extends BaseProps {}
 
 const getDefaultStyle = (visible: boolean): Style => ({
   display: visible ? 'flex' : 'none'
 })
 
-const Triangle: FunctionComponent<TraingleProps> = ({
+const Triangle: FunctionComponent<TriangleProps> = ({
   height = 80,
   width = 80,
   color = 'green',
-  arialLabel = 'trianle-loading',
+  arialLabel = 'triangle-loading',
   wrapperStyle,
   wrapperClass,
   visible = true
@@ -32,7 +31,12 @@ const Triangle: FunctionComponent<TraingleProps> = ({
       aria-label={arialLabel}
       data-testid="triangle-svg"
     >
-      <polygon fill="transparent" stroke={color} strokeWidth="1" points="16,0 32,32 0,32"/>
+      <polygon
+        fill="transparent"
+        stroke={color}
+        strokeWidth="1"
+        points="16,0 32,32 0,32"
+      />
     </svg>
   </div>
 )

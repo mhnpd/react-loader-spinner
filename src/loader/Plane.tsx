@@ -1,7 +1,6 @@
 import React, { FunctionComponent, ReactElement } from 'react'
 
 import { BaseProps, Style } from '../type'
-import './css/Plane.css'
 
 interface PlaneProps extends Omit<BaseProps, 'width' | 'height'> {
   secondaryColor?: string,

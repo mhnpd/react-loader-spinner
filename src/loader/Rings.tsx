@@ -8,7 +8,7 @@ interface RingsProps extends BaseProps {
 const getDefaultStyle = (visible: boolean): Style => ({
   display: visible ? 'flex' : 'none'
 })
-export const Rings:FunctionComponent<RingsProps> = ({
+export const Rings: FunctionComponent<RingsProps> = ({
   height = 80,
   width = 80,
   radius = 6,
