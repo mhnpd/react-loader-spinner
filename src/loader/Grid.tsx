@@ -25,7 +25,7 @@ export const Grid: FunctionComponent<GridProps> = ({
       height={height}
       viewBox="0 0 105 105"
       fill={color}
-      aria-label={arialLabel}
+      aria-label={ariaLabel}
       data-testid="grid-svg"
     >
       <circle cx="12.5" cy="12.5" r={`${radius}`}>

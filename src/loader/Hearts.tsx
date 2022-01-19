@@ -22,7 +22,7 @@ const Hearts: FunctionComponent<HeartsProps> = ({
       viewBox="0 0 140 64"
       xmlns="http://www.w3.org/2000/svg"
       fill={color}
-      aria-label={arialLabel}
+      aria-label={ariaLabel}
       data-testid="hearts-svg"
     >
       <path

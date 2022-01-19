@@ -30,7 +30,7 @@ const Watch: FunctionComponent<WatchProps> = ({
       viewBox="0 0 100 100"
       enableBackground="new 0 0 100 100"
       xmlSpace="preserve"
-      aria-label={arialLabel}
+      aria-label={ariaLabel}
       data-testid="watch-svg"
     >
       <circle

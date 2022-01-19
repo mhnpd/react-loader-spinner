@@ -23,7 +23,7 @@ export const Plane: FunctionComponent<PlaneProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       width="230"
       height="230"
-      aria-label={arialLabel}
+      aria-label={ariaLabel}
       data-testid="plane-svg"
     >
       <desc>Plane animation. Loading </desc>

@@ -28,7 +28,7 @@ const Triangle: FunctionComponent<TriangleProps> = ({
       width={width}
       height={height}
       viewBox="-3 -4 39 39"
-      aria-label={arialLabel}
+      aria-label={ariaLabel}
       data-testid="triangle-svg"
     >
       <polygon

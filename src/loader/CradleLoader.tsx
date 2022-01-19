@@ -19,7 +19,7 @@ const CradleLoader: FunctionComponent<CradleLoaderProps> = ({
   visible = true
 }): ReactElement => (
   <div
-    aria-label={arialLabel}
+    aria-label={ariaLabel}
     role="presentation"
     style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
     className={`container ${wrapperClass}`}

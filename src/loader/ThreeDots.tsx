@@ -30,7 +30,7 @@ const ThreeDots: FunctionComponent<ThreeDotsProps> = ({
       viewBox="0 0 120 30"
       xmlns="http://www.w3.org/2000/svg"
       fill={color}
-      aria-label={arialLabel}
+      aria-label={ariaLabel}
       data-testid="three-dots-svg"
     >
       <circle cx="15" cy="15" r={Number(radius) + 6}>

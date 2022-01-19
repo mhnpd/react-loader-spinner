@@ -73,7 +73,7 @@ const Oval: FunctionComponent<OvalProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       stroke={color}
       data-testid="oval-svg"
-      aria-label={arialLabel}
+      aria-label={ariaLabel}
     >
       <g fill="none" fillRule="evenodd">
         <g

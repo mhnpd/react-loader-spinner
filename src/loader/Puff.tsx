@@ -27,7 +27,7 @@ export const Puff: FunctionComponent<PuffProps> = ({
       viewBox="0 0 44 44"
       xmlns="http://www.w3.org/2000/svg"
       stroke={color}
-      aria-label={arialLabel}
+      aria-label={ariaLabel}
       data-testid="puff-svg"
     >
       <g fill="none" fillRule="evenodd" strokeWidth="2">

@@ -25,7 +25,7 @@ export const TailSpin: FunctionComponent<TailSpinProps> = ({
       height={height}
       viewBox="0 0 38 38"
       xmlns="http://www.w3.org/2000/svg"
-      aria-label={arialLabel}
+      aria-label={ariaLabel}
       data-testid="tail-spin-svg"
     >
       <defs>

@@ -22,7 +22,7 @@ const MutatingDots: FunctionComponent<MutatingDotsProps> = ({
   visible = true
 }) => (
   <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="mutating-dots-loading">
-    <svg id="goo-loader" width={width} height={height} aria-label={arialLabel} data-testid="mutating-dots-svg">
+    <svg id="goo-loader" width={width} height={height} aria-label={ariaLabel} data-testid="mutating-dots-svg">
       <filter id="fancy-goo">
         <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
         <feColorMatrix
