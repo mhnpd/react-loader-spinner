@@ -57,7 +57,7 @@ import { Audio } from  'react-loader-spinner'
     heigth="100"
     width="100"
     color='grey'
-    arialLabel='loading'
+    ariaLabel='loading'
   />
 ```
 

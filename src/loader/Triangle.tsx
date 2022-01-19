@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 
 import { BaseProps, Style } from '../type'
 
-interface TriangleProps extends BaseProps {}
+interface TriangleProps extends BaseProps { }
 
 const getDefaultStyle = (visible: boolean): Style => ({
   display: visible ? 'flex' : 'none'
@@ -12,7 +12,7 @@ const Triangle: FunctionComponent<TriangleProps> = ({
   height = 80,
   width = 80,
   color = 'green',
-  arialLabel = 'triangle-loading',
+  ariaLabel = 'triangle-loading',
   wrapperStyle,
   wrapperClass,
   visible = true

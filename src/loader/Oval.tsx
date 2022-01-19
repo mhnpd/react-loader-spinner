@@ -50,7 +50,7 @@ const Oval: FunctionComponent<OvalProps> = ({
   width = 80,
   color = 'green',
   secondaryColor = 'green',
-  arialLabel = 'oval-loading',
+  ariaLabel = 'oval-loading',
   wrapperStyle,
   wrapperClass,
   visible = true,

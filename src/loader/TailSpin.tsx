@@ -14,7 +14,7 @@ export const TailSpin: FunctionComponent<TailSpinProps> = ({
   width = 80,
   radius = 1,
   color = 'green',
-  arialLabel = 'tail-spin-loading',
+  ariaLabel = 'tail-spin-loading',
   wrapperStyle,
   wrapperClass,
   visible = true

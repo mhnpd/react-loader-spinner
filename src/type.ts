@@ -1,13 +1,13 @@
 export type Style = {
-  [key:string]: string
+  [key: string]: string
 }
 
 export interface BaseProps {
   height?: string | number,
   width?: string | number,
   color?: string,
-  arialLabel?: string,
+  ariaLabel?: string,
   wrapperStyle?: Style,
   wrapperClass?: string,
-  visible?:boolean
+  visible?: boolean
 }

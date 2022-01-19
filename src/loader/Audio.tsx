@@ -1,9 +1,9 @@
 import React, { FunctionComponent, ReactElement } from 'react'
 import { BaseProps, Style } from '../type'
 
-interface AudioProps extends BaseProps {}
+interface AudioProps extends BaseProps { }
 
-const getDefaultStyle = (visible:boolean):Style => ({
+const getDefaultStyle = (visible: boolean): Style => ({
   display: visible ? 'flex' : 'none'
 })
 
@@ -11,7 +11,7 @@ const Audio: FunctionComponent<AudioProps> = ({
   height = '100',
   width = '100',
   color = 'blue',
-  arialLabel = 'audio-loading',
+  ariaLabel = 'audio-loading',
   wrapperStyle = {},
   wrapperClass,
   visible = true

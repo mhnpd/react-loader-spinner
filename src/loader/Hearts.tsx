@@ -10,7 +10,7 @@ const Hearts: FunctionComponent<HeartsProps> = ({
   height = 80,
   width = 80,
   color = 'green',
-  arialLabel = 'hearts-loading',
+  ariaLabel = 'hearts-loading',
   wrapperStyle,
   wrapperClass,
   visible = true

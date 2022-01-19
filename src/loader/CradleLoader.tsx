@@ -2,10 +2,10 @@ import React, { FunctionComponent, ReactElement } from 'react'
 import { Style } from '../type'
 
 interface CradleLoaderProps {
-  arialLabel?: string;
-  wrapperStyle?: Style;
-  wrapperClass?: string;
-  visible?: boolean;
+  ariaLabel?: string
+  wrapperStyle?: Style
+  wrapperClass?: string
+  visible?: boolean
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
@@ -13,7 +13,7 @@ const getDefaultStyle = (visible: boolean): Style => ({
 })
 
 const CradleLoader: FunctionComponent<CradleLoaderProps> = ({
-  arialLabel = 'cradle-loading',
+  ariaLabel = 'cradle-loading',
   wrapperStyle,
   wrapperClass,
   visible = true

@@ -14,7 +14,7 @@ const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
   width = 80,
   radius = 6,
   color = 'green',
-  arialLabel = 'revolving-dot-loading',
+  ariaLabel = 'revolving-dot-loading',
   wrapperStyle,
   wrapperClass,
   visible = true
