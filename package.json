@@ -5,6 +5,11 @@
   "unpkg": "dist/index.js",
   "jsdelivr": "dist/index.js",
   "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/esm/index.js"
+  },
   "types": "dist/index.d.ts",
   "author": {
     "name": "Mohan Upadhyay",
@@ -22,7 +27,9 @@
     "react"
   ],
   "scripts": {
-    "build": "yarn clean && tsc && yarn copy-files",
+    "build": "yarn clean && yarn build:cjs && yarn build:esm && yarn copy-files",
+    "build:esm": "tsc --module es6 --outdir ./dist/esm/",
+    "build:cjs": "tsc --module commonjs --outdir  ./dist/",
     "build:watch": "tsc --watch",
     "typecheck": "tsc --noEmit --skipLibCheck",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
