@@ -92,7 +92,9 @@ react-loader-spinner component has the following types of spinners.
 
 ### Here are the list of the task for which we want PR:
 
-- Rings svg loader not supported in Safari
+- Rings spinner is not supported in Safari
+- Fix npm publish script
+- 
 
 ## License
 
