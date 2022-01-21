@@ -40,8 +40,8 @@ const getViewBoxSize = (
   radius: number,
 ): string => {
   const maxStrokeWidth = Math.max(strokeWidth, secondaryStrokeWidth)
-  const startingPoint = -radius - maxStrokeWidth / 2
-  const endpoint = Math.abs(startingPoint) * 2
+  const startingPoint = -radius - (maxStrokeWidth / 2) + 1
+  const endpoint = (radius * 2) + maxStrokeWidth
   return [startingPoint, startingPoint, endpoint, endpoint].join(' ')
 }
 
