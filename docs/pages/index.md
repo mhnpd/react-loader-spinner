@@ -3,10 +3,9 @@ name: Getting Started
 route: /
 ---
 
-## React Spinner and Loaders
+## React Spinners and Loaders
 
-`react-spinner-loader` provides simple React SVG spinner component which can be implemented
-for async await operation before data loads to the view.
+`react-spinner-loader` provides customizable React SVG spinner component which can be implemented for async await operation before data loads to the view.
 
 ## Installation
 
@@ -17,6 +16,12 @@ $ npm install react-loader-spinner --save
 
 $ yarn add react-loader-spinner
 ```
+
+## Features 🎸 🚀 👽:
+
+* Typescript Support
+* Customizable SVG Loaders
+* Light Weight
 
 
 
