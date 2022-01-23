@@ -37,6 +37,10 @@ $ yarn add react-loader-spinner
 
 [DEMO](https://mhnpd.github.io/react-loader-spinner-example/)
 
+# Code SandBox:
+https://codesandbox.io/s/react-loader-spinner-weqls?file=/src/App.js
+
+
 ### Usage
 
 
