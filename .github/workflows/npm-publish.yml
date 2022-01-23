@@ -9,13 +9,21 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Checkout code
+        uses: actions/checkout@v1
+      - name: Install Node
+        uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: npm install
-      - run: npm test
-      - run: npm build
-      - uses: JS-DevTools/npm-publish@v1
+      - name: Install yarn
+        run: npm install -g yarn
+      - name: Install packages
+        run: yarn install
+      - name: Run tests
+        run: yarn test
+      - name: Build TypeScript code
+        run: yarn build
+      - name: Publish to npm
+        uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_AUTH_TOKEN }}
