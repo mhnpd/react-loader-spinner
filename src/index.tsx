@@ -2,6 +2,7 @@ import Audio from './loader/Audio'
 import BallTriangle from './loader/BallTriangle'
 import Bars from './loader/Bars'
 import Circles from './loader/Circles'
+import CirclesWithBar from './loader/CirclesWithBar'
 import CradleLoader from './loader/CradleLoader'
 import Grid from './loader/Grid'
 import Hearts from './loader/Hearts'
@@ -23,6 +24,7 @@ export {
   Bars,
   CradleLoader,
   Circles,
+  CirclesWithBar,
   Grid,
   Hearts,
   MutatingDots,
