@@ -36,7 +36,8 @@
     "clean": "rimraf dist/",
     "copy-files": "copyfiles -u 1 src/**/*.css dist/",
     "test": "jest --no-cache",
-    "dev": "docz dev",
+    "dev": "yarn clean:doc && docz dev",
+    "clean:doc":"rimraf .docz/",
     "build:doc": "docz build",
     "build:serve:doc": "docz build && docz serve",
     "deploy:doc": "yarn build:doc && gh-pages -d ./.docz/dist/"

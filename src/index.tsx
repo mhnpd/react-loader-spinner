@@ -14,6 +14,7 @@ import RevolvingDot from './loader/RevolvingDot'
 import Rings from './loader/Rings'
 import RotatingSquare from './loader/RotatingSquare'
 import TailSpin from './loader/TailSpin'
+import ThreeCircles from './loader/ThreeCircles'
 import ThreeDots from './loader/ThreeDots'
 import Triangle from './loader/Triangle'
 import Watch from './loader/Watch'
@@ -36,6 +37,7 @@ export {
   Rings,
   TailSpin,
   ThreeDots,
+  ThreeCircles,
   Triangle,
   Watch
 }
