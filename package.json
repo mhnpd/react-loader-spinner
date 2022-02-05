@@ -1,6 +1,6 @@
 {
   "name": "react-loader-spinner",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": " react-spinner-loader provides simple React.js spinner component which can be implemented for async wait operation before data load to the view.",
   "unpkg": "dist/index.js",
   "jsdelivr": "dist/index.js",
@@ -11,10 +11,10 @@
       "require": "./dist/index.js",
       "import": "./dist/esm/index.js"
     },
-    "./dist/loader/css/react-spinner-loader.css":  "./dist/loader/css/react-spinner-loader.css",
-    "./dist/loader/css/CradleLoader.css":  "./dist/loader/css/CradleLoader.css",
-    "./dist/loader/css/Plane.css":  "./dist/loader/css/Plane.css",
-    "./dist/loader/css/Triangle.css":  "./dist/loader/css/Triangle.css"
+    "./dist/loader/css/react-spinner-loader.css": "./dist/loader/css/react-spinner-loader.css",
+    "./dist/loader/css/CradleLoader.css": "./dist/loader/css/CradleLoader.css",
+    "./dist/loader/css/Plane.css": "./dist/loader/css/Plane.css",
+    "./dist/loader/css/Triangle.css": "./dist/loader/css/Triangle.css"
   },
   "types": "dist/index.d.ts",
   "author": {
@@ -43,7 +43,7 @@
     "copy-files": "copyfiles -u 1 src/**/*.css dist/",
     "test": "jest --no-cache",
     "dev": "yarn clean:doc && docz dev",
-    "clean:doc":"rimraf .docz/",
+    "clean:doc": "rimraf .docz/",
     "build:doc": "docz build",
     "build:serve:doc": "docz build && docz serve",
     "deploy:doc": "yarn build:doc && gh-pages -d ./.docz/dist/"
