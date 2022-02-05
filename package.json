@@ -7,8 +7,14 @@
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "exports": {
-    "require": "./dist/index.js",
-    "import": "./dist/esm/index.js"
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/esm/index.js"
+    },
+    "./dist/loader/css/react-spinner-loader.css":  "./dist/loader/css/react-spinner-loader.css",
+    "./dist/loader/css/CradleLoader.css":  "./dist/loader/css/CradleLoader.css",
+    "./dist/loader/css/Plane.css":  "./dist/loader/css/Plane.css",
+    "./dist/loader/css/Triangle.css":  "./dist/loader/css/Triangle.css"
   },
   "types": "dist/index.d.ts",
   "author": {
@@ -53,7 +59,6 @@
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
     "copyfiles": "^2.4.1",
-    "docz": "^2.3.1",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.3",
