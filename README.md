@@ -58,7 +58,7 @@ import { Audio } from  'react-loader-spinner'
 
 
 <Audio
-    heigth="100"
+    height="100"
     width="100"
     color='grey'
     ariaLabel='loading'
