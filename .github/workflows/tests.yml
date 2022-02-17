@@ -1,9 +1,9 @@
-name: Typecheck
+name: Test
 
 on: push
 
 jobs:
-  typecheck:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -18,5 +18,5 @@ jobs:
       - name: Install packages
         run: yarn install
 
-      - name: Typecheck
-        run: yarn typecheck
+      - name: Test
+        run: yarn test

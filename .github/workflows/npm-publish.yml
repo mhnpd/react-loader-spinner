@@ -2,7 +2,7 @@ name: Publish to Npm
 
 on:
   workflow_run:
-    workflows: ["ESLint", "Typecheck"]
+    workflows: ["ESLint", "Typecheck", "Test"]
     types:
       - completed
   push:
