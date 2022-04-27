@@ -17,15 +17,15 @@ const Blossom: FunctionComponent<BlossomProps> = ({
   wrapperClass,
   visible = true
 }): ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="audio-loading">
+  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="blossom-loading">
     <svg
       version="1.1"
       width={`${width}`}
       height={`${height}`}
-      viewBox="0 0 55 80"
+      viewBox="0 0 320 320"
       aria-label={ariaLabel}
-      fill={color}
-      stroke="red"
+      fill='none'
+      stroke={color}
       strokeLinecap="round"
       data-testid="blossom-svg"
       xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
