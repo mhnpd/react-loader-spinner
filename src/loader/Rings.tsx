@@ -55,32 +55,6 @@ export const Rings: FunctionComponent<RingsProps> = ({
             repeatCount="indefinite"
           />
         </circle>
-        <circle cx="22" cy="22" r={radius} strokeOpacity="0">
-          <animate
-            attributeName="r"
-            begin="3s"
-            dur="3s"
-            values="6;22"
-            calcMode="linear"
-            repeatCount="indefinite"
-          />
-          <animate
-            attributeName="strokeOpacity"
-            begin="3s"
-            dur="3s"
-            values="1;0"
-            calcMode="linear"
-            repeatCount="indefinite"
-          />
-          <animate
-            attributeName="strokeWidth"
-            begin="3s"
-            dur="3s"
-            values="2;0"
-            calcMode="linear"
-            repeatCount="indefinite"
-          />
-        </circle>
         <circle cx="22" cy="22" r={Number(radius) + 2}>
           <animate
             attributeName="r"
