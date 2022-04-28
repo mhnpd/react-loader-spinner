@@ -1,0 +1,25 @@
+---
+name: Star
+route: /star
+menu: Loaders
+---
+
+import { Playground, Props } from "docz";
+import { Star } from "../lib/index.tsx";
+import "../lib/loader/css/react-spinner-loader.css";
+
+## Example
+
+<Playground>
+  <Star ariaLabel="loading-indicator" />
+</Playground>
+
+> To use this spinner you need to import css from the packages
+
+```jsx
+import "../lib/loader/css/react-spinner-loader.css";
+```
+
+## Props
+
+<Props of={Star} />
