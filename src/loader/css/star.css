@@ -1,0 +1,21 @@
+.react-loader-spinner-svg-star {
+  animation: starRotate 1.5s linear;
+  -moz-animation: starRotate 1.5s linear;
+  -webkit-animation: starRotate 1.5s linear;
+  animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+
+@keyframes starRotate {
+  from {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
