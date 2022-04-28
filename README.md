@@ -38,37 +38,29 @@ $ yarn add react-loader-spinner
 [DEMO](https://mhnpd.github.io/react-loader-spinner-example/)
 
 # Code SandBox:
-https://codesandbox.io/s/react-loader-spinner-weqls?file=/src/App.js
 
+https://codesandbox.io/s/react-loader-spinner-weqls?file=/src/App.js
 
 ### Usage
 
-
 ##### Import required css
+
 Import the css to main app.js file
 
 ```js
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 ```
 
-
 ```jsx
+import { Audio } from "react-loader-spinner";
 
-import { Audio } from  'react-loader-spinner'
-
-
-<Audio
-    height="100"
-    width="100"
-    color='grey'
-    ariaLabel='loading'
-  />
+<Audio height="100" width="100" color="grey" ariaLabel="loading" />;
 ```
 
 ### If webpack throws issue with css. (For older version of this package)
 
 Change webpack config as:
-` test: /\.scss$/ to test: /\.s?css$/`
+`test: /\.scss$/ to test: /\.s?css$/`
 <br/><br/>
 <small>Newer version just import css file from node modules to app.js<small>
 
@@ -76,23 +68,24 @@ Change webpack config as:
 
 react-loader-spinner component has the following types of spinners.
 
-| Spinner Type | Implementation                                                                |
-| ------------ |-------------------------------------------------------------------------------|
-| Audio        | `<Audio color="#00BFFF" height={80} width={80} />`               |
+| Spinner Type | Implementation                                            |
+| ------------ | --------------------------------------------------------- |
+| Audio        | `<Audio color="#00BFFF" height={80} width={80} />`        |
 | BallTriangle | `<BallTriangle color="#00BFFF" height={80} width={80} />` |
-| Bars         | `<Bars color="#00BFFF" height={80} width={80} />`                 |
-| Circles      | `<Circles color="#00BFFF" height={80} width={80}/>`            |
-| Grid         | `<Grid color="#00BFFF" height={80} width={80} />`                 |
-| Hearts       | `<Hearts color="#00BFFF" height={80} width={80} />`             |
-| Oval         | `<Oval color="#00BFFF" height={80} width={80} />`                 |
-| Puff         | `<Puff color="#00BFFF" height={80} width={80} />`                 |
-| Rings        | `<Rings color="#00BFFF" height={80} width={80} />`               |
-| TailSpin     | `<TailSpin  color="#00BFFF" height={80} width={80} />`         |
-| ThreeDots    | `<ThreeDots color="#00BFFF" height={80} width={80} />`       |
+| Bars         | `<Bars color="#00BFFF" height={80} width={80} />`         |
+| Circles      | `<Circles color="#00BFFF" height={80} width={80}/>`       |
+| Grid         | `<Grid color="#00BFFF" height={80} width={80} />`         |
+| Hearts       | `<Hearts color="#00BFFF" height={80} width={80} />`       |
+| Oval         | `<Oval color="#00BFFF" height={80} width={80} />`         |
+| Puff         | `<Puff color="#00BFFF" height={80} width={80} />`         |
+| Rings        | `<Rings color="#00BFFF" height={80} width={80} />`        |
+| TailSpin     | `<TailSpin color="#00BFFF" height={80} width={80} />`     |
+| ThreeDots    | `<ThreeDots color="#00BFFF" height={80} width={80} />`    |
+| Blossom      | `<Blossom color="#00BFFF" height={80} width={80} />`      |
+| Star         | `<Star color="#00BFFF" height={80} width={80} />`         |
+| MorphShapes  | `<MorphShapes color="#00BFFF" height={80} width={80} />`  |
 
-
- ![alt text](https://user-images.githubusercontent.com/33191954/148691173-a825d830-9457-4174-9b74-5c2a264906e4.gif)
-  
+![alt text](https://user-images.githubusercontent.com/33191954/148691173-a825d830-9457-4174-9b74-5c2a264906e4.gif)
 
 ### Here are the list of the task for which we want PR:
 
