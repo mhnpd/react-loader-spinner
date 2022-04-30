@@ -17,8 +17,9 @@ const Star: FunctionComponent<StarProps> = ({
   visible = true
 }): ReactElement => (
   <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="star-loading">
-    <svg fill={color}
+    <svg fill='white'
       version="1.0"
+      style={{ backgroundColor: color, padding: '.5em', borderRadius: '50%' }}
       className='react-loader-spinner-svg-star'
       xmlns="http://www.w3.org/2000/svg"
       aria-label={ariaLabel}
