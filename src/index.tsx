@@ -19,6 +19,9 @@ import ThreeCircles from './loader/ThreeCircles'
 import ThreeDots from './loader/ThreeDots'
 import Triangle from './loader/Triangle'
 import Watch from './loader/Watch'
+import Blossom from './loader/Blossom'
+import MorphShapes from './loader/MorphShapes'
+import Star from './loader/Star'
 
 export {
   Audio,
@@ -36,6 +39,9 @@ export {
   Puff,
   RevolvingDot,
   RotatingSquare,
+  Blossom,
+  MorphShapes,
+  Star,
   Rings,
   TailSpin,
   ThreeDots,
