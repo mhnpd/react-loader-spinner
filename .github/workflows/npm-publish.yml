@@ -8,31 +8,17 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v2
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
-        - name: Install Node
-          uses: actions/setup-node@v2
-          with:
-            node-version: 16
-
-        - name: Install packages
-          run: npm install
-
-        - name: Run Lint
-          run: npm run lint
-
-        - name: Run Typecheck
-          run: npm run typecheck
-
-        - name: Run Test
-          run: npm run test  
-
-        - name: Build code
-          run: yarn build
-
-        - name: Publish to npm
-          run: yarn publish
-          env:
-            NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - run: npm install
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test  
+      - run: npm run build
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
