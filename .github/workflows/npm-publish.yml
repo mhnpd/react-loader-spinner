@@ -1,18 +1,12 @@
 name: Publish to Npm
 
 on:
-  workflow_run:
-    workflows: ["ESLint", "Typecheck", "Test"]
-    types:
-      - completed
   push:
     branches:
       - master
-
 jobs:
   publish:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -20,11 +14,19 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v2
         with:
-          node-version: 14
-          cache: "yarn"
+          node-version: 16
 
       - name: Install packages
-        run: yarn install
+        run: npm install
+
+      - name: Run Lint
+        run: npm run lint
+
+      - name: Run typecheck
+        run: npm run typecheck
+
+     - name: Run typecheck
+        run: npm run test  
 
       - name: Build code
         run: yarn build
