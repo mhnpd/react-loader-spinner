@@ -4,34 +4,35 @@ on:
   push:
     branches:
       - master
+
 jobs:
   publish:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
 
-      - name: Install Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16
+        - name: Install Node
+          uses: actions/setup-node@v2
+          with:
+            node-version: 16
 
-      - name: Install packages
-        run: npm install
+        - name: Install packages
+          run: npm install
 
-      - name: Run Lint
-        run: npm run lint
+        - name: Run Lint
+          run: npm run lint
 
-      - name: Run typecheck
-        run: npm run typecheck
+        - name: Run Typecheck
+          run: npm run typecheck
 
-     - name: Run typecheck
-        run: npm run test  
+        - name: Run Test
+          run: npm run test  
 
-      - name: Build code
-        run: yarn build
+        - name: Build code
+          run: yarn build
 
-      - name: Publish to npm
-        run: yarn publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        - name: Publish to npm
+          run: yarn publish
+          env:
+            NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
