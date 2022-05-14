@@ -17,28 +17,15 @@
 
 ### Installation
 
-##### Using NPM:
+```bash
+npm install react-loader-spinner --save
 
-#
-
-```sh
-$ npm install react-loader-spinner --save
+# or
+yarn add react-loader-spinner
 ```
-
-##### Using yarn
-
-#
-
-```sh
-$ yarn add react-loader-spinner
-```
-
-# Documentation:
-
-[DEMO](https://mhnpd.github.io/react-loader-spinner-example/)
-
-# Code SandBox:
-https://codesandbox.io/s/react-loader-spinner-weqls?file=/src/App.js
+### Documentation: 
+1. [Docs](https://mhnpd.github.io/react-loader-spinner-example/)
+2. [Code SandBox](https://codesandbox.io/s/react-loader-spinner-weqls?file=/src/App.js)
 
 
 ### Usage
@@ -89,10 +76,6 @@ react-loader-spinner component has the following types of spinners.
 | Rings        | `<Rings color="#00BFFF" height={80} width={80} />`               |
 | TailSpin     | `<TailSpin  color="#00BFFF" height={80} width={80} />`         |
 | ThreeDots    | `<ThreeDots color="#00BFFF" height={80} width={80} />`       |
-
-
- ![alt text](https://user-images.githubusercontent.com/33191954/148691173-a825d830-9457-4174-9b74-5c2a264906e4.gif)
-  
 
 ### Here are the list of the task for which we want PR:
 
