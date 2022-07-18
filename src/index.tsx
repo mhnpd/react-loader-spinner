@@ -6,6 +6,7 @@ import CirclesWithBar from './loader/CirclesWithBar'
 import CradleLoader from './loader/CradleLoader'
 import Grid from './loader/Grid'
 import Hearts from './loader/Hearts'
+import InfinitySpin from './loader/InfinitySpin'
 import LineWave from './loader/LineWave'
 import MutatingDots from './loader/MutatingDots'
 import Oval from './loader/Oval'
@@ -29,6 +30,7 @@ export {
   CirclesWithBar,
   Grid,
   Hearts,
+  InfinitySpin,
   LineWave,
   MutatingDots,
   Oval,
