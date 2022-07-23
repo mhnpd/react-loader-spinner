@@ -1,8 +1,8 @@
 ---
 ---
 
-# Heart
+# Hearts
 
 ```jsx live
-<Heart height="100" width="100" color="grey" ariaLabel="loading" />
+<Hearts height="100" width="100" color="grey" ariaLabel="loading" />
 ```

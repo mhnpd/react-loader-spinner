@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 const config = {
   title: 'React Spinners',
   tagline: 'Cool spinner for react application',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://github.com/mhnpd/react-loader-spinner',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -16,9 +16,9 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  // organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'react-spinner-loader', // Usually your repo name.
-
+  organizationName: 'mhnpd', // Usually your GitHub org/user name.
+  projectName: 'react-loader-spinner', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
@@ -37,15 +37,11 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: [
@@ -76,7 +72,7 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/mhnpd/react-loader-spinner',
             label: 'GitHub',
             position: 'right',
           },
@@ -91,6 +87,16 @@ const config = {
               {
                 label: 'Documentation',
                 to: '/docs/intro',
+              },
+            ],
+          },
+          {},
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'GitHub',
+                href: 'https://github.com/facebook/docusaurus',
               },
             ],
           },
