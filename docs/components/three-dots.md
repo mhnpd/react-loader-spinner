@@ -1,12 +1,11 @@
 ---
 ---
-# Circles
+# Three Dots
 
 ```jsx live
- <Circles 
+ <ThreeDots
  height="100" 
  width="100" 
  color="grey" 
  ariaLabel="loading" 
  />
-```

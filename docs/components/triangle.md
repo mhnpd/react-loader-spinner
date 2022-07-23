@@ -1,12 +1,12 @@
 ---
 ---
-# Circles
+
+# Triangle
 
 ```jsx live
- <Circles 
+ <Triangle
  height="100" 
  width="100" 
  color="grey" 
  ariaLabel="loading" 
  />
-```
