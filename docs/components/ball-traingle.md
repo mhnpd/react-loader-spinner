@@ -1,9 +1,9 @@
 ---
 ---
-# Audio
+# Ball Triangle
 
 ```jsx live
- <Audio 
+ <BallTriangle 
  height="100" 
  width="100" 
  color="grey" 

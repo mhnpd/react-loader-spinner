@@ -1,14 +1,11 @@
 ---
 ---
-# Audio
+# Mutating Dots
 
 ```jsx live
- <Audio 
+ <MutatingDots
  height="100" 
  width="100" 
  color="grey" 
  ariaLabel="loading" 
  />
-```
-
-

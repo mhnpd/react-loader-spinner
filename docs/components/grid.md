@@ -1,14 +1,11 @@
 ---
 ---
-# Audio
+# Grid
 
 ```jsx live
- <Audio 
+ <Grid
  height="100" 
  width="100" 
  color="grey" 
  ariaLabel="loading" 
  />
-```
-
-
