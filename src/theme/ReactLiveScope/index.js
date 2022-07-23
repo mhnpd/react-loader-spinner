@@ -13,12 +13,12 @@ import {
   Plane,
   RevolvingDot,
   Rings,
-  RotatingSquares,
+  RotatingSquare,
   TailSpin,
   ThreeCircles,
   ThreeDots,
   Triangle,
-  Watch
+  Watch,
 } from 'react-loader-spinner'
 
 // Add react-live imports you need here
@@ -38,11 +38,11 @@ const ReactLiveScope = {
   Plane,
   RevolvingDot,
   Rings,
-  RotatingSquares,
+  RotatingSquare,
   TailSpin,
   ThreeCircles,
   ThreeDots,
   Triangle,
-  Watch
+  Watch,
 }
 export default ReactLiveScope

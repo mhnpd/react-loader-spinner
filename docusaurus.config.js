@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -27,7 +27,7 @@ const config = {
     locales: ['en'],
   },
   plugins: ['@docusaurus/theme-live-codeblock'],
-  
+
   presets: [
     [
       'classic',
@@ -49,8 +49,11 @@ const config = {
         },
         theme: {
           customCss: [
-            require.resolve('./src/css/custom.css'), 
-            require.resolve('./node_modules/react-loader-spinner/dist/loader/css/react-spinner-loader.css')],
+            require.resolve('./src/css/custom.css'),
+            require.resolve(
+              './node_modules/react-loader-spinner/dist/loader/css/react-spinner-loader.css',
+            ),
+          ],
         },
       }),
     ],
@@ -103,9 +106,8 @@ const config = {
          * Possible values: "top" | "bottom"
          */
         playgroundPosition: 'top',
-
       },
     }),
-};
+}
 
-module.exports = config;
+module.exports = config
