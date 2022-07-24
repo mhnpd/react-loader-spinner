@@ -1,0 +1,72 @@
+---
+---
+
+import PropsTable from '../../src/components/props-table'
+
+# Ball Triangle
+
+```jsx live
+<BallTriangle
+  height={100}
+  width={100}
+  radius={5}
+  color="#4fa94d"
+  ariaLabel="ball-triangle-loading"
+  wrapperClass={{}}
+  wrapperStyle=""
+  visible={true}
+/>
+```
+## Props
+<PropsTable
+  properties={[
+    {
+      name: 'height',
+      type: 'number',
+      default: '100',
+      description: 'Height of the ball triangle',
+    },
+    {
+      name: 'width',
+      type: 'number',
+      default: '100',
+      description: 'Width of the ball triangle',
+    },
+    {
+      name: 'radius',
+      type: 'number',
+      default: '5',
+      description: 'Radius of the balls',
+    },
+    {
+      name: 'color',
+      type: 'string',
+      default: 'blue',
+      description: 'Color of the ball triangle',
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      default: 'ball-triangle-loading',
+      description: 'Aria label of the ball triangle',
+    },
+    {
+      name: 'wrapperClass',
+      type: 'object',
+      default: '{}',
+      description: 'Classes to be applied to the wrapper',
+    },
+    {
+      name: 'wrapperStyle',
+      type: 'object',
+      default: '{}',
+      description: 'Styles to be applied to the wrapper',
+    },
+    {
+      name: 'visible',
+      type: 'boolean',
+      default: 'true',
+      description: 'Whether the ball triangle is visible',
+    },
+    ]}
+  />
