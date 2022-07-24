@@ -1,3 +1,5 @@
+export const DEFAULT_COLOR = '#4fa94d'
+
 export type Style = {
   [key: string]: string
 }

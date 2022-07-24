@@ -19,6 +19,7 @@ import ThreeCircles from './loader/ThreeCircles'
 import ThreeDots from './loader/ThreeDots'
 import Triangle from './loader/Triangle'
 import Watch from './loader/Watch'
+import FallingLines from './loader/FallingLines'
 
 export {
   Audio,
@@ -27,6 +28,7 @@ export {
   Circles,
   CirclesWithBar,
   Grid,
+  FallingLines,
   Hearts,
   InfinitySpin,
   LineWave,

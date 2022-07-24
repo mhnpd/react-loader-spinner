@@ -1,6 +1,7 @@
 import React from 'react'
+import { DEFAULT_COLOR } from '../type'
 
-type Props = {
+type FallingLinesProps = {
   color?: string
   width?: string
   height?: string
@@ -8,10 +9,10 @@ type Props = {
 }
 
 const FallingLines = ({
-  color = 'grey',
+  color = DEFAULT_COLOR,
   width = '100',
   visible = true,
-}: Props): React.ReactElement | null => {
+}: FallingLinesProps): React.ReactElement | null => {
   return visible
     ? (
     <svg
@@ -19,8 +20,17 @@ const FallingLines = ({
       width={width}
       height={width}
       viewBox="0 0 100 100"
+      data-testid="falling-lines"
     >
-      <rect y="25" width="10" height="50" rx="4" ry="4" fill={color}>
+      <rect
+        y="25"
+        width="10"
+        height="50"
+        rx="4"
+        ry="4"
+        fill={color}
+        data-testid="falling-lines-rect-1"
+      >
         <animate
           attributeName="x"
           values="10;100"
@@ -67,7 +77,16 @@ const FallingLines = ({
           repeatCount="indefinite"
         />
       </rect>
-      <rect y="25" width="10" height="50" rx="4" ry="4" fill={color}>
+
+      <rect
+        y="25"
+        width="10"
+        height="50"
+        rx="4"
+        ry="4"
+        fill={color}
+        data-testid="falling-lines-rect-2"
+      >
         <animate
           attributeName="x"
           values="10;100"
