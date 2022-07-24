@@ -14,7 +14,7 @@ export const Puff: FunctionComponent<PuffProps> = ({
   height = 80,
   width = 80,
   radius = 1,
-  color = 'green',
+  color = '#4fa94d',
   ariaLabel = 'puff-loading',
   wrapperStyle,
   wrapperClass,

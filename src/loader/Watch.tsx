@@ -12,7 +12,7 @@ const Watch: FunctionComponent<WatchProps> = ({
   height = 80,
   width = 80,
   radius = 48,
-  color = 'green',
+  color = '#4fa94d',
   ariaLabel = 'watch-loading',
   wrapperStyle,
   wrapperClass,

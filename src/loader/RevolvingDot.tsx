@@ -10,10 +10,10 @@ const getDefaultStyle = (visible: boolean): Style => ({
   display: visible ? 'flex' : 'none'
 })
 const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
-  height = 80,
-  width = 80,
+  height = 100,
+  width = 100,
   radius = 6,
-  color = 'green',
+  color = '#4fa94d',
   ariaLabel = 'revolving-dot-loading',
   wrapperStyle,
   wrapperClass,

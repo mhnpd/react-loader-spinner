@@ -12,7 +12,7 @@ export const Rings: FunctionComponent<RingsProps> = ({
   height = 80,
   width = 80,
   radius = 6,
-  color = 'green',
+  color = '#4fa94d',
   ariaLabel = 'rings-loading',
   wrapperStyle,
   wrapperClass,

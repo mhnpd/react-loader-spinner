@@ -11,7 +11,7 @@ const getDefaultStyle = (visible: boolean): Style => ({
 const Circles: FunctionComponent<CirclesProps> = ({
   height = 80,
   width = 80,
-  color = 'green',
+  color = '#4fa94d',
   ariaLabel = 'circles-loading',
   wrapperStyle,
   wrapperClass,

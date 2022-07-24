@@ -11,7 +11,7 @@ const getDefaultStyle = (visible: boolean): Style => ({
 const Triangle: FunctionComponent<TriangleProps> = ({
   height = 80,
   width = 80,
-  color = 'green',
+  color = '#4fa94d',
   ariaLabel = 'triangle-loading',
   wrapperStyle,
   wrapperClass,

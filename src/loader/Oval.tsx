@@ -48,8 +48,8 @@ const getViewBoxSize = (
 const Oval: FunctionComponent<OvalProps> = ({
   height = 80,
   width = 80,
-  color = 'green',
-  secondaryColor = 'green',
+  color = '#4fa94d',
+  secondaryColor = '#4fa94d',
   ariaLabel = 'oval-loading',
   wrapperStyle,
   wrapperClass,

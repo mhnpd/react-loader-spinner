@@ -11,6 +11,7 @@ type Props = {
   outerCircleColor?: string,
   innerCircleColor?: string
   barColor?: string
+  ariaLabel?: string
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
@@ -28,15 +29,17 @@ const CirclesWithBar: React.FunctionComponent<Props> = ({
   wrapperClass = '',
   height = 100,
   width = 100,
-  color = 'red',
+  color = '#4fa94d',
   outerCircleColor,
   innerCircleColor,
-  barColor
+  barColor,
+  ariaLabel = 'circles-with-bar-loading',
 }): React.ReactElement => {
   return (
     <div
       style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
       className={wrapperClass}
+      aria-label={ariaLabel}
       data-testid="circles-with-bar-wrapper">
       <svg version="1.1"
         id="L1"

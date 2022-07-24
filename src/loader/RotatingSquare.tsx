@@ -2,7 +2,6 @@ import React from 'react'
 import { Style } from '../type'
 
 type RotatingSquareProps = {
-  style?: Style,
   wrapperClass?: '',
   color?: string,
   strokeWidth?: string | number,
@@ -18,10 +17,8 @@ const getDefaultStyle = (visible: boolean): Style => ({
 })
 
 const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
-  style = {},
   wrapperClass = '',
-  color = 'red',
-  strokeWidth: number,
+  color = '#4fa94d',
   height = 100,
   width = 100,
   strokeWidth = 4,

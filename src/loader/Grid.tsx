@@ -13,7 +13,7 @@ export const Grid: FunctionComponent<GridProps> = ({
   height = 80,
   width = 80,
   radius = 12.5,
-  color = 'green',
+  color = '#4fa94d',
   ariaLabel = 'grid-loading',
   wrapperStyle,
   wrapperClass,

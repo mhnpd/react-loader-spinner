@@ -10,7 +10,7 @@ const getDefaultStyle = (visible: boolean): Style => ({
 const Audio: FunctionComponent<AudioProps> = ({
   height = '100',
   width = '100',
-  color = 'blue',
+  color = '#4fa94d',
   ariaLabel = 'audio-loading',
   wrapperStyle = {},
   wrapperClass,

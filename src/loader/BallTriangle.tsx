@@ -13,7 +13,7 @@ const BallTriangle: FunctionComponent<BallTriangleProps> = ({
   height = 100,
   width = 100,
   radius = 5,
-  color = 'blue',
+  color = '#4fa94d',
   ariaLabel = 'ball-triangle-loading',
   wrapperClass,
   wrapperStyle,

@@ -28,7 +28,7 @@ const LineWave: React.FunctionComponent<Props> = ({
   wrapperClass = '',
   height = 100,
   width = 100,
-  color = 'red',
+  color = '#4fa94d',
   ariaLabel = 'line-wave',
   firstLineColor,
   middleLineColor,
