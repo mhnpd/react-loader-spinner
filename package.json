@@ -29,14 +29,13 @@
     "react"
   ],
   "scripts": {
-    "build": "yarn clean && yarn build:cjs && yarn build:esm && yarn copy-files",
+    "build": "yarn clean && yarn build:cjs && yarn build:esm",
     "build:esm": "tsc --module es6 --outdir ./dist/esm/",
     "build:cjs": "tsc --module commonjs --outdir  ./dist/",
     "build:watch": "tsc --watch",
     "typecheck": "tsc --noEmit --skipLibCheck",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "clean": "rimraf dist/",
-    "copy-files": "copyfiles -u 1 src/**/*.css dist/",
     "test": "jest --no-cache"
   },
   "devDependencies": {
@@ -50,7 +49,6 @@
     "@types/testing-library__react": "^10.2.0",
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
-    "copyfiles": "^2.4.1",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.3",
