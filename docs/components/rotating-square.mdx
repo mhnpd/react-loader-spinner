@@ -23,7 +23,7 @@ import PropsTable from '../../src/components/props-table'
   properties={[
     {
       name: 'height',
-      type: 'number',
+      type: 'number | string',
       default: '100',
       description: 'Height of the spinner',
     },
@@ -35,7 +35,7 @@ import PropsTable from '../../src/components/props-table'
     },
     {
       name: 'color',
-      type: 'number | string',
+      type: 'string',
       default: '#4fa94d',
       description: 'Color of the spinner',
     },
@@ -55,13 +55,13 @@ import PropsTable from '../../src/components/props-table'
       name: 'wrapperStyle',
       type: 'object',
       default: '{}',
-      description: 'Style of the wrapper',
+      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
     },
     {
       name: 'wrapperClass',
       type: 'string',
       default: '',
-      description: 'Class of the wrapper',
+      description: 'Class of the wrapper element. It can be used for custom styling.',
     },
     {
       name: 'visible',
