@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - docs
-
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -12,7 +10,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: redkubes/docusaurus-deploy-action@v1
         with:
-          source-folder: website
+          source-folder: build
           git-user: mhnpd
           git-password: ${{ secrets.SECRET }}
           deployment-branch: gh-pages
