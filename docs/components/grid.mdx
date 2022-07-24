@@ -10,8 +10,8 @@ import PropsTable from '../../src/components/props-table'
   height="80"
   width="80"
   color="#4fa94d"
-  ariaLabel="bars-loading"
-  radius="5"
+  ariaLabel="grid-loading"
+  radius="12.5"
   wrapperStyle={{}}
   wrapperClass=""
   visible={true}
@@ -49,19 +49,19 @@ import PropsTable from '../../src/components/props-table'
     name: 'radius',
     type: 'string | number',
     default: '12.5',
-    description: 'Radius of the circles inside the grid'
+    description: 'Radius of the circles inside the grid. Max value is 13.'
   },
   {
     name: 'wrapperStyle',
     type: 'object',
     default: '{}',
-    description: 'Style of the grid wrapper'
+    description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.'
   },
   {
     name: 'wrapperClass',
     type: 'string',
     default: '',
-    description: 'Class of the grid wrapper'
+    description: 'Class of the grid wrapper element. It can be used for custom styling. It will override the default style.'
   },
   {
     name: 'visible',
