@@ -10,11 +10,7 @@
     ".": {
       "require": "./dist/index.js",
       "import": "./dist/esm/index.js"
-    },
-    "./dist/loader/css/react-spinner-loader.css": "./dist/loader/css/react-spinner-loader.css",
-    "./dist/loader/css/cradleLoader.css": "./dist/loader/css/cradleLoader.css",
-    "./dist/loader/css/plane.css": "./dist/loader/css/plane.css",
-    "./dist/loader/css/triangle.css": "./dist/loader/css/triangle.css"
+    }
   },
   "types": "dist/index.d.ts",
   "author": {
