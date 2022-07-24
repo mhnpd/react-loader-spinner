@@ -22,21 +22,21 @@ import PropsTable from '../../src/components/props-table'
   properties={[
     {
       name: 'height',
-      type: 'number',
+      type: 'number | string',
       default: '100',
       description: 'Height of the puff .',
     },
     {
       name: 'width',
-      type: 'number',
+      type: 'number | string',
       default: '100',
       description: 'Width of the puff.',
     },
     {
       name: 'radius',
-      type: 'number',
+      type: 'number | string',
       default: '1',
-      description: 'Radius of the puff .',
+      description: 'Radius of the puff. Radius seems to be not working.',
     },
     {
       name: 'color',
@@ -51,52 +51,22 @@ import PropsTable from '../../src/components/props-table'
       description: 'Aria label of the puff .',
     },
     {
-      name: 'wrapperStyle',
-      type: 'object',
-      default: '{}',
-      description: 'Style of the wrapper.',
-    },
-    {
-      name: 'wrapperClass',
-      type: 'string',
-      default: '',
-      description: 'Class of the wrapper.',
-    },
-    {
       name: 'visible',
       type: 'boolean',
       default: 'true',
       description: 'Whether the line wave is visible.',
     },
     {
-      name: 'color',
-      type: 'string',
-      default: '#4fa94d',
-      description: 'Color of the line wave.',
-    },
-    {
-      name: 'ariaLabel',
-      type: 'string',
-      default: 'line-wave',
-      description: 'ARIA label for the line wave.',
-    },
-    {
       name: 'wrapperStyle',
       type: 'object',
       default: '{}',
-      description: 'Style object for the wrapper.',
+      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
     },
     {
       name: 'wrapperClass',
       type: 'string',
       default: '',
-      description: 'Class name for the wrapper.',
-    },
-    {
-      name: 'visible',
-      type: 'boolean',
-      default: 'true',
-      description: 'Whether the line wave is visible.',
+      description: 'Class name for the wrapper element. It can be used for custom styling.',
     },
   ]}
 />  
