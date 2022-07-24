@@ -16,6 +16,7 @@ import PropsTable from '../../src/components/props-table'
   outerCircleColor=""
   innerCircleColor=""
   barColor=""
+  ariaLabel='circles-with-bar-loading'
 />
 ```
 
@@ -26,7 +27,7 @@ import PropsTable from '../../src/components/props-table'
     {
       name: 'wrapperStyle',
       type: 'object',
-      default: '{}',
+      default: 'undefined',
       description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
     },
     {
@@ -69,16 +70,22 @@ import PropsTable from '../../src/components/props-table'
     {
       name: 'innerCircleColor',
       type: 'string',
-      default: '',
+      default: 'undefined',
       description:
         'Color of the inner circle. If not defined, it will be the same as color',
     },
     {
       name: 'barColor',
       type: 'string',
-      default: '',
+      default: 'undefined',
       description:
         'Color of the bar. If not defined, it will be the same as color',
     },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      default: 'circles-with-bar-loading',
+      description: 'Aria label for the wrapper element',
+    }
   ]}
 />

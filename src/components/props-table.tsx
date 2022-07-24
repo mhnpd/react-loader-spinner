@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import Table from 'rc-table';
-
+import {sortBy} from 'lodash'
 type Props = {
   properties: [
     {
@@ -15,13 +15,13 @@ const columns=[
     title: 'Name',
     dataIndex: 'name',
     key: 'name',
-    width: 250,
+    width: 200,
   },
   {
     title: 'Type',
     dataIndex: 'type',
     key: 'type',
-    width: 250,
+    width: 150,
     render:(_, row)=>(<em style={{color:'#932981'}}>{row.type}</em>)
   },
   {
@@ -35,10 +35,10 @@ const columns=[
     title: 'Description',
     dataIndex: 'description',
     key: 'description',
-    width: 250,
+    width: 300,
   },
 ]
 
 export default function PropsTable({ properties }: Props): ReactElement {
-  return (<Table columns={columns} data={properties} />)
+  return (<Table columns={columns} data={sortBy(properties, 'name')} />)
 }
