@@ -24,13 +24,13 @@ import PropsTable from '../../src/components/props-table'
   properties={[
     {
       name: 'height',
-      type: 'number',
+      type: 'number | string',
       default: '100',
       description: 'Height of the line wave.',
     },
     {
       name: 'width',
-      type: 'number',
+      type: 'number | string',
       default: '100',
       description: 'Width of the line wave.',
     },
@@ -50,13 +50,13 @@ import PropsTable from '../../src/components/props-table'
       name: 'wrapperStyle',
       type: 'object',
       default: '{}',
-      description: 'Style object for the wrapper.',
+      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
     },
     {
       name: 'wrapperClass',
       type: 'string',
       default: '',
-      description: 'Class name for the wrapper.',
+      description: 'Class name for the wrapper element. It can be used for custom styling.',
     },
     {
       name: 'visible',
