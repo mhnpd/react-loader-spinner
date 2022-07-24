@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, Style } from '../type'
 
 interface AudioProps extends BaseProps { }
 
@@ -10,7 +10,7 @@ const getDefaultStyle = (visible: boolean): Style => ({
 const Audio: FunctionComponent<AudioProps> = ({
   height = '100',
   width = '100',
-  color = '#4fa94d',
+  color = DEFAULT_COLOR,
   ariaLabel = 'audio-loading',
   wrapperStyle = {},
   wrapperClass,

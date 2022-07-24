@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, Style } from '../type'
 
 interface GridProps extends BaseProps {
   radius?: string | number,
@@ -13,7 +13,7 @@ export const Grid: FunctionComponent<GridProps> = ({
   height = 80,
   width = 80,
   radius = 12.5,
-  color = '#4fa94d',
+  color = DEFAULT_COLOR,
   ariaLabel = 'grid-loading',
   wrapperStyle,
   wrapperClass,

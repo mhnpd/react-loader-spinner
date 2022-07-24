@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, Style } from '../type'
 interface HeartsProps extends BaseProps { }
 
 const getDefaultStyle = (visible: boolean): Style => ({
@@ -9,7 +9,7 @@ const getDefaultStyle = (visible: boolean): Style => ({
 const Hearts: FunctionComponent<HeartsProps> = ({
   height = 80,
   width = 80,
-  color = '#4fa94d',
+  color = DEFAULT_COLOR,
   ariaLabel = 'hearts-loading',
   wrapperStyle,
   wrapperClass,

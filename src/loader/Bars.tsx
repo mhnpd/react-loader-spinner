@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, Style } from '../type'
 
 interface BarsProps extends BaseProps { }
 
@@ -10,7 +10,7 @@ const getDefaultStyle = (visible: boolean): Style => ({
 const Bars: FunctionComponent<BarsProps> = ({
   height = 80,
   width = 80,
-  color = '#4fa94d',
+  color = DEFAULT_COLOR,
   ariaLabel = 'bars-loading',
   wrapperStyle,
   wrapperClass,

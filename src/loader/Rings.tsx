@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, Style } from '../type'
 
 interface RingsProps extends BaseProps {
   radius?: string | number,
@@ -12,7 +12,7 @@ export const Rings: FunctionComponent<RingsProps> = ({
   height = 80,
   width = 80,
   radius = 6,
-  color = '#4fa94d',
+  color = DEFAULT_COLOR,
   ariaLabel = 'rings-loading',
   wrapperStyle,
   wrapperClass,

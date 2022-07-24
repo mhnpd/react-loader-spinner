@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, Style } from '../type'
 
 interface TailSpinProps extends BaseProps {
   radius?: string | number,
@@ -13,7 +13,7 @@ export const TailSpin: FunctionComponent<TailSpinProps> = ({
   height = 80,
   width = 80,
   radius = 1,
-  color = '#4fa94d',
+  color = DEFAULT_COLOR,
   ariaLabel = 'tail-spin-loading',
   wrapperStyle,
   wrapperClass,

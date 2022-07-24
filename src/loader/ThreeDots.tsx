@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, Style } from '../type'
 
 interface ThreeDotsProps extends BaseProps {
   radius?: string | number
@@ -13,7 +13,7 @@ const ThreeDots: FunctionComponent<ThreeDotsProps> = ({
   height = 80,
   width = 80,
   radius = 9,
-  color = '4fa94d',
+  color = DEFAULT_COLOR,
   ariaLabel = 'three-dots-loading',
   wrapperStyle,
   wrapperClass,

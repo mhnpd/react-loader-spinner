@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, Style } from '../type'
 
 interface RevolvingDotProps extends BaseProps {
   radius?: string | number,
@@ -13,7 +13,7 @@ const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
   height = 100,
   width = 100,
   radius = 6,
-  color = '#4fa94d',
+  color = DEFAULT_COLOR,
   ariaLabel = 'revolving-dot-loading',
   wrapperStyle,
   wrapperClass,

@@ -1,28 +1,38 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, Style } from '../type'
 
 interface MutatingDotsProps extends BaseProps {
-  radius?: string | number,
-  secondaryColor?: string,
+  radius?: string | number
+  secondaryColor?: string
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 const MutatingDots: FunctionComponent<MutatingDotsProps> = ({
   height = 90,
   width = 80,
   radius = 12.5,
-  color = '#4fa94d',
-  secondaryColor = '#4fa94d',
+  color = DEFAULT_COLOR,
+  secondaryColor = DEFAULT_COLOR,
   ariaLabel = 'mutating-dots-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
+  visible = true,
 }) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="mutating-dots-loading">
-    <svg id="goo-loader" width={width} height={height} aria-label={ariaLabel} data-testid="mutating-dots-svg">
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="mutating-dots-loading"
+  >
+    <svg
+      id="goo-loader"
+      width={width}
+      height={height}
+      aria-label={ariaLabel}
+      data-testid="mutating-dots-svg"
+    >
       <filter id="fancy-goo">
         <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
         <feColorMatrix
@@ -44,7 +54,7 @@ const MutatingDots: FunctionComponent<MutatingDotsProps> = ({
           dur="1.2s"
           repeatCount="indefinite"
         />
-        <circle cx="50%" cy="40" r={radius} fill={color} >
+        <circle cx="50%" cy="40" r={radius} fill={color}>
           <animate
             id="cAnim1"
             attributeType="XML"

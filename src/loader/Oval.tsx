@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, Style } from '../type'
 
 interface OvalProps extends BaseProps {
   strokeWidth?: string | number
@@ -40,16 +40,16 @@ const getViewBoxSize = (
   radius: number,
 ): string => {
   const maxStrokeWidth = Math.max(strokeWidth, secondaryStrokeWidth)
-  const startingPoint = -radius - (maxStrokeWidth / 2) + 1
-  const endpoint = (radius * 2) + maxStrokeWidth
+  const startingPoint = -radius - maxStrokeWidth / 2 + 1
+  const endpoint = radius * 2 + maxStrokeWidth
   return [startingPoint, startingPoint, endpoint, endpoint].join(' ')
 }
 
 const Oval: FunctionComponent<OvalProps> = ({
   height = 80,
   width = 80,
-  color = '#4fa94d',
-  secondaryColor = '#4fa94d',
+  color = DEFAULT_COLOR,
+  secondaryColor = DEFAULT_COLOR,
   ariaLabel = 'oval-loading',
   wrapperStyle,
   wrapperClass,

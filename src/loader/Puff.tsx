@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, Style } from '../type'
 
 interface PuffProps extends BaseProps {
   radius?: string | number,
@@ -14,7 +14,7 @@ export const Puff: FunctionComponent<PuffProps> = ({
   height = 80,
   width = 80,
   radius = 1,
-  color = '#4fa94d',
+  color = DEFAULT_COLOR,
   ariaLabel = 'puff-loading',
   wrapperStyle,
   wrapperClass,

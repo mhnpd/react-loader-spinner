@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { BaseProps, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, Style } from '../type'
 
 /** Styles */
 const dash = keyframes`
@@ -26,7 +26,7 @@ const getDefaultStyle = (visible: boolean): Style => ({
 const Triangle: FunctionComponent<TriangleProps> = ({
   height = 80,
   width = 80,
-  color = 'green',
+  color = DEFAULT_COLOR,
   ariaLabel = 'triangle-loading',
   wrapperStyle,
   wrapperClass,

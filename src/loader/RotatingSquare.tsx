@@ -1,5 +1,5 @@
 import React from 'react'
-import { Style } from '../type'
+import { DEFAULT_COLOR, Style } from '../type'
 
 type RotatingSquareProps = {
   wrapperClass?: '',
@@ -18,7 +18,7 @@ const getDefaultStyle = (visible: boolean): Style => ({
 
 const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
   wrapperClass = '',
-  color = '#4fa94d',
+  color = DEFAULT_COLOR,
   height = 100,
   width = 100,
   strokeWidth = 4,

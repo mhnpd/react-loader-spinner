@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, Style } from '../type'
 
 interface BallTriangleProps extends BaseProps {
   radius?: string | number,
@@ -13,7 +13,7 @@ const BallTriangle: FunctionComponent<BallTriangleProps> = ({
   height = 100,
   width = 100,
   radius = 5,
-  color = '#4fa94d',
+  color = DEFAULT_COLOR,
   ariaLabel = 'ball-triangle-loading',
   wrapperClass,
   wrapperStyle,

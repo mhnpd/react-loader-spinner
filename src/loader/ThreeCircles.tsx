@@ -1,5 +1,5 @@
 import React from 'react'
-import { Style } from '../type'
+import { DEFAULT_COLOR, Style } from '../type'
 
 type Props = {
   wrapperStyle?: Style,
@@ -29,7 +29,7 @@ const ThreeCircles: React.FunctionComponent<Props> = ({
   height = 100,
   width = 100,
   color = '#4fa94d',
-  ariaLabel = 'rotating-three-circles',
+  ariaLabel = DEFAULT_COLOR,
   outerCircleColor,
   innerCircleColor,
   middleCircleColor,

@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, Style } from '../type'
 
 interface CirclesProps extends BaseProps {
 }
@@ -11,7 +11,7 @@ const getDefaultStyle = (visible: boolean): Style => ({
 const Circles: FunctionComponent<CirclesProps> = ({
   height = 80,
   width = 80,
-  color = '#4fa94d',
+  color = DEFAULT_COLOR,
   ariaLabel = 'circles-loading',
   wrapperStyle,
   wrapperClass,
