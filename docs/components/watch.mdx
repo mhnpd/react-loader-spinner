@@ -23,13 +23,13 @@ import PropsTable from '../../src/components/props-table'
   properties={[
     {
       name: 'height',
-      type: 'number',
+      type: 'number | string',
       default: '80',
       description: 'Height of the watch'
     },
     {
       name: 'width',
-      type: 'number',
+      type: 'number | string',
       default: '80',
       description: 'Width of the watch'
     },
@@ -55,13 +55,13 @@ import PropsTable from '../../src/components/props-table'
       name: 'wrapperStyle',
       type: 'object',
       default: '{}',
-      description: 'Style of the wrapper'
+      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.'
     },
     {
       name: 'wrapperClassName',
       type: 'string',
       default: '',
-      description: 'Class name of the wrapper'
+      description: 'Class name of the wrapper element. It can be used for custom styling.'
     },
     {
       name: 'visible',
