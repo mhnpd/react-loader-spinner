@@ -54,22 +54,16 @@ import PropsTable from '../../src/components/props-table'
       description: 'secondary color of the dot. If not set, the color will be the same as the primary color.'
     },
     {
-      name: 'ariaLabel',
-      type: 'string',
-      default: 'revolving-dot-loading',
-      description: 'Aria label of the component.'
-    },
-    {
       name: 'wrapperStyle',
       type: 'object',
       default: '{}',
-      description: 'Style of the wrapper.'
+      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.'
     },
     {
       name: 'wrapperClass',
       type: 'string',
       default: '',
-      description: 'Class of the wrapper.'
+      description: 'Class of the wrapper element. It can be used for custom styling.'
     },
     {
       name: 'visible',
@@ -83,24 +77,6 @@ import PropsTable from '../../src/components/props-table'
       default: 'revolving-dot-loading',
       description: 'Aria label of the dot'
     },
-    {
-      name: 'wrapperStyle',
-      type: 'object',
-      default: '{}',
-      description: 'Style of the wrapper'
-    },
-    {
-      name: 'wrapperClass',
-      type: 'string',
-      default: '',
-      description: 'Class of the wrapper'
-    },
-    {
-      name: 'visible',
-      type: 'boolean',
-      default: 'true',
-      description: 'Whether the dot is visible'
-    }
   ]}
 />
 
