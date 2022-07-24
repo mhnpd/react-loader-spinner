@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { prop } from 'styled-tools'
+import { DEFAULT_COLOR } from '../type'
 
 type Props = {
   width?: string
@@ -73,7 +74,7 @@ const Polyline = styled.polyline`
 `
 
 export default function RotatingLines ({
-  strokeColor = 'grey',
+  strokeColor = DEFAULT_COLOR,
   strokeWidth = '5',
   animationDuration = '0.75',
   width = '96',
