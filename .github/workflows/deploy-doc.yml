@@ -1,15 +1,34 @@
-name: Build Docs
+name: deploy-docusaurus
+
 on:
   push:
-    branches:
-      - docs
+    branches: [docs]
+  pull_request:
+    branches: [docs]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: redkubes/docusaurus-deploy-action@v1
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Check out repo
+        uses: actions/checkout@v2
+      # Node is required for npm
+      - name: Set up Node
+        uses: actions/setup-node@v2
         with:
-          git-user: mhnpd
-          git-password: ${{ secrets.SECRET }}
-          deployment-branch: gh-pages
+          node-version: "16"
+      # Install and build Docusaurus website
+      - name: Build Docusaurus website
+        run: |
+          npm install 
+          npm run build
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: build
+        env:
+          GITHUB_TOKEN: ${{ secrets.SECRET }}
