@@ -1,10 +1,15 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, DEFAULT_COLOR, Style } from '../type'
+import {
+  BaseProps,
+  DEFAULT_COLOR,
+  DEFAULT_WAI_ARIA_ATTRIBUTE,
+  Style,
+} from '../type'
 
-interface AudioProps extends BaseProps { }
+interface AudioProps extends BaseProps {}
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 const Audio: FunctionComponent<AudioProps> = ({
@@ -14,16 +19,21 @@ const Audio: FunctionComponent<AudioProps> = ({
   ariaLabel = 'audio-loading',
   wrapperStyle = {},
   wrapperClass,
-  visible = true
+  visible = true,
 }): ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="audio-loading">
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="audio-loading"
+    aria-label={ariaLabel}
+    {...DEFAULT_WAI_ARIA_ATTRIBUTE}
+  >
     <svg
       height={`${height}`}
       width={`${width}`}
       fill={color}
       viewBox="0 0 55 80"
       xmlns="http://www.w3.org/2000/svg"
-      aria-label={ariaLabel}
       data-testid="audio-svg"
     >
       <g transform="matrix(1 0 0 -1 0 80)">
