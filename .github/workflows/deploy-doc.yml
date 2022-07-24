@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: redkubes/docusaurus-deploy-action@v1
         with:
-          source-folder: build
+          source-folder: './'
           git-user: mhnpd
           git-password: ${{ secrets.SECRET }}
           deployment-branch: gh-pages
