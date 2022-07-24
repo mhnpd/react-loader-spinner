@@ -4,6 +4,7 @@
 # Production
 /build
 .docz
+/dist
 
 # Generated files
 .docusaurus
