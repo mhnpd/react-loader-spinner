@@ -14,7 +14,7 @@ describe('Audio Loader', () => {
     expect(element).toBeVisible()
     expect(element).toContainHTML('svg')
   })
-  test('should be hidden when visibile is false', () => {
+  test('should be hidden when visible is false', () => {
     render(<Audio height={100} color={'red'} width={100} visible={false} />)
     const element = screen.getByTestId('audio-loading')
     expect(element).not.toBeVisible()
