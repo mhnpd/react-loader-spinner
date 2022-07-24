@@ -46,10 +46,7 @@ const config = {
         },
         theme: {
           customCss: [
-            require.resolve('./src/css/custom.css'),
-            require.resolve(
-              './node_modules/react-loader-spinner/dist/loader/css/react-spinner-loader.css',
-            ),
+            require.resolve('./src/css/custom.css')
           ],
         },
       }),

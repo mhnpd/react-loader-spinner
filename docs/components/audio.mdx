@@ -1,0 +1,65 @@
+---
+---
+import PropsTable from "../../src/components/props-table"
+
+# Audio
+
+```jsx live
+<Audio
+  height="100"
+  width="100"
+  color="#4fa94d"
+  ariaLabel="loading"
+  wrapperStyle={{}}
+  wrapperClass="wrapper-class"
+  visible={true}
+/>
+```
+
+### Props
+<PropsTable
+  properties={[
+  {
+    name: 'height',
+    type: 'string',
+    default: '100',
+    description: 'Height of the svg loader'
+  },
+  {
+    name: 'width',
+    type: 'string',
+    default: '100',
+    description: 'Width of the svg loader'
+  },
+  {
+    name: 'color',
+    type: 'string',
+    default: 'green',
+    description: 'It should be a valid color. Color code is #4fa94d'
+  },
+  {
+    name: 'ariaLabel',
+    type: 'string',
+    default: 'audio-loading',
+    description: 'Aria label for the svg loader'
+  },
+  {
+    name: 'wrapperStyle',
+    type: 'object',
+    default: '{}',
+    description: 'Style object for the wrapper'
+  },
+  {
+    name: 'wrapperClass',
+    type: 'string',
+    default: '',
+    description: 'Class name for the wrapper'
+  },
+  {
+    name: 'visible',
+    type: 'boolean',
+    default: 'true',
+    description: 'Whether the loader is visible or not'
+  }
+]}
+/>
