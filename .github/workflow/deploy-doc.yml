@@ -1,5 +1,9 @@
-name: CI
-on: [push]
+name: Build Docs
+on:
+  push:
+    branches:
+      - docs
+
 
 jobs:
   deploy:
