@@ -1,9 +1,10 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+import { DEFAULT_COLOR } from '../type'
 
 type Props = {
-  color: string
-  width: string
+  color?: string
+  width?: string
 }
 
 const len = 242.776657104492
@@ -31,7 +32,7 @@ const Path = styled.path`
 `
 
 const InfinitySpin = ({
-  color = '#f28f3b',
+  color = DEFAULT_COLOR,
   width = '200',
 }: Props): React.ReactElement => {
   return (
@@ -43,6 +44,7 @@ const InfinitySpin = ({
       data-testid='infinity-spin'
     >
       <Path
+        data-testid='infinity-spin-path-1'
         stroke={color}
         fill="none"
         strokeWidth="4"
@@ -52,6 +54,7 @@ const InfinitySpin = ({
         d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z"
       />
       <path
+       data-testid='infinity-spin-path-2'
         opacity="0.07"
         fill="none"
         stroke={color}
