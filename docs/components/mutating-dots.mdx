@@ -11,7 +11,7 @@ import PropsTable from '../../src/components/props-table'
   color="#4fa94d"
   secondaryColor= '#4fa94d'
   radius='12.5'
-  ariaLabel="bars-loading"
+  ariaLabel="mutating-dots-loading"
   wrapperStyle={{}}
   wrapperClass=""
   visible={true}
@@ -61,13 +61,13 @@ import PropsTable from '../../src/components/props-table'
       name: 'wrapperStyle',
       type: 'object',
       default: '{}',
-      description: 'Style of the wrapper'
+      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.'
     },
     {
       name: 'wrapperClass',
       type: 'string',
       default: '',
-      description: 'Class of the wrapper'
+      description: 'Class of the wrapper element. It can be used for custom styling. It will override the default style.'
     },
     {
       name: 'visible',
