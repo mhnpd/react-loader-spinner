@@ -10,11 +10,11 @@ import PropsTable from '../../src/components/props-table'
   height="80"
   width="80"
   color="#4fa94d"
-  ariaLabel="rings-loading"
   radius="6"
   wrapperStyle={{}}
   wrapperClass=""
   visible={true}
+  ariaLabel="rings-loading"
 />
 ```
 
@@ -56,13 +56,13 @@ import PropsTable from '../../src/components/props-table'
       name: 'wrapperStyle',
       type: 'object',
       default: '{}',
-      description: 'The style of the wrapper.',
+      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
     },
     {
       name: 'wrapperClass',
       type: 'string',
       default: '',
-      description: 'The class of the wrapper.',
+      description: 'The class of the wrapper element. It can be used for custom styling.', 
     },
     {
       name: 'visible',
