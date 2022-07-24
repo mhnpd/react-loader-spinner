@@ -30,14 +30,7 @@ yarn add react-loader-spinner
 
 ### Usage
 
-
-##### Import required css
-Import the css to main app.js file
-
-```js
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-```
-
+> No css import is required
 
 ```jsx
 
