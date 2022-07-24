@@ -1,0 +1,84 @@
+---
+---
+import PropsTable from '../../src/components/props-table'
+
+# Rotating Square
+
+```jsx live
+<RotatingSquare
+  height="100"
+  width="100"
+  color="#4fa94d"
+  ariaLabel="rotating-square-loading"
+  strokeWidth="4"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+/>
+```
+
+## Props
+
+<PropsTable
+  properties={[
+    {
+      name: 'height',
+      type: 'number',
+      default: '100',
+      description: 'Height of the spinner',
+    },
+    {
+      name: 'width',
+      type: 'number | string',
+      default: '100',
+      description: 'Width of the spinner',
+    },
+    {
+      name: 'color',
+      type: 'number | string',
+      default: '#4fa94d',
+      description: 'Color of the spinner',
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      default: 'rotating-square-loading',
+      description: 'Aria label of the spinner',
+    },
+    {
+      name: 'strokeWidth',
+      type: 'number | string',
+      default: '4',
+      description: 'Stroke width of the spinner',
+    },
+    {
+      name: 'wrapperStyle',
+      type: 'object',
+      default: '{}',
+      description: 'Style of the wrapper',
+    },
+    {
+      name: 'wrapperClass',
+      type: 'string',
+      default: '',
+      description: 'Class of the wrapper',
+    },
+    {
+      name: 'visible',
+      type: 'boolean',
+      default: 'true',
+      description: 'Whether the spinner is visible',
+    },
+  ]}
+/>
+
+## Example 2
+
+```jsx live
+<RotatingSquare
+  ariaLabel="rotating-square"
+  visible={true}
+  color="grey"
+  strokeWidth="10"
+/>
+```

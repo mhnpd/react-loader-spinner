@@ -1,0 +1,106 @@
+---
+---
+import PropsTable from '../../src/components/props-table'
+
+# RevolvingDot
+
+```jsx live
+<RevolvingDot
+  height="100"
+  width="100"
+  radius="6"
+  color="#4fa94d"
+  secondaryColor=''
+  ariaLabel="revolving-dot-loading"
+  radius="5"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+/>
+```
+
+## Props
+
+<PropsTable
+  properties={[
+    {
+      name: 'height',
+      type: 'number | string',
+      default: '80',
+      description: 'Height of the components'
+    },
+    {
+      name: 'width',
+      type: 'number | string',
+      default: '80',
+      description: 'Width of the components'
+    },
+    {
+      name: 'radius',
+      type: 'number | string',
+      default: '6',
+      description: 'Radius of the dot'
+    },
+    {
+      name: 'color',
+      type: 'string',
+      default: '#4fa94d',
+      description: 'Color of the dot.'
+    },
+    {
+      name: 'secondaryColor',
+      type: 'string',
+      default: '',
+      description: 'secondary color of the dot. If not set, the color will be the same as the primary color.'
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      default: 'revolving-dot-loading',
+      description: 'Aria label of the component.'
+    },
+    {
+      name: 'wrapperStyle',
+      type: 'object',
+      default: '{}',
+      description: 'Style of the wrapper.'
+    },
+    {
+      name: 'wrapperClass',
+      type: 'string',
+      default: '',
+      description: 'Class of the wrapper.'
+    },
+    {
+      name: 'visible',
+      type: 'boolean',
+      default: 'true',
+      description: 'Visibility of the component.'
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      default: 'revolving-dot-loading',
+      description: 'Aria label of the dot'
+    },
+    {
+      name: 'wrapperStyle',
+      type: 'object',
+      default: '{}',
+      description: 'Style of the wrapper'
+    },
+    {
+      name: 'wrapperClass',
+      type: 'string',
+      default: '',
+      description: 'Class of the wrapper'
+    },
+    {
+      name: 'visible',
+      type: 'boolean',
+      default: 'true',
+      description: 'Whether the dot is visible'
+    }
+  ]}
+/>
+

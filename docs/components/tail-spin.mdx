@@ -1,0 +1,73 @@
+---
+---
+import PropsTable from '../../src/components/props-table'
+
+# Tail Spin
+
+```jsx live
+<TailSpin
+  height="80"
+  width="80"
+  color="#4fa94d"
+  ariaLabel="tail-spin-loading"
+  radius="1"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+/>
+```
+
+## Props
+
+<PropsTable
+  properties={[
+   {
+      name: 'height',
+      type: 'number | string',
+      default: '80',
+      description: 'Height of the spinner.',
+    },
+    {
+      name: 'width',
+      type: 'number | string',
+      default: '80',
+      description: 'Width of the spinner.',
+    },
+    {
+      name: 'color',
+      type: 'string',
+      default: '#4fa94d',
+      description: 'Color of the spinner.',
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      default: 'tail-spin-loading',
+      description: 'Aria label of the spinner.',
+    },
+    {
+      name: 'radius',
+      type: 'number | string',
+      default: '1',
+      description: 'Radius of the spinner.',
+    },
+    {
+      name: 'wrapperStyle',
+      type: 'object',
+      default: '{}',
+      description: 'Style of the wrapper.',
+    },
+    {
+      name: 'wrapperClass',
+      type: 'string',
+      default: '',
+      description: 'Class of the wrapper.',
+    },
+    {
+      name: 'visible',
+      type: 'boolean',
+      default: 'true',
+      description: 'Whether the spinner is visible.',
+    }, 
+  ]}
+/>
