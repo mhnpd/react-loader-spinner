@@ -9,9 +9,11 @@ import styles from './index.module.css'
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext()
+  const Logo = require('@site/static/img/logo.svg').default
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
+        <Logo className={styles.logoSvg}/>
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
@@ -19,7 +21,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/intro"
           >
-            Documentation
+            Get Started
           </Link>
         </div>
       </div>
@@ -31,8 +33,8 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext()
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`${siteConfig.title}`}
+      description="Spinner for react application"
     >
       <HomepageHeader />
       <main>

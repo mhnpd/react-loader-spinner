@@ -7,9 +7,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'React Spinners',
-  tagline: 'Cool spinner for react application',
+  tagline: 'Cool spinners for ReactJS application',
   url: 'https://github.com/mhnpd/react-loader-spinner',
-  baseUrl: '/',
+  baseUrl: '/react-loader-spinner/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -19,6 +19,7 @@ const config = {
   organizationName: 'mhnpd', // Usually your GitHub org/user name.
   projectName: 'react-loader-spinner', // Usually your repo name.
   deploymentBranch: 'gh-pages',
+
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".

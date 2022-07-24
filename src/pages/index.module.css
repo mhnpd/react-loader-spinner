@@ -28,3 +28,8 @@
   flex-direction: column;
   padding: 10px;
 }
+
+.logoSvg {
+  height: 120px;
+  width: 120px;
+}

@@ -16,13 +16,6 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Customizable SVG Loaders',
     Svg: require('@site/static/img/customizable.svg').default,
-    description: (
-      <p>
-        react-spinner-loader provides customizable React SVG spinner component
-        which can be implemented for async await operation before data loads to
-        the view.
-      </p>
-    ),
   },
   {
     title: 'Light Weight',

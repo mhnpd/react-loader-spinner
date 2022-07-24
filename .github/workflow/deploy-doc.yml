@@ -1,0 +1,14 @@
+name: CI
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: redkubes/docusaurus-deploy-action@v1
+        with:
+          source-folder: website
+          git-user: mhnpd
+          git-password: ${{ secrets.SECRET }}
+          deployment-branch: gh-pages
