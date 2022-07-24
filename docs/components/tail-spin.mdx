@@ -49,19 +49,19 @@ import PropsTable from '../../src/components/props-table'
       name: 'radius',
       type: 'number | string',
       default: '1',
-      description: 'Radius of the spinner.',
+      description: 'Radius of the spinner. Max radius is 10',
     },
     {
       name: 'wrapperStyle',
       type: 'object',
       default: '{}',
-      description: 'Style of the wrapper.',
+      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
     },
     {
       name: 'wrapperClass',
       type: 'string',
       default: '',
-      description: 'Class of the wrapper.',
+      description: 'Class of the wrapper element. It can be used for custom styling.',
     },
     {
       name: 'visible',
