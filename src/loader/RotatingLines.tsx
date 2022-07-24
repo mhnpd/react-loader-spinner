@@ -24,7 +24,7 @@ const Svg = styled.svg`
 `
 
 const Polyline = styled.polyline`
-  stroke-width: ${(props) => props.width}px;
+  stroke-width: ${props => props.width}px;
   stroke-linecap: round;
 
   &:nth-child(12n + 0) {
@@ -72,7 +72,7 @@ const Polyline = styled.polyline`
   }
 `
 
-export default function RotatingLines({
+export default function RotatingLines ({
   strokeColor = 'grey',
   strokeWidth = '5',
   animationDuration = '0.75',
@@ -81,7 +81,7 @@ export default function RotatingLines({
 }: Props): React.ReactElement | null {
   const lines = useCallback(
     () =>
-      POINTS.map((point) => (
+      POINTS.map(point => (
         <Polyline
           key={point}
           points="24,12 24,4"
@@ -89,9 +89,11 @@ export default function RotatingLines({
           transform={`rotate(${point}, 24, 24)`}
         />
       )),
-    [strokeWidth]
+    [strokeWidth],
   )
-  return !visible ? null : (
+  return !visible
+    ? null
+    : (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 48"
@@ -103,5 +105,5 @@ export default function RotatingLines({
     >
       {lines()}
     </Svg>
-  )
+      )
 }
