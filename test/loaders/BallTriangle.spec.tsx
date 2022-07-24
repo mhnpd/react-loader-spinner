@@ -1,34 +1,57 @@
 import React from 'react'
 import BallTriangle from '../../src/loader/BallTriangle'
 import { render, screen } from '@testing-library/react'
+import { DEFAULT_COLOR } from '../../src/type'
 
 const wrapperTestId = 'ball-triangle-loading'
 const svgTestId = 'ball-triangle-svg'
 
-describe('Ball Triangle Loader', () => {
-  test('should be importable correctly', () => {
-    const component = render(<BallTriangle height={100} color={'red'} width={100} />)
+describe('Ball Triangle', () => {
+  test('should render correctly with default props', () => {
+    render(<BallTriangle />)
+    const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
+    expect(component).toHaveAttribute('aria-label', 'ball-triangle-loading')
+    expect(component).toHaveAttribute('role', 'status')
+
+    const svg = screen.getByTestId(svgTestId)
+    expect(svg).toBeDefined()
+    expect(svg).toHaveAttribute('height', '100')
+    expect(svg).toHaveAttribute('width', '100')
+    expect(svg).toHaveAttribute('stroke', DEFAULT_COLOR)
+
+    svg.querySelectorAll('circle').forEach((circle, index) => {
+      expect(circle).toHaveAttribute('r', '5')
+    })
   })
 
-  test('should have a test classes', () => {
-    render(<BallTriangle height={100} color={'red'} width={100} />)
-    const element = screen.getByTestId(wrapperTestId)
-    expect(element).toBeVisible()
-    expect(element).toContainHTML('svg')
+  test('should use props pass externally', () => {
+    render(<BallTriangle
+        height={200}
+        width={200}
+        ariaLabel="ball-triangle-loading-test"
+        color='red'
+        radius={10}
+      />)
+    const component = screen.getByTestId(wrapperTestId)
+    expect(component).toBeDefined()
+    expect(component).toHaveAttribute('aria-label', 'ball-triangle-loading-test')
+    expect(component).toHaveAttribute('role', 'status')
+
+    const svg = screen.getByTestId(svgTestId)
+    expect(svg).toBeDefined()
+    expect(svg).toHaveAttribute('height', '200')
+    expect(svg).toHaveAttribute('width', '200')
+    expect(svg).toHaveAttribute('stroke', 'red')
+
+    svg.querySelectorAll('circle').forEach((circle, index) => {
+      expect(circle).toHaveAttribute('r', '10')
+    })
   })
-  test('should be hidden when visibile is false', () => {
-    render(<BallTriangle height={100} color={'red'} width={100} visible={false} />)
+  test('should be hidden when visible is false', () => {
+    render(<BallTriangle visible={false} />,)
     const element = screen.getByTestId(wrapperTestId)
     expect(element).not.toBeVisible()
-  })
-
-  test('should have a correct attributes', () => {
-    render(<BallTriangle height={100} color={'red'} width={100} visible={false} />)
-    const element = screen.getByTestId(svgTestId)
-    expect(element).toHaveAttribute('height')
-    expect(element).toHaveAttribute('width')
-    expect(element).toHaveAttribute('stroke')
-    expect(element).toHaveAttribute('aria-label')
+    expect(element).toHaveStyle('display:none')
   })
 })

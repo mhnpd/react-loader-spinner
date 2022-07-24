@@ -1,12 +1,17 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, DEFAULT_COLOR, Style } from '../type'
+import {
+  BaseProps,
+  DEFAULT_COLOR,
+  DEFAULT_WAI_ARIA_ATTRIBUTE,
+  Style,
+} from '../type'
 
 interface BallTriangleProps extends BaseProps {
-  radius?: string | number,
+  radius?: string | number
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 const BallTriangle: FunctionComponent<BallTriangleProps> = ({
@@ -17,10 +22,15 @@ const BallTriangle: FunctionComponent<BallTriangleProps> = ({
   ariaLabel = 'ball-triangle-loading',
   wrapperClass,
   wrapperStyle,
-  visible = true
-
+  visible = true,
 }) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="ball-triangle-loading">
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="ball-triangle-loading"
+    aria-label={ariaLabel}
+    {...DEFAULT_WAI_ARIA_ATTRIBUTE}
+  >
     <svg
       height={height}
       width={width}
@@ -28,7 +38,6 @@ const BallTriangle: FunctionComponent<BallTriangleProps> = ({
       viewBox="0 0 57 57"
       xmlns="http://www.w3.org/2000/svg"
       data-testid="ball-triangle-svg"
-      aria-label={ariaLabel}
     >
       <g fill="none" fillRule="evenodd">
         <g transform="translate(1 1)" strokeWidth="2">
