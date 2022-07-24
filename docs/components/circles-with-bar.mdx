@@ -1,0 +1,77 @@
+---
+---
+import PropsTable from '../../src/components/props-table'
+
+# Circles With Bar
+
+```jsx live
+<CirclesWithBar
+ wrapperStyle = {{}}
+  visible = {true}
+  wrapperClass = ''
+  height = '100'
+  width = '100'
+  color = '#4fa94d'
+  outerCircleColor=''
+  innerCircleColor=''
+  barColor=''
+/>
+```
+## Props
+
+<PropsTable properties={[
+  {
+    name: 'wrapperStyle',
+    type: 'object',
+    default: '{}',
+    description: 'Style for the wrapper'
+  },
+  {
+    name: 'visible',
+    type: 'boolean',
+    default: 'true',
+    description: 'Whether the circles are visible'
+  },
+  {
+    name: 'wrapperClass',
+    type: 'string',
+    default: '',
+    description: 'Class for the wrapper'
+  },
+  {
+    name: 'height',
+    type: 'string',
+    default: '100',
+    description: 'Height of the wrapper'
+  },
+  {
+    name: 'width',
+    type: 'string',
+    default: '100',
+    description: 'Width of the wrapper'
+  },
+  {
+    name: 'color',
+    type: 'string',
+    default: '#4fa94d',
+    description: 'Color of the outer circle'
+  },
+  {
+    name: 'outerCircleColor',
+    type: 'string',
+    default: 'undefined',
+    description: 'Color of the outer circle. If not defined, it will be the same as color'
+  },
+  {
+    name: 'innerCircleColor',
+    type: 'string',
+    default: '',
+    description: 'Color of the inner circle. If not defined, it will be the same as color'
+  },
+  {
+    name: 'barColor',
+    type: 'string',
+    default: '',
+    description: 'Color of the bar. If not defined, it will be the same as color'
+  }
+]}/>

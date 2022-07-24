@@ -1,0 +1,72 @@
+---
+---
+
+import PropsTable from '../../src/components/props-table'
+
+# Grid
+
+```jsx live
+<Grid
+  height="80"
+  width="80"
+  color="#4fa94d"
+  ariaLabel="bars-loading"
+  radius="5"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+/>
+```
+
+## Props
+
+<PropsTable properties={[
+  {
+    name: 'height',
+    type: 'string | number',
+    default: '20',
+    description: 'Height of the grid'
+  },
+  {
+    name: 'width',
+    type: 'string | number',
+    default: '20',
+    description: 'Width of the grid'
+  },
+  {
+    name: 'color',
+    type: 'string',
+    default: '#4fa94d',
+    description: 'Color of the grid'
+  },
+  {
+    name: 'ariaLabel',
+    type: 'string',
+    default: 'bars-loading',
+    description: 'Aria label of the grid'
+  },
+  {
+    name: 'radius',
+    type: 'string | number',
+    default: '12.5',
+    description: 'Radius of the circles inside the grid'
+  },
+  {
+    name: 'wrapperStyle',
+    type: 'object',
+    default: '{}',
+    description: 'Style of the grid wrapper'
+  },
+  {
+    name: 'wrapperClass',
+    type: 'string',
+    default: '',
+    description: 'Class of the grid wrapper'
+  },
+  {
+    name: 'visible',
+    type: 'boolean',
+    default: 'true',
+    description: 'Visibility of the grid'
+  }
+]} />

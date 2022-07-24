@@ -1,0 +1,67 @@
+---
+---
+import PropsTable from '../../src/components/props-table'
+
+# Circles
+
+```jsx live
+<Circles
+  height="80"
+  width="80"
+  color="#4fa94d"
+  ariaLabel="circles-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+/>
+```
+
+## Props
+
+<PropsTable
+  properties={[
+     {
+      name: 'height',
+      type: 'number',
+      default: '80',
+      description: 'Height of the circles svg box',
+    },
+    {
+      name: 'width',
+      type: 'number',
+      default: '80',
+      description: 'Width of the circles svg box',
+    },
+    {
+      name: 'color',
+      type: 'string',
+      default: '#000',
+      description: 'Color of the circles',
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      default: '',
+      description: 'ARIA label for the circles',
+    },
+    {
+      name: 'wrapperStyle',
+      type: 'object',
+      default: '{}',
+      description: 'Style object for the circles wrapper',
+    },
+    {
+      name: 'wrapperClass',
+      type: 'string',
+      default: '',
+      description: 'Class name for the circles wrapper',
+    },
+    {
+      name: 'visible',
+      type: 'boolean',
+      default: 'true',
+      description: 'Whether the circles is visible',
+    },
+  ]}
+/>
+

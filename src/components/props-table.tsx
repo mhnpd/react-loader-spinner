@@ -29,7 +29,7 @@ const columns=[
     dataIndex: 'default',
     key: 'default',
     width: 250,
-    render:(_, row)=>(<code style={{color:'#932981'}}>{row.type}</code>)
+    render:(_, row)=>(<code style={{color:'#932981'}}>{row.default}</code>)
   },
   {
     title: 'Description',

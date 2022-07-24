@@ -1,0 +1,112 @@
+---
+---
+import PropsTable from '../../src/components/props-table'
+
+# LineWave
+
+```jsx live
+<LineWave
+  height="100"
+  width="100"
+  color="#4fa94d"
+  ariaLabel="line-wave"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+  firstLineColor=""
+  middleLineColor=""
+  lastLineColor=""
+/>
+```
+
+## Props
+<PropsTable
+  properties={[
+    {
+      name: 'height',
+      type: 'number',
+      default: '100',
+      description: 'Height of the line wave.',
+    },
+    {
+      name: 'width',
+      type: 'number',
+      default: '100',
+      description: 'Width of the line wave.',
+    },
+    {
+      name: 'color',
+      type: 'string',
+      default: '#4fa94d',
+      description: 'Color of the line wave.',
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      default: 'line-wave',
+      description: 'ARIA label for the line wave.',
+    },
+    {
+      name: 'wrapperStyle',
+      type: 'object',
+      default: '{}',
+      description: 'Style object for the wrapper.',
+    },
+    {
+      name: 'wrapperClass',
+      type: 'string',
+      default: '',
+      description: 'Class name for the wrapper.',
+    },
+    {
+      name: 'visible',
+      type: 'boolean',
+      default: 'true',
+      description: 'Whether the line wave is visible.',
+    },
+    {
+      name: 'firstLineColor',
+      type: 'string',
+      default: '',
+      description: 'Color of the first line. If not provided, the color will be the same as the color.',
+    },
+    {
+      name: 'middleLineColor',
+      type: 'string',
+      default: '',
+      description: 'Color of the middle line. If not provided, the color will be the same as the color.',
+    },
+    {
+      name: 'lastLineColor',
+      type: 'string',
+      default: '',
+      description: 'Color of the last line. If not provided, the color will be the same as the color.',
+    },
+  ]}
+/>  
+
+
+## More Examples:
+
+### Example 1
+
+```jsx live
+<LineWave color="red" firstLineColor="green" />
+```
+
+### Example 2
+
+```jsx live
+<LineWave color="red" middleLineColor="green" lastLineColor="green" />
+```
+
+### Example 3
+
+```jsx live
+<LineWave
+  color="red"
+  firstLineColor="blue"
+  middleLineColor="green"
+  lastLineColor="grey"
+/>
+```
