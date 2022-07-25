@@ -1,10 +1,15 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, DEFAULT_COLOR, Style } from '../type'
+import {
+  BaseProps,
+  DEFAULT_COLOR,
+  DEFAULT_WAI_ARIA_ATTRIBUTE,
+  Style,
+} from '../type'
 
-interface BarsProps extends BaseProps { }
+interface BarsProps extends BaseProps {}
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 const Bars: FunctionComponent<BarsProps> = ({
@@ -14,9 +19,15 @@ const Bars: FunctionComponent<BarsProps> = ({
   ariaLabel = 'bars-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
+  visible = true,
 }) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="bars-loading">
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="bars-loading"
+    aria-label={ariaLabel}
+    {...DEFAULT_WAI_ARIA_ATTRIBUTE}
+  >
     <svg
       width={width}
       height={height}
@@ -24,7 +35,6 @@ const Bars: FunctionComponent<BarsProps> = ({
       viewBox="0 0 135 140"
       xmlns="http://www.w3.org/2000/svg"
       data-testid="bars-svg"
-      aria-label={ariaLabel}
     >
       <rect y="10" width="15" height="120" rx="6">
         <animate
