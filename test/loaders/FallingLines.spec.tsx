@@ -8,7 +8,7 @@ const rectTestIdOne = 'falling-lines-rect-1'
 const rectTestIdTwo = 'falling-lines-rect-2'
 
 describe('FallingLines', () => {
-  it('should render without crashing', () => {
+  it('should render correctly with default props', () => {
     render(<FallingLines />)
     const loader = screen.getByTestId(wrapperTestId)
     expect(loader).toBeInTheDocument()
