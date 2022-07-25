@@ -1,5 +1,5 @@
 import React from 'react'
-import BallTriangle from '../../src/loader/BallTriangle'
+import { BallTriangle } from '../../src/'
 import { render, screen } from '@testing-library/react'
 import { DEFAULT_COLOR } from '../../src/type'
 

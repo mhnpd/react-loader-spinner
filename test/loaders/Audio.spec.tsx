@@ -1,5 +1,5 @@
 import React from 'react'
-import Audio from '../../src/loader/Audio'
+import { Audio } from '../../src'
 import { render, screen } from '@testing-library/react'
 import { DEFAULT_COLOR } from '../../src/type'
 
