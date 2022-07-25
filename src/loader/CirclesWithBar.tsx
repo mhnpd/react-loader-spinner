@@ -1,5 +1,5 @@
 import React from 'react'
-import { DEFAULT_COLOR, Style } from '../type'
+import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
 
 type Props = {
   wrapperStyle?: Style,
@@ -40,6 +40,7 @@ const CirclesWithBar: React.FunctionComponent<Props> = ({
       style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
       className={wrapperClass}
       aria-label={ariaLabel}
+      {...DEFAULT_WAI_ARIA_ATTRIBUTE}
       data-testid="circles-with-bar-wrapper">
       <svg version="1.1"
         id="L1"
@@ -59,7 +60,6 @@ const CirclesWithBar: React.FunctionComponent<Props> = ({
           strokeMiterlimit="15"
           strokeDasharray="14.2472,14.2472"
           cx="50" cy="50" r="47"
-          data-testid="circles-with-bar-svg-outer-circle"
         >
           <animateTransform
             attributeName="transform"
@@ -75,7 +75,6 @@ const CirclesWithBar: React.FunctionComponent<Props> = ({
           strokeWidth="1"
           strokeMiterlimit="10"
           strokeDasharray="10,10" cx="50" cy="50" r="39"
-          data-testid="circles-with-bar-svg-inner-circle"
         >
           <animateTransform
             attributeName="transform"

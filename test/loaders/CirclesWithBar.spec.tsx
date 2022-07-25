@@ -1,68 +1,68 @@
 import React from 'react'
 import CirclesWithBar from '../../src/loader/CirclesWithBar'
 import { render, screen } from '@testing-library/react'
+import { DEFAULT_COLOR } from '../../src/type'
 
 const wrapperTestId = 'circles-with-bar-wrapper'
 const svgTestId = 'circles-with-bar-svg'
-const outerCircleTestId = 'circles-with-bar-svg-outer-circle'
-const innerCircleTestId = 'circles-with-bar-svg-inner-circle'
-const insideBarTestId = 'circles-with-bar-svg-bar'
 
 describe('Circles With bar Loader', () => {
-  test('should be importable correctly', () => {
-    const component = render(<
-      CirclesWithBar
-      height={100}
-      color={'red'}
-      width={100} />)
+  test('should render correctly with default props', () => {
+    render(<CirclesWithBar />)
+    const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
-  })
+    expect(component).toHaveStyle('display: flex')
+    expect(component).toHaveAttribute('aria-label', 'circles-with-bar-loading')
+    expect(component).toHaveAttribute('aria-busy', 'true')
+    expect(component).toHaveAttribute('role', 'status')
 
-  test('should have a test classes', () => {
-    render(<CirclesWithBar
-      height={100}
-      color={'red'}
-      width={100}
-    />)
-    const element = screen.getByTestId(wrapperTestId)
-    expect(element).toBeVisible()
-    expect(element).toContainHTML('svg')
-  })
-  test('should be hidden when visible is false', () => {
-    render(<
-      CirclesWithBar
-      height={100}
-      color={'red'}
-      width={100}
-      visible={false}
-    />)
-    const element = screen.getByTestId(wrapperTestId)
-    expect(element).not.toBeVisible()
-  })
-
-  test('should have a correct attributes', () => {
-    render(<CirclesWithBar
-      height={120}
-      width={120}
-      color={'red'}
-      innerCircleColor='blue'
-      wrapperStyle={{ padding: '10px' }}
-      wrapperClass='testClass'
-      barColor='grey'
-      visible={true} />)
-
-    const wrapperDiv = screen.getByTestId(wrapperTestId)
     const svg = screen.getByTestId(svgTestId)
-    const outerCircle = screen.getByTestId(outerCircleTestId)
-    const innerCircle = screen.getByTestId(innerCircleTestId)
-    const bar = screen.getByTestId(insideBarTestId)
+    expect(svg).toBeDefined()
+    expect(svg).toHaveAttribute('height', '100')
+    expect(svg).toHaveAttribute('width', '100')
 
-    expect(svg).toHaveAttribute('height', '120')
-    expect(svg).toHaveAttribute('width', '120')
-    expect(outerCircle).toHaveAttribute('stroke', 'red')
-    expect(innerCircle).toHaveAttribute('stroke', 'blue')
-    expect(bar).toHaveAttribute('fill', 'grey')
-    expect(wrapperDiv).toHaveStyle('padding:10px')
-    expect(wrapperDiv).toHaveClass('testClass')
+    svg.querySelectorAll('circle').forEach(circle => {
+      expect(circle).toBeDefined()
+      expect(circle).toHaveAttribute('stroke', DEFAULT_COLOR)
+    })
+
+    svg.querySelectorAll('g').forEach(g => {
+      expect(g).toBeDefined()
+      expect(g).toHaveAttribute('fill', DEFAULT_COLOR)
+    })
+  })
+  test('should render correctly with custom props passed', () => {
+    render(<CirclesWithBar
+        height={200}
+        width={200}
+        ariaLabel='test-aria-label'
+        color='red'
+        wrapperClass='test-class'
+        wrapperStyle={{ opacity: '1' }}
+        innerCircleColor='blue'
+        outerCircleColor='blue'
+        barColor='yellow'
+      />)
+    const component = screen.getByTestId(wrapperTestId)
+    expect(component).toBeDefined()
+    expect(component).toHaveStyle('display: flex')
+    expect(component).toHaveAttribute('aria-label', 'test-aria-label')
+    expect(component).toHaveAttribute('aria-busy', 'true')
+    expect(component).toHaveAttribute('role', 'status')
+
+    const svg = screen.getByTestId(svgTestId)
+    expect(svg).toBeDefined()
+    expect(svg).toHaveAttribute('height', '200')
+    expect(svg).toHaveAttribute('width', '200')
+
+    svg.querySelectorAll('circle').forEach(circle => {
+      expect(circle).toBeDefined()
+      expect(circle).toHaveAttribute('stroke', 'blue')
+    })
+
+    svg.querySelectorAll('g').forEach(g => {
+      expect(g).toBeDefined()
+      expect(g).toHaveAttribute('fill', 'yellow')
+    })
   })
 })
