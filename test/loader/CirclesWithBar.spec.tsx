@@ -1,5 +1,5 @@
 import React from 'react'
-import CirclesWithBar from '../../src/loader/CirclesWithBar'
+import { CirclesWithBar } from '../../src'
 import { render, screen } from '@testing-library/react'
 import { DEFAULT_COLOR } from '../../src/type'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Grid from '../../src/loader/Grid'
+import { Grid } from '../../src'
 import { render, screen } from '@testing-library/react'
 import { DEFAULT_COLOR } from '../../src/type'
 

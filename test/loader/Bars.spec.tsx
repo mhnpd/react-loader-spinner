@@ -1,5 +1,5 @@
 import React from 'react'
-import Bars from '../../src/loader/Bars'
+import { Bars } from '../../src'
 import { render, screen } from '@testing-library/react'
 import { DEFAULT_COLOR } from '../../src/type'
 

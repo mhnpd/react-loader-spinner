@@ -1,5 +1,5 @@
 import React from 'react'
-import Circles from '../../src/loader/Circles'
+import { Circles } from '../../src'
 import { render, screen } from '@testing-library/react'
 import { DEFAULT_COLOR } from '../../src/type'
 
