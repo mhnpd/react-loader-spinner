@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, DEFAULT_COLOR, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
 interface HeartsProps extends BaseProps { }
 
 const getDefaultStyle = (visible: boolean): Style => ({
@@ -15,14 +15,19 @@ const Hearts: FunctionComponent<HeartsProps> = ({
   wrapperClass,
   visible = true
 }) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="hearts-loading">
+  <div
+  style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+  className={wrapperClass}
+  data-testid="hearts-loading"
+  aria-label={ariaLabel}
+  {...DEFAULT_WAI_ARIA_ATTRIBUTE}
+  >
     <svg
       width={width}
       height={height}
       viewBox="0 0 140 64"
       xmlns="http://www.w3.org/2000/svg"
       fill={color}
-      aria-label={ariaLabel}
       data-testid="hearts-svg"
     >
       <path

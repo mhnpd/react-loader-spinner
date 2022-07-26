@@ -1,34 +1,56 @@
 import React from 'react'
-import Hearts from '../../src/loader/Hearts'
+import { Hearts } from '../../src/'
 import { render, screen } from '@testing-library/react'
+import { DEFAULT_COLOR } from '../../src/type'
 
 const wrapperTestId = 'hearts-loading'
 const svgTestId = 'hearts-svg'
 
 describe('Hearts Loader', () => {
-  test('should be importable correctly', () => {
-    const component = render(<Hearts height={100} color={'red'} width={100} />)
+  test('should render correctly with default props', () => {
+    render(<Hearts/>)
+    const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
+    expect(component).toHaveAttribute('aria-label', 'hearts-loading')
+    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('aria-busy', 'true')
+    expect(component).toHaveStyle('display:flex')
+
+    const svg = screen.getByTestId(svgTestId)
+    expect(svg).toBeDefined()
+    expect(svg).toHaveAttribute('width', '80')
+    expect(svg).toHaveAttribute('height', '80')
+    expect(svg).toHaveAttribute('fill', DEFAULT_COLOR)
   })
 
-  test('should have a test classes', () => {
-    render(<Hearts height={100} color={'red'} width={100} />)
-    const element = screen.getByTestId(wrapperTestId)
-    expect(element).toBeVisible()
-    expect(element).toContainHTML('svg')
+  test('should render correctly with custom props', () => {
+    render(<Hearts
+      height={200}
+      width={200}
+      color='#ff0000'
+      ariaLabel='custom-hearts-loading'
+      wrapperStyle={{ opacity: '0.5' }}
+      wrapperClass='custom-wrapper-class'
+    />)
+    const component = screen.getByTestId(wrapperTestId)
+    expect(component).toBeDefined()
+    expect(component).toHaveAttribute('aria-label', 'custom-hearts-loading')
+    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('aria-busy', 'true')
+    expect(component).toHaveStyle('display:flex')
+    expect(component).toHaveStyle('opacity: 0.5')
+    expect(component).toHaveClass('custom-wrapper-class')
+
+    const svg = screen.getByTestId(svgTestId)
+    expect(svg).toBeDefined()
+    expect(svg).toHaveAttribute('width', '200')
+    expect(svg).toHaveAttribute('height', '200')
+    expect(svg).toHaveAttribute('fill', '#ff0000')
   })
-  test('should be hidden when visibile is false', () => {
-    render(<Hearts height={100} color={'red'} width={100} visible={false} />)
+  test('should be hidden when visible is false', () => {
+    render(<Hearts visible={false} />)
     const element = screen.getByTestId(wrapperTestId)
     expect(element).not.toBeVisible()
-  })
-
-  test('should have a correct attributes', () => {
-    render(<Hearts height={100} color={'red'} width={100} visible={false} />)
-    const element = screen.getByTestId(svgTestId)
-    expect(element).toHaveAttribute('height')
-    expect(element).toHaveAttribute('width')
-    expect(element).toHaveAttribute('fill')
-    expect(element).toHaveAttribute('aria-label')
+    expect(element).toHaveStyle('display:none')
   })
 })
