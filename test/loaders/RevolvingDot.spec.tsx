@@ -1,33 +1,41 @@
 import React from 'react'
-import RevolvingDot from '../../src/loader/RevolvingDot'
+import { RevolvingDot } from '../../src/'
 import { render, screen } from '@testing-library/react'
+import { DEFAULT_COLOR } from '../../src/type'
 
 const wrapperTestId = 'revolving-dot-loading'
 const svgTestId = 'revolving-dot-svg'
 
 describe('RevolvingDot Loader', () => {
-  test('should be importable correctly', () => {
-    const component = render(<RevolvingDot height={100} color={'red'} width={100} />)
+  test('should render the default correctly', () => {
+    render(<RevolvingDot />)
+    const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
+    expect(component).toHaveAttribute('aria-label', 'revolving-dot-loading')
+    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('aria-busy', 'true')
+    expect(component).toHaveStyle('display:flex')
+
+    const svg = screen.getByTestId(svgTestId)
+    expect(svg).toBeDefined()
+    expect(svg).toHaveAttribute('width', '100')
+    expect(svg).toHaveAttribute('height', '100')
+
+    svg.querySelectorAll('circle').forEach((circle, index) => {
+      if (index === 0) {
+        expect(circle).toHaveAttribute('stroke', DEFAULT_COLOR)
+      } else if (index === 1) {
+        expect(circle).toHaveAttribute('stroke', DEFAULT_COLOR)
+        expect(circle).toHaveAttribute('fill', DEFAULT_COLOR)
+        expect(circle).toHaveAttribute('r', '6')
+      }
+    })
   })
 
-  test('should have a test classes', () => {
-    render(<RevolvingDot height={100} color={'red'} width={100} />)
-    const element = screen.getByTestId(wrapperTestId)
-    expect(element).toBeVisible()
-    expect(element).toContainHTML('svg')
-  })
-  test('should be hidden when visibile is false', () => {
-    render(<RevolvingDot height={100} color={'red'} width={100} visible={false} />)
+  test('should be hidden when visible is false', () => {
+    render(<RevolvingDot visible={false} />)
     const element = screen.getByTestId(wrapperTestId)
     expect(element).not.toBeVisible()
-  })
-
-  test('should have a correct attributes', () => {
-    render(<RevolvingDot height={100} color={'red'} width={100} visible={false} />)
-    const element = screen.getByTestId(svgTestId)
-    expect(element).toHaveAttribute('height')
-    expect(element).toHaveAttribute('width')
-    expect(element).toHaveAttribute('aria-label')
+    expect(element).toHaveStyle('display:none')
   })
 })

@@ -1,13 +1,18 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, DEFAULT_COLOR, Style } from '../type'
+import {
+  BaseProps,
+  DEFAULT_COLOR,
+  DEFAULT_WAI_ARIA_ATTRIBUTE,
+  Style,
+} from '../type'
 
 interface RevolvingDotProps extends BaseProps {
-  radius?: string | number,
-  secondaryColor?: string,
+  radius?: string | number
+  secondaryColor?: string
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
   height = 100,
@@ -17,10 +22,15 @@ const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
   ariaLabel = 'revolving-dot-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
+  visible = true,
 }): ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="revolving-dot-loading">
-
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    aria-label={ariaLabel}
+    data-testid="revolving-dot-loading"
+    {...DEFAULT_WAI_ARIA_ATTRIBUTE}
+  >
     <svg
       version="1.1"
       width={width}
@@ -28,7 +38,6 @@ const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      aria-label={ariaLabel}
       data-testid="revolving-dot-svg"
     >
       <circle
@@ -40,7 +49,14 @@ const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
         r={Number(`${radius}`) + 38}
         style={{ opacity: 0.5 }}
       />
-      <circle fill={color} stroke={color} strokeWidth="3" cx="8" cy="54" r={radius}>
+      <circle
+        fill={color}
+        stroke={color}
+        strokeWidth="3"
+        cx="8"
+        cy="54"
+        r={radius}
+      >
         <animateTransform
           attributeName="transform"
           dur="2s"
