@@ -1,34 +1,66 @@
 import React from 'react'
-import Rings from '../../src/loader/Rings'
+import { Rings } from '../../src/'
 import { render, screen } from '@testing-library/react'
+import { DEFAULT_COLOR } from '../../src/type'
 
 const wrapperTestId = 'rings-loading'
 const svgTestId = 'rings-svg'
 
 describe('Rings Loader', () => {
-  test('should be importable correctly', () => {
-    const component = render(<Rings height={100} color={'red'} width={100} />)
+  test('should render correctly with default props', () => {
+    render(<Rings />)
+    const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
+    expect(component).toHaveStyle('display:flex')
+    expect(component).toHaveAttribute('aria-label', 'rings-loading')
+    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('aria-busy', 'true')
+
+    const svg = screen.getByTestId(svgTestId)
+    expect(svg).toBeDefined()
+    expect(svg).toHaveAttribute('width', '80')
+    expect(svg).toHaveAttribute('height', '80')
+    expect(svg).toHaveAttribute('stroke', DEFAULT_COLOR)
+
+    svg.querySelectorAll('circle').forEach((circle, index) => {
+      expect(circle).toHaveAttribute('r')
+    })
   })
 
-  test('should have a test classes', () => {
-    render(<Rings height={100} color={'red'} width={100} />)
-    const element = screen.getByTestId(wrapperTestId)
-    expect(element).toBeVisible()
-    expect(element).toContainHTML('svg')
+  test('should render correctly with custom props', () => {
+    render(<Rings
+      height={100}
+      width={100}
+      radius={10}
+      color="red"
+      ariaLabel="custom-aria-label"
+      wrapperStyle={{ opacity: '1' }}
+      wrapperClass="custom-class"
+      />)
+    const component = screen.getByTestId(wrapperTestId)
+    expect(component).toBeDefined()
+    expect(component).toHaveStyle('display:flex')
+    expect(component).toHaveAttribute('aria-label', 'custom-aria-label')
+    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('aria-busy', 'true')
+    expect(component).toHaveStyle('opacity:1')
+    expect(component).toHaveClass('custom-class')
+
+    const svg = screen.getByTestId(svgTestId)
+    expect(svg).toBeDefined()
+    expect(svg).toHaveAttribute('width', '100')
+    expect(svg).toHaveAttribute('height', '100')
+    expect(svg).toHaveAttribute('stroke', 'red')
+
+    svg.querySelectorAll('circle').forEach((circle, index) => {
+      expect(circle).toHaveAttribute('r')
+    })
   })
-  test('should be hidden when visibile is false', () => {
-    render(<Rings height={100} color={'red'} width={100} visible={false} />)
+
+  test('should be hidden when visible is false', () => {
+    render(<Rings visible={false} />)
     const element = screen.getByTestId(wrapperTestId)
     expect(element).not.toBeVisible()
-  })
-
-  test('should have a correct attributes', () => {
-    render(<Rings height={100} color={'red'} width={100} visible={false} />)
-    const element = screen.getByTestId(svgTestId)
-    expect(element).toHaveAttribute('height')
-    expect(element).toHaveAttribute('width')
-    expect(element).toHaveAttribute('stroke')
-    expect(element).toHaveAttribute('aria-label')
+    expect(element).toHaveStyle('display:none')
   })
 })

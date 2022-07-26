@@ -1,12 +1,17 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, DEFAULT_COLOR, Style } from '../type'
+import {
+  BaseProps,
+  DEFAULT_COLOR,
+  DEFAULT_WAI_ARIA_ATTRIBUTE,
+  Style,
+} from '../type'
 
 interface RingsProps extends BaseProps {
-  radius?: string | number,
+  radius?: string | number
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 export const Rings: FunctionComponent<RingsProps> = ({
   height = 80,
@@ -16,19 +21,29 @@ export const Rings: FunctionComponent<RingsProps> = ({
   ariaLabel = 'rings-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
+  visible = true,
 }) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="rings-loading">
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="rings-loading"
+    aria-label={ariaLabel}
+    {...DEFAULT_WAI_ARIA_ATTRIBUTE}
+  >
     <svg
       width={width}
       height={height}
       viewBox="0 0 45 45"
       xmlns="http://www.w3.org/2000/svg"
       stroke={color}
-      aria-label={ariaLabel}
       data-testid="rings-svg"
     >
-      <g fill="none" fillRule="evenodd" transform="translate(1 1)" strokeWidth="2">
+      <g
+        fill="none"
+        fillRule="evenodd"
+        transform="translate(1 1)"
+        strokeWidth="2"
+      >
         <circle cx="22" cy="22" r={radius} strokeOpacity="0">
           <animate
             attributeName="r"
