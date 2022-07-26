@@ -23,6 +23,7 @@ describe('Triangle', () => {
 
     svg.querySelectorAll('circle').forEach((circle) => {
       expect(circle).toHaveAttribute('r', '48')
+      expect(circle).toHaveAttribute('stroke', DEFAULT_COLOR)
     })
   })
 
@@ -52,6 +53,7 @@ describe('Triangle', () => {
 
     svg.querySelectorAll('circle').forEach((circle) => {
       expect(circle).toHaveAttribute('r', '100')
+      expect(circle).toHaveAttribute('stroke', 'red')
     })
   })
 

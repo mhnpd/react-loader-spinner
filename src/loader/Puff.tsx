@@ -1,13 +1,13 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, DEFAULT_COLOR, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
 
 interface PuffProps extends BaseProps {
-  radius?: string | number,
-  secondaryColor?: string,
+  radius?: string | number
+  secondaryColor?: string
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 export const Puff: FunctionComponent<PuffProps> = ({
@@ -18,16 +18,21 @@ export const Puff: FunctionComponent<PuffProps> = ({
   ariaLabel = 'puff-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
+  visible = true,
 }) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="puff-loading">
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="puff-loading"
+    aria-label={ariaLabel}
+    {...DEFAULT_WAI_ARIA_ATTRIBUTE}
+  >
     <svg
       width={width}
       height={height}
       viewBox="0 0 44 44"
       xmlns="http://www.w3.org/2000/svg"
       stroke={color}
-      aria-label={ariaLabel}
       data-testid="puff-svg"
     >
       <g fill="none" fillRule="evenodd" strokeWidth="2">
