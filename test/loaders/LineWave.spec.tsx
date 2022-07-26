@@ -1,67 +1,65 @@
 import React from 'react'
-import LineWave from '../../src/loader/LineWave'
+import { LineWave } from '../../src'
 import { render, screen } from '@testing-library/react'
+import { DEFAULT_COLOR } from '../../src/type'
 
 const wrapperTestId = 'line-wave-wrapper'
 const svgTestId = 'line-wave-svg'
-const firstLineTestId = 'line-wave-svg-first-line'
-const middleLineTestId = 'line-wave-svg-middle-line'
-const lastLineTestId = 'line-wave-svg-last-line'
 
-describe('Circles With bar Loader', () => {
-  test('should be importable correctly', () => {
-    const component = render(<
-      LineWave
-      height={100}
-      color={'red'}
-      width={100} />)
+describe('Line Wave', () => {
+  test('should render correctly with default props', () => {
+    render(<LineWave />)
+    const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
+    expect(component).toHaveAttribute('aria-label', 'line-wave-loading')
+    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('aria-busy', 'true')
+    expect(component).toHaveStyle('display:flex')
+
+    const svg = screen.getByTestId(svgTestId)
+    expect(svg).toBeDefined()
+    expect(svg).toHaveAttribute('width', '100')
+    expect(svg).toHaveAttribute('height', '100')
+
+    svg.querySelectorAll('rect').forEach(rect => {
+      expect(rect).toBeDefined()
+      expect(rect).toHaveAttribute('fill', DEFAULT_COLOR)
+    })
   })
 
-  test('should have a test classes', () => {
+  test('should render correctly when custom props are passed', () => {
     render(<LineWave
-      height={100}
-      color={'red'}
-      width={100}
-    />)
-    const element = screen.getByTestId(wrapperTestId)
-    expect(element).toBeVisible()
-    expect(element).toContainHTML('svg')
+      height={200}
+      width={200}
+      color='#ff0000'
+      ariaLabel='custom-line-wave-loading'
+      wrapperStyle={{ opacity: '0.5' }}
+      wrapperClass='custom-wrapper-class'
+      firstLineColor='red'
+      middleLineColor='red'
+      lastLineColor='red'
+      />)
+    const component = screen.getByTestId(wrapperTestId)
+    expect(component).toBeDefined()
+    expect(component).toHaveAttribute('aria-label', 'custom-line-wave-loading')
+    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('aria-busy', 'true')
+    expect(component).toHaveStyle('display:flex')
+
+    const svg = screen.getByTestId(svgTestId)
+    expect(svg).toBeDefined()
+    expect(svg).toHaveAttribute('width', '200')
+    expect(svg).toHaveAttribute('height', '200')
+
+    svg.querySelectorAll('rect').forEach(rect => {
+      expect(rect).toBeDefined()
+      expect(rect).toHaveAttribute('fill', 'red')
+    })
   })
   test('should be hidden when visible is false', () => {
-    render(<LineWave
-      height={100}
-      color={'red'}
-      width={100}
-      visible={false}
-    />)
+    render(<LineWave visible={false} />)
     const element = screen.getByTestId(wrapperTestId)
     expect(element).not.toBeVisible()
-  })
-
-  test('should have a correct attributes', () => {
-    render(<LineWave
-      height={120}
-      width={120}
-      color={'red'}
-      middleLineColor='green'
-      lastLineColor='blue'
-      wrapperStyle={{ padding: '10px' }}
-      wrapperClass='testClass'
-      visible={true} />)
-
-    const wrapperDiv = screen.getByTestId(wrapperTestId)
-    const svg = screen.getByTestId(svgTestId)
-    const firstLine = screen.getByTestId(firstLineTestId)
-    const secondLine = screen.getByTestId(middleLineTestId)
-    const thirdLine = screen.getByTestId(lastLineTestId)
-
-    expect(svg).toHaveAttribute('height', '120')
-    expect(svg).toHaveAttribute('width', '120')
-    expect(firstLine).toHaveAttribute('fill', 'red')
-    expect(secondLine).toHaveAttribute('fill', 'green')
-    expect(thirdLine).toHaveAttribute('fill', 'blue')
-    expect(wrapperDiv).toHaveStyle('padding:10px')
-    expect(wrapperDiv).toHaveClass('testClass')
+    expect(element).toHaveStyle('display:none')
   })
 })
