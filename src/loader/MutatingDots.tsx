@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, DEFAULT_COLOR, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
 
 interface MutatingDotsProps extends BaseProps {
   radius?: string | number
@@ -25,12 +25,13 @@ const MutatingDots: FunctionComponent<MutatingDotsProps> = ({
     style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
     className={wrapperClass}
     data-testid="mutating-dots-loading"
+    aria-label={ariaLabel}
+    {...DEFAULT_WAI_ARIA_ATTRIBUTE}
   >
     <svg
       id="goo-loader"
       width={width}
       height={height}
-      aria-label={ariaLabel}
       data-testid="mutating-dots-svg"
     >
       <filter id="fancy-goo">
