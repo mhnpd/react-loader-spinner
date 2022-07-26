@@ -1,5 +1,5 @@
 import React from 'react'
-import { DEFAULT_COLOR } from '../type'
+import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 type FallingLinesProps = {
   color?: string
@@ -21,6 +21,7 @@ const FallingLines = ({
       height={width}
       viewBox="0 0 100 100"
       data-testid="falling-lines"
+      {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <rect
         y="25"
