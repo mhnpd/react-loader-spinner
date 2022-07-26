@@ -1,12 +1,17 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, DEFAULT_COLOR, Style } from '../type'
+import {
+  BaseProps,
+  DEFAULT_COLOR,
+  DEFAULT_WAI_ARIA_ATTRIBUTE,
+  Style,
+} from '../type'
 
 interface TailSpinProps extends BaseProps {
-  radius?: string | number,
+  radius?: string | number
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 export const TailSpin: FunctionComponent<TailSpinProps> = ({
@@ -17,15 +22,20 @@ export const TailSpin: FunctionComponent<TailSpinProps> = ({
   ariaLabel = 'tail-spin-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
+  visible = true,
 }): ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="tail-spin-loading">
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="tail-spin-loading"
+    aria-label={ariaLabel}
+    {...DEFAULT_WAI_ARIA_ATTRIBUTE}
+  >
     <svg
       width={width}
       height={height}
       viewBox="0 0 38 38"
       xmlns="http://www.w3.org/2000/svg"
-      aria-label={ariaLabel}
       data-testid="tail-spin-svg"
     >
       <defs>
@@ -37,7 +47,12 @@ export const TailSpin: FunctionComponent<TailSpinProps> = ({
       </defs>
       <g fill="none" fillRule="evenodd">
         <g transform="translate(1 1)">
-          <path d="M36 18c0-9.94-8.06-18-18-18" id="Oval-2" stroke={color} strokeWidth="2">
+          <path
+            d="M36 18c0-9.94-8.06-18-18-18"
+            id="Oval-2"
+            stroke={color}
+            strokeWidth="2"
+          >
             <animateTransform
               attributeName="transform"
               type="rotate"
