@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { prop } from 'styled-tools'
-import { DEFAULT_COLOR } from '../type'
+import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 type Props = {
   width?: string
@@ -9,6 +9,7 @@ type Props = {
   strokeWidth?: string
   strokeColor?: string
   animationDuration?: string
+  ariaLabel?: string
 }
 
 const spin = keyframes`
@@ -79,6 +80,7 @@ export default function RotatingLines ({
   animationDuration = '0.75',
   width = '96',
   visible = true,
+  ariaLabel = 'rotating-lines-loading',
 }: Props): React.ReactElement | null {
   const lines = useCallback(
     () =>
@@ -101,8 +103,9 @@ export default function RotatingLines ({
       width={width}
       stroke={strokeColor}
       speed={animationDuration}
-      role="status"
       data-testid="rotating-lines-svg"
+      aria-label={ariaLabel}
+      {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       {lines()}
     </Svg>
