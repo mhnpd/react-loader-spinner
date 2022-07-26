@@ -1,33 +1,63 @@
 import React from 'react'
-import Triangle from '../../src/loader/Triangle'
+import { Triangle } from '../../src'
 import { render, screen } from '@testing-library/react'
+import { DEFAULT_COLOR } from '../../src/type'
 
 const wrapperTestId = 'triangle-loading'
 const svgTestId = 'triangle-svg'
 
-describe('Triangle Loader', () => {
-  test('should be importable correctly', () => {
-    const component = render(<Triangle height={100} color={'red'} width={100} />)
+describe('Triangle', () => {
+  test('should render correctly with default props', () => {
+    render(<Triangle/>)
+    const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
+    expect(component).toHaveStyle('display: flex')
+    expect(component).toHaveAttribute('aria-label', 'triangle-loading')
+    expect(component).toHaveAttribute('aria-busy', 'true')
+    expect(component).toHaveAttribute('role', 'status')
+
+    const svg = screen.getByTestId(svgTestId)
+    expect(svg).toBeDefined()
+    expect(svg).toHaveAttribute('height', '80')
+    expect(svg).toHaveAttribute('width', '80')
+
+    svg.querySelectorAll('polygon').forEach((p) => {
+      expect(p).toHaveAttribute('stroke', DEFAULT_COLOR)
+    })
   })
 
-  test('should have a test classes', () => {
-    render(<Triangle height={100} color={'red'} width={100} />)
-    const element = screen.getByTestId(wrapperTestId)
-    expect(element).toBeVisible()
-    expect(element).toContainHTML('svg')
+  test('should render correctly with custom props', () => {
+    render(<Triangle
+      height={200}
+      width={200}
+      ariaLabel="test-aria-label"
+      color="red"
+      wrapperClass="test-class"
+      wrapperStyle={{ opacity: '1' }}
+    />)
+    const component = screen.getByTestId(wrapperTestId)
+    expect(component).toBeDefined()
+    expect(component).toHaveStyle('display: flex')
+    expect(component).toHaveAttribute('aria-label', 'test-aria-label')
+    expect(component).toHaveAttribute('aria-busy', 'true')
+    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveClass('test-class')
+    expect(component).toHaveStyle('opacity: 1')
+
+    const svg = screen.getByTestId(svgTestId)
+    expect(svg).toBeDefined()
+    expect(svg).toHaveAttribute('height', '200')
+    expect(svg).toHaveAttribute('width', '200')
+
+    svg.querySelectorAll('polygon').forEach((p) => {
+      expect(p).toHaveAttribute('stroke', 'red')
+    })
   })
-  test('should be hidden when visibile is false', () => {
+
+  test('should be hidden when visible is false', () => {
     render(<Triangle height={100} color={'red'} width={100} visible={false} />)
     const element = screen.getByTestId(wrapperTestId)
     expect(element).not.toBeVisible()
-  })
-
-  test('should have a correct attributes', () => {
-    render(<Triangle height={100} color={'red'} width={100} visible={false} />)
-    const element = screen.getByTestId(svgTestId)
-    expect(element).toHaveAttribute('height')
-    expect(element).toHaveAttribute('width')
-    expect(element).toHaveAttribute('aria-label')
+    expect(element).toHaveStyle('display: none')
   })
 })

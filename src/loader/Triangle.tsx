@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { BaseProps, DEFAULT_COLOR, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
 
 /** Styles */
 const dash = keyframes`
@@ -33,17 +33,17 @@ const Triangle: FunctionComponent<TriangleProps> = ({
   visible = true,
 }: TriangleProps): React.ReactElement => (
   <div
-    role="presentation"
     style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
     className={`${wrapperClass}`}
     data-testid="triangle-loading"
+    aria-label={ariaLabel}
+    {...DEFAULT_WAI_ARIA_ATTRIBUTE}
   >
     <SVG
       id="triangle"
       width={width}
       height={height}
       viewBox="-3 -4 39 39"
-      aria-label={ariaLabel}
       data-testid="triangle-svg"
     >
       <Polygon
