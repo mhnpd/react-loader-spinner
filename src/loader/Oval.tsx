@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, DEFAULT_COLOR, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
 
 interface OvalProps extends BaseProps {
   strokeWidth?: string | number
@@ -61,6 +61,8 @@ const Oval: FunctionComponent<OvalProps> = ({
     style={{ ...getDefaultStyle(visible), ...wrapperStyle, padding: 3 }}
     className={wrapperClass}
     data-testid="oval-loading"
+    aria-label={ariaLabel}
+    {...DEFAULT_WAI_ARIA_ATTRIBUTE}
   >
     <svg
       width={width}
@@ -73,12 +75,12 @@ const Oval: FunctionComponent<OvalProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       stroke={color}
       data-testid="oval-svg"
-      aria-label={ariaLabel}
     >
       <g fill="none" fillRule="evenodd">
         <g
           transform="translate(1 1)"
           strokeWidth={Number(strokeWidthSecondary || strokeWidth)}
+          data-testid="oval-secondary-group"
         >
           <circle
             strokeOpacity=".5"
