@@ -6,7 +6,7 @@ import { DEFAULT_COLOR } from '../../src/type'
 const wrapperTestId = 'tail-spin-loading'
 const svgTestId = 'tail-spin-svg'
 
-describe('TailSpin Loader', () => {
+describe('TailSpin', () => {
   test('should render correctly with default props', () => {
     render(<TailSpin />)
     const component = screen.getByTestId(wrapperTestId)
