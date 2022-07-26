@@ -1,12 +1,12 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, DEFAULT_COLOR, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
 
 interface GridProps extends BaseProps {
-  radius?: string | number,
+  radius?: string | number
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 export const Grid: FunctionComponent<GridProps> = ({
@@ -17,15 +17,20 @@ export const Grid: FunctionComponent<GridProps> = ({
   ariaLabel = 'grid-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
+  visible = true,
 }): ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="grid-loading">
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="grid-loading"
+    aria-label={ariaLabel}
+    {...DEFAULT_WAI_ARIA_ATTRIBUTE}
+  >
     <svg
       width={width}
       height={height}
       viewBox="0 0 105 105"
       fill={color}
-      aria-label={ariaLabel}
       data-testid="grid-svg"
     >
       <circle cx="12.5" cy="12.5" r={`${radius}`}>
