@@ -1,14 +1,11 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
+import { getDefaultStyle } from '../helpers'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface PuffProps extends BaseProps {
   radius?: string | number
   secondaryColor?: string
 }
-
-const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none',
-})
 
 export const Puff: FunctionComponent<PuffProps> = ({
   height = 80,

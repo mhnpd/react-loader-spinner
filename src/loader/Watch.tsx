@@ -1,13 +1,11 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
+import { getDefaultStyle } from '../helpers'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface WatchProps extends BaseProps {
   radius?: string | number
 }
 
-const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none',
-})
 const Watch: FunctionComponent<WatchProps> = ({
   height = 80,
   width = 80,

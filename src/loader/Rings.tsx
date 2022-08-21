@@ -1,18 +1,15 @@
 import React, { FunctionComponent } from 'react'
+import { getDefaultStyle } from '../helpers'
 import {
   BaseProps,
   DEFAULT_COLOR,
   DEFAULT_WAI_ARIA_ATTRIBUTE,
-  Style,
 } from '../type'
 
 interface RingsProps extends BaseProps {
   radius?: string | number
 }
 
-const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none',
-})
 export const Rings: FunctionComponent<RingsProps> = ({
   height = 80,
   width = 80,

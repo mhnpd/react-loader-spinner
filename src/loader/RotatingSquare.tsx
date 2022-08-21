@@ -1,4 +1,5 @@
 import React from 'react'
+import { getDefaultStyle } from '../helpers'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
 
 type RotatingSquareProps = {
@@ -11,10 +12,6 @@ type RotatingSquareProps = {
   wrapperStyle?: Style
   visible?: boolean
 }
-
-const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none',
-})
 
 const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
   wrapperClass = '',

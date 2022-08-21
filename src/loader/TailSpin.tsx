@@ -1,18 +1,14 @@
 import React, { FunctionComponent, ReactElement } from 'react'
+import { getDefaultStyle } from '../helpers'
 import {
   BaseProps,
   DEFAULT_COLOR,
   DEFAULT_WAI_ARIA_ATTRIBUTE,
-  Style,
 } from '../type'
 
 interface TailSpinProps extends BaseProps {
   radius?: string | number
 }
-
-const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none',
-})
 
 export const TailSpin: FunctionComponent<TailSpinProps> = ({
   height = 80,

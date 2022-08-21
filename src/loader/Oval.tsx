@@ -1,15 +1,12 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
+import { getDefaultStyle } from '../helpers'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, } from '../type'
 
 interface OvalProps extends BaseProps {
   strokeWidth?: string | number
   strokeWidthSecondary?: string | number
   secondaryColor?: string
 }
-
-const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none',
-})
 
 /**
  * The radius of the circle

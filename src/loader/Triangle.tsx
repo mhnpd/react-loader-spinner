@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
+import { getDefaultStyle } from '../helpers'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 /** Styles */
 const dash = keyframes`
@@ -18,10 +19,6 @@ const SVG = styled.svg`
 /** Styles Ends */
 
 type TriangleProps = BaseProps
-
-const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none',
-})
 
 const Triangle: FunctionComponent<TriangleProps> = ({
   height = 80,

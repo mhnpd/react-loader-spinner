@@ -1,18 +1,14 @@
 import React, { FunctionComponent } from 'react'
+import { getDefaultStyle } from '../helpers'
 import {
   BaseProps,
   DEFAULT_COLOR,
   DEFAULT_WAI_ARIA_ATTRIBUTE,
-  Style,
 } from '../type'
 
 interface ThreeDotsProps extends BaseProps {
   radius?: string | number
 }
-
-const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none',
-})
 
 const ThreeDots: FunctionComponent<ThreeDotsProps> = ({
   height = 80,

@@ -1,4 +1,5 @@
 import React from 'react'
+import { getDefaultStyle } from '../helpers'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
 
 type Props = {
@@ -13,10 +14,6 @@ type Props = {
   barColor?: string
   ariaLabel?: string
 }
-
-const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none',
-})
 
 /**
  * @description contains two circles rotating in opposite direction
