@@ -21,6 +21,7 @@
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "no-use-before-define": "off",
+    "no-console": 2,
     "@typescript-eslint/no-use-before-define": ["error"],
     "comma-dangle": "off",
     "@typescript-eslint/comma-dangle": "off"
