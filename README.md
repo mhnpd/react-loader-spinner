@@ -19,13 +19,15 @@
 
 ```bash
 npm install react-loader-spinner --save
-
 # or
 yarn add react-loader-spinner
 ```
+
+
 ### Documentation: 
-1. [Docs](https://mhnpd.github.io/react-loader-spinner-example/)
-2. [Code SandBox](https://codesandbox.io/s/react-loader-spinner-weqls?file=/src/App.js)
+1. [Getting Started](https://mhnpd.github.io/react-loader-spinner/docs/intro)
+2. [Spinners](https://mhnpd.github.io/react-loader-spinner/docs/category/components/)
+
 
 
 ### Usage
@@ -48,34 +50,7 @@ import { Audio } from  'react-loader-spinner'
   />
 ```
 
-### If webpack throws issue with css. (For older version of this package)
 
-Change webpack config as:
-` test: /\.scss$/ to test: /\.s?css$/`
-<br/><br/>
-<small>Newer version just import css file from node modules to app.js<small>
-
-### Types of Spinner
-
-react-loader-spinner component has the following types of spinners.
-
-| Spinner Type | Implementation                                                                |
-| ------------ |-------------------------------------------------------------------------------|
-| Audio        | `<Audio color="#00BFFF" height={80} width={80} />`               |
-| BallTriangle | `<BallTriangle color="#00BFFF" height={80} width={80} />` |
-| Bars         | `<Bars color="#00BFFF" height={80} width={80} />`                 |
-| Circles      | `<Circles color="#00BFFF" height={80} width={80}/>`            |
-| Grid         | `<Grid color="#00BFFF" height={80} width={80} />`                 |
-| Hearts       | `<Hearts color="#00BFFF" height={80} width={80} />`             |
-| Oval         | `<Oval color="#00BFFF" height={80} width={80} />`                 |
-| Puff         | `<Puff color="#00BFFF" height={80} width={80} />`                 |
-| Rings        | `<Rings color="#00BFFF" height={80} width={80} />`               |
-| TailSpin     | `<TailSpin  color="#00BFFF" height={80} width={80} />`         |
-| ThreeDots    | `<ThreeDots color="#00BFFF" height={80} width={80} />`       |
-
-### Here are the list of the task for which we want PR:
-
-- Rings spinner is not supported in Safari
 
 ## License
 
