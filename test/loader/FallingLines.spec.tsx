@@ -27,10 +27,7 @@ describe('FallingLines', () => {
   it('should render with custom props', () => {
     const width = '200'
     const color = '#ff0000'
-    render(<FallingLines
-        width={width}
-        color={color}
-      />)
+    render(<FallingLines width={width} color={color} />)
     const loader = screen.getByTestId(wrapperTestId)
     expect(loader).toBeInTheDocument()
     expect(loader).toHaveAttribute('width', width)

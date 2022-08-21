@@ -74,7 +74,7 @@ const Polyline = styled.polyline`
   }
 `
 
-export default function RotatingLines ({
+export default function RotatingLines({
   strokeColor = DEFAULT_COLOR,
   strokeWidth = '5',
   animationDuration = '0.75',
@@ -92,11 +92,9 @@ export default function RotatingLines ({
           transform={`rotate(${point}, 24, 24)`}
         />
       )),
-    [strokeWidth],
+    [strokeWidth]
   )
-  return !visible
-    ? null
-    : (
+  return !visible ? null : (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 48"
@@ -109,5 +107,5 @@ export default function RotatingLines ({
     >
       {lines()}
     </Svg>
-      )
+  )
 }

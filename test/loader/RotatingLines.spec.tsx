@@ -24,7 +24,7 @@ describe('Rotating Lines Loader', () => {
         animationDuration="1"
         width="100"
         strokeColor="red"
-      />,
+      />
     )
     const loader = screen.getByTestId(svgTestId)
     expect(loader).toHaveAttribute('width', '100')

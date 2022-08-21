@@ -43,5 +43,5 @@ export {
   ThreeDots,
   ThreeCircles,
   Triangle,
-  Watch
+  Watch,
 }

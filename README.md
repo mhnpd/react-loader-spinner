@@ -23,34 +23,27 @@ npm install react-loader-spinner --save
 yarn add react-loader-spinner
 ```
 
+### Documentation:
 
-### Documentation: 
 1. [Getting Started](https://mhnpd.github.io/react-loader-spinner/docs/intro)
 2. [Spinners](https://mhnpd.github.io/react-loader-spinner/docs/category/components/)
-
-
 
 ### Usage
 
 > No css import is required
 
 ```jsx
-
-import { Audio } from  'react-loader-spinner'
-
-
-<Audio
-    height = "80"
-    width = "80"
-    radius = "9"
-    color = 'green'
-    ariaLabel = 'three-dots-loading'     
-    wrapperStyle
-    wrapperClass
-  />
+import { Audio } from 'react-loader-spinner'
+;<Audio
+  height="80"
+  width="80"
+  radius="9"
+  color="green"
+  ariaLabel="three-dots-loading"
+  wrapperStyle
+  wrapperClass
+/>
 ```
-
-
 
 ## License
 

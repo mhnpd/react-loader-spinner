@@ -28,10 +28,10 @@ describe('Audio Loader', () => {
         wrapperStyle={{ opacity: '1' }}
         width="200"
         height="200"
-        ariaLabel='test-aria-label'
-        color='red'
+        ariaLabel="test-aria-label"
+        color="red"
         visible={false}
-      />,
+      />
     )
     const loader = screen.getByTestId('audio-loading')
     expect(loader).toBeInTheDocument()

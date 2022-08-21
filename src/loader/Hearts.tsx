@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
-interface HeartsProps extends BaseProps { }
+interface HeartsProps extends BaseProps {}
 
 const Hearts: FunctionComponent<HeartsProps> = ({
   height = 80,
@@ -10,14 +10,14 @@ const Hearts: FunctionComponent<HeartsProps> = ({
   ariaLabel = 'hearts-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
+  visible = true,
 }) => (
   <div
-  style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
-  className={wrapperClass}
-  data-testid="hearts-loading"
-  aria-label={ariaLabel}
-  {...DEFAULT_WAI_ARIA_ATTRIBUTE}
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="hearts-loading"
+    aria-label={ariaLabel}
+    {...DEFAULT_WAI_ARIA_ATTRIBUTE}
   >
     <svg
       width={width}
@@ -57,8 +57,7 @@ const Hearts: FunctionComponent<HeartsProps> = ({
           repeatCount="indefinite"
         />
       </path>
-      <path
-        d="M67.408 57.834l-23.01-24.98c-5.864-6.15-5.864-16.108 0-22.248 5.86-6.14 15.37-6.14 21.234 0L70 16.168l4.368-5.562c5.863-6.14 15.375-6.14 21.235 0 5.863 6.14 5.863 16.098 0 22.247l-23.007 24.98c-1.43 1.556-3.757 1.556-5.188 0z" />
+      <path d="M67.408 57.834l-23.01-24.98c-5.864-6.15-5.864-16.108 0-22.248 5.86-6.14 15.37-6.14 21.234 0L70 16.168l4.368-5.562c5.863-6.14 15.375-6.14 21.235 0 5.863 6.14 5.863 16.098 0 22.247l-23.007 24.98c-1.43 1.556-3.757 1.556-5.188 0z" />
     </svg>
   </div>
 )

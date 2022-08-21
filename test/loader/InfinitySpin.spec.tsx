@@ -23,10 +23,7 @@ describe('InfinitySpin Loader', () => {
     expect(path2).toHaveAttribute('stroke', DEFAULT_COLOR)
   })
   it('Should render apply custom props', () => {
-    render(<InfinitySpin
-        width="250"
-        color="red"
-      />)
+    render(<InfinitySpin width="250" color="red" />)
     const loader = screen.getByTestId(wrapperTestId)
     expect(loader).toBeInTheDocument()
     expect(loader).toHaveAttribute('width', '250')

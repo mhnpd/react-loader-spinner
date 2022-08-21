@@ -33,17 +33,19 @@ describe('Three Circles', () => {
   })
 
   test('should render correctly with custom props', () => {
-    render(<ThreeCircles
+    render(
+      <ThreeCircles
         height={200}
         width={200}
-        ariaLabel='test-aria-label'
-        color='red'
-        wrapperClass='test-class'
+        ariaLabel="test-aria-label"
+        color="red"
+        wrapperClass="test-class"
         wrapperStyle={{ opacity: '1' }}
-        outerCircleColor='blue'
-        innerCircleColor='green'
-        middleCircleColor='yellow'
-    />)
+        outerCircleColor="blue"
+        innerCircleColor="green"
+        middleCircleColor="yellow"
+      />
+    )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveStyle('display: flex')
@@ -70,7 +72,7 @@ describe('Three Circles', () => {
   })
 
   test('should be hidden when visible is false', () => {
-    render(<ThreeCircles visible={false}/>)
+    render(<ThreeCircles visible={false} />)
     const element = screen.getByTestId(wrapperTestId)
     expect(element).not.toBeVisible()
     expect(element).toHaveStyle('display: none')

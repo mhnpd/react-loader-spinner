@@ -28,19 +28,24 @@ describe('Mutating Dots', () => {
   })
 
   test('should render correctly with custom props', () => {
-    render(<MutatingDots
-      height={200}
-      width={200}
-      color='red'
-      ariaLabel='custom-mutating-dots-loading'
-      wrapperStyle={{ opacity: '0.5' }}
-      wrapperClass='custom-wrapper-class'
-      secondaryColor='red'
-      radius={25}
-      />)
+    render(
+      <MutatingDots
+        height={200}
+        width={200}
+        color="red"
+        ariaLabel="custom-mutating-dots-loading"
+        wrapperStyle={{ opacity: '0.5' }}
+        wrapperClass="custom-wrapper-class"
+        secondaryColor="red"
+        radius={25}
+      />
+    )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
-    expect(component).toHaveAttribute('aria-label', 'custom-mutating-dots-loading')
+    expect(component).toHaveAttribute(
+      'aria-label',
+      'custom-mutating-dots-loading'
+    )
     expect(component).toHaveAttribute('role', 'status')
     expect(component).toHaveAttribute('aria-busy', 'true')
     expect(component).toHaveStyle('display:flex')

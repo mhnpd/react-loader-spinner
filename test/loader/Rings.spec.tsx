@@ -28,15 +28,17 @@ describe('Rings Loader', () => {
   })
 
   test('should render correctly with custom props', () => {
-    render(<Rings
-      height={100}
-      width={100}
-      radius={10}
-      color="red"
-      ariaLabel="custom-aria-label"
-      wrapperStyle={{ opacity: '1' }}
-      wrapperClass="custom-class"
-      />)
+    render(
+      <Rings
+        height={100}
+        width={100}
+        radius={10}
+        color="red"
+        ariaLabel="custom-aria-label"
+        wrapperStyle={{ opacity: '1' }}
+        wrapperClass="custom-class"
+      />
+    )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveStyle('display:flex')

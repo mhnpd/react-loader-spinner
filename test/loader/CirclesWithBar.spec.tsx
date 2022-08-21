@@ -32,17 +32,19 @@ describe('Circles With bar Loader', () => {
     })
   })
   test('should render correctly with custom props passed', () => {
-    render(<CirclesWithBar
+    render(
+      <CirclesWithBar
         height={200}
         width={200}
-        ariaLabel='test-aria-label'
-        color='red'
-        wrapperClass='test-class'
+        ariaLabel="test-aria-label"
+        color="red"
+        wrapperClass="test-class"
         wrapperStyle={{ opacity: '1' }}
-        innerCircleColor='blue'
-        outerCircleColor='blue'
-        barColor='yellow'
-      />)
+        innerCircleColor="blue"
+        outerCircleColor="blue"
+        barColor="yellow"
+      />
+    )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveStyle('display: flex')

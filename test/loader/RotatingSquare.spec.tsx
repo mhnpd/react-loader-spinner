@@ -32,15 +32,17 @@ describe('RotatingSquare Loader', () => {
   })
 
   test('should render with custom props', () => {
-    render(<RotatingSquare
+    render(
+      <RotatingSquare
         height={200}
         width={200}
-        ariaLabel='test-aria-label'
-        color='red'
-        wrapperClass='test-class'
+        ariaLabel="test-aria-label"
+        color="red"
+        wrapperClass="test-class"
         wrapperStyle={{ opacity: '1' }}
         strokeWidth={10}
-      />)
+      />
+    )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveStyle('display: flex')

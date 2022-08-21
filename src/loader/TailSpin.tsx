@@ -1,10 +1,6 @@
 import React, { FunctionComponent, ReactElement } from 'react'
 import { getDefaultStyle } from '../helpers'
-import {
-  BaseProps,
-  DEFAULT_COLOR,
-  DEFAULT_WAI_ARIA_ATTRIBUTE,
-} from '../type'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface TailSpinProps extends BaseProps {
   radius?: string | number

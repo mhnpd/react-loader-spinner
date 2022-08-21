@@ -9,7 +9,7 @@ const svgSecondaryGroup = 'oval-secondary-group'
 
 describe('Oval Loader', () => {
   test('should render correctly with default props', () => {
-    render(<Oval/>)
+    render(<Oval />)
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'oval-loading')
@@ -34,17 +34,19 @@ describe('Oval Loader', () => {
   })
 
   test('should render correctly with custom props', () => {
-    render(<Oval
-      width={100}
-      height={100}
-      strokeWidth={5}
-      strokeWidthSecondary={10}
-      wrapperClass='wrapper-class'
-      wrapperStyle={{ opacity: '1' }}
-      ariaLabel='custom-label'
-      color='red'
-      secondaryColor='blue'
-    />)
+    render(
+      <Oval
+        width={100}
+        height={100}
+        strokeWidth={5}
+        strokeWidthSecondary={10}
+        wrapperClass="wrapper-class"
+        wrapperStyle={{ opacity: '1' }}
+        ariaLabel="custom-label"
+        color="red"
+        secondaryColor="blue"
+      />
+    )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'custom-label')

@@ -21,22 +21,24 @@ describe('Triangle', () => {
     expect(svg).toHaveAttribute('height', '80')
     expect(svg).toHaveAttribute('width', '80')
 
-    svg.querySelectorAll('circle').forEach((circle) => {
+    svg.querySelectorAll('circle').forEach(circle => {
       expect(circle).toHaveAttribute('r', '48')
       expect(circle).toHaveAttribute('stroke', DEFAULT_COLOR)
     })
   })
 
   test('should render correctly with custom props', () => {
-    render(<Watch
-      height={200}
-      width={200}
-      ariaLabel="test-aria-label"
-      color="red"
-      wrapperClass="test-class"
-      wrapperStyle={{ opacity: '1' }}
-      radius={100}
-    />)
+    render(
+      <Watch
+        height={200}
+        width={200}
+        ariaLabel="test-aria-label"
+        color="red"
+        wrapperClass="test-class"
+        wrapperStyle={{ opacity: '1' }}
+        radius={100}
+      />
+    )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveStyle('display: flex')
@@ -51,7 +53,7 @@ describe('Triangle', () => {
     expect(svg).toHaveAttribute('height', '200')
     expect(svg).toHaveAttribute('width', '200')
 
-    svg.querySelectorAll('circle').forEach((circle) => {
+    svg.querySelectorAll('circle').forEach(circle => {
       expect(circle).toHaveAttribute('r', '100')
       expect(circle).toHaveAttribute('stroke', 'red')
     })

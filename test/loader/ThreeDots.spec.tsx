@@ -41,7 +41,7 @@ describe('Three Dots', () => {
         wrapperClass="test-class"
         wrapperStyle={{ opacity: '1' }}
         radius={5}
-      />,
+      />
     )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()

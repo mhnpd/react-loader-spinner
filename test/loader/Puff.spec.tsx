@@ -8,7 +8,7 @@ const svgTestId = 'puff-svg'
 
 describe('Puff Loader', () => {
   test('should render correctly with default props', () => {
-    render(<Puff/>)
+    render(<Puff />)
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'puff-loading')
@@ -28,15 +28,17 @@ describe('Puff Loader', () => {
   })
 
   test('should render correctly with custom props', () => {
-    render(<Puff
-      width={100}
-      height={100}
-      radius={50}
-      wrapperClass='wrapper-class'
-      wrapperStyle={{ opacity: '1' }}
-      ariaLabel='custom-label'
-      color='red'
-    />)
+    render(
+      <Puff
+        width={100}
+        height={100}
+        radius={50}
+        wrapperClass="wrapper-class"
+        wrapperStyle={{ opacity: '1' }}
+        ariaLabel="custom-label"
+        color="red"
+      />
+    )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'custom-label')

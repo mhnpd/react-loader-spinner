@@ -8,7 +8,7 @@ const svgTestId = 'hearts-svg'
 
 describe('Hearts Loader', () => {
   test('should render correctly with default props', () => {
-    render(<Hearts/>)
+    render(<Hearts />)
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'hearts-loading')
@@ -24,14 +24,16 @@ describe('Hearts Loader', () => {
   })
 
   test('should render correctly with custom props', () => {
-    render(<Hearts
-      height={200}
-      width={200}
-      color='#ff0000'
-      ariaLabel='custom-hearts-loading'
-      wrapperStyle={{ opacity: '0.5' }}
-      wrapperClass='custom-wrapper-class'
-    />)
+    render(
+      <Hearts
+        height={200}
+        width={200}
+        color="#ff0000"
+        ariaLabel="custom-hearts-loading"
+        wrapperStyle={{ opacity: '0.5' }}
+        wrapperClass="custom-wrapper-class"
+      />
+    )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'custom-hearts-loading')

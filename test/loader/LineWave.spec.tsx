@@ -28,17 +28,19 @@ describe('Line Wave', () => {
   })
 
   test('should render correctly when custom props are passed', () => {
-    render(<LineWave
-      height={200}
-      width={200}
-      color='#ff0000'
-      ariaLabel='custom-line-wave-loading'
-      wrapperStyle={{ opacity: '0.5' }}
-      wrapperClass='custom-wrapper-class'
-      firstLineColor='red'
-      middleLineColor='red'
-      lastLineColor='red'
-      />)
+    render(
+      <LineWave
+        height={200}
+        width={200}
+        color="#ff0000"
+        ariaLabel="custom-line-wave-loading"
+        wrapperStyle={{ opacity: '0.5' }}
+        wrapperClass="custom-wrapper-class"
+        firstLineColor="red"
+        middleLineColor="red"
+        lastLineColor="red"
+      />
+    )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'custom-line-wave-loading')

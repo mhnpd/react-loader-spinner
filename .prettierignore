@@ -1,0 +1,7 @@
+node_modules
+# Ignore artifacts:
+build
+coverage
+.docusaurus
+dist
+logo

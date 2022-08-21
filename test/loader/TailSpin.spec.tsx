@@ -25,24 +25,26 @@ describe('TailSpin', () => {
       expect(stop).toHaveAttribute('stop-color', DEFAULT_COLOR)
     })
 
-    svg.querySelectorAll('circle').forEach((circle) => {
+    svg.querySelectorAll('circle').forEach(circle => {
       expect(circle).toHaveAttribute('r', '1')
     })
-    svg.querySelectorAll('path').forEach((path) => {
+    svg.querySelectorAll('path').forEach(path => {
       expect(path).toHaveAttribute('stroke', DEFAULT_COLOR)
     })
   })
 
   test('should render correctly with custom props', () => {
-    render(<TailSpin
+    render(
+      <TailSpin
         height={200}
         width={200}
-        ariaLabel='test-aria-label'
-        color='red'
-        wrapperClass='test-class'
+        ariaLabel="test-aria-label"
+        color="red"
+        wrapperClass="test-class"
         wrapperStyle={{ opacity: '1' }}
         radius={10}
-      />)
+      />
+    )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveStyle('display: flex')
@@ -61,10 +63,10 @@ describe('TailSpin', () => {
       expect(stop).toHaveAttribute('stop-color', 'red')
     })
 
-    svg.querySelectorAll('circle').forEach((circle) => {
+    svg.querySelectorAll('circle').forEach(circle => {
       expect(circle).toHaveAttribute('r', '10')
     })
-    svg.querySelectorAll('path').forEach((path) => {
+    svg.querySelectorAll('path').forEach(path => {
       expect(path).toHaveAttribute('stroke', 'red')
     })
   })

@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactElement } from 'react'
 import { getDefaultStyle } from '../helpers'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, } from '../type'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface OvalProps extends BaseProps {
   strokeWidth?: string | number
@@ -34,7 +34,7 @@ const getPath = (radius: number): string => {
 const getViewBoxSize = (
   strokeWidth: number,
   secondaryStrokeWidth: number,
-  radius: number,
+  radius: number
 ): string => {
   const maxStrokeWidth = Math.max(strokeWidth, secondaryStrokeWidth)
   const startingPoint = -radius - maxStrokeWidth / 2 + 1
@@ -67,7 +67,7 @@ const Oval: FunctionComponent<OvalProps> = ({
       viewBox={getViewBoxSize(
         Number(strokeWidth),
         Number(strokeWidthSecondary || strokeWidth),
-        RADIUS,
+        RADIUS
       )}
       xmlns="http://www.w3.org/2000/svg"
       stroke={color}

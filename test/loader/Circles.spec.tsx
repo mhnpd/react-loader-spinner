@@ -24,14 +24,16 @@ describe('Circles Loader', () => {
   })
 
   test('should render with correct custom props', () => {
-    render(<Circles
+    render(
+      <Circles
         height={200}
         width={200}
-        ariaLabel='test-aria-label'
-        color='red'
-        wrapperClass='test-class'
+        ariaLabel="test-aria-label"
+        color="red"
+        wrapperClass="test-class"
         wrapperStyle={{ opacity: '1' }}
-      />)
+      />
+    )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveStyle('display: flex')

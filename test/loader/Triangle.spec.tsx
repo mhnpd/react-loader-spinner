@@ -8,7 +8,7 @@ const svgTestId = 'triangle-svg'
 
 describe('Triangle', () => {
   test('should render correctly with default props', () => {
-    render(<Triangle/>)
+    render(<Triangle />)
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveStyle('display: flex')
@@ -21,20 +21,22 @@ describe('Triangle', () => {
     expect(svg).toHaveAttribute('height', '80')
     expect(svg).toHaveAttribute('width', '80')
 
-    svg.querySelectorAll('polygon').forEach((p) => {
+    svg.querySelectorAll('polygon').forEach(p => {
       expect(p).toHaveAttribute('stroke', DEFAULT_COLOR)
     })
   })
 
   test('should render correctly with custom props', () => {
-    render(<Triangle
-      height={200}
-      width={200}
-      ariaLabel="test-aria-label"
-      color="red"
-      wrapperClass="test-class"
-      wrapperStyle={{ opacity: '1' }}
-    />)
+    render(
+      <Triangle
+        height={200}
+        width={200}
+        ariaLabel="test-aria-label"
+        color="red"
+        wrapperClass="test-class"
+        wrapperStyle={{ opacity: '1' }}
+      />
+    )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveStyle('display: flex')
@@ -49,7 +51,7 @@ describe('Triangle', () => {
     expect(svg).toHaveAttribute('height', '200')
     expect(svg).toHaveAttribute('width', '200')
 
-    svg.querySelectorAll('polygon').forEach((p) => {
+    svg.querySelectorAll('polygon').forEach(p => {
       expect(p).toHaveAttribute('stroke', 'red')
     })
   })

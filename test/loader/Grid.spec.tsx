@@ -8,7 +8,7 @@ const svgTestId = 'grid-svg'
 
 describe('Grids Loader', () => {
   test('should render correctly with default props', () => {
-    render(<Grid/>)
+    render(<Grid />)
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'grid-loading')
@@ -28,15 +28,17 @@ describe('Grids Loader', () => {
   })
 
   test('should render correctly with custom props', () => {
-    render(<Grid
-      height={200}
-      width={200}
-      radius={25}
-      color='#ff0000'
-      ariaLabel='custom-grid-loading'
-      wrapperStyle={{ opacity: '0.5' }}
-      wrapperClass='custom-wrapper-class'
-    />)
+    render(
+      <Grid
+        height={200}
+        width={200}
+        radius={25}
+        color="#ff0000"
+        ariaLabel="custom-grid-loading"
+        wrapperStyle={{ opacity: '0.5' }}
+        wrapperClass="custom-wrapper-class"
+      />
+    )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'custom-grid-loading')

@@ -13,8 +13,7 @@ const FallingLines = ({
   width = '100',
   visible = true,
 }: FallingLinesProps): React.ReactElement | null => {
-  return visible
-    ? (
+  return visible ? (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={width}
@@ -113,8 +112,7 @@ const FallingLines = ({
         />
       </rect>
     </svg>
-      )
-    : null
+  ) : null
 }
 
 export default FallingLines

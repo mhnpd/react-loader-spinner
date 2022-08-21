@@ -9,7 +9,7 @@
     "es2021": true,
     "jest": true
   },
-  "extends": ["plugin:react/recommended", "standard"],
+  "extends": ["plugin:react/recommended", "standard", "prettier"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {

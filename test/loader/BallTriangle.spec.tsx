@@ -26,16 +26,21 @@ describe('Ball Triangle', () => {
   })
 
   test('should use props pass externally', () => {
-    render(<BallTriangle
+    render(
+      <BallTriangle
         height={200}
         width={200}
         ariaLabel="ball-triangle-loading-test"
-        color='red'
+        color="red"
         radius={10}
-      />)
+      />
+    )
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
-    expect(component).toHaveAttribute('aria-label', 'ball-triangle-loading-test')
+    expect(component).toHaveAttribute(
+      'aria-label',
+      'ball-triangle-loading-test'
+    )
     expect(component).toHaveAttribute('role', 'status')
 
     const svg = screen.getByTestId(svgTestId)
@@ -49,7 +54,7 @@ describe('Ball Triangle', () => {
     })
   })
   test('should be hidden when visible is false', () => {
-    render(<BallTriangle visible={false} />,)
+    render(<BallTriangle visible={false} />)
     const element = screen.getByTestId(wrapperTestId)
     expect(element).not.toBeVisible()
     expect(element).toHaveStyle('display:none')
