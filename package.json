@@ -70,6 +70,7 @@
     "react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0"
   },
   "dependencies": {
+    "react-is": "^18.2.0",
     "styled-components": "^5.3.5",
     "styled-tools": "^1.7.2"
   }
