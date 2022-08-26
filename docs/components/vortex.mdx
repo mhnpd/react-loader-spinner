@@ -1,0 +1,32 @@
+---
+---
+
+import PropsTable from '../../src/components/props-table'
+import { getPropsTableData} from '../../src/components/helpers'
+
+# Vortex
+
+```jsx live
+<Vortex
+  visible={true}
+  height="80"
+  width="80"
+  ariaLabel="vortex-loading"
+  wrapperStyle={{}}
+  wrapperClass="vortex-wrapper"
+  colors={{
+    color1: '#A4036F',
+    color2: '#048BA8',
+    color3: '#16DB93',
+    color4: '#EFEA5A',
+    color5: '#DDB771',
+    color6: '#65743A',
+  }}
+/>
+```
+
+## Props
+
+<PropsTable
+  properties={[...getPropsTableData('Vortex')]}
+/>
