@@ -5,12 +5,12 @@ interface BlocksProps extends BaseProps {}
 
 export default function Blocks({
   visible = true,
-  width = '80px',
-  height = '80px',
+  width = '80',
+  height = '80',
   wrapperClass='',
   wrapperStyle={},
   ariaLabel='blocks-loading',
-}: BlocksProps): React.ReactNode {
+}: BlocksProps) {
   return !visible ? null : (
     <svg
       width={width}
@@ -22,6 +22,7 @@ export default function Blocks({
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid"
       aria-label={ariaLabel}
+      data-testid="blocks-svg"
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <rect x="17" y="17" width="20" height="20" fill="#577c9b">
