@@ -2,14 +2,14 @@ import React from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface ColorRingProps extends BaseProps {
-  colors: [string, string, string, string, string]
+  colors?: [string, string, string, string, string]
 }
 
 export default function ColorRing({
   visible = true,
-  width = '80px',
-  height = '80px',
-  colors= ['#e15b64','#f47e60','#f8b26a','#abbd81','#849b87'],
+  width = '80',
+  height = '80',
+  colors = ['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87'],
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'color-ring-loading',
@@ -25,6 +25,7 @@ export default function ColorRing({
       className={wrapperClass}
       style={wrapperStyle}
       aria-label={ariaLabel}
+      data-testid="color-ring-svg"
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <defs>
