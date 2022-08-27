@@ -3,7 +3,6 @@ import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface CommentProps extends BaseProps {
   backgroundColor?: string
-  color?: string
 }
 
 
