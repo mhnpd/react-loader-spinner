@@ -5,21 +5,24 @@ import styles from './styles.module.css'
 type FeatureItem = {
   title: string
   Svg: React.ComponentType<React.ComponentProps<'svg'>>
-  description?: JSX.Element
+  description?: string
 }
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'Typescript Support',
     Svg: require('@site/static/img/typescript-support.svg').default,
+    description: 'This library is written in TypeScript and supports all modern browsers.',
   },
   {
     title: 'Customizable SVG Loaders',
     Svg: require('@site/static/img/customizable.svg').default,
+    description: 'You can easily customize the loader by passing in custom props to the loader component.',
   },
   {
     title: 'Light Weight',
     Svg: require('@site/static/img/light-weight.svg').default,
+    description: 'This library is lightweight and does not require any additional dependencies.',
   },
 ]
 
