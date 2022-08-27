@@ -1,21 +1,22 @@
 import React from 'react'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface FidgetSpinnerProps extends BaseProps {
+interface FidgetSpinnerProps extends Omit<BaseProps, 'color'> {
   backgroundColor?: string
   ballColors?: [string, string, string]
 }
 
 export default function FidgetSpinner({
-  width = '80px',
-  height = '80px',
+  width = '80',
+  height = '80',
   backgroundColor = DEFAULT_COLOR,
-  ballColors= ['#fc636b','#6a67ce','#ffb900' ],
+  ballColors = ['#fc636b', '#6a67ce', '#ffb900'],
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'fidget-spinner-loader',
+  visible = true,
 }: FidgetSpinnerProps) {
-  return (
+  return !visible ? null : (
     <svg
       width={width}
       height={height}
@@ -25,6 +26,7 @@ export default function FidgetSpinner({
       className={wrapperClass}
       style={wrapperStyle}
       aria-label={ariaLabel}
+      data-testid="fidget-spinner-svg"
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <g transform="rotate(6 50 50)">
