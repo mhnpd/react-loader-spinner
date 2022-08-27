@@ -9,8 +9,8 @@ interface CommentProps extends BaseProps {
 
 export default function Comment({
   visible = true,
-  width = '80px',
-  height = '80px',
+  width = '80',
+  height = '80',
   backgroundColor = '#ff6d00',
   color = '#fff',
   wrapperClass = '',
@@ -27,6 +27,7 @@ export default function Comment({
       className={wrapperClass}
       style={wrapperStyle}
       aria-label={ariaLabel}
+      data-testid={'comment-svg'}
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <path
