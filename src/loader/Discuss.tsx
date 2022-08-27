@@ -1,14 +1,14 @@
 import React from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface DiscussProps extends BaseProps {
-  colors: [string, string]
+interface DiscussProps extends Omit<BaseProps, 'color'> {
+  colors?: [string, string]
 }
 
 export default function Discuss({
   visible = true,
-  width = '80px',
-  height = '80px',
+  width = '80',
+  height = '80',
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'discuss-loading',
@@ -24,6 +24,7 @@ export default function Discuss({
       className={wrapperClass}
       style={wrapperStyle}
       aria-label={ariaLabel}
+      data-testid='discuss-svg'
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <path
