@@ -26,7 +26,7 @@ import Radio from './loader/Radio'
 import ProgressBar from './loader/ProgressBar'
 import MagnifyingGlass from './loader/MagnifyingGlass'
 import FidgetSpinner from './loader/FidgetSpinner'
-import DNA from './loader/Dna'
+import Dna from './loader/Dna'
 import Discuss from './loader/Discuss'
 import ColorRing from './loader/ColorRing'
 import Comment from './loader/Comment'
@@ -42,7 +42,7 @@ export {
   ColorRing,
   Comment,
   Discuss,
-  DNA,
+  Dna,
   Grid,
   FallingLines,
   FidgetSpinner,
