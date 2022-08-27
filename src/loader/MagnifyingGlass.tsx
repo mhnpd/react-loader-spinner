@@ -3,7 +3,6 @@ import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface MagnifyingGlassProps extends BaseProps {
   glassColor?: string,
-  color?: string,
 }
 
 export default function MagnifyingGlass({
