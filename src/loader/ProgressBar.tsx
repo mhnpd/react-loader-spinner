@@ -2,14 +2,14 @@ import React from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface ProgressBarProps extends BaseProps {
-  borderColor: string,
-  barColor: string,
+  borderColor?: string,
+  barColor?: string,
 }
 
 export default function ProgressBar({
-  visible = false,
-  height = '80px',
-  width = '80px',
+  visible = true,
+  height = '80',
+  width = '80',
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'progress-bar-loading',
@@ -26,6 +26,7 @@ export default function ProgressBar({
       className={wrapperClass}
       style={wrapperStyle}
       aria-label={ariaLabel}
+      data-testid='progress-bar-svg'
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <defs>
