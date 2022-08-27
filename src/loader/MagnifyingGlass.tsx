@@ -2,14 +2,14 @@ import React from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface MagnifyingGlassProps extends BaseProps {
-  glassColor: string,
-  color: string,
+  glassColor?: string,
+  color?: string,
 }
 
 export default function MagnifyingGlass({
-  visible = false,
-  height = '80px',
-  width = '80px',
+  visible = true,
+  height = '80',
+  width = '80',
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'magnifying-glass-loading',
@@ -26,6 +26,7 @@ export default function MagnifyingGlass({
       className={wrapperClass}
       style={wrapperStyle}
       aria-label={ariaLabel}
+      data-testid='magnifying-glass-svg'
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <g transform="translate(50,50)">
