@@ -20,21 +20,41 @@ import ThreeDots from './loader/ThreeDots'
 import Triangle from './loader/Triangle'
 import Watch from './loader/Watch'
 import FallingLines from './loader/FallingLines'
+import Vortex from './loader/Vortex'
+import RotatingTriangles from './loader/RotatingTriangles'
+import Radio from './loader/Radio'
+import ProgressBar from './loader/ProgressBar'
+import MagnifyingGlass from './loader/MagnifyingGlass'
+import FidgetSpinner from './loader/FidgetSpinner'
+import DNA from './loader/DNA'
+import Discuss from './loader/Discuss'
+import ColorRing from './loader/ColorRing'
+import Comment from './loader/Comment'
+import Blocks from './loader/Blocks'
 
 export {
   Audio,
   BallTriangle,
   Bars,
+  Blocks,
   Circles,
   CirclesWithBar,
+  ColorRing,
+  Comment,
+  Discuss,
+  DNA,
   Grid,
   FallingLines,
+  FidgetSpinner,
   Hearts,
   InfinitySpin,
   LineWave,
+  MagnifyingGlass,
   MutatingDots,
   Oval,
+  ProgressBar,
   Puff,
+  Radio,
   RevolvingDot,
   RotatingSquare,
   RotatingLines,
@@ -43,5 +63,7 @@ export {
   ThreeDots,
   ThreeCircles,
   Triangle,
+  RotatingTriangles,
   Watch,
+  Vortex,
 }
