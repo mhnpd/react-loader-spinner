@@ -1,18 +1,18 @@
 import React from 'react'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface RadioProps extends BaseProps {
-  colors: [string, string, string],
+interface RadioProps extends Omit<BaseProps, 'color'> {
+  colors?: [string, string, string]
 }
 
 export default function Radio({
   visible = true,
-  height = '80px',
-  width = '80px',
+  height = '80',
+  width = '80',
   wrapperClass = '',
   wrapperStyle = {},
-  ariaLabel = 'progress-bar-loading',
-  colors= [DEFAULT_COLOR, DEFAULT_COLOR, DEFAULT_COLOR],
+  ariaLabel = 'radio-loading',
+  colors = [DEFAULT_COLOR, DEFAULT_COLOR, DEFAULT_COLOR],
 }: RadioProps) {
   return !visible ? null : (
     <svg
@@ -24,6 +24,7 @@ export default function Radio({
       className={wrapperClass}
       style={wrapperStyle}
       aria-label={ariaLabel}
+      data-testid="radio-bar-svg"
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <circle
