@@ -1,0 +1,26 @@
+---
+---
+
+import PropsTable from '../../src/components/props-table'
+import { getPropsTableData} from '../../src/components/helpers'
+
+# DNA
+
+```jsx live
+<DNA
+  visible={true}
+  height="80"
+  width="80"
+  ariaLabel="dna-loading"
+  wrapperStyle={{}}
+  wrapperClass="dna-wrapper"
+/>
+```
+
+## Props
+
+<PropsTable
+  properties={[
+    ...getPropsTableData('DNA', ['colors']),
+    ]}
+/>
