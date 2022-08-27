@@ -1,7 +1,7 @@
 import React from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface DnaProps extends Omit<BaseProps, 'color'> {}
+interface DNAProps extends Omit<BaseProps, 'color'> {}
 
 export default function DNA({
   visible = true,
@@ -10,7 +10,7 @@ export default function DNA({
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'dna-loading',
-}: DnaProps) {
+}: DNAProps) {
   return !visible ? null : (
     <svg
       xmlns="http://www.w3.org/2000/svg"
