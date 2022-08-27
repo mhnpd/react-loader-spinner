@@ -2,13 +2,13 @@ import React from 'react'
 import { BaseProps,  DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface RotatingTrianglesProps extends BaseProps {
-  colors: [string, string, string],
+  colors?: [string, string, string],
 }
 
 export default function RotatingTriangles({
   visible = true,
-  height = '80px',
-  width = '80px',
+  height = '80',
+  width = '80',
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'rotating-triangle-loading',
@@ -24,6 +24,7 @@ export default function RotatingTriangles({
       className={wrapperClass}
       style={wrapperStyle}
       aria-label={ariaLabel}
+      data-testid='rotating-triangle-svg'
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <g transform="translate(50,42)">
