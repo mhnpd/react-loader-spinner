@@ -24,7 +24,6 @@ describe('ColorRing', () => {
         height={200}
         width={200}
         ariaLabel="test-aria-label"
-        color="red"
         wrapperClass="test-class"
         wrapperStyle={{ opacity: '1' }}
         colors={colors as [string, string, string, string, string]}
