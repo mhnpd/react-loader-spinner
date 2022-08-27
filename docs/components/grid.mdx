@@ -2,6 +2,7 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { getPropsTableData} from '../../src/components/helpers'
 
 # Grid
 
@@ -18,55 +19,15 @@ import PropsTable from '../../src/components/props-table'
 />
 ```
 
-## Props
-
-<PropsTable properties={[
-  {
-    name: 'height',
-    type: 'string | number',
-    default: '20',
-    description: 'Height of the grid'
-  },
-  {
-    name: 'width',
-    type: 'string | number',
-    default: '20',
-    description: 'Width of the grid'
-  },
-  {
-    name: 'color',
-    type: 'string',
-    default: '#4fa94d',
-    description: 'Color of the grid'
-  },
-  {
-    name: 'ariaLabel',
-    type: 'string',
-    default: 'grid-loading',
-    description: 'Aria label of the grid. Will be used for the aria-label attribute of the wrapper element'
-  },
-  {
-    name: 'radius',
-    type: 'string | number',
-    default: '12.5',
-    description: 'Radius of the circles inside the grid. Max value is 13.'
-  },
-  {
-    name: 'wrapperStyle',
-    type: 'object',
-    default: '{}',
-    description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.'
-  },
-  {
-    name: 'wrapperClass',
-    type: 'string',
-    default: 'undefined',
-    description: 'Class of the grid wrapper element. It can be used for custom styling. It will override the default style.'
-  },
-  {
-    name: 'visible',
-    type: 'boolean',
-    default: 'true',
-    description: 'Visibility of the grid'
-  }
-]} />
+### Props
+<PropsTable
+  properties={[
+    ...getPropsTableData('grid', ['colors']),
+    {
+      name: 'radius',
+      type: 'number | string',
+      default: '12.5',
+      description: 'Radius of the grid'
+    },
+    ]}
+/>

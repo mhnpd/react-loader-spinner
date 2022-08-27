@@ -1,6 +1,7 @@
 ---
 ---
 import PropsTable from "../../src/components/props-table"
+import { getPropsTableData} from '../../src/components/helpers'
 
 # Audio
 
@@ -18,48 +19,5 @@ import PropsTable from "../../src/components/props-table"
 
 ### Props
 <PropsTable
-  properties={[
-  {
-    name: 'height',
-    type: 'string | number',
-    default: '100',
-    description: 'Height of the svg loader'
-  },
-  {
-    name: 'width',
-    type: 'string | number',
-    default: '100',
-    description: 'Width of the svg loader'
-  },
-  {
-    name: 'color',
-    type: 'string',
-    default: '#4fa94d',
-    description: 'Color of the svg loader. It can be a hex color or a color name'
-  },
-  {
-    name: 'ariaLabel',
-    type: 'string',
-    default: 'audio-loading',
-    description: 'Aria label for the svg loader'
-  },
-  {
-    name: 'wrapperStyle',
-    type: 'object',
-    default: '{}',
-    description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.'
-  },
-  {
-    name: 'wrapperClass',
-    type: 'string',
-    default: '',
-    description: 'Class name for the wrapper. It can be used for custom styling'
-  },
-  {
-    name: 'visible',
-    type: 'boolean',
-    default: 'true',
-    description: 'Whether the loader is visible or not'
-  }
-]}
+  properties={[...getPropsTableData('audio', 'colors')]}
 />

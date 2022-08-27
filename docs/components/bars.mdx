@@ -1,6 +1,8 @@
 ---
 ---
 import PropsTable from '../../src/components/props-table'
+import { getPropsTableData} from '../../src/components/helpers'
+
 
 # Bars
 
@@ -17,49 +19,8 @@ import PropsTable from '../../src/components/props-table'
 ```
 
 ## Props
+
 <PropsTable
-  properties={[
-     {
-      name: 'height',
-      type: 'number | string',
-      default: '80',
-      description: 'Height of the ball triangle',
-    },
-    {
-      name: 'width',
-      type: 'number | string',
-      default: '80',
-      description: 'Width of the ball triangle',
-    },
-    {
-      name: 'color',
-      type: 'string',
-      default: '#4fa94d',
-      description: 'Color of the ball triangle',
-    },
-    {
-      name: 'ariaLabel',
-      type: 'string',
-      default: 'bars-loading',
-      description: 'ARIA label for the ball triangle',
-    },
-    {
-      name: 'wrapperStyle',
-      type: 'object',
-      default: '{}',
-      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
-    },
-    {
-      name: 'wrapperClass',
-      type: 'string',
-      default: '',
-      description: 'Class name for the ball triangle wrapper element.',
-    },
-    {
-      name: 'visible',
-      type: 'boolean',
-      default: 'true',
-      description: 'Whether the ball triangle is visible',
-    },
-  ]}
-  />
+  properties={[...getPropsTableData('bars', 'colors')]}
+/>
+

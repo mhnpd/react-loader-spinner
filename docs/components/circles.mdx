@@ -1,6 +1,7 @@
 ---
 ---
 import PropsTable from '../../src/components/props-table'
+import { getPropsTableData} from '../../src/components/helpers'
 
 # Circles
 
@@ -16,52 +17,9 @@ import PropsTable from '../../src/components/props-table'
 />
 ```
 
-## Props
-
+### Props
 <PropsTable
   properties={[
-     {
-      name: 'height',
-      type: 'number | string',
-      default: '80',
-      description: 'Height of the circles svg box',
-    },
-    {
-      name: 'width',
-      type: 'number | string',
-      default: '80',
-      description: 'Width of the circles svg box',
-    },
-    {
-      name: 'color',
-      type: 'string',
-      default: '#000',
-      description: 'Color of the circles. Should be a valid css color',
-    },
-    {
-      name: 'ariaLabel',
-      type: 'string',
-      default: 'circles-loading',
-      description: 'ARIA label for the circles. Will be used for the aria-label attribute',
-    },
-    {
-      name: 'wrapperStyle',
-      type: 'object',
-      default: '{}',
-      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
-    },
-    {
-      name: 'wrapperClass',
-      type: 'string',
-      default: '',
-      description: 'Class name for the circles wrapper. It can be used for custom styling. It will override the default style.',
-    },
-    {
-      name: 'visible',
-      type: 'boolean',
-      default: 'true',
-      description: 'Whether the circles is visible',
-    },
+    ...getPropsTableData('circles', ['colors'])
   ]}
 />
-

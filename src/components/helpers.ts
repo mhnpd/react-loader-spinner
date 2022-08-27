@@ -13,7 +13,7 @@ export const getDescription = (componentName: string) => ({
 export const defaultPropsTypes = {
   height: 'number | string',
   width: 'number | string',
-  colors: 'object',
+  colors: 'Array<string>',
   color: 'string: #hex-code',
   secondaryColor: 'string: #hex-code',
   ariaLabel: 'string',
@@ -26,8 +26,8 @@ export const defaultPropsTypes = {
 }
 
 export const getDefaultPropsValue = (componentName)=>({
-  height: '80px',
-  width: '80px',
+  height: '80',
+  width: '80',
   color: `#4fa94d`,
   secondaryColor: `#4fa94d`,
   ariaLabel: `${componentName}-loading`,
@@ -53,8 +53,7 @@ export const getPropsTableData = (componentName, excluded=[])=>{
     {
       name: 'colors',
       type: defaultPropsTypes.colors,
-      default:
-        "{color1: '#A4036F', color2: '#048BA8', color3: '#16DB93', color4: '#EFEA5A', color5: '#DDB771', color6: '#65743A'}",
+      default: JSON.stringify(['#4fa94d', '#4fa94d', '#4fa94d']),
       description: getDescription(componentName).colors,
     },
     {
