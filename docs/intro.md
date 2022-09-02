@@ -19,7 +19,6 @@ $ yarn add react-loader-spinner
 ```jsx
 
 import { Audio } from  'react-loader-spinner'
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 <Audio
     height = "80"
