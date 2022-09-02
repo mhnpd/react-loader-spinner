@@ -48,3 +48,9 @@ import { Audio } from 'react-loader-spinner'
 ## License
 
 MIT
+
+## Contributors
+
+<a href="https://github.com/mhnpd/react-loader-spinner/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=mhnpd/react-loader-spinner" />
+</a>
