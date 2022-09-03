@@ -26,8 +26,8 @@ const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
   >
     <svg
       version="1.1"
-      width={width}
-      height={height}
+      width={`calc(${radius} * 2.5)`}
+      height={`calc(${radius} * 2.5)`}
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
@@ -37,17 +37,22 @@ const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
         fill="none"
         stroke={color}
         strokeWidth="4"
-        cx="50"
-        cy="50"
-        r={Number(`${radius}`) + 38}
+        // cx={`calc(${width} / 2)`}
+        // cy={`calc(${height} / 2)`}
+        cx={`calc(${radius} * 1.28)`}
+        cy={`calc(${radius} * 1.28)`}
+        // r={Number(`${radius}`) + 38}
+        r={radius}
         style={{ opacity: 0.5 }}
       />
-      <circle
+      {/* <circle
         fill={color}
         stroke={color}
         strokeWidth="3"
-        cx="8"
-        cy="54"
+        // cx="8"
+        // cy="54"
+        cx={`calc(${width} / 2)`}
+        cy={`calc(${radius} * 2)`}
         r={radius}
       >
         <animateTransform
@@ -57,8 +62,8 @@ const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
           from="0 50 48"
           to="360 50 52"
           repeatCount="indefinite"
-        />
-      </circle>
+        /> 
+      </circle>  */}
     </svg>
   </div>
 )
