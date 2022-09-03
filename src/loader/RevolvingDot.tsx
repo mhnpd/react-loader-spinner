@@ -5,12 +5,14 @@ import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 interface RevolvingDotProps extends BaseProps {
   radius?: string | number
   secondaryColor?: string
+  strokeWidth?: string | number
 }
 
 const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
   height = 100,
   width = 100,
   radius = 6,
+  strokeWidth = 4,
   color = DEFAULT_COLOR,
   ariaLabel = 'revolving-dot-loading',
   wrapperStyle,
@@ -36,7 +38,7 @@ const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
       <circle
         fill="none"
         stroke={color}
-        strokeWidth="4"
+        strokeWidth={strokeWidth}
         // cx={`calc(${width} / 2)`}
         // cy={`calc(${height} / 2)`}
         cx={`calc(${radius} * 1.28)`}
@@ -45,25 +47,35 @@ const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
         r={radius}
         style={{ opacity: 0.5 }}
       />
-      {/* <circle
+      <circle
         fill={color}
         stroke={color}
         strokeWidth="3"
         // cx="8"
         // cy="54"
-        cx={`calc(${width} / 2)`}
-        cy={`calc(${radius} * 2)`}
-        r={radius}
+        //==============================
+        //=============================
+        // cx={`calc(${width} / 2)`}
+        // cy={`calc(${radius} * 2)`}
+
+        // cy={`calc(${radius} / 3)`}
+        // r={`calc(${radius} / 3.5)`}
+        cx={`calc(${radius} * 1.28)`}
+        cy={`calc(${radius} / 3.5)`}
+        r={`calc(${radius} / 5)`}
+        style={{ transformOrigin: '50% 50%' }}
       >
         <animateTransform
           attributeName="transform"
           dur="2s"
           type="rotate"
-          from="0 50 48"
-          to="360 50 52"
+          // from="0 50 48"
+          // to="360 50 52"
+          from="0"
+          to="360"
           repeatCount="indefinite"
-        /> 
-      </circle>  */}
+        />
+      </circle>
     </svg>
   </div>
 )
