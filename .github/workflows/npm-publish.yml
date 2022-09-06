@@ -2,8 +2,8 @@ name: Publish to Npm
 
 on:
   push:
-    branches-ignore:
-      - docs
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
 
 jobs:
   publish:
