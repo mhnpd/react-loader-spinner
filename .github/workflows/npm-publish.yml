@@ -1,4 +1,4 @@
-name: Publish to Npm
+name: Publish new version to NPM
 
 on:
   push:
