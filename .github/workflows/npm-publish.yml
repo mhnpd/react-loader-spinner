@@ -2,9 +2,8 @@ name: Publish to Npm
 
 on:
   push:
-    branches:
-      - master
-      - !docs
+    branches-ignore:
+      - docs
 
 jobs:
   publish:
