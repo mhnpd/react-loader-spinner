@@ -1,0 +1,23 @@
+name: Publish to Npm
+
+on:
+  push:
+    branches-ignore:
+      - docs
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - run: npm install
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test
+      - run: npm run build
+        with:
+          token: ${{ secrets.NPM_AUTH_TOKEN }}
