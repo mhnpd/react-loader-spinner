@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - master
-    branches-ignore:
-      - docs
+      - !docs
 
 jobs:
   publish:
