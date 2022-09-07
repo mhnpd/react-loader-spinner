@@ -18,17 +18,17 @@ describe('RevolvingDot Loader', () => {
 
     const svg = screen.getByTestId(svgTestId)
     expect(svg).toBeDefined()
-    expect(svg).toHaveAttribute('width', `calc(6 * 2.5)`)
-    expect(svg).toHaveAttribute('height', `calc(6 * 2.5)`)
+    expect(svg).toHaveAttribute('width', `calc(45 * 2.5)`)
+    expect(svg).toHaveAttribute('height', `calc(45 * 2.5)`)
 
     svg.querySelectorAll('circle').forEach((circle, index) => {
       if (index === 0) {
         expect(circle).toHaveAttribute('stroke', DEFAULT_COLOR)
-        expect(circle).toHaveAttribute('r', '6')
+        expect(circle).toHaveAttribute('r', '45')
       } else if (index === 1) {
         expect(circle).toHaveAttribute('stroke', DEFAULT_COLOR)
         expect(circle).toHaveAttribute('fill', DEFAULT_COLOR)
-        expect(circle).toHaveAttribute('r', `calc(6 / 5)`)
+        expect(circle).toHaveAttribute('r', `calc(45 / 5)`)
       }
     })
   })
