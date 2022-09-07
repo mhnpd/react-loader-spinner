@@ -3,14 +3,14 @@ import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface RevolvingDotProps extends BaseProps {
-  radius?: string | number
+  radius?: number
   secondaryColor?: string
-  strokeWidth?: string | number
+  strokeWidth?: number
 }
 
 const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
-  radius = 6,
-  strokeWidth = 4,
+  radius = 45,
+  strokeWidth = 5,
   color = DEFAULT_COLOR,
   secondaryColor,
   ariaLabel = 'revolving-dot-loading',
