@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface PuffProps extends BaseProps {
+export interface PuffProps extends BaseProps {
   radius?: string | number
   secondaryColor?: string
 }

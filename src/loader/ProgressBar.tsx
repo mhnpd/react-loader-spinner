@@ -1,7 +1,7 @@
 import React from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface ProgressBarProps extends Omit<BaseProps, 'color'> {
+export interface ProgressBarProps extends Omit<BaseProps, 'color'> {
   borderColor?: string,
   barColor?: string,
 }

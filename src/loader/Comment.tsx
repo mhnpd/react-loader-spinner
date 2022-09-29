@@ -1,10 +1,9 @@
 import React from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface CommentProps extends BaseProps {
+export interface CommentProps extends BaseProps {
   backgroundColor?: string
 }
-
 
 export default function Comment({
   visible = true,

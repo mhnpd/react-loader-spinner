@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { DEFAULT_COLOR } from '../type'
 
-type Props = {
+export interface InfinitySpinProps {
   color?: string
   width?: string
 }
@@ -34,7 +34,7 @@ const Path = styled.path`
 const InfinitySpin = ({
   color = DEFAULT_COLOR,
   width = '200',
-}: Props): React.ReactElement => {
+}: InfinitySpinProps): React.ReactElement => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

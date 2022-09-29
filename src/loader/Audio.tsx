@@ -2,7 +2,7 @@ import React, { FunctionComponent, ReactElement } from 'react'
 import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface AudioProps extends BaseProps {}
+export interface AudioProps extends BaseProps {}
 
 const Audio: FunctionComponent<AudioProps> = ({
   height = '100',

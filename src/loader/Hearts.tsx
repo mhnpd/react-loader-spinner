@@ -1,7 +1,8 @@
 import React, { FunctionComponent } from 'react'
 import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
-interface HeartsProps extends BaseProps {}
+
+export interface HeartsProps extends BaseProps {}
 
 const Hearts: FunctionComponent<HeartsProps> = ({
   height = 80,

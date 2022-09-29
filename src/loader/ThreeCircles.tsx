@@ -1,25 +1,18 @@
 import React from 'react'
 import { getDefaultStyle } from '../helpers'
-import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-type Props = {
-  wrapperStyle?: Style
-  visible?: boolean
-  wrapperClass?: string
-  height?: string | number
-  width?: string | number
-  color?: string
+export interface ThreeCirclesProps extends BaseProps {
   outerCircleColor?: string
   innerCircleColor?: string
   middleCircleColor?: string
-  ariaLabel?: string
 }
 
 /**
  * @description contains three circles rotating in opposite direction
  * outer circle, middle circle and inner circle color can be set from props.
  */
-const ThreeCircles: React.FunctionComponent<Props> = ({
+const ThreeCircles: React.FunctionComponent<ThreeCirclesProps> = ({
   wrapperStyle = {},
   visible = true,
   wrapperClass = '',

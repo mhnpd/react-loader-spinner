@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface WatchProps extends BaseProps {
+export interface WatchProps extends BaseProps {
   radius?: string | number
 }
 

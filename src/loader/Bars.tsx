@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface BarsProps extends BaseProps {}
+export interface BarsProps extends BaseProps {}
 
 const Bars: FunctionComponent<BarsProps> = ({
   height = 80,

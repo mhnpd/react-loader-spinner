@@ -18,7 +18,7 @@ const SVG = styled.svg`
 `
 /** Styles Ends */
 
-type TriangleProps = BaseProps
+export interface TriangleProps extends BaseProps {}
 
 const Triangle: FunctionComponent<TriangleProps> = ({
   height = 80,
