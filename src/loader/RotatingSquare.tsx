@@ -1,16 +1,9 @@
 import React from 'react'
 import { getDefaultStyle } from '../helpers'
-import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-type RotatingSquareProps = {
-  wrapperClass?: string
-  color?: string
+export interface RotatingSquareProps extends BaseProps {
   strokeWidth?: string | number
-  height?: string | number
-  width?: string | number
-  ariaLabel?: string
-  wrapperStyle?: Style
-  visible?: boolean
 }
 
 const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({

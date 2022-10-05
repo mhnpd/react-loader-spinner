@@ -1,7 +1,7 @@
 import React from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface DiscussProps extends Omit<BaseProps, 'color'> {
+export interface DiscussProps extends Omit<BaseProps, 'color'> {
   colors?: [string, string]
 }
 

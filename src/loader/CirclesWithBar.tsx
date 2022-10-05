@@ -1,18 +1,11 @@
 import React from 'react'
 import { getDefaultStyle } from '../helpers'
-import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-type Props = {
-  wrapperStyle?: Style
-  visible?: boolean
-  wrapperClass?: string
-  height?: string | number
-  width?: string | number
-  color?: string
+export interface CirclesWithBarProps extends BaseProps {
   outerCircleColor?: string
   innerCircleColor?: string
   barColor?: string
-  ariaLabel?: string
 }
 
 /**
@@ -20,7 +13,7 @@ type Props = {
  * and a wave bars. outer circle, inner circle and bar
  * color can be set from props.
  */
-const CirclesWithBar: React.FunctionComponent<Props> = ({
+const CirclesWithBar: React.FunctionComponent<CirclesWithBarProps> = ({
   wrapperStyle = {},
   visible = true,
   wrapperClass = '',

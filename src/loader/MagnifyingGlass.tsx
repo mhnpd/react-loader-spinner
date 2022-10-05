@@ -1,7 +1,7 @@
 import React from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface MagnifyingGlassProps extends BaseProps {
+export interface MagnifyingGlassProps extends BaseProps {
   glassColor?: string,
 }
 

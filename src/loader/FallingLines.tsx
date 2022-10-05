@@ -1,23 +1,22 @@
 import React from 'react'
-import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-type FallingLinesProps = {
-  color?: string
+export interface FallingLinesProps extends Pick<BaseProps, 'color' | 'visible'> {
   width?: string
   height?: string
-  visible?: boolean
 }
 
 const FallingLines = ({
   color = DEFAULT_COLOR,
   width = '100',
+  height = '100',
   visible = true,
 }: FallingLinesProps): React.ReactElement | null => {
   return visible ? (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={width}
-      height={width}
+      height={height}
       viewBox="0 0 100 100"
       data-testid="falling-lines"
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}

@@ -1,7 +1,7 @@
 import React from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface BlocksProps extends BaseProps {}
+export interface BlocksProps extends BaseProps {}
 
 export default function Blocks({
   visible = true,

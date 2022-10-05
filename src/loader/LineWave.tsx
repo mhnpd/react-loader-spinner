@@ -1,25 +1,18 @@
 import React from 'react'
 import { getDefaultStyle } from '../helpers'
-import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-type Props = {
-  wrapperStyle?: Style
-  visible?: boolean
-  wrapperClass?: string
-  height?: string | number
-  width?: string | number
-  color?: string
+export interface LineWaveProps extends BaseProps {
   firstLineColor?: string
   middleLineColor?: string
   lastLineColor?: string
-  ariaLabel?: string
 }
 
 /**
  * @description contains three lines in a wave motion
  * line colors are changeable
  */
-const LineWave: React.FunctionComponent<Props> = ({
+const LineWave: React.FunctionComponent<LineWaveProps> = ({
   wrapperStyle = {},
   visible = true,
   wrapperClass = '',

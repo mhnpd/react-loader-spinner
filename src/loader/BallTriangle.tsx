@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface BallTriangleProps extends BaseProps {
+export interface BallTriangleProps extends BaseProps {
   radius?: string | number
 }
 

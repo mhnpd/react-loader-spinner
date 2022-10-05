@@ -1,15 +1,12 @@
 import React, { useCallback } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { prop } from 'styled-tools'
-import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-type Props = {
-  width?: string
-  visible?: boolean
+export interface RotatingLinesProps extends Pick<BaseProps, 'width' | 'visible' | 'ariaLabel'> {
   strokeWidth?: string
   strokeColor?: string
   animationDuration?: string
-  ariaLabel?: string
 }
 
 const spin = keyframes`
@@ -81,7 +78,7 @@ export default function RotatingLines({
   width = '96',
   visible = true,
   ariaLabel = 'rotating-lines-loading',
-}: Props): React.ReactElement | null {
+}: RotatingLinesProps): React.ReactElement | null {
   const lines = useCallback(
     () =>
       POINTS.map(point => (
