@@ -4,12 +4,9 @@ import { prop } from 'styled-tools'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 export interface RotatingLinesProps extends Pick<BaseProps, 'width' | 'visible' | 'ariaLabel'> {
-  width?: string
-  visible?: boolean
   strokeWidth?: string
   strokeColor?: string
   animationDuration?: string
-  ariaLabel?: string
 }
 
 const spin = keyframes`
