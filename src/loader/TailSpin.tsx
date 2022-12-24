@@ -3,12 +3,14 @@ import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface TailSpinProps extends BaseProps {
-  radius?: string | number
+  radius?: string | number,
+  strokeWidth?: string | number
 }
 
 export const TailSpin: FunctionComponent<TailSpinProps> = ({
   height = 80,
   width = 80,
+  strokeWidth = 2,
   radius = 1,
   color = DEFAULT_COLOR,
   ariaLabel = 'tail-spin-loading',
@@ -26,7 +28,7 @@ export const TailSpin: FunctionComponent<TailSpinProps> = ({
     <svg
       width={width}
       height={height}
-      viewBox="0 0 38 38"
+      viewBox={`0 0 ${strokeWidth as number + 36} ${strokeWidth as number + 36}`}
       xmlns="http://www.w3.org/2000/svg"
       data-testid="tail-spin-svg"
     >
@@ -38,12 +40,12 @@ export const TailSpin: FunctionComponent<TailSpinProps> = ({
         </linearGradient>
       </defs>
       <g fill="none" fillRule="evenodd">
-        <g transform="translate(1 1)">
+        <g transform={`translate(${strokeWidth as number / 2} ${strokeWidth as number / 2})`}>
           <path
             d="M36 18c0-9.94-8.06-18-18-18"
             id="Oval-2"
             stroke={color}
-            strokeWidth="2"
+            strokeWidth={strokeWidth}
           >
             <animateTransform
               attributeName="transform"
@@ -54,7 +56,7 @@ export const TailSpin: FunctionComponent<TailSpinProps> = ({
               repeatCount="indefinite"
             />
           </path>
-          <circle fill="#fff" cx="36" cy="18" r={radius}>
+          <circle fill="#fff" cx="36" cy="18" r={(strokeWidth as number / 2) + (radius as number - 1)}>
             <animateTransform
               attributeName="transform"
               type="rotate"

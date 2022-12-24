@@ -30,6 +30,7 @@ describe('TailSpin', () => {
     })
     svg.querySelectorAll('path').forEach(path => {
       expect(path).toHaveAttribute('stroke', DEFAULT_COLOR)
+      expect(path).toHaveAttribute('stroke-width', "2")
     })
   })
 
@@ -43,6 +44,7 @@ describe('TailSpin', () => {
         wrapperClass="test-class"
         wrapperStyle={{ opacity: '1' }}
         radius={10}
+        strokeWidth={3}
       />
     )
     const component = screen.getByTestId(wrapperTestId)
@@ -64,10 +66,11 @@ describe('TailSpin', () => {
     })
 
     svg.querySelectorAll('circle').forEach(circle => {
-      expect(circle).toHaveAttribute('r', '10')
+      expect(circle).toHaveAttribute('r', '10.5') // r-1 + stroke-width/2
     })
     svg.querySelectorAll('path').forEach(path => {
       expect(path).toHaveAttribute('stroke', 'red')
+      expect(path).toHaveAttribute('stroke-width','3')
     })
   })
 
