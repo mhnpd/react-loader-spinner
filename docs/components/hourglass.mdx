@@ -1,0 +1,33 @@
+---
+---
+
+import PropsTable from '../../src/components/props-table'
+import { getPropsTableData} from '../../src/components/helpers'
+
+# Hourglass
+
+```jsx live
+<Hourglass
+  visible={true}
+  height="80"
+  width="80"
+  ariaLabel="hourglass-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  color=['#306cce', '#72a1ed']
+/>
+```
+
+## Props
+
+<PropsTable
+  properties={[
+    ...getPropsTableData('hourglass', ['color']),
+    {
+      name: 'color',
+      type: 'array',
+      default: `['#306cce', '#72a1ed']`,
+      description: 'The colors of the frame and sands',
+    },
+    ]}
+/>
