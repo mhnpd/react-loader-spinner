@@ -95,28 +95,3 @@ export default function Hourglass({
     </svg>
   )
 }
-
-// const HourglassRotate =
-//   `@keyframes HourglassRotate${uniqId}` +
-//   '{' +
-//   '0%,45% {transform:rotate(0deg);}' +
-//   '55% {transform:rotate(-30deg);}' +
-//   '100% {transform:rotate(360deg);}' +
-//   '}'
-
-// const SandsAnimationOne =
-//   `@keyframes SandsAnimationOne${uniqId}` +
-//   '{' +
-//   '0%,5% {transform:scale(0); transform-origin: bottom}' +
-//   '55% {transform:scale(1); transform-origin: bottom}' +
-//   '56% {transform:scale(1); transform-origin: center}' +
-//   '80%,100% {transform:scale(0); transform-origin: center}' +
-//   '}'
-
-// const SandsAnimationTwo =
-//   `@keyframes SandsAnimationTwo${uniqId}` +
-//   '{' +
-//   '0%,10% {transform:scale(1.5);}' +
-//   '64% {transform:scale(0);}' +
-//   '85%,100% {transform:scale(1.5);}' +
-//   '}'
