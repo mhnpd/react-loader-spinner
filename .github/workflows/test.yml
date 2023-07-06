@@ -1,5 +1,4 @@
-name: Run Test
-
+name: Run required test
 on:
   push:
     branches-ignore:
@@ -7,14 +6,13 @@ on:
   pull_request:
 
 jobs:
-  publish:
+  Test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-
       - run: npm install
       - run: npm run lint
       - run: npm run typecheck
