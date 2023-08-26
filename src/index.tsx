@@ -31,6 +31,7 @@ import Discuss from './loader/Discuss'
 import ColorRing from './loader/ColorRing'
 import Comment from './loader/Comment'
 import Blocks from './loader/Blocks'
+import Hourglass from './loader/Hourglass'
 
 export {
   Audio,
@@ -66,4 +67,5 @@ export {
   RotatingTriangles,
   Watch,
   Vortex,
+  Hourglass
 }
