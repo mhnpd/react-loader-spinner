@@ -1,4 +1,3 @@
-![Node.js Package](https://github.com/mhnpd/react-loader-spinner/workflows/Node.js%20Package/badge.svg?branch=master)
 ![release](https://badgen.net/github/release/mhnpd/react-loader-spinner)
 ![tag](https://badgen.net/github/tag/mhnpd/react-loader-spinner)
 ![stars](https://badgen.net/github/stars/mhnpd/react-loader-spinner)
