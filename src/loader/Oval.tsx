@@ -55,7 +55,7 @@ const Oval: FunctionComponent<OvalProps> = ({
   strokeWidthSecondary,
 }): ReactElement => (
   <div
-    style={{ ...getDefaultStyle(visible), ...wrapperStyle, padding: 3 }}
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle}}
     className={wrapperClass}
     data-testid="oval-loading"
     aria-label={ariaLabel}
