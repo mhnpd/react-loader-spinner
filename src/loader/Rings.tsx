@@ -35,9 +35,9 @@ export const Rings: FunctionComponent<RingsProps> = ({
         fill="none"
         fillRule="evenodd"
         transform="translate(1 1)"
-        strokeWidth="2"
+        stroke-width="2"
       >
-        <circle cx="22" cy="22" r={radius} strokeOpacity="0">
+        <circle cx="22" cy="22" r={radius} stroke-opacity="0">
           <animate
             attributeName="r"
             begin="1.5s"
@@ -63,7 +63,7 @@ export const Rings: FunctionComponent<RingsProps> = ({
             repeatCount="indefinite"
           />
         </circle>
-        <circle cx="22" cy="22" r={radius} strokeOpacity="0">
+        <circle cx="22" cy="22" r={radius} stroke-opacity="0">
           <animate
             attributeName="r"
             begin="3s"
@@ -73,7 +73,7 @@ export const Rings: FunctionComponent<RingsProps> = ({
             repeatCount="indefinite"
           />
           <animate
-            attributeName="strokeOpacity"
+            attributeName="stroke-opacity"
             begin="3s"
             dur="3s"
             values="1;0"
@@ -81,7 +81,7 @@ export const Rings: FunctionComponent<RingsProps> = ({
             repeatCount="indefinite"
           />
           <animate
-            attributeName="strokeWidth"
+            attributeName="stroke-width"
             begin="3s"
             dur="3s"
             values="2;0"
