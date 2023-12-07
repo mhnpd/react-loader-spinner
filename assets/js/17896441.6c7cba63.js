@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkrls_docs=self.webpackChunkrls_docs||[]).push([[918],{6922:(s,c,e)=>{e.d(c,{Z:()=>k});var a=e(7294),l=e(3036),r=e(2052);const k={React:a,...a,PropsTable:r.Z,...l}}}]);
