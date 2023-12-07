@@ -131,3 +131,7 @@ dist
 .idea
 .DS_Store
 .docusaurus
+.parcel-cache
+build
+docs
+
