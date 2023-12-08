@@ -20,7 +20,7 @@ const SVG = styled.svg`
 
 type TriangleProps = BaseProps
 
-const Triangle: FunctionComponent<TriangleProps> = ({
+export const Triangle: FunctionComponent<TriangleProps> = ({
   height = 80,
   width = 80,
   color = DEFAULT_COLOR,
@@ -53,4 +53,3 @@ const Triangle: FunctionComponent<TriangleProps> = ({
   </div>
 )
 
-export default Triangle

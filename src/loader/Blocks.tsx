@@ -3,7 +3,7 @@ import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface BlocksProps extends BaseProps {}
 
-export default function Blocks({
+export function Blocks({
   visible = true,
   width = '80',
   height = '80',

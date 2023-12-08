@@ -19,7 +19,7 @@ type Props = {
  * @description contains three circles rotating in opposite direction
  * outer circle, middle circle and inner circle color can be set from props.
  */
-const ThreeCircles: React.FunctionComponent<Props> = ({
+export const ThreeCircles: React.FunctionComponent<Props> = ({
   wrapperStyle = {},
   visible = true,
   wrapperClass = '',
@@ -99,4 +99,3 @@ const ThreeCircles: React.FunctionComponent<Props> = ({
   )
 }
 
-export default ThreeCircles

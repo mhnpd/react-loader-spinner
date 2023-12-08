@@ -124,4 +124,3 @@ export const Grid: FunctionComponent<GridProps> = ({
   </div>
 )
 
-export default Grid

@@ -31,7 +31,7 @@ const Path = styled.path`
   animation: ${anim} ${time}s linear infinite;
 `
 
-const InfinitySpin = ({
+export const InfinitySpin = ({
   color = DEFAULT_COLOR,
   width = '200',
 }: Props): React.ReactElement => {
@@ -68,4 +68,3 @@ const InfinitySpin = ({
   )
 }
 
-export default InfinitySpin

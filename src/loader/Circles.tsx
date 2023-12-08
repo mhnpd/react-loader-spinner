@@ -2,9 +2,9 @@ import React, { FunctionComponent, ReactElement } from 'react'
 import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface CirclesProps extends BaseProps {}
+interface CirclesProps extends BaseProps { }
 
-const Circles: FunctionComponent<CirclesProps> = ({
+export const Circles: FunctionComponent<CirclesProps> = ({
   height = 80,
   width = 80,
   color = DEFAULT_COLOR,
@@ -52,4 +52,3 @@ const Circles: FunctionComponent<CirclesProps> = ({
   </div>
 )
 
-export default Circles

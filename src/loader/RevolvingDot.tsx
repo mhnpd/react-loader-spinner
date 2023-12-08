@@ -8,7 +8,7 @@ interface RevolvingDotProps extends BaseProps {
   strokeWidth?: number
 }
 
-const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
+export const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
   radius = 45,
   strokeWidth = 5,
   color = DEFAULT_COLOR,
@@ -65,4 +65,3 @@ const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
   </div>
 )
 
-export default RevolvingDot

@@ -5,7 +5,7 @@ interface RotatingTrianglesProps extends Omit<BaseProps, 'color'> {
   colors?: [string, string, string],
 }
 
-export default function RotatingTriangles({
+export function RotatingTriangles({
   visible = true,
   height = '80',
   width = '80',

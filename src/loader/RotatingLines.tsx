@@ -74,7 +74,7 @@ const Polyline = styled.polyline`
   }
 `
 
-export default function RotatingLines({
+export function RotatingLines({
   strokeColor = DEFAULT_COLOR,
   strokeWidth = '5',
   animationDuration = '0.75',

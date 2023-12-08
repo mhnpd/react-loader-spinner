@@ -42,7 +42,7 @@ const getViewBoxSize = (
   return [startingPoint, startingPoint, endpoint, endpoint].join(' ')
 }
 
-const Oval: FunctionComponent<OvalProps> = ({
+export const Oval: FunctionComponent<OvalProps> = ({
   height = 80,
   width = 80,
   color = DEFAULT_COLOR,
@@ -102,4 +102,3 @@ const Oval: FunctionComponent<OvalProps> = ({
     </svg>
   </div>
 )
-export default Oval

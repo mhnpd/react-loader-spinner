@@ -5,7 +5,7 @@ interface VortexProps extends Omit<BaseProps, 'color'> {
   colors?: [string, string, string, string, string, string]
 }
 
-const Vortex = ({
+export const Vortex = ({
   visible = true,
   height = '80',
   width = '80',
@@ -73,4 +73,3 @@ const Vortex = ({
   )
 }
 
-export default Vortex

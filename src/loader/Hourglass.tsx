@@ -5,7 +5,7 @@ interface HourglassProps extends Omit<BaseProps, 'color'> {
   colors?: [string, string]
 }
 
-export default function Hourglass({
+export function Hourglass({
   visible = true,
   width = '80',
   height = '80',

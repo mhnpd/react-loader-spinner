@@ -5,7 +5,7 @@ interface RadioProps extends Omit<BaseProps, 'color'> {
   colors?: [string, string, string]
 }
 
-export default function Radio({
+export function Radio({
   visible = true,
   height = '80',
   width = '80',

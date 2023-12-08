@@ -5,7 +5,7 @@ interface MagnifyingGlassProps extends BaseProps {
   glassColor?: string,
 }
 
-export default function MagnifyingGlass({
+export function MagnifyingGlass({
   visible = true,
   height = '80',
   width = '80',

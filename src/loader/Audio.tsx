@@ -4,7 +4,7 @@ import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface AudioProps extends BaseProps {}
 
-const Audio: FunctionComponent<AudioProps> = ({
+export const Audio: FunctionComponent<AudioProps> = ({
   height = '100',
   width = '100',
   color = DEFAULT_COLOR,
@@ -74,4 +74,3 @@ const Audio: FunctionComponent<AudioProps> = ({
   </div>
 )
 
-export default Audio

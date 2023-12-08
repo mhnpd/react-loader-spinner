@@ -6,7 +6,7 @@ interface ProgressBarProps extends Omit<BaseProps, 'color'> {
   barColor?: string,
 }
 
-export default function ProgressBar({
+export function ProgressBar({
   visible = true,
   height = '80',
   width = '80',

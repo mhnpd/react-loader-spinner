@@ -13,7 +13,7 @@ type RotatingSquareProps = {
   visible?: boolean
 }
 
-const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
+export const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
   wrapperClass = '',
   color = DEFAULT_COLOR,
   height = 100,
@@ -80,4 +80,3 @@ const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
   )
 }
 
-export default RotatingSquare

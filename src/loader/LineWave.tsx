@@ -19,7 +19,7 @@ type Props = {
  * @description contains three lines in a wave motion
  * line colors are changeable
  */
-const LineWave: React.FunctionComponent<Props> = ({
+export const LineWave: React.FunctionComponent<Props> = ({
   wrapperStyle = {},
   visible = true,
   wrapperClass = '',
@@ -109,4 +109,3 @@ const LineWave: React.FunctionComponent<Props> = ({
   )
 }
 
-export default LineWave

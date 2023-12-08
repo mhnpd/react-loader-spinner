@@ -6,7 +6,7 @@ interface FidgetSpinnerProps extends Omit<BaseProps, 'color'> {
   ballColors?: [string, string, string]
 }
 
-export default function FidgetSpinner({
+export function FidgetSpinner({
   width = '80',
   height = '80',
   backgroundColor = DEFAULT_COLOR,

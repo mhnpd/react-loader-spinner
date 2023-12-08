@@ -20,7 +20,7 @@ type Props = {
  * and a wave bars. outer circle, inner circle and bar
  * color can be set from props.
  */
-const CirclesWithBar: React.FunctionComponent<Props> = ({
+export const CirclesWithBar: React.FunctionComponent<Props> = ({
   wrapperStyle = {},
   visible = true,
   wrapperClass = '',
@@ -150,4 +150,3 @@ const CirclesWithBar: React.FunctionComponent<Props> = ({
   )
 }
 
-export default CirclesWithBar

@@ -6,7 +6,7 @@ interface ThreeDotsProps extends BaseProps {
   radius?: string | number
 }
 
-const ThreeDots: FunctionComponent<ThreeDotsProps> = ({
+export const ThreeDots: FunctionComponent<ThreeDotsProps> = ({
   height = 80,
   width = 80,
   radius = 9,
@@ -108,4 +108,3 @@ const ThreeDots: FunctionComponent<ThreeDotsProps> = ({
   </div>
 )
 
-export default ThreeDots

@@ -6,7 +6,7 @@ interface BallTriangleProps extends BaseProps {
   radius?: string | number
 }
 
-const BallTriangle: FunctionComponent<BallTriangleProps> = ({
+export const BallTriangle: FunctionComponent<BallTriangleProps> = ({
   height = 100,
   width = 100,
   radius = 5,
@@ -14,7 +14,7 @@ const BallTriangle: FunctionComponent<BallTriangleProps> = ({
   ariaLabel = 'ball-triangle-loading',
   wrapperClass,
   wrapperStyle,
-  visible = true,
+  visible = true
 }) => (
   <div
     style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
@@ -99,4 +99,3 @@ const BallTriangle: FunctionComponent<BallTriangleProps> = ({
   </div>
 )
 
-export default BallTriangle

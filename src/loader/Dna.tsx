@@ -3,7 +3,7 @@ import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface DNAProps extends Omit<BaseProps, 'color'> {}
 
-export default function DNA({
+export function DNA({
   visible = true,
   width = '80',
   height = '80',

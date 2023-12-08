@@ -3,7 +3,7 @@ import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 interface HeartsProps extends BaseProps {}
 
-const Hearts: FunctionComponent<HeartsProps> = ({
+export const Hearts: FunctionComponent<HeartsProps> = ({
   height = 80,
   width = 80,
   color = DEFAULT_COLOR,
@@ -62,4 +62,3 @@ const Hearts: FunctionComponent<HeartsProps> = ({
   </div>
 )
 
-export default Hearts

@@ -5,7 +5,7 @@ interface ColorRingProps extends Omit<BaseProps, 'color'> {
   colors?: [string, string, string, string, string]
 }
 
-export default function ColorRing({
+export function ColorRing({
   visible = true,
   width = '80',
   height = '80',

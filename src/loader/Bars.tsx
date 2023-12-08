@@ -2,9 +2,9 @@ import React, { FunctionComponent } from 'react'
 import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface BarsProps extends BaseProps {}
+interface BarsProps extends BaseProps { }
 
-const Bars: FunctionComponent<BarsProps> = ({
+export const Bars: FunctionComponent<BarsProps> = ({
   height = 80,
   width = 80,
   color = DEFAULT_COLOR,
@@ -122,4 +122,3 @@ const Bars: FunctionComponent<BarsProps> = ({
   </div>
 )
 
-export default Bars

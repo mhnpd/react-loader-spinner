@@ -5,7 +5,7 @@ interface DiscussProps extends Omit<BaseProps, 'color'> {
   colors?: [string, string]
 }
 
-export default function Discuss({
+export function Discuss({
   visible = true,
   width = '80',
   height = '80',

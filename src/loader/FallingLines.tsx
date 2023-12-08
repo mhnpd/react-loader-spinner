@@ -8,7 +8,7 @@ type FallingLinesProps = {
   visible?: boolean
 }
 
-const FallingLines = ({
+export const FallingLines = ({
   color = DEFAULT_COLOR,
   width = '100',
   visible = true,
@@ -115,4 +115,3 @@ const FallingLines = ({
   ) : null
 }
 
-export default FallingLines

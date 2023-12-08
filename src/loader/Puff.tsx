@@ -82,4 +82,3 @@ export const Puff: FunctionComponent<PuffProps> = ({
   </div>
 )
 
-export default Puff

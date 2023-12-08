@@ -7,7 +7,7 @@ interface MutatingDotsProps extends BaseProps {
   secondaryColor?: string
 }
 
-const MutatingDots: FunctionComponent<MutatingDotsProps> = ({
+export const MutatingDots: FunctionComponent<MutatingDotsProps> = ({
   height = 90,
   width = 80,
   radius = 12.5,
@@ -83,4 +83,3 @@ const MutatingDots: FunctionComponent<MutatingDotsProps> = ({
   </div>
 )
 
-export default MutatingDots

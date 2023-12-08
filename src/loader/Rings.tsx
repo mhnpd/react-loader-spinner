@@ -104,4 +104,3 @@ export const Rings: FunctionComponent<RingsProps> = ({
   </div>
 )
 
-export default Rings

@@ -6,7 +6,7 @@ interface CommentProps extends BaseProps {
 }
 
 
-export default function Comment({
+export function Comment({
   visible = true,
   width = '80',
   height = '80',

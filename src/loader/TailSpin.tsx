@@ -78,4 +78,3 @@ export const TailSpin: FunctionComponent<TailSpinProps> = ({
   )
 }
 
-export default TailSpin

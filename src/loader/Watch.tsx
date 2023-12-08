@@ -6,7 +6,7 @@ interface WatchProps extends BaseProps {
   radius?: string | number
 }
 
-const Watch: FunctionComponent<WatchProps> = ({
+export const Watch: FunctionComponent<WatchProps> = ({
   height = 80,
   width = 80,
   radius = 48,
@@ -89,4 +89,3 @@ const Watch: FunctionComponent<WatchProps> = ({
   </div>
 )
 
-export default Watch
