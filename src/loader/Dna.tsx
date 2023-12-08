@@ -3,14 +3,14 @@ import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface DNAProps extends Omit<BaseProps, 'color'> {}
 
-export function DNA({
+export const DNA = ({
   visible = true,
   width = '80',
   height = '80',
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'dna-loading',
-}: DNAProps) {
+}: DNAProps)  => {
   return !visible ? null : (
     <svg
       xmlns="http://www.w3.org/2000/svg"

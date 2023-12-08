@@ -1,12 +1,12 @@
 import React from 'react'
-import { Dna } from '../../src'
+import { DNA } from '../../src'
 import { render, screen } from '@testing-library/react'
 
 const svgTestId = 'dna-svg'
 
 describe('Dna', () => {
   test('should render properly with default props', () => {
-    render(<Dna />)
+    render(<DNA />)
     const component = screen.getByTestId(svgTestId)
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'dna-loading')
@@ -18,7 +18,7 @@ describe('Dna', () => {
 
   test('should render with custom props', () => {
     render(
-      <Dna
+      <DNA
         height={200}
         width={200}
         ariaLabel="test-aria-label"
@@ -37,7 +37,7 @@ describe('Dna', () => {
     expect(component).toHaveAttribute('width', '200')
   })
   test('should be hidden when visible is false', () => {
-    render(<Dna visible={false} />)
+    render(<DNA visible={false} />)
     const element = screen.queryAllByTestId(svgTestId)
     expect(element).toEqual([])
   })
