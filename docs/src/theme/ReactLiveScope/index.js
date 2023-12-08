@@ -1,5 +1,7 @@
 import React from 'react'
-import * as Spinners from '../../../../dist'
+// Use this for local debugging
+// import * as Spinners from '../../../../dist'
+import * as Spinners from 'react-loader-spinner'
 import PropsTable from "../../components/props-table"
 
 // Add react-live imports you need here
