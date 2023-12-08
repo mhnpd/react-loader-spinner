@@ -1,0 +1,65 @@
+---
+---
+import PropsTable from '../../src/components/props-table'
+
+# Hearts
+
+```jsx live
+<Hearts 
+  height="80"
+  width="80"
+  color="#4fa94d"
+  ariaLabel="hearts-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+/>
+```
+## Props
+
+<PropsTable
+  properties={[
+    {
+      name: 'height',
+      type: 'number | string',
+      default: '80',
+      description: 'Height of the component'
+    },
+    {
+      name: 'width',
+      type: 'number | string',
+      default: '80',
+      description: 'Width of the component'
+    },
+    {
+      name: 'color',
+      type: 'string',
+      default: '#4fa94d',
+      description: 'Color of the hearts. Multiple colors for multiple hearts is not supported.'
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      default: 'hearts-loading',
+      description: 'Aria label of the component. This is used for accessibility.'
+    },
+    {
+      name: 'wrapperStyle',
+      type: 'object',
+      default: '{}',
+      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.'
+    },
+    {
+      name: 'wrapperClass',
+      type: 'string',
+      default: '',
+      description: 'Class of the wrapper element. It can be used for custom styling.'
+    },
+    {
+      name: 'visible',
+      type: 'boolean',
+      default: 'true',
+      description: 'Visibility of the component'
+    }
+  ]}
+/>  

@@ -1,0 +1,46 @@
+---
+---
+
+import PropsTable from '../../src/components/props-table'
+import { getPropsTableData } from '../../src/components/helpers'
+
+# Fidget Spinner
+
+```jsx live
+<FidgetSpinner
+  visible={true}
+  height="80"
+  width="80"
+  ariaLabel="dna-loading"
+  wrapperStyle={{}}
+  wrapperClass="dna-wrapper"
+  ballColors={['#ff0000', '#00ff00', '#0000ff']}
+  backgroundColor="#F4442E"
+/>
+```
+
+## Props
+
+<PropsTable
+  properties={[
+    ...getPropsTableData('fidget spinner', ['colors']),
+    {
+      name: 'ballColors',
+      type: 'array',
+      default: '["#ff0000", "#00ff00", "#0000ff"]',
+      description: 'Array of colors for the balls',
+    },
+    {
+      name: 'backgroundColor',
+      type: 'string',
+      default: '"#F4442E"',
+      description: 'Background color of the spinner',
+    },
+  ]}
+/>
+
+## More Example
+
+```jsx live
+<FidgetSpinner />
+```

@@ -1,0 +1,75 @@
+---
+---
+
+import PropsTable from '../../src/components/props-table'
+
+# Rings
+
+```jsx live
+<Rings
+  height="80"
+  width="80"
+  color="#4fa94d"
+  radius="6"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+  ariaLabel="rings-loading"
+/>
+```
+> This spinner is not supported by Safari. [See](https://github.com/mhnpd/react-loader-spinner/issues/150)
+
+## Props
+
+<PropsTable
+  properties={[
+    {
+      name: 'height',
+      type: 'number | string',
+      default: '80',
+      description: 'The height of the component.',
+    },
+    {
+      name: 'width',
+      type: 'number | string',
+      default: '80',
+      description: 'The width of the component.',
+    },
+    {
+      name: 'color',
+      type: 'string | string',
+      default: '#4fa94d',
+      description: 'The color of the component.',
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      default: 'rings-loading',
+      description: 'The aria label of the component. This is used by screen readers to identify the component.',
+    },
+    {
+      name: 'radius',
+      type: 'number | string',
+      default: '6',
+      description: 'The radius of the component.',
+    },
+    {
+      name: 'wrapperStyle',
+      type: 'object',
+      default: '{}',
+      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
+    },
+    {
+      name: 'wrapperClass',
+      type: 'string',
+      default: '',
+      description: 'The class of the wrapper element. It can be used for custom styling.', 
+    },
+    {
+      name: 'visible',
+      type: 'boolean',
+      default: 'true',
+      description: 'The visibility of the component.',
+    },
+  ]}
+/>

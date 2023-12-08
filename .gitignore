@@ -133,5 +133,8 @@ dist
 .docusaurus
 .parcel-cache
 build
-docs
+./docs/.docusaurus
+./docs/.docz
+./docs/vscode
+
 
