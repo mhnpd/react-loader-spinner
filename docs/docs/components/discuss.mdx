@@ -1,0 +1,34 @@
+---
+---
+
+import PropsTable from '../../src/components/props-table'
+import { getPropsTableData} from '../../src/components/helpers'
+
+# Discuss
+
+```jsx live
+<Discuss
+  visible={true}
+  height="80"
+  width="80"
+  ariaLabel="comment-loading"
+  wrapperStyle={{}}
+  wrapperClass="comment-wrapper"
+  color="#fff"
+  backgroundColor="#F4442E"
+/>
+```
+
+## Props
+
+<PropsTable
+  properties={[
+    ...getPropsTableData('discuss', ['colors']),
+    {
+      name: 'colors',
+      type: 'array',
+      default: `['#ff727d', '#ff727d']`,
+      description: 'The colors of the the rings',
+    },
+    ]}
+/>

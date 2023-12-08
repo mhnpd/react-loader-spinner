@@ -1,0 +1,74 @@
+---
+---
+import PropsTable from '../../src/components/props-table'
+
+# Puff
+
+```jsx live
+<Puff
+  height="80"
+  width="80"
+  radius={1}
+  color="#4fa94d"
+  ariaLabel="puff-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+/>
+```
+
+> This spinner is not supported by Safari. [See](https://github.com/mhnpd/react-loader-spinner/issues/150)
+
+## Props
+<PropsTable
+  properties={[
+    {
+      name: 'height',
+      type: 'number | string',
+      default: '100',
+      description: 'Height of the puff .',
+    },
+    {
+      name: 'width',
+      type: 'number | string',
+      default: '100',
+      description: 'Width of the puff.',
+    },
+    {
+      name: 'radius',
+      type: 'number | string',
+      default: '1',
+      description: 'Radius of the puff. Radius seems to be not working.',
+    },
+    {
+      name: 'color',
+      type: 'string',
+      default: '#4fa94d',
+      description: 'Color of the puff.',
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      default: 'puff-loading',
+      description: 'Aria label of the puff. This is used for accessibility.',
+    },
+    {
+      name: 'visible',
+      type: 'boolean',
+      default: 'true',
+      description: 'Whether the line wave is visible.',
+    },
+    {
+      name: 'wrapperStyle',
+      type: 'object',
+      default: '{}',
+      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
+    },
+    {
+      name: 'wrapperClass',
+      type: 'string',
+      default: '',
+      description: 'Class name for the wrapper element. It can be used for custom styling.',
+    },
+  ]}
+/>  

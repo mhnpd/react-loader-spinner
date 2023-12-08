@@ -1,0 +1,40 @@
+---
+---
+
+import PropsTable from '../../src/components/props-table'
+import { getPropsTableData} from '../../src/components/helpers'
+
+# MagnifyingGlass
+
+```jsx live
+<MagnifyingGlass
+  visible={true}
+  height="80"
+  width="80"
+  ariaLabel="MagnifyingGlass-loading"
+  wrapperStyle={{}}
+  wrapperClass="MagnifyingGlass-wrapper"
+  glassColor = '#c0efff'
+  color = '#e15b64'
+/>
+```
+
+## Props
+
+<PropsTable
+  properties={[
+    ...getPropsTableData('magnifying-glass', ['colors']),
+    {
+      name: 'glassColor',
+      type: 'string',
+      default: '#c0efff',
+      description: 'Color of the magnifying glass lensed area'
+    },
+    {
+      name: 'color',
+      type: 'string',
+      default: '#e15b64',
+      description: 'Color of the magnifying glass frame'
+    }
+    ]}
+/>

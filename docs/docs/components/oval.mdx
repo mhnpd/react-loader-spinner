@@ -1,0 +1,132 @@
+---
+---
+import PropsTable from '../../src/components/props-table'
+
+# Oval
+
+```jsx live
+<Oval
+  height={80}
+  width={80}
+  color="#4fa94d"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+  ariaLabel='oval-loading'
+  secondaryColor="#4fa94d"
+  strokeWidth={2}
+  strokeWidthSecondary={2}
+
+/>
+```
+
+## Props
+
+<PropsTable
+  properties={[
+    {
+      name: 'height',
+      type: 'number|string',
+      default: '80',
+      description: 'Height of the oval',
+    },
+    {
+      name: 'width',
+      type: 'number|string',
+      default: '80',
+      description: 'Width of the oval',
+    },
+    {
+      name: 'color',
+      type: 'string',
+      default: '#4fa94d',
+      description: 'Color of the oval. Can be hex or rgba. Default is #4fa94d',
+    },
+    {
+      name: 'secondaryColor',
+      type: 'string',
+      default: 'undefined',
+      description: 'Color of the secondary oval. Can be hex or rgba. Default is same as color',
+    },
+    {
+      name: 'strokeWidth',
+      type: 'number',
+      default: '2',
+      description: 'Width of the stroke',
+    },
+    {
+      name: 'strokeWidthSecondary',
+      type: 'number',
+      default: '2',
+      description: 'Width of the secondary stroke. Default is same as strokeWidth',
+    },
+    {
+      name: 'wrapperStyle',
+      type: 'object',
+      default: '{}',
+      description: 'Style of the wrapper',
+    },
+    {
+      name: 'wrapperClass',
+      type: 'string',
+      default: '',
+      description: 'Class of the wrapper',
+    },
+    {
+      name: 'visible',
+      type: 'boolean',
+      default: 'true',
+      description: 'Whether the oval is visible',
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      default: 'oval-loading',
+      description: 'Aria label of the oval. Default is oval-loading. Will be overridden if ariaLabel is passed in props',
+    },
+  ]}
+/>  
+
+## More examples
+
+### Example 1
+
+```jsx live
+<Oval
+  ariaLabel="loading-indicator"
+  height={100}
+  width={100}
+  strokeWidth={5}
+  strokeWidthSecondary={1}
+  color="blue"
+  secondaryColor="white"
+/>
+```
+
+### Example 2
+
+```jsx live
+<Oval
+  ariaLabel="loading-indicator"
+  height={100}
+  width={100}
+  strokeWidth={1}
+  strokeWidthSecondary={2000}
+  color="blue"
+  secondaryColor="red"
+/>
+```
+
+### Example 3
+
+```jsx live
+<Oval
+  ariaLabel="loading-indicator"
+  height={100}
+  width={100}
+  strokeWidth={2000}
+  strokeWidthSecondary={2030}
+  color="blue"
+  secondaryColor="Grey"
+/>
+```

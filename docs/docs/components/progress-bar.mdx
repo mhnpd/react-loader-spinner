@@ -1,0 +1,39 @@
+---
+---
+
+import PropsTable from '../../src/components/props-table'
+import { getPropsTableData} from '../../src/components/helpers'
+
+# Progress Bar
+
+```jsx live
+<ProgressBar
+  height="80"
+  width="80"
+  ariaLabel="progress-bar-loading"
+  wrapperStyle={{}}
+  wrapperClass="progress-bar-wrapper"
+  borderColor = '#F4442E'
+  barColor = '#51E5FF'
+/>
+```
+
+## Props
+
+<PropsTable
+  properties={[
+    ...getPropsTableData('progress-bar', ['colors']),
+    {
+      name: 'borderColor',
+      type: 'string',
+      default: '#51E5FF',
+      description: 'Color of the border of the progress bar'
+    },
+    {
+      name: 'barColor',
+      type: 'string',
+      default: '#F4442E',
+      description: 'Color of the progress bar'
+    }
+    ]}
+/>

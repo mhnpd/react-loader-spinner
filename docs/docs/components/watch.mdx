@@ -1,0 +1,73 @@
+---
+---
+import PropsTable from '../../src/components/props-table'
+
+# Watch
+
+```jsx live
+<Watch
+  height="80"
+  width="80"
+  radius="48"
+  color="#4fa94d"
+  ariaLabel="watch-loading"
+  wrapperStyle={{}}
+  wrapperClassName=""
+  visible={true}
+/>
+```
+
+## Props
+
+<PropsTable
+  properties={[
+    {
+      name: 'height',
+      type: 'number | string',
+      default: '80',
+      description: 'Height of the watch'
+    },
+    {
+      name: 'width',
+      type: 'number | string',
+      default: '80',
+      description: 'Width of the watch'
+    },
+    {
+      name: 'radius',
+      type: 'number',
+      default: '48',
+      description: 'Radius of the watch'
+    },
+    {
+      name: 'color',
+      type: 'string',
+      default: '#4fa94d',
+      description: 'Color of the watch'
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      default: 'watch-loading',
+      description: 'Aria label of the watch. Used for accessibility'
+    },
+    {
+      name: 'wrapperStyle',
+      type: 'object',
+      default: '{}',
+      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.'
+    },
+    {
+      name: 'wrapperClassName',
+      type: 'string',
+      default: 'undefined',
+      description: 'Class name of the wrapper element. It can be used for custom styling.'
+    },
+    {
+      name: 'visible',
+      type: 'boolean',
+      default: 'true',
+      description: 'Visibility of the watch'
+    }
+  ]}
+/>

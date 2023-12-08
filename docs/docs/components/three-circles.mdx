@@ -1,0 +1,86 @@
+---
+---
+import PropsTable from '../../src/components/props-table'
+
+# Three Circles
+
+```jsx live
+<ThreeCircles
+  height="100"
+  width="100"
+  color="#4fa94d"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+  ariaLabel="three-circles-rotating"
+  outerCircleColor=""
+  innerCircleColor=""
+  middleCircleColor=""
+/>
+```
+## Props
+
+<PropsTable
+  properties={[
+    {
+      name: 'height',
+      type: 'number | string',
+      default: '100',
+      description: 'Height of the spinner.',
+    },
+    {
+      name: 'width',
+      type: 'number | string',
+      default: '100',
+      description: 'Width of the spinner.',
+    },
+    {
+      name: 'color',
+      type: 'string',
+      default: '#4fa94d',
+      description: 'Color of the component.',
+    },
+    {
+      name: 'wrapperStyle',
+      type: 'object',
+      default: '{}',
+      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
+    },
+    {
+      name: 'wrapperClass',
+      type: 'string',
+      default: '',
+      description: 'Class of the wrapper element. It can be used for custom styling.',
+    },
+    {
+      name: 'visible',
+      type: 'boolean',
+      default: 'true',
+      description: 'Visibility of the component.',
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      default: 'three-circles-rotating',
+      description: 'ARIA label of the component.',
+    },
+    {
+      name: 'outerCircleColor',
+      type: 'string',
+      default: '',
+      description: 'Color of the outer circle. If not set, the color will be the same as the color of the component.',
+    },
+    {
+      name: 'innerCircleColor',
+      type: 'string',
+      default: '',
+      description: 'Color of the inner circle. If not set, the color will be the same as the color of the component.',
+    },
+    {
+      name: 'middleCircleColor',
+      type: 'string',
+      default: '',
+      description: 'Color of the middle circle. If not set, the color will be the same as the color of the component.',
+    },
+  ]}
+/>

@@ -136,5 +136,6 @@ build
 ./docs/.docusaurus
 ./docs/.docz
 ./docs/vscode
+./docs/build
 
 

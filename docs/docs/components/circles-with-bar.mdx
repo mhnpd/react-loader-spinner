@@ -1,0 +1,91 @@
+---
+---
+
+import PropsTable from '../../src/components/props-table'
+
+# Circles With Bar
+
+```jsx live
+<CirclesWithBar
+  height="100"
+  width="100"
+  color="#4fa94d"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+  outerCircleColor=""
+  innerCircleColor=""
+  barColor=""
+  ariaLabel='circles-with-bar-loading'
+/>
+```
+
+## Props
+
+<PropsTable
+  properties={[
+    {
+      name: 'wrapperStyle',
+      type: 'object',
+      default: 'undefined',
+      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
+    },
+    {
+      name: 'visible',
+      type: 'boolean',
+      default: 'true',
+      description: 'Whether the circles are visible',
+    },
+    {
+      name: 'wrapperClass',
+      type: 'string',
+      default: '',
+      description: 'CSS class name for the wrapper element',
+    },
+    {
+      name: 'height',
+      type: 'string | number',
+      default: '100',
+      description: 'Height of the wrapper element',
+    },
+    {
+      name: 'width',
+      type: 'string | number',
+      default: '100',
+      description: 'Width of the wrapper element',
+    },
+    {
+      name: 'color',
+      type: 'string',
+      default: '#4fa94d',
+      description: 'Color of the outer circle. It will also be used for the bar color if `barColor` is not specified.',
+    },
+    {
+      name: 'outerCircleColor',
+      type: 'string',
+      default: 'undefined',
+      description:
+        'Color of the outer circle. If not defined, it will be the same as color',
+    },
+    {
+      name: 'innerCircleColor',
+      type: 'string',
+      default: 'undefined',
+      description:
+        'Color of the inner circle. If not defined, it will be the same as color',
+    },
+    {
+      name: 'barColor',
+      type: 'string',
+      default: 'undefined',
+      description:
+        'Color of the bar. If not defined, it will be the same as color',
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      default: 'circles-with-bar-loading',
+      description: 'Aria label for the wrapper element',
+    }
+  ]}
+/>
