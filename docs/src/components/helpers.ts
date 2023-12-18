@@ -36,7 +36,7 @@ export const getDefaultPropsValue = (componentName:string)=>({
   visible: 'true',
 })
 
-export const getPropsTableData = (componentName:string, excluded=[])=>{
+export const getPropsTableData = (componentName:string, excluded:string[] = [])=>{
   return [
     {
       name: 'height',
