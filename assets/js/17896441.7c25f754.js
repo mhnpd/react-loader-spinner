@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[7918],{1869:(s,c,e)=>{var a;e.d(c,{Z:()=>r});var k=e(7294),o=e(5871),p=e(5305);const r={...a||(a=e.t(k,2)),PropsTable:p.Z,...o}}}]);
