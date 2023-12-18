@@ -20,6 +20,9 @@ const SVG = styled.svg`
 
 type TriangleProps = BaseProps
 
+const VIEW_BOX_VALUES = "-3 -4 39 39";
+const POLYGON_POINTS = "16,0 32,32 0,32";
+
 export const Triangle: FunctionComponent<TriangleProps> = ({
   height = 80,
   width = 80,
@@ -40,14 +43,15 @@ export const Triangle: FunctionComponent<TriangleProps> = ({
       id="triangle"
       width={width}
       height={height}
-      viewBox="-3 -4 39 39"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox={VIEW_BOX_VALUES}
       data-testid="triangle-svg"
     >
       <Polygon
         fill="transparent"
         stroke={color}
         strokeWidth="1"
-        points="16,0 32,32 0,32"
+        points={POLYGON_POINTS}
       />
     </SVG>
   </div>
