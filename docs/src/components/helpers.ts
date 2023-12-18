@@ -1,14 +1,14 @@
 export const getDescription = (componentName: string) => ({
-  height: `Height of the ${componentName} SVG. For more customization, use the wrapper className.`,
-  width: `Width of the ${componentName} SVG. For more customization, use the wrapper className. `,
-  colors: `Colors of the ${componentName} SVG. Accepts multiple color objects. If a complete list of colors is not provided, defaults will be used. Refer to the example.`,
-  color: `Color of the ${componentName} SVG.`,
-  ariaLabel: `Aria label of the ${componentName}. It will be used for the aria-label attribute in the wrapper element.`,
-  wrapperStyle: 'Styles to be applied to the wrapper. It should be a valid CSS object and can be used for custom styling. It will override the default style.',
-  wrapperClass: `ClassName to be applied to the wrapper. It can be used for custom styling and will override the default style.`,
-  visible: `Specifies whether the ${componentName} is visible or not. If set to false, the ${componentName} will not be rendered.`,
-  radius: `Radius of the circle(s) in the ${componentName} component. For further customization, use the wrapper className.`,
-})
+  height: `Specifies the height of the ${componentName} SVG. For additional customization, employ the wrapper className.`,
+  width: `Specifies the width of the ${componentName} SVG. For further customization, utilize the wrapper className.`,
+  colors: `Defines the colors of the ${componentName} SVG. Accepts multiple color objects. If a comprehensive list of colors is not provided, defaults will be applied. Refer to the example.`,
+  color: `Sets the color of the ${componentName} SVG.`,
+  ariaLabel: `Specifies the Aria label of the ${componentName}. This label will be applied to the aria-label attribute in the wrapper element.`,
+  wrapperStyle: 'Applies styles to the wrapper. It should be a valid CSS object and can be used for custom styling, overriding the default style.',
+  wrapperClass: `Assigns a className to the wrapper for custom styling, overriding the default style.`,
+  visible: `Controls the visibility of the ${componentName}. If set to false, the ${componentName} will not be rendered.`,
+  radius: `Determines the radius of the circle(s) in the ${componentName} component. For further customization, use the wrapper className.`,
+});
 
 export const defaultPropsTypes = {
   height: 'number | string',
