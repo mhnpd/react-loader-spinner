@@ -5,7 +5,7 @@ export const getDescription = (componentName: string) => ({
   color: `Color of the ${componentName} SVG.`,
   ariaLabel: `Aria label of the ${componentName}. It will be used for the aria-label attribute in the wrapper element.`,
   wrapperStyle: 'Styles to be applied to the wrapper. It should be a valid CSS object and can be used for custom styling. It will override the default style.',
-  wrapperClassName: `ClassName to be applied to the wrapper. It can be used for custom styling and will override the default style.`,
+  wrapperClass: `ClassName to be applied to the wrapper. It can be used for custom styling and will override the default style.`,
   visible: `Specifies whether the ${componentName} is visible or not. If set to false, the ${componentName} will not be rendered.`,
   radius: `Radius of the circle(s) in the ${componentName} component. For further customization, use the wrapper className.`,
 })
@@ -18,11 +18,11 @@ export const defaultPropsTypes = {
   secondaryColor: 'string: #hex-code',
   ariaLabel: 'string',
   wrapperStyle: 'object',
-  wrapperClassName: 'string',
+  wrapperClass: 'string',
   visible: 'boolean',
   radius: 'number | string',
   strokeWidth: 'number | string',
-  strokeColor: 'string',  
+  strokeColor: 'string',
 }
 
 export const getDefaultPropsValue = (componentName)=>({
@@ -32,7 +32,7 @@ export const getDefaultPropsValue = (componentName)=>({
   secondaryColor: `#4fa94d`,
   ariaLabel: `${componentName}-loading`,
   wrapperStyle: JSON.stringify({}, null, 2),
-  wrapperClassName: 'undefined',
+  wrapperClass: 'undefined',
   visible: 'true',
 })
 
@@ -69,10 +69,10 @@ export const getPropsTableData = (componentName, excluded=[])=>{
       description: getDescription(componentName).wrapperStyle,
     },
     {
-      name: 'wrapperClassName',
-      type: defaultPropsTypes.wrapperClassName,
-      default: getDefaultPropsValue(componentName).wrapperClassName,
-      description: getDescription(componentName).wrapperClassName,
+      name: 'wrapperClass',
+      type: defaultPropsTypes.wrapperClass,
+      default: getDefaultPropsValue(componentName).wrapperClass,
+      description: getDescription(componentName).wrapperClass,
     },
     {
       name: 'visible',
