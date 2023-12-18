@@ -30,7 +30,8 @@
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "prettier": "prettier --write .",
     "clean": "rimraf dist/",
-    "test": "jest --no-cache"
+    "test": "jest --no-cache",
+    "start": "cd docs && npm run start"
   },
   "devDependencies": {
     "@parcel/packager-ts": "^2.10.3",
