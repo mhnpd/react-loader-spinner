@@ -1,8 +1,9 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper'
+import { SVG_NAMESPACE } from '../shared/constants'
 
-interface AudioProps extends BaseProps {}
+interface AudioProps extends BaseProps { }
 
 export const Audio: FunctionComponent<AudioProps> = ({
   height = '100',
@@ -13,19 +14,22 @@ export const Audio: FunctionComponent<AudioProps> = ({
   wrapperClass,
   visible = true,
 }): ReactElement => (
-  <div
-    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+  <SvgWrapper
+    visible={visible}
+    style={wrapperStyle}
     className={wrapperClass}
     data-testid="audio-loading"
     aria-label={ariaLabel}
     {...DEFAULT_WAI_ARIA_ATTRIBUTE}
   >
+    <title>Audio Visualization</title>
+    <desc>Animated representation of audio data</desc>
     <svg
       height={`${height}`}
       width={`${width}`}
       fill={color}
       viewBox="0 0 55 80"
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       data-testid="audio-svg"
     >
       <g transform="matrix(1 0 0 -1 0 80)">
@@ -71,6 +75,6 @@ export const Audio: FunctionComponent<AudioProps> = ({
         </rect>
       </g>
     </svg>
-  </div>
+  </SvgWrapper>
 )
 

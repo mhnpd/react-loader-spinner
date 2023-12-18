@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react'
-import Table from 'rc-table';
-import {sortBy} from 'lodash'
+import Table from 'rc-table'
+import { sortBy } from 'lodash'
+
 type Props = {
   properties: [
     {
@@ -10,7 +11,7 @@ type Props = {
   ]
 }
 
-const columns=[
+const columns = [
   {
     title: 'Name',
     dataIndex: 'name',
@@ -22,14 +23,14 @@ const columns=[
     dataIndex: 'type',
     key: 'type',
     width: 150,
-    render:(_, row)=>(<em style={{color:'#932981'}}>{row.type}</em>)
+    render: (_, row) => (<em style={{ color: '#932981' }}>{row.type}</em>)
   },
   {
     title: 'Default',
     dataIndex: 'default',
     key: 'default',
     width: 250,
-    render:(_, row)=>(<code style={{color:'#932981'}}>{row.default}</code>)
+    render: (_, row) => (<code style={{ color: '#932981' }}>{row.default}</code>)
   },
   {
     title: 'Description',
