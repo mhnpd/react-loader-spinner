@@ -1,6 +1,5 @@
 import React, { useCallback } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { prop } from 'styled-tools'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 type Props = {
@@ -22,7 +21,7 @@ const POINTS = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330]
 
 const Svg = styled.svg`
   animation: ${spin} 0.75s steps(12, end) infinite;
-  animation-duration: ${prop('speed', '0.75')}s;
+  animation-duration: 0.75s;
 `
 
 const Polyline = styled.polyline`
