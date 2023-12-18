@@ -12,7 +12,7 @@ describe('Grids Loader', () => {
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'grid-loading')
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
     expect(component).toHaveAttribute('aria-busy', 'true')
     expect(component).toHaveStyle('display:flex')
 
@@ -42,7 +42,7 @@ describe('Grids Loader', () => {
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'custom-grid-loading')
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
     expect(component).toHaveAttribute('aria-busy', 'true')
     expect(component).toHaveStyle('opacity: 0.5')
     expect(component).toHaveClass('custom-wrapper-class')

@@ -14,7 +14,7 @@ describe('Circles With bar Loader', () => {
     expect(component).toHaveStyle('display: flex')
     expect(component).toHaveAttribute('aria-label', 'circles-with-bar-loading')
     expect(component).toHaveAttribute('aria-busy', 'true')
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
 
     const svg = screen.getByTestId(svgTestId)
     expect(svg).toBeDefined()
@@ -50,7 +50,7 @@ describe('Circles With bar Loader', () => {
     expect(component).toHaveStyle('display: flex')
     expect(component).toHaveAttribute('aria-label', 'test-aria-label')
     expect(component).toHaveAttribute('aria-busy', 'true')
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
 
     const svg = screen.getByTestId(svgTestId)
     expect(svg).toBeDefined()

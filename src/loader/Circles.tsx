@@ -1,6 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper';
+import { SVG_NAMESPACE } from '../shared/constants'
 
 interface CirclesProps extends BaseProps { }
 
@@ -13,8 +14,9 @@ export const Circles: FunctionComponent<CirclesProps> = ({
   wrapperClass,
   visible = true,
 }): ReactElement => (
-  <div
-    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+  <SvgWrapper
+    style={wrapperStyle}
+    $visible={visible}
     className={wrapperClass}
     aria-label={ariaLabel}
     data-testid="circles-loading"
@@ -24,10 +26,12 @@ export const Circles: FunctionComponent<CirclesProps> = ({
       width={width}
       height={height}
       viewBox="0 0 135 135"
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       fill={color}
       data-testid="circles-svg"
     >
+      <title>circles-loading</title>
+      <desc>Animated representation of circles</desc>
       <path d="M67.447 58c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zm9.448 9.447c0 5.523 4.477 10 10 10 5.522 0 10-4.477 10-10s-4.478-10-10-10c-5.523 0-10 4.477-10 10zm-9.448 9.448c-5.523 0-10 4.477-10 10 0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10zM58 67.447c0-5.523-4.477-10-10-10s-10 4.477-10 10 4.477 10 10 10 10-4.477 10-10z">
         <animateTransform
           attributeName="transform"
@@ -49,6 +53,6 @@ export const Circles: FunctionComponent<CirclesProps> = ({
         />
       </path>
     </svg>
-  </div>
+  </SvgWrapper>
 )
 

@@ -12,7 +12,7 @@ describe('Ball Triangle', () => {
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'ball-triangle-loading')
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
 
     const svg = screen.getByTestId(svgTestId)
     expect(svg).toBeDefined()
@@ -41,7 +41,7 @@ describe('Ball Triangle', () => {
       'aria-label',
       'ball-triangle-loading-test'
     )
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
 
     const svg = screen.getByTestId(svgTestId)
     expect(svg).toBeDefined()

@@ -1,6 +1,7 @@
 import React from 'react'
-import { getDefaultStyle } from '../helpers'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 type RotatingSquareProps = {
   wrapperClass?: string
@@ -24,8 +25,9 @@ export const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
   visible = true,
 }): React.ReactElement => {
   return (
-    <div
-      style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    <SvgWrapper
+      style={wrapperStyle }
+      $visible={visible}
       className={wrapperClass}
       data-testid="rotating-square-wrapper"
       aria-label={ariaLabel}
@@ -33,7 +35,7 @@ export const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
     >
       <svg
         version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns={SVG_NAMESPACE}
         x="0px"
         y="0px"
         viewBox="0 0 100 100"
@@ -76,7 +78,7 @@ export const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
           />
         </rect>
       </svg>
-    </div>
+    </SvgWrapper>
   )
 }
 

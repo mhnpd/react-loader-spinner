@@ -1,6 +1,7 @@
 import React from 'react'
-import { getDefaultStyle } from '../helpers'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 type Props = {
   wrapperStyle?: Style
@@ -33,8 +34,9 @@ export const CirclesWithBar: React.FunctionComponent<Props> = ({
   ariaLabel = 'circles-with-bar-loading',
 }): React.ReactElement => {
   return (
-    <div
-      style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    <SvgWrapper
+      style={wrapperStyle}
+      $visible={visible}
       className={wrapperClass}
       aria-label={ariaLabel}
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
@@ -43,7 +45,7 @@ export const CirclesWithBar: React.FunctionComponent<Props> = ({
       <svg
         version="1.1"
         id="L1"
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns={SVG_NAMESPACE}
         x="0px"
         y="0px"
         height={`${height}`}
@@ -53,6 +55,8 @@ export const CirclesWithBar: React.FunctionComponent<Props> = ({
         xmlSpace="preserve"
         data-testid="circles-with-bar-svg"
       >
+        <title>circles-with-bar-loading</title>
+        <desc>Animated representation of circles with bar</desc>
         <circle
           fill="none"
           stroke={`${outerCircleColor || color}`} // color
@@ -146,7 +150,7 @@ export const CirclesWithBar: React.FunctionComponent<Props> = ({
           </rect>
         </g>
       </svg>
-    </div>
+    </SvgWrapper>
   )
 }
 

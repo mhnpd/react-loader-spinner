@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 interface FidgetSpinnerProps extends Omit<BaseProps, 'color'> {
   backgroundColor?: string
   ballColors?: [string, string, string]
 }
 
-export function FidgetSpinner({
+export const FidgetSpinner: FunctionComponent<FidgetSpinnerProps> = ({
   width = '80',
   height = '80',
   backgroundColor = DEFAULT_COLOR,
@@ -15,12 +16,12 @@ export function FidgetSpinner({
   wrapperStyle = {},
   ariaLabel = 'fidget-spinner-loader',
   visible = true,
-}: FidgetSpinnerProps) {
+}) => {
   return !visible ? null : (
     <svg
       width={width}
       height={height}
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid"
       className={wrapperClass}
@@ -31,7 +32,7 @@ export function FidgetSpinner({
     >
       <g transform="rotate(6 50 50)">
         <g transform="translate(50 50)">
-          <g  transform="scale(0.9)">
+          <g transform="scale(0.9)">
             <g transform="translate(-50 -58)">
               <path
                 d="M27.1,79.4c-1.1,0.6-2.4,1-3.7,1c-2.6,0-5.1-1.4-6.4-3.7c-2-3.5-0.8-8,2.7-10.1c1.1-0.6,2.4-1,3.7-1c2.6,0,5.1,1.4,6.4,3.7 C31.8,72.9,30.6,77.4,27.1,79.4z"

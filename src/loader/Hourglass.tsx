@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface HourglassProps extends Omit<BaseProps, 'color'> {
   colors?: [string, string]
 }
 
-export function Hourglass({
+export const Hourglass:FunctionComponent<HourglassProps> = ({
   visible = true,
   width = '80',
   height = '80',
@@ -13,7 +13,7 @@ export function Hourglass({
   wrapperStyle = {},
   ariaLabel = 'hourglass-loading',
   colors = ['#306cce', '#72a1ed'],
-}: HourglassProps) {
+}) => {
   return !visible ? null : (
     <svg
       width={width}

@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
-import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 interface WatchProps extends BaseProps {
   radius?: string | number
@@ -16,8 +17,9 @@ export const Watch: FunctionComponent<WatchProps> = ({
   wrapperClass,
   visible = true,
 }) => (
-  <div
-    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+  <SvgWrapper
+    style={wrapperStyle }
+    $visible={visible}
     className={wrapperClass}
     data-testid="watch-loading"
     aria-label={ariaLabel}
@@ -28,7 +30,7 @@ export const Watch: FunctionComponent<WatchProps> = ({
       height={height}
       version="1.1"
       id="L2"
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       x="0px"
       y="0px"
       viewBox="0 0 100 100"
@@ -86,6 +88,6 @@ export const Watch: FunctionComponent<WatchProps> = ({
         />
       </line>
     </svg>
-  </div>
+  </SvgWrapper>
 )
 

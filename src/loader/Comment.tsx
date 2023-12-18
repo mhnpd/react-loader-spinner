@@ -1,12 +1,12 @@
-import React from 'react'
+import React, {FunctionComponent, ReactElement} from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 interface CommentProps extends BaseProps {
   backgroundColor?: string
 }
 
-
-export function Comment({
+export const Comment:FunctionComponent<CommentProps> = ({
   visible = true,
   width = '80',
   height = '80',
@@ -15,12 +15,12 @@ export function Comment({
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'comment-loading',
-}: CommentProps) {
+}): ReactElement | null => {
   return !visible ?null: (
     <svg
       width={width}
       height={height}
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid"
       className={wrapperClass}

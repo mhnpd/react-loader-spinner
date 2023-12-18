@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
-import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper';
+import { SVG_NAMESPACE } from '../shared/constants'
 
 interface BarsProps extends BaseProps { }
 
@@ -13,8 +14,9 @@ export const Bars: FunctionComponent<BarsProps> = ({
   wrapperClass,
   visible = true,
 }) => (
-  <div
-    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+  <SvgWrapper
+    $visible={visible}
+    style={{...wrapperStyle}}
     className={wrapperClass}
     data-testid="bars-loading"
     aria-label={ariaLabel}
@@ -25,7 +27,7 @@ export const Bars: FunctionComponent<BarsProps> = ({
       height={height}
       fill={color}
       viewBox="0 0 135 140"
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       data-testid="bars-svg"
     >
       <rect y="10" width="15" height="120" rx="6">
@@ -119,6 +121,6 @@ export const Bars: FunctionComponent<BarsProps> = ({
         />
       </rect>
     </svg>
-  </div>
+  </SvgWrapper>
 )
 

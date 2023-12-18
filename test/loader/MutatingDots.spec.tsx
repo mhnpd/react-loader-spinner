@@ -12,7 +12,7 @@ describe('Mutating Dots', () => {
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'mutating-dots-loading')
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
     expect(component).toHaveAttribute('aria-busy', 'true')
     expect(component).toHaveStyle('display:flex')
 
@@ -46,7 +46,7 @@ describe('Mutating Dots', () => {
       'aria-label',
       'custom-mutating-dots-loading'
     )
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
     expect(component).toHaveAttribute('aria-busy', 'true')
     expect(component).toHaveStyle('display:flex')
     expect(component).toHaveStyle('opacity: 0.5')

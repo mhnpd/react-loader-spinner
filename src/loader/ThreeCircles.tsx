@@ -1,6 +1,7 @@
 import React from 'react'
-import { getDefaultStyle } from '../helpers'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 type Props = {
   wrapperStyle?: Style
@@ -32,8 +33,9 @@ export const ThreeCircles: React.FunctionComponent<Props> = ({
   middleCircleColor,
 }): React.ReactElement => {
   return (
-    <div
-      style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    <SvgWrapper
+      style={wrapperStyle }
+      $visible={visible}
       className={wrapperClass}
       data-testid="three-circles-wrapper"
       aria-label={ariaLabel}
@@ -43,7 +45,7 @@ export const ThreeCircles: React.FunctionComponent<Props> = ({
         version="1.1"
         height={`${height}`}
         width={`${width}`}
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns={SVG_NAMESPACE}
         viewBox="0 0 100 100"
         enableBackground="new 0 0 100 100"
         xmlSpace="preserve"
@@ -95,7 +97,7 @@ export const ThreeCircles: React.FunctionComponent<Props> = ({
           />
         </path>
       </svg>
-    </div>
+    </SvgWrapper>
   )
 }
 

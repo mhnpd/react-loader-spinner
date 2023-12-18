@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
-import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 interface PuffProps extends BaseProps {
   radius?: string | number
@@ -17,8 +18,9 @@ export const Puff: FunctionComponent<PuffProps> = ({
   wrapperClass,
   visible = true,
 }) => (
-  <div
-    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+  <SvgWrapper
+    style={wrapperStyle }
+    $visible={visible}
     className={wrapperClass}
     data-testid="puff-loading"
     aria-label={ariaLabel}
@@ -28,7 +30,7 @@ export const Puff: FunctionComponent<PuffProps> = ({
       width={width}
       height={height}
       viewBox="0 0 44 44"
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       stroke={color}
       data-testid="puff-svg"
     >
@@ -79,6 +81,6 @@ export const Puff: FunctionComponent<PuffProps> = ({
         </circle>
       </g>
     </svg>
-  </div>
+  </SvgWrapper>
 )
 

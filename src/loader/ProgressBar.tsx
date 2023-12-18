@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 interface ProgressBarProps extends Omit<BaseProps, 'color'> {
   borderColor?: string,
   barColor?: string,
 }
 
-export function ProgressBar({
+export const ProgressBar:FunctionComponent<ProgressBarProps> = ({
   visible = true,
   height = '80',
   width = '80',
@@ -15,12 +16,12 @@ export function ProgressBar({
   ariaLabel = 'progress-bar-loading',
   borderColor = '#F4442E',
   barColor = '#51E5FF',
-}: ProgressBarProps) {
+}) => {
   return !visible ? null : (
     <svg
       width={width}
       height={height}
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid"
       className={wrapperClass}

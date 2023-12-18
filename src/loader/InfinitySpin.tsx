@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { DEFAULT_COLOR } from '../type'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 type Props = {
   color?: string
@@ -31,13 +32,13 @@ const Path = styled.path`
   animation: ${anim} ${time}s linear infinite;
 `
 
-export const InfinitySpin = ({
+export const InfinitySpin:FunctionComponent<Props> = ({
   color = DEFAULT_COLOR,
   width = '200',
-}: Props): React.ReactElement => {
+}): React.ReactElement => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       width={`${width}`}
       height={`${Number(width) * 0.5}`}
       viewBox={`0 0 ${width} ${Number(200 * 0.5)}`}

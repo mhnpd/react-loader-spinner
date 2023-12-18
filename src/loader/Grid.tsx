@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper';
 
 interface GridProps extends BaseProps {
   radius?: string | number
@@ -16,8 +16,9 @@ export const Grid: FunctionComponent<GridProps> = ({
   wrapperClass,
   visible = true,
 }): ReactElement => (
-  <div
-    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+  <SvgWrapper
+    style={wrapperStyle }
+    $visible={visible}
     className={wrapperClass}
     data-testid="grid-loading"
     aria-label={ariaLabel}
@@ -121,6 +122,6 @@ export const Grid: FunctionComponent<GridProps> = ({
         />
       </circle>
     </svg>
-  </div>
+  </SvgWrapper>
 )
 

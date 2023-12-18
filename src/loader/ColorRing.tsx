@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { ReactElement, FunctionComponent } from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 interface ColorRingProps extends Omit<BaseProps, 'color'> {
   colors?: [string, string, string, string, string]
 }
 
-export function ColorRing({
+export const ColorRing: FunctionComponent<ColorRingProps> = ({
   visible = true,
   width = '80',
   height = '80',
@@ -13,7 +13,7 @@ export function ColorRing({
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'color-ring-loading',
-}: ColorRingProps) {
+}): ReactElement | null => {
   return !visible ? null : (
     <svg
       xmlns="http://www.w3.org/2000/svg"

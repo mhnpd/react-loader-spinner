@@ -1,6 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 interface TailSpinProps extends BaseProps {
   radius?: string | number,
@@ -23,8 +24,9 @@ export const TailSpin: FunctionComponent<TailSpinProps> = ({
   const halfStrokeWidth = strokeWidthNum / 2;
   const processedRadius = halfStrokeWidth + parseInt(String(radius)) - 1;
   return (
-    <div
-      style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    <SvgWrapper
+      style={wrapperStyle }
+      $visible={visible}
       className={wrapperClass}
       data-testid="tail-spin-loading"
       aria-label={ariaLabel}
@@ -34,7 +36,7 @@ export const TailSpin: FunctionComponent<TailSpinProps> = ({
         width={width}
         height={height}
         viewBox={`0 0 ${viewBoxValue} ${viewBoxValue}`}
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns={SVG_NAMESPACE}
         data-testid="tail-spin-svg"
       >
         <defs>
@@ -74,7 +76,7 @@ export const TailSpin: FunctionComponent<TailSpinProps> = ({
           </g>
         </g>
       </svg>
-    </div>
+    </SvgWrapper>
   )
 }
 

@@ -14,7 +14,7 @@ describe('TailSpin', () => {
     expect(component).toHaveStyle('display: flex')
     expect(component).toHaveAttribute('aria-label', 'tail-spin-loading')
     expect(component).toHaveAttribute('aria-busy', 'true')
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
 
     const svg = screen.getByTestId(svgTestId)
     expect(svg).toBeDefined()
@@ -52,7 +52,7 @@ describe('TailSpin', () => {
     expect(component).toHaveStyle('display: flex')
     expect(component).toHaveAttribute('aria-label', 'test-aria-label')
     expect(component).toHaveAttribute('aria-busy', 'true')
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
     expect(component).toHaveClass('test-class')
     expect(component).toHaveStyle('opacity: 1')
 

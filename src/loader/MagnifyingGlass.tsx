@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 interface MagnifyingGlassProps extends BaseProps {
   glassColor?: string,
 }
 
-export function MagnifyingGlass({
+export const MagnifyingGlass:FunctionComponent<MagnifyingGlassProps> = ({
   visible = true,
   height = '80',
   width = '80',
@@ -14,12 +15,12 @@ export function MagnifyingGlass({
   ariaLabel = 'magnifying-glass-loading',
   glassColor = '#c0efff',
   color = '#e15b64',
-}: MagnifyingGlassProps) {
+}) => {
   return !visible ? null : (
     <svg
       width={width}
       height={height}
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid"
       className={wrapperClass}

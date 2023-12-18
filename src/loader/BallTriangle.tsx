@@ -1,6 +1,7 @@
-import React, { FunctionComponent } from 'react'
-import { getDefaultStyle } from '../helpers'
+import React, { FunctionComponent, ReactElement } from 'react'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper';
+import { SVG_NAMESPACE } from '../shared/constants'
 
 interface BallTriangleProps extends BaseProps {
   radius?: string | number
@@ -15,9 +16,10 @@ export const BallTriangle: FunctionComponent<BallTriangleProps> = ({
   wrapperClass,
   wrapperStyle,
   visible = true
-}) => (
-  <div
-    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+}):ReactElement => (
+  <SvgWrapper
+    style={{...wrapperStyle}}
+    $visible={visible}
     className={wrapperClass}
     data-testid="ball-triangle-loading"
     aria-label={ariaLabel}
@@ -28,9 +30,11 @@ export const BallTriangle: FunctionComponent<BallTriangleProps> = ({
       width={width}
       stroke={color}
       viewBox="0 0 57 57"
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       data-testid="ball-triangle-svg"
     >
+      <title>Ball Triangle</title>
+      <desc>Animated representation of three balls</desc>
       <g fill="none" fillRule="evenodd">
         <g transform="translate(1 1)" strokeWidth="2">
           <circle cx="5" cy="50" r={radius}>
@@ -96,6 +100,6 @@ export const BallTriangle: FunctionComponent<BallTriangleProps> = ({
         </g>
       </g>
     </svg>
-  </div>
+  </SvgWrapper>
 )
 

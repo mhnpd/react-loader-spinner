@@ -1,24 +1,25 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 interface DiscussProps extends Omit<BaseProps, 'color'> {
   colors?: [string, string]
 }
 
-export function Discuss({
+export const Discuss: FunctionComponent<DiscussProps> = ({
   visible = true,
   width = '80',
   height = '80',
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'discuss-loading',
-  colors= ['#ff727d', '#ff727d']
-}: DiscussProps) {
+  colors = ['#ff727d', '#ff727d']
+}) => {
   return !visible ? null : (
     <svg
       width={width}
       height={height}
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid"
       className={wrapperClass}

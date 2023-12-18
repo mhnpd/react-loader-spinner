@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 type FallingLinesProps = {
   color?: string
@@ -8,14 +9,14 @@ type FallingLinesProps = {
   visible?: boolean
 }
 
-export const FallingLines = ({
+export const FallingLines:FunctionComponent<FallingLinesProps> = ({
   color = DEFAULT_COLOR,
   width = '100',
   visible = true,
-}: FallingLinesProps): React.ReactElement | null => {
+}): React.ReactElement | null => {
   return visible ? (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       width={width}
       height={width}
       viewBox="0 0 100 100"

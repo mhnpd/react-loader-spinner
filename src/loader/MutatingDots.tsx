@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
-import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper'
 
 interface MutatingDotsProps extends BaseProps {
   radius?: string | number
@@ -18,8 +18,9 @@ export const MutatingDots: FunctionComponent<MutatingDotsProps> = ({
   wrapperClass,
   visible = true,
 }) => (
-  <div
-    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+  <SvgWrapper
+    style={wrapperStyle }
+    $visible={visible}
     className={wrapperClass}
     data-testid="mutating-dots-loading"
     aria-label={ariaLabel}
@@ -80,6 +81,6 @@ export const MutatingDots: FunctionComponent<MutatingDotsProps> = ({
         </circle>
       </g>
     </svg>
-  </div>
+  </SvgWrapper>
 )
 

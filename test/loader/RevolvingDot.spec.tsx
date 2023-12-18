@@ -12,7 +12,7 @@ describe('RevolvingDot Loader', () => {
     const component = screen.getByTestId(wrapperTestId)
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'revolving-dot-loading')
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
     expect(component).toHaveAttribute('aria-busy', 'true')
     expect(component).toHaveStyle('display:flex')
 

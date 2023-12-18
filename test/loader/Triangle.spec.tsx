@@ -14,7 +14,7 @@ describe('Triangle', () => {
     expect(component).toHaveStyle('display: flex')
     expect(component).toHaveAttribute('aria-label', 'triangle-loading')
     expect(component).toHaveAttribute('aria-busy', 'true')
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
 
     const svg = screen.getByTestId(svgTestId)
     expect(svg).toBeDefined()
@@ -42,7 +42,7 @@ describe('Triangle', () => {
     expect(component).toHaveStyle('display: flex')
     expect(component).toHaveAttribute('aria-label', 'test-aria-label')
     expect(component).toHaveAttribute('aria-busy', 'true')
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
     expect(component).toHaveClass('test-class')
     expect(component).toHaveStyle('opacity: 1')
 

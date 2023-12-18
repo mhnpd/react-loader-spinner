@@ -13,7 +13,7 @@ describe('Rings Loader', () => {
     expect(component).toBeDefined()
     expect(component).toHaveStyle('display:flex')
     expect(component).toHaveAttribute('aria-label', 'rings-loading')
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
     expect(component).toHaveAttribute('aria-busy', 'true')
 
     const svg = screen.getByTestId(svgTestId)
@@ -43,7 +43,7 @@ describe('Rings Loader', () => {
     expect(component).toBeDefined()
     expect(component).toHaveStyle('display:flex')
     expect(component).toHaveAttribute('aria-label', 'custom-aria-label')
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
     expect(component).toHaveAttribute('aria-busy', 'true')
     expect(component).toHaveStyle('opacity:1')
     expect(component).toHaveClass('custom-class')

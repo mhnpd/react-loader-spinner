@@ -11,7 +11,7 @@ describe('Audio Loader', () => {
     expect(loader).toHaveStyle('display: flex')
     expect(loader).toHaveAttribute('aria-label', 'audio-loading')
     expect(loader).toHaveAttribute('aria-busy', 'true')
-    expect(loader).toHaveAttribute('role', 'status')
+    expect(loader).toHaveAttribute('role', 'progressbar')
     expect(loader).toHaveClass('test-class')
     expect(loader).toHaveStyle('opacity:1')
 

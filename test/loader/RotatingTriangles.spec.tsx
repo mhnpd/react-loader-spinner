@@ -11,7 +11,7 @@ describe('Rotating Triangles', () => {
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'rotating-triangle-loading')
     expect(component).toHaveAttribute('aria-busy', 'true')
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
     expect(component).toHaveAttribute('height', '80')
     expect(component).toHaveAttribute('width', '80')
   })
@@ -31,12 +31,12 @@ describe('Rotating Triangles', () => {
     expect(component).toBeDefined()
     expect(component).toHaveAttribute('aria-label', 'test-aria-label')
     expect(component).toHaveAttribute('aria-busy', 'true')
-    expect(component).toHaveAttribute('role', 'status')
+    expect(component).toHaveAttribute('role', 'progressbar')
     expect(component).toHaveClass('test-class')
     expect(component).toHaveStyle('opacity: 1')
     expect(component).toHaveAttribute('height', '200')
     expect(component).toHaveAttribute('width', '200')
-    
+
     component.querySelectorAll('polygon').forEach(p => {
      const color = p.getAttribute('fill')
      expect(['red', 'green', 'blue']).toContain(color)

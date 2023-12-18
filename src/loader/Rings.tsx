@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
-import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 interface RingsProps extends BaseProps {
   radius?: string | number
@@ -16,8 +17,9 @@ export const Rings: FunctionComponent<RingsProps> = ({
   wrapperClass,
   visible = true,
 }) => (
-  <div
-    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+  <SvgWrapper
+    style={wrapperStyle }
+    $visible={visible}
     className={wrapperClass}
     data-testid="rings-loading"
     aria-label={ariaLabel}
@@ -27,7 +29,7 @@ export const Rings: FunctionComponent<RingsProps> = ({
       width={width}
       height={height}
       viewBox="0 0 45 45"
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       stroke={color}
       data-testid="rings-svg"
     >
@@ -101,6 +103,6 @@ export const Rings: FunctionComponent<RingsProps> = ({
         </circle>
       </g>
     </svg>
-  </div>
+  </SvgWrapper>
 )
 

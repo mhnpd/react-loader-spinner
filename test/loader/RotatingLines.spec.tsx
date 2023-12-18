@@ -14,7 +14,7 @@ describe('Rotating Lines Loader', () => {
     expect(loader).toHaveAttribute('speed', '0.75')
     expect(loader).toHaveAttribute('aria-busy', 'true')
     expect(loader).toHaveAttribute('aria-label', 'rotating-lines-loading')
-    expect(loader).toHaveAttribute('role', 'status')
+    expect(loader).toHaveAttribute('role', 'progressbar')
   })
 
   it('should apply custom props', () => {

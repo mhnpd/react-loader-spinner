@@ -1,20 +1,20 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 interface DNAProps extends Omit<BaseProps, 'color'> {}
 
-export const DNA = ({
+export const DNA:FunctionComponent<DNAProps> = ({
   visible = true,
   width = '80',
   height = '80',
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'dna-loading',
-}: DNAProps)  => {
+})  => {
   return !visible ? null : (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
+      xmlns={SVG_NAMESPACE}
       width={width}
       height={height}
       viewBox="0 0 100 100"

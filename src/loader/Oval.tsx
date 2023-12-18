@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper'
 
 interface OvalProps extends BaseProps {
   strokeWidth?: string | number
@@ -54,8 +54,9 @@ export const Oval: FunctionComponent<OvalProps> = ({
   strokeWidth = 2,
   strokeWidthSecondary,
 }): ReactElement => (
-  <div
-    style={{ ...getDefaultStyle(visible), ...wrapperStyle}}
+  <SvgWrapper
+    style={wrapperStyle}
+    $visible={visible}
     className={wrapperClass}
     data-testid="oval-loading"
     aria-label={ariaLabel}
@@ -100,5 +101,5 @@ export const Oval: FunctionComponent<OvalProps> = ({
         </g>
       </g>
     </svg>
-  </div>
+  </SvgWrapper>
 )

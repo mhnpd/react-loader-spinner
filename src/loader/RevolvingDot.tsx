@@ -1,6 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 interface RevolvingDotProps extends BaseProps {
   radius?: number
@@ -18,8 +19,9 @@ export const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
   wrapperClass,
   visible = true,
 }): ReactElement => (
-  <div
-    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+  <SvgWrapper
+    style={wrapperStyle }
+    $visible={visible}
     className={wrapperClass}
     aria-label={ariaLabel}
     data-testid="revolving-dot-loading"
@@ -29,7 +31,7 @@ export const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
       version="1.1"
       width={`calc(${radius} * 2.5)`}
       height={`calc(${radius} * 2.5)`}
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       x="0px"
       y="0px"
       data-testid="revolving-dot-svg"
@@ -62,6 +64,6 @@ export const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
         />
       </circle>
     </svg>
-  </div>
+  </SvgWrapper>
 )
 

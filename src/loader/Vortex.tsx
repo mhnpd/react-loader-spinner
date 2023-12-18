@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 interface VortexProps extends Omit<BaseProps, 'color'> {
   colors?: [string, string, string, string, string, string]
 }
 
-export const Vortex = ({
+export const Vortex:FunctionComponent<VortexProps> = ({
   visible = true,
   height = '80',
   width = '80',
@@ -13,12 +14,12 @@ export const Vortex = ({
   wrapperStyle,
   wrapperClass,
   colors = ['#1B5299', '#EF8354', '#DB5461', '#1B5299', '#EF8354', '#DB5461'],
-}: VortexProps) => {
+}) => {
   return !visible ? null : (
     <svg
       height={height}
       width={width}
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid"
       data-testid="vortex-svg"

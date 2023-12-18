@@ -1,6 +1,8 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, FunctionComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SVG_NAMESPACE } from '../shared/constants'
+
 
 type Props = {
   width?: string
@@ -73,14 +75,14 @@ const Polyline = styled.polyline`
   }
 `
 
-export function RotatingLines({
+export const RotatingLines:FunctionComponent<Props> = ({
   strokeColor = DEFAULT_COLOR,
   strokeWidth = '5',
   animationDuration = '0.75',
   width = '96',
   visible = true,
   ariaLabel = 'rotating-lines-loading',
-}: Props): React.ReactElement | null {
+}): React.ReactElement | null => {
   const lines = useCallback(
     () =>
       POINTS.map(point => (
@@ -95,7 +97,7 @@ export function RotatingLines({
   )
   return !visible ? null : (
     <Svg
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       viewBox="0 0 48 48"
       width={width}
       stroke={strokeColor}

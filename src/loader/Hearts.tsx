@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
-import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper';
 interface HeartsProps extends BaseProps {}
 
 export const Hearts: FunctionComponent<HeartsProps> = ({
@@ -12,8 +12,9 @@ export const Hearts: FunctionComponent<HeartsProps> = ({
   wrapperClass,
   visible = true,
 }) => (
-  <div
-    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+  <SvgWrapper
+    style={wrapperStyle }
+    $visible={visible}
     className={wrapperClass}
     data-testid="hearts-loading"
     aria-label={ariaLabel}
@@ -59,6 +60,6 @@ export const Hearts: FunctionComponent<HeartsProps> = ({
       </path>
       <path d="M67.408 57.834l-23.01-24.98c-5.864-6.15-5.864-16.108 0-22.248 5.86-6.14 15.37-6.14 21.234 0L70 16.168l4.368-5.562c5.863-6.14 15.375-6.14 21.235 0 5.863 6.14 5.863 16.098 0 22.247l-23.007 24.98c-1.43 1.556-3.757 1.556-5.188 0z" />
     </svg>
-  </div>
+  </SvgWrapper>
 )
 

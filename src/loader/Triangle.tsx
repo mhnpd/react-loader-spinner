@@ -1,7 +1,8 @@
 import React, { FunctionComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { getDefaultStyle } from '../helpers'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { SvgWrapper } from '../shared/svg-wrapper'
+import { SVG_NAMESPACE } from '../shared/constants'
 
 /** Styles */
 const dash = keyframes`
@@ -32,8 +33,9 @@ export const Triangle: FunctionComponent<TriangleProps> = ({
   wrapperClass,
   visible = true,
 }: TriangleProps): React.ReactElement => (
-  <div
-    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+  <SvgWrapper
+    style={wrapperStyle }
+    $visible={visible}
     className={`${wrapperClass}`}
     data-testid="triangle-loading"
     aria-label={ariaLabel}
@@ -43,7 +45,7 @@ export const Triangle: FunctionComponent<TriangleProps> = ({
       id="triangle"
       width={width}
       height={height}
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns={SVG_NAMESPACE}
       viewBox={VIEW_BOX_VALUES}
       data-testid="triangle-svg"
     >
@@ -54,6 +56,6 @@ export const Triangle: FunctionComponent<TriangleProps> = ({
         points={POLYGON_POINTS}
       />
     </SVG>
-  </div>
+  </SvgWrapper>
 )
 

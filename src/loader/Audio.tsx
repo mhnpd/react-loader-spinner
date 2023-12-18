@@ -15,15 +15,13 @@ export const Audio: FunctionComponent<AudioProps> = ({
   visible = true,
 }): ReactElement => (
   <SvgWrapper
-    visible={visible}
-    style={wrapperStyle}
+    $visible={visible}
+    style={{...wrapperStyle}}
     className={wrapperClass}
     data-testid="audio-loading"
     aria-label={ariaLabel}
     {...DEFAULT_WAI_ARIA_ATTRIBUTE}
   >
-    <title>Audio Visualization</title>
-    <desc>Animated representation of audio data</desc>
     <svg
       height={`${height}`}
       width={`${width}`}
@@ -32,6 +30,8 @@ export const Audio: FunctionComponent<AudioProps> = ({
       xmlns={SVG_NAMESPACE}
       data-testid="audio-svg"
     >
+      <title>Audio Visualization</title>
+      <desc>Animated representation of audio data</desc>
       <g transform="matrix(1 0 0 -1 0 80)">
         <rect width="10" height="20" rx="3">
           <animate
