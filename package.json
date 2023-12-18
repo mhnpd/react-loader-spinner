@@ -65,7 +65,6 @@
   },
   "dependencies": {
     "react-is": "^18.2.0",
-    "styled-components": "^6.1.1",
-    "styled-tools": "^1.7.2"
+    "styled-components": "^6.1.1"
   }
 }
