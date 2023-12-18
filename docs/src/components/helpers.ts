@@ -25,7 +25,7 @@ export const defaultPropsTypes = {
   strokeColor: 'string',
 }
 
-export const getDefaultPropsValue = (componentName)=>({
+export const getDefaultPropsValue = (componentName:string)=>({
   height: '80',
   width: '80',
   color: `#4fa94d`,
@@ -36,7 +36,7 @@ export const getDefaultPropsValue = (componentName)=>({
   visible: 'true',
 })
 
-export const getPropsTableData = (componentName, excluded=[])=>{
+export const getPropsTableData = (componentName:string, excluded=[])=>{
   return [
     {
       name: 'height',
