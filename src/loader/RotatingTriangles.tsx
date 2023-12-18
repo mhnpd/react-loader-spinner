@@ -31,7 +31,6 @@ export function RotatingTriangles({
         <g transform="scale(0.8)">
           <g transform="translate(-50,-50)">
             <polygon
-              ng-attr-fill="{{config.c1}}"
               points="72.5,50 50,11 27.5,50 50,50"
               fill={colors[0]}
               transform="rotate(186 50 38.5)"
@@ -48,7 +47,6 @@ export function RotatingTriangles({
               ></animateTransform>
             </polygon>
             <polygon
-              ng-attr-fill="{{config.c2}}"
               points="5,89 50,89 27.5,50"
               fill={colors[1]}
               transform="rotate(186 27.5 77.5)"
@@ -65,7 +63,6 @@ export function RotatingTriangles({
               ></animateTransform>
             </polygon>
             <polygon
-              ng-attr-fill="{{config.c3}}"
               points="72.5,50 50,89 95,89"
               fill={colors[2]}
               transform="rotate(186 72.2417 77.5)"

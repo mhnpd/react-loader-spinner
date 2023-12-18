@@ -28,9 +28,6 @@ export function Discuss({
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <path
-        ng-attr-d="{{config.d}}"
-        ng-attr-stroke-width="{{config.width}}"
-        ng-attr-stroke="{{config.stroke}}"
         fill="none"
         d="M82 50A32 32 0 1 1 23.533421623214014 32.01333190873183 L21.71572875253809 21.7157287525381 L32.013331908731814 23.53342162321403 A32 32 0 0 1 82 50"
         strokeWidth="5"
@@ -39,10 +36,6 @@ export function Discuss({
       <circle
         cx="50"
         cy="50"
-        ng-attr-r="{{config.radius2}}"
-        ng-attr-stroke-width="{{config.width}}"
-        ng-attr-stroke="{{config.stroke}}"
-        ng-attr-stroke-dasharray="{{config.dasharray}}"
         fill="none"
         strokeLinecap="round"
         r="20"

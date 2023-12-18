@@ -31,7 +31,6 @@ export function ProgressBar({
     >
       <defs>
         <clipPath
-          ng-attr-id="{{config.cpid}}"
           x="0"
           y="0"
           width="100"
@@ -62,14 +61,11 @@ export function ProgressBar({
       </defs>
       <path
         fill="none"
-        ng-attr-stroke="{{config.c1}}"
         strokeWidth="2.7928"
         d="M82,63H18c-7.2,0-13-5.8-13-13v0c0-7.2,5.8-13,13-13h64c7.2,0,13,5.8,13,13v0C95,57.2,89.2,63,82,63z"
         stroke={borderColor}
       ></path>
       <path
-        ng-attr-fill="{{config.c2}}"
-        ng-attr-clip-path="url(#{{config.cpid}})"
         d="M81.3,58.7H18.7c-4.8,0-8.7-3.9-8.7-8.7v0c0-4.8,3.9-8.7,8.7-8.7h62.7c4.8,0,8.7,3.9,8.7,8.7v0C90,54.8,86.1,58.7,81.3,58.7z"
         fill={barColor}
         clipPath="url(#lds-progress-cpid-5009611b8a418)"
