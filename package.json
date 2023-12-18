@@ -4,7 +4,7 @@
   "description": " react-spinner-loader provides simple React.js spinner component which can be implemented for async wait operation before data load to the view.",
   "unpkg": "dist/index.js",
   "jsdelivr": "dist/index.js",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "source": "src/index.tsx",
   "module": "dist/module.js",
   "types": "dist/types.d.ts",
