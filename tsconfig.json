@@ -7,8 +7,6 @@
 		"sourceMap": true,
 		"outDir": "lib",
 		"strict": true,
-		"allowSyntheticDefaultImports": true,
-		"esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
 	},
   "exclude": ["docs"]
