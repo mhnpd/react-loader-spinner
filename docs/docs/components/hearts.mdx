@@ -2,11 +2,14 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { Hearts } from 'react-loader-spinner'
 
 # Hearts
 
-```jsx live
-<Hearts
+<LiveProvider
+  code={`
+  render(<Hearts
   height="80"
   width="80"
   color="#4fa94d"
@@ -14,8 +17,18 @@ import PropsTable from '../../src/components/props-table'
   wrapperStyle={{}}
   wrapperClass=""
   visible={true}
-/>
-```
+  />)
+`}
+  scope={{ Hearts }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+
+---
 
 ## Props
 

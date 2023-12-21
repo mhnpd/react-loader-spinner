@@ -25,6 +25,7 @@
     "rc-table": "^7.36.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-live": "^4.1.5",
     "react-loader-spinner": "^6.1.4"
   },
   "devDependencies": {
