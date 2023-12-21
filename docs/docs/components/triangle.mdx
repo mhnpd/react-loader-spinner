@@ -3,21 +3,32 @@
 
 import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { Triangle } from 'react-loader-spinner'
 
 # Triangle
 
-```jsx live
-<Triangle
+<LiveProvider
+  code={`
+  render(<Triangle
+  visible={true}
   height="80"
   width="80"
   color="#4fa94d"
   ariaLabel="triangle-loading"
   wrapperStyle={{}}
   wrapperClass=""
-  visible={true}
-/>
-```
+  />)
+`}
+  scope={{ Triangle }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
 
+---
 ## Props
 
 <PropsTable

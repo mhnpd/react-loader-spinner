@@ -3,24 +3,32 @@
 
 import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { ThreeCircles } from 'react-loader-spinner'
 
 # Three Circles
 
-```jsx live
-<ThreeCircles
+<LiveProvider
+  code={`
+  render(<ThreeCircles
+  visible={true}
   height="100"
   width="100"
   color="#4fa94d"
+  ariaLabel="three-circles-loading"
   wrapperStyle={{}}
   wrapperClass=""
-  visible={true}
-  ariaLabel="three-circles-rotating"
-  outerCircleColor=""
-  innerCircleColor=""
-  middleCircleColor=""
-/>
-```
+  />)
+`}
+  scope={{ ThreeCircles }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
 
+---
 ## Props
 
 <PropsTable

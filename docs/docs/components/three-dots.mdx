@@ -3,22 +3,33 @@
 
 import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { ThreeDots } from 'react-loader-spinner'
 
 # Three Dots
 
-```jsx live
-<ThreeDots
+<LiveProvider
+  code={`
+  render(<ThreeDots
+  visible={true}
   height="80"
   width="80"
-  radius="9"
   color="#4fa94d"
+  radius="9"
   ariaLabel="three-dots-loading"
   wrapperStyle={{}}
   wrapperClass=""
-  visible={true}
-/>
-```
+  />)
+`}
+  scope={{ ThreeDots }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
 
+---
 ## Props
 
 <PropsTable

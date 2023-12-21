@@ -3,11 +3,14 @@
 
 import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { Watch } from 'react-loader-spinner'
 
 # Watch
 
-```jsx live
-<Watch
+<LiveProvider
+  code={`
+  render(<Watch
+  visible={true}
   height="80"
   width="80"
   radius="48"
@@ -15,10 +18,18 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
   ariaLabel="watch-loading"
   wrapperStyle={{}}
   wrapperClass=""
-  visible={true}
-/>
-```
+  />)
+`}
+  scope={{ Watch }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
 
+---
 ## Props
 
 <PropsTable
