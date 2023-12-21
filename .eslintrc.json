@@ -35,6 +35,9 @@
           {
             "module": "react",
             "functions": ["createContext", "createRef"]
+          },
+          {
+            "files": ["*.test.tsx", "*.test.ts"]
           }
         ]
       }
