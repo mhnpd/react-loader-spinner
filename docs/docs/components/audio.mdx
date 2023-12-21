@@ -3,10 +3,15 @@
 
 import PropsTable from '../../src/components/props-table'
 import { getPropsTableData } from '../../src/components/helpers'
+import { Audio } from 'react-loader-spinner'
 
 # Audio
 
-```jsx live
+<Audio />
+
+---
+
+```jsx
 <Audio
   height="100"
   width="100"
@@ -17,7 +22,6 @@ import { getPropsTableData } from '../../src/components/helpers'
   visible={true}
 />
 ```
-
 ### Props
 
 <PropsTable properties={[...getPropsTableData('audio', 'colors')]} />
