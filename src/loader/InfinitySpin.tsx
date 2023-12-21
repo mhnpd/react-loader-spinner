@@ -11,31 +11,31 @@ type Props = {
 const len = 242.776657104492
 const time = 1.6
 
-const anim = keyframes`
-  12.5% {
-    stroke-dasharray: ${len * 0.14}px, ${len}px;
-    stroke-dashoffset: -${len * 0.11}px;
-  }
-  43.75% {
-    stroke-dasharray: ${len * 0.35}px, ${len}px;
-    stroke-dashoffset: -${len * 0.35}px;
-  }
-  100% {
-    stroke-dasharray: ${len * 0.01}px, ${len}px;
-    stroke-dashoffset: -${len * 0.99}px;
-  }
-`
-
-const Path = styled.path`
-  stroke-dasharray: ${len * 0.01}px, ${len};
-  stroke-dashoffset: 0;
-  animation: ${anim} ${time}s linear infinite;
-`
-
-export const InfinitySpin:FunctionComponent<Props> = ({
+export const InfinitySpin: FunctionComponent<Props> = ({
   color = DEFAULT_COLOR,
   width = '200',
 }): React.ReactElement => {
+  const anim = keyframes`
+12.5% {
+  stroke-dasharray: ${len * 0.14}px, ${len}px;
+  stroke-dashoffset: -${len * 0.11}px;
+}
+43.75% {
+  stroke-dasharray: ${len * 0.35}px, ${len}px;
+  stroke-dashoffset: -${len * 0.35}px;
+}
+100% {
+  stroke-dasharray: ${len * 0.01}px, ${len}px;
+  stroke-dashoffset: -${len * 0.99}px;
+}
+`
+
+  const Path = styled.path`
+    stroke-dasharray: ${len * 0.01}px, ${len};
+    stroke-dashoffset: 0;
+    animation: ${anim} ${time}s linear infinite;
+  `
+
   return (
     <svg
       xmlns={SVG_NAMESPACE}
@@ -68,4 +68,3 @@ export const InfinitySpin:FunctionComponent<Props> = ({
     </svg>
   )
 }
-

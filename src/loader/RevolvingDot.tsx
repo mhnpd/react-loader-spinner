@@ -20,7 +20,7 @@ export const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
   visible = true,
 }): ReactElement => (
   <SvgWrapper
-    style={wrapperStyle }
+    style={wrapperStyle}
     $visible={visible}
     className={wrapperClass}
     aria-label={ariaLabel}
@@ -66,4 +66,3 @@ export const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
     </svg>
   </SvgWrapper>
 )
-

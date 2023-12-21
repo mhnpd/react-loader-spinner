@@ -1,19 +1,19 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps,  DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
 
 interface RotatingTrianglesProps extends Omit<BaseProps, 'color'> {
-  colors?: [string, string, string],
+  colors?: [string, string, string]
 }
 
-export const RotatingTriangles:FunctionComponent<RotatingTrianglesProps> = ({
+export const RotatingTriangles: FunctionComponent<RotatingTrianglesProps> = ({
   visible = true,
   height = '80',
   width = '80',
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'rotating-triangle-loading',
-  colors= ['#1B5299', '#EF8354', '#DB5461'],
+  colors = ['#1B5299', '#EF8354', '#DB5461'],
 }) => {
   return !visible ? null : (
     <svg
@@ -25,7 +25,7 @@ export const RotatingTriangles:FunctionComponent<RotatingTrianglesProps> = ({
       className={wrapperClass}
       style={wrapperStyle}
       aria-label={ariaLabel}
-      data-testid='rotating-triangle-svg'
+      data-testid="rotating-triangle-svg"
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <g transform="translate(50,42)">

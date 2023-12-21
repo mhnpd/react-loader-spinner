@@ -1,4 +1,4 @@
-import React, {FunctionComponent, ReactElement} from 'react'
+import React, { FunctionComponent, ReactElement } from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
 
@@ -6,7 +6,7 @@ interface CommentProps extends BaseProps {
   backgroundColor?: string
 }
 
-export const Comment:FunctionComponent<CommentProps> = ({
+export const Comment: FunctionComponent<CommentProps> = ({
   visible = true,
   width = '80',
   height = '80',
@@ -16,7 +16,7 @@ export const Comment:FunctionComponent<CommentProps> = ({
   wrapperStyle = {},
   ariaLabel = 'comment-loading',
 }): ReactElement | null => {
-  return !visible ?null: (
+  return !visible ? null : (
     <svg
       width={width}
       height={height}
@@ -44,7 +44,7 @@ export const Comment:FunctionComponent<CommentProps> = ({
           repeatCount="indefinite"
         ></animate>
       </circle>
-      <circle cx="50" cy="47" r="5"  fill={color}>
+      <circle cx="50" cy="47" r="5" fill={color}>
         <animate
           attributeName="opacity"
           calcMode="linear"
@@ -55,7 +55,7 @@ export const Comment:FunctionComponent<CommentProps> = ({
           repeatCount="indefinite"
         ></animate>
       </circle>
-      <circle cx="70" cy="47" r="5"  fill={color}>
+      <circle cx="70" cy="47" r="5" fill={color}>
         <animate
           attributeName="opacity"
           calcMode="linear"

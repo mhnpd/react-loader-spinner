@@ -1,3 +1,5 @@
+// Such export is called Tree Shaking. It allows to import only the components
+// that are needed while webpack will remove the rest of the code from the bundle.
 export { Audio } from './loader/Audio'
 export { BallTriangle } from './loader/BallTriangle'
 export { Bars } from './loader/Bars'

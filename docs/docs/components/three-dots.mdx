@@ -1,20 +1,21 @@
 ---
 ---
+
 import PropsTable from '../../src/components/props-table'
 
 # Three Dots
 
 ```jsx live
 <ThreeDots
-height="80"
-width="80"
-radius="9"
-color="#4fa94d"
-ariaLabel="three-dots-loading"
-wrapperStyle={{}}
-wrapperClass=""
-visible={true}
- />
+  height="80"
+  width="80"
+  radius="9"
+  color="#4fa94d"
+  ariaLabel="three-dots-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+/>
 ```
 
 ## Props
@@ -55,13 +56,15 @@ visible={true}
       name: 'wrapperStyle',
       type: 'object',
       default: '{}',
-      description: 'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
+      description:
+        'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
     },
     {
       name: 'wrapperClass',
       type: 'string',
       default: '',
-      description: 'Class name of the wrapper element. It can be used for custom styling.',
+      description:
+        'Class name of the wrapper element. It can be used for custom styling.',
     },
     {
       name: 'visible',

@@ -153,4 +153,3 @@ export const CirclesWithBar: React.FunctionComponent<Props> = ({
     </SvgWrapper>
   )
 }
-

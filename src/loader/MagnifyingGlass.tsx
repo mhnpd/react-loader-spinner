@@ -3,10 +3,10 @@ import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
 
 interface MagnifyingGlassProps extends BaseProps {
-  glassColor?: string,
+  glassColor?: string
 }
 
-export const MagnifyingGlass:FunctionComponent<MagnifyingGlassProps> = ({
+export const MagnifyingGlass: FunctionComponent<MagnifyingGlassProps> = ({
   visible = true,
   height = '80',
   width = '80',
@@ -26,7 +26,7 @@ export const MagnifyingGlass:FunctionComponent<MagnifyingGlassProps> = ({
       className={wrapperClass}
       style={wrapperStyle}
       aria-label={ariaLabel}
-      data-testid='magnifying-glass-svg'
+      data-testid="magnifying-glass-svg"
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <g transform="translate(50,50)">

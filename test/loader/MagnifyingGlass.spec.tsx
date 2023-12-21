@@ -25,7 +25,7 @@ describe('DNA', () => {
         wrapperClass="test-class"
         wrapperStyle={{ opacity: '1' }}
         color="red"
-        glassColor='green'
+        glassColor="green"
       />
     )
     const component = screen.getByTestId(svgTestId)

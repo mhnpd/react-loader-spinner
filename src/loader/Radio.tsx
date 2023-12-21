@@ -6,7 +6,7 @@ interface RadioProps extends Omit<BaseProps, 'color'> {
   colors?: [string, string, string]
 }
 
-export const Radio:FunctionComponent<RadioProps> = ({
+export const Radio: FunctionComponent<RadioProps> = ({
   visible = true,
   height = '80',
   width = '80',
@@ -28,12 +28,7 @@ export const Radio:FunctionComponent<RadioProps> = ({
       data-testid="radio-bar-svg"
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
-      <circle
-        cx="28"
-        cy="75"
-        r="11"
-        fill={colors[0]}
-      >
+      <circle cx="28" cy="75" r="11" fill={colors[0]}>
         <animate
           attributeName="fill-opacity"
           calcMode="linear"

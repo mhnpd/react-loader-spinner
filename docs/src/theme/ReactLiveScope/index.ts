@@ -7,6 +7,6 @@ import PropsTable from '../../components/props-table'
 const ReactLiveScope = {
   ...React,
   PropsTable,
-  ...Spinners
+  ...Spinners,
 }
 export default ReactLiveScope

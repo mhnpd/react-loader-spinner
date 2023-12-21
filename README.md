@@ -29,7 +29,6 @@ yarn add react-loader-spinner
 
 ### Usage
 
-> 
 > No css import is required
 
 ```jsx

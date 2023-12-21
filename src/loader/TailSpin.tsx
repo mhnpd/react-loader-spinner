@@ -4,7 +4,7 @@ import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
 
 interface TailSpinProps extends BaseProps {
-  radius?: string | number,
+  radius?: string | number
   strokeWidth?: string | number
 }
 
@@ -19,13 +19,13 @@ export const TailSpin: FunctionComponent<TailSpinProps> = ({
   wrapperClass,
   visible = true,
 }): ReactElement => {
-  const strokeWidthNum = parseInt(String(strokeWidth));
-  const viewBoxValue = strokeWidthNum + 36;
-  const halfStrokeWidth = strokeWidthNum / 2;
-  const processedRadius = halfStrokeWidth + parseInt(String(radius)) - 1;
+  const strokeWidthNum = parseInt(String(strokeWidth))
+  const viewBoxValue = strokeWidthNum + 36
+  const halfStrokeWidth = strokeWidthNum / 2
+  const processedRadius = halfStrokeWidth + parseInt(String(radius)) - 1
   return (
     <SvgWrapper
-      style={wrapperStyle }
+      style={wrapperStyle}
       $visible={visible}
       className={wrapperClass}
       data-testid="tail-spin-loading"
@@ -79,4 +79,3 @@ export const TailSpin: FunctionComponent<TailSpinProps> = ({
     </SvgWrapper>
   )
 }
-

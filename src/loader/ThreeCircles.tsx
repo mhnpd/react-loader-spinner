@@ -34,7 +34,7 @@ export const ThreeCircles: React.FunctionComponent<Props> = ({
 }): React.ReactElement => {
   return (
     <SvgWrapper
-      style={wrapperStyle }
+      style={wrapperStyle}
       $visible={visible}
       className={wrapperClass}
       data-testid="three-circles-wrapper"
@@ -100,4 +100,3 @@ export const ThreeCircles: React.FunctionComponent<Props> = ({
     </SvgWrapper>
   )
 }
-

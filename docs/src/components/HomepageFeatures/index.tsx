@@ -12,17 +12,20 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'TypeScript Compatibility',
     Svg: require('@site/static/img/typescript-support.svg').default,
-    description: 'Our library is meticulously crafted in TypeScript, ensuring seamless compatibility with all contemporary web browsers."',
+    description:
+      'Our library is meticulously crafted in TypeScript, ensuring seamless compatibility with all contemporary web browsers."',
   },
   {
     title: 'Highly Customizable',
     Svg: require('@site/static/img/customizable.svg').default,
-    description: 'ou can effortlessly personalize the loader by supplying custom properties to the loader component',
+    description:
+      'ou can effortlessly personalize the loader by supplying custom properties to the loader component',
   },
   {
     title: 'Light Weight',
     Svg: require('@site/static/img/light-weight.svg').default,
-    description: 'This library is featherweight, devoid of any additional dependencies.',
+    description:
+      'This library is featherweight, devoid of any additional dependencies.',
   },
 ]
 
@@ -40,7 +43,7 @@ function Feature({ title, Svg, description }: FeatureItem) {
   )
 }
 
-export default function HomepageFeatures(){
+export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">

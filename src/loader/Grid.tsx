@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactElement } from 'react'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
-import { SvgWrapper } from '../shared/svg-wrapper';
+import { SvgWrapper } from '../shared/svg-wrapper'
 
 interface GridProps extends BaseProps {
   radius?: string | number
@@ -17,7 +17,7 @@ export const Grid: FunctionComponent<GridProps> = ({
   visible = true,
 }): ReactElement => (
   <SvgWrapper
-    style={wrapperStyle }
+    style={wrapperStyle}
     $visible={visible}
     className={wrapperClass}
     data-testid="grid-loading"
@@ -124,4 +124,3 @@ export const Grid: FunctionComponent<GridProps> = ({
     </svg>
   </SvgWrapper>
 )
-

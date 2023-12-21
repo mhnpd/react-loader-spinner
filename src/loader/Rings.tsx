@@ -18,7 +18,7 @@ export const Rings: FunctionComponent<RingsProps> = ({
   visible = true,
 }) => (
   <SvgWrapper
-    style={wrapperStyle }
+    style={wrapperStyle}
     $visible={visible}
     className={wrapperClass}
     data-testid="rings-loading"
@@ -105,4 +105,3 @@ export const Rings: FunctionComponent<RingsProps> = ({
     </svg>
   </SvgWrapper>
 )
-

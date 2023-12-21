@@ -36,9 +36,6 @@ describe('Blocks', () => {
     expect(component).toHaveStyle('opacity: 1')
     expect(component).toHaveAttribute('height', '200')
     expect(component).toHaveAttribute('width', '200')
-
-
-
   })
   test('should be hidden when visible is false', () => {
     render(<Blocks visible={false} />)

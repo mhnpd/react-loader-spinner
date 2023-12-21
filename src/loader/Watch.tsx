@@ -18,7 +18,7 @@ export const Watch: FunctionComponent<WatchProps> = ({
   visible = true,
 }) => (
   <SvgWrapper
-    style={wrapperStyle }
+    style={wrapperStyle}
     $visible={visible}
     className={wrapperClass}
     data-testid="watch-loading"
@@ -90,4 +90,3 @@ export const Watch: FunctionComponent<WatchProps> = ({
     </svg>
   </SvgWrapper>
 )
-

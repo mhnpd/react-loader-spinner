@@ -2,7 +2,7 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
-import { getPropsTableData} from '../../src/components/helpers'
+import { getPropsTableData } from '../../src/components/helpers'
 
 # Grid
 
@@ -20,6 +20,7 @@ import { getPropsTableData} from '../../src/components/helpers'
 ```
 
 ### Props
+
 <PropsTable
   properties={[
     ...getPropsTableData('grid', ['colors']),
@@ -27,7 +28,7 @@ import { getPropsTableData} from '../../src/components/helpers'
       name: 'radius',
       type: 'number | string',
       default: '12.5',
-      description: 'Radius of the grid'
+      description: 'Radius of the grid',
     },
-    ]}
+  ]}
 />

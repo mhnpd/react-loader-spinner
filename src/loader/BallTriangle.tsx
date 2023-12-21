@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactElement } from 'react'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
-import { SvgWrapper } from '../shared/svg-wrapper';
+import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
 
 interface BallTriangleProps extends BaseProps {
@@ -15,10 +15,10 @@ export const BallTriangle: FunctionComponent<BallTriangleProps> = ({
   ariaLabel = 'ball-triangle-loading',
   wrapperClass,
   wrapperStyle,
-  visible = true
-}):ReactElement => (
+  visible = true,
+}): ReactElement => (
   <SvgWrapper
-    style={{...wrapperStyle}}
+    style={{ ...wrapperStyle }}
     $visible={visible}
     className={wrapperClass}
     data-testid="ball-triangle-loading"
@@ -102,4 +102,3 @@ export const BallTriangle: FunctionComponent<BallTriangleProps> = ({
     </svg>
   </SvgWrapper>
 )
-

@@ -4,11 +4,12 @@ export const getDescription = (componentName: string) => ({
   colors: `Defines the colors of the ${componentName} SVG. Accepts multiple color objects. If a comprehensive list of colors is not provided, defaults will be applied. Refer to the example.`,
   color: `Sets the color of the ${componentName} SVG.`,
   ariaLabel: `Specifies the Aria label of the ${componentName}. This label will be applied to the aria-label attribute in the wrapper element.`,
-  wrapperStyle: 'Applies styles to the wrapper. It should be a valid CSS object and can be used for custom styling, overriding the default style.',
+  wrapperStyle:
+    'Applies styles to the wrapper. It should be a valid CSS object and can be used for custom styling, overriding the default style.',
   wrapperClass: `Assigns a className to the wrapper for custom styling, overriding the default style.`,
   visible: `Controls the visibility of the ${componentName}. If set to false, the ${componentName} will not be rendered.`,
   radius: `Determines the radius of the circle(s) in the ${componentName} component. For further customization, use the wrapper className.`,
-});
+})
 
 export const defaultPropsTypes = {
   height: 'number | string',
@@ -25,7 +26,7 @@ export const defaultPropsTypes = {
   strokeColor: 'string',
 }
 
-export const getDefaultPropsValue = (componentName:string)=>({
+export const getDefaultPropsValue = (componentName: string) => ({
   height: '80',
   width: '80',
   color: `#4fa94d`,
@@ -36,7 +37,10 @@ export const getDefaultPropsValue = (componentName:string)=>({
   visible: 'true',
 })
 
-export const getPropsTableData = (componentName:string, excluded:string[] = [])=>{
+export const getPropsTableData = (
+  componentName: string,
+  excluded: string[] = []
+) => {
   return [
     {
       name: 'height',
@@ -80,5 +84,5 @@ export const getPropsTableData = (componentName:string, excluded:string[] = [])=
       default: getDefaultPropsValue(componentName).visible,
       description: getDescription(componentName).visible,
     },
-  ].filter(f=>!excluded.includes(f.name))
+  ].filter(f => !excluded.includes(f.name))
 }

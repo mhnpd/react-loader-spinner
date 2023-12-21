@@ -38,8 +38,8 @@ describe('Rotating Triangles', () => {
     expect(component).toHaveAttribute('width', '200')
 
     component.querySelectorAll('polygon').forEach(p => {
-     const color = p.getAttribute('fill')
-     expect(['red', 'green', 'blue']).toContain(color)
+      const color = p.getAttribute('fill')
+      expect(['red', 'green', 'blue']).toContain(color)
     })
   })
   test('should be hidden when visible is false', () => {

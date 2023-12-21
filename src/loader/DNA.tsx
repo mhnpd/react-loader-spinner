@@ -4,14 +4,14 @@ import { SVG_NAMESPACE } from '../shared/constants'
 
 interface DNAProps extends Omit<BaseProps, 'color'> {}
 
-export const DNA:FunctionComponent<DNAProps> = ({
+export const DNA: FunctionComponent<DNAProps> = ({
   visible = true,
   width = '80',
   height = '80',
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'dna-loading',
-})  => {
+}) => {
   return !visible ? null : (
     <svg
       xmlns={SVG_NAMESPACE}
@@ -22,7 +22,7 @@ export const DNA:FunctionComponent<DNAProps> = ({
       className={wrapperClass}
       style={wrapperStyle}
       aria-label={ariaLabel}
-      data-testid='dna-svg'
+      data-testid="dna-svg"
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <circle

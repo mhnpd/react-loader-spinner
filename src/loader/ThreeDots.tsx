@@ -18,7 +18,7 @@ export const ThreeDots: FunctionComponent<ThreeDotsProps> = ({
   visible = true,
 }) => (
   <SvgWrapper
-    style={wrapperStyle }
+    style={wrapperStyle}
     $visible={visible}
     className={wrapperClass}
     data-testid="three-dots-loading"
@@ -109,4 +109,3 @@ export const ThreeDots: FunctionComponent<ThreeDotsProps> = ({
     </svg>
   </SvgWrapper>
 )
-

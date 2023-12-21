@@ -9,7 +9,7 @@ type FallingLinesProps = {
   visible?: boolean
 }
 
-export const FallingLines:FunctionComponent<FallingLinesProps> = ({
+export const FallingLines: FunctionComponent<FallingLinesProps> = ({
   color = DEFAULT_COLOR,
   width = '100',
   visible = true,
@@ -115,4 +115,3 @@ export const FallingLines:FunctionComponent<FallingLinesProps> = ({
     </svg>
   ) : null
 }
-

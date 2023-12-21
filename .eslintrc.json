@@ -18,12 +18,26 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": ["react", "@typescript-eslint", "tree-shaking"],
   "rules": {
     "no-use-before-define": "off",
     "no-console": 2,
     "@typescript-eslint/no-use-before-define": ["error"],
     "comma-dangle": "off",
-    "@typescript-eslint/comma-dangle": "off"
+    "@typescript-eslint/comma-dangle": "off",
+    "tree-shaking/no-side-effects-in-initialization": [
+      2,
+      {
+        "noSideEffectsWhenCalled": [
+          {
+            "function": "Object.freeze"
+          },
+          {
+            "module": "react",
+            "functions": ["createContext", "createRef"]
+          }
+        ]
+      }
+    ]
   }
 }

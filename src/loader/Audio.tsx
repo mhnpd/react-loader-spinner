@@ -3,7 +3,7 @@ import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
 
-interface AudioProps extends BaseProps { }
+interface AudioProps extends BaseProps {}
 
 export const Audio: FunctionComponent<AudioProps> = ({
   height = '100',
@@ -16,7 +16,7 @@ export const Audio: FunctionComponent<AudioProps> = ({
 }): ReactElement => (
   <SvgWrapper
     $visible={visible}
-    style={{...wrapperStyle}}
+    style={{ ...wrapperStyle }}
     className={wrapperClass}
     data-testid="audio-loading"
     aria-label={ariaLabel}
@@ -77,4 +77,3 @@ export const Audio: FunctionComponent<AudioProps> = ({
     </svg>
   </SvgWrapper>
 )
-

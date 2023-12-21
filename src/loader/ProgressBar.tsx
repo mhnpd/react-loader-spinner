@@ -3,11 +3,11 @@ import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
 
 interface ProgressBarProps extends Omit<BaseProps, 'color'> {
-  borderColor?: string,
-  barColor?: string,
+  borderColor?: string
+  barColor?: string
 }
 
-export const ProgressBar:FunctionComponent<ProgressBarProps> = ({
+export const ProgressBar: FunctionComponent<ProgressBarProps> = ({
   visible = true,
   height = '80',
   width = '80',
@@ -27,7 +27,7 @@ export const ProgressBar:FunctionComponent<ProgressBarProps> = ({
       className={wrapperClass}
       style={wrapperStyle}
       aria-label={ariaLabel}
-      data-testid='progress-bar-svg'
+      data-testid="progress-bar-svg"
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <defs>

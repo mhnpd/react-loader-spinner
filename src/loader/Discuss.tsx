@@ -13,7 +13,7 @@ export const Discuss: FunctionComponent<DiscussProps> = ({
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'discuss-loading',
-  colors = ['#ff727d', '#ff727d']
+  colors = ['#ff727d', '#ff727d'],
 }) => {
   return !visible ? null : (
     <svg
@@ -25,7 +25,7 @@ export const Discuss: FunctionComponent<DiscussProps> = ({
       className={wrapperClass}
       style={wrapperStyle}
       aria-label={ariaLabel}
-      data-testid='discuss-svg'
+      data-testid="discuss-svg"
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
       <path

@@ -19,7 +19,7 @@ export const MutatingDots: FunctionComponent<MutatingDotsProps> = ({
   visible = true,
 }) => (
   <SvgWrapper
-    style={wrapperStyle }
+    style={wrapperStyle}
     $visible={visible}
     className={wrapperClass}
     data-testid="mutating-dots-loading"
@@ -83,4 +83,3 @@ export const MutatingDots: FunctionComponent<MutatingDotsProps> = ({
     </svg>
   </SvgWrapper>
 )
-

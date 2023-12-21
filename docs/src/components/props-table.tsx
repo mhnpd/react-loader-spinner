@@ -24,14 +24,18 @@ const columns = [
     dataIndex: 'type',
     key: 'type',
     width: 150,
-    render: (_:unknown, row:Properties) => (<em style={{ color: '#932981' }}>{row.type}</em>)
+    render: (_: unknown, row: Properties) => (
+      <em style={{ color: '#932981' }}>{row.type}</em>
+    ),
   },
   {
     title: 'Default',
     dataIndex: 'default',
     key: 'default',
     width: 250,
-    render: (_:unknown, row:Properties) => (<code style={{ color: '#932981' }}>{row.default}</code>)
+    render: (_: unknown, row: Properties) => (
+      <code style={{ color: '#932981' }}>{row.default}</code>
+    ),
   },
   {
     title: 'Description',
@@ -42,5 +46,5 @@ const columns = [
 ]
 
 export default function PropsTable({ properties }: Props): ReactElement {
-  return (<Table columns={columns} data={sortBy(properties, 'name')} />)
+  return <Table columns={columns} data={sortBy(properties, 'name')} />
 }

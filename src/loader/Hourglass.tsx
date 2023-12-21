@@ -5,7 +5,7 @@ interface HourglassProps extends Omit<BaseProps, 'color'> {
   colors?: [string, string]
 }
 
-export const Hourglass:FunctionComponent<HourglassProps> = ({
+export const Hourglass: FunctionComponent<HourglassProps> = ({
   visible = true,
   width = '80',
   height = '80',

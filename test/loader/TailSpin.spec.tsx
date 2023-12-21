@@ -30,7 +30,7 @@ describe('TailSpin', () => {
     })
     svg.querySelectorAll('path').forEach(path => {
       expect(path).toHaveAttribute('stroke', DEFAULT_COLOR)
-      expect(path).toHaveAttribute('stroke-width', "2")
+      expect(path).toHaveAttribute('stroke-width', '2')
     })
   })
 
@@ -70,7 +70,7 @@ describe('TailSpin', () => {
     })
     svg.querySelectorAll('path').forEach(path => {
       expect(path).toHaveAttribute('stroke', 'red')
-      expect(path).toHaveAttribute('stroke-width','3')
+      expect(path).toHaveAttribute('stroke-width', '3')
     })
   })
 

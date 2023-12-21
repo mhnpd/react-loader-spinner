@@ -19,7 +19,7 @@ export const Puff: FunctionComponent<PuffProps> = ({
   visible = true,
 }) => (
   <SvgWrapper
-    style={wrapperStyle }
+    style={wrapperStyle}
     $visible={visible}
     className={wrapperClass}
     data-testid="puff-loading"
@@ -83,4 +83,3 @@ export const Puff: FunctionComponent<PuffProps> = ({
     </svg>
   </SvgWrapper>
 )
-

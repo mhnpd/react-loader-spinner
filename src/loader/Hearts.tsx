@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
-import { SvgWrapper } from '../shared/svg-wrapper';
+import { SvgWrapper } from '../shared/svg-wrapper'
 interface HeartsProps extends BaseProps {}
 
 export const Hearts: FunctionComponent<HeartsProps> = ({
@@ -13,7 +13,7 @@ export const Hearts: FunctionComponent<HeartsProps> = ({
   visible = true,
 }) => (
   <SvgWrapper
-    style={wrapperStyle }
+    style={wrapperStyle}
     $visible={visible}
     className={wrapperClass}
     data-testid="hearts-loading"
@@ -62,4 +62,3 @@ export const Hearts: FunctionComponent<HeartsProps> = ({
     </svg>
   </SvgWrapper>
 )
-

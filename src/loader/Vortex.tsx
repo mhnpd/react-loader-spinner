@@ -6,7 +6,7 @@ interface VortexProps extends Omit<BaseProps, 'color'> {
   colors?: [string, string, string, string, string, string]
 }
 
-export const Vortex:FunctionComponent<VortexProps> = ({
+export const Vortex: FunctionComponent<VortexProps> = ({
   visible = true,
   height = '80',
   width = '80',
@@ -73,4 +73,3 @@ export const Vortex:FunctionComponent<VortexProps> = ({
     </svg>
   )
 }
-

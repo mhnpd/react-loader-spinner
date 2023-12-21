@@ -1,9 +1,9 @@
 import React, { FunctionComponent, ReactElement } from 'react'
 import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
-import { SvgWrapper } from '../shared/svg-wrapper';
+import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
 
-interface CirclesProps extends BaseProps { }
+interface CirclesProps extends BaseProps {}
 
 export const Circles: FunctionComponent<CirclesProps> = ({
   height = 80,
@@ -55,4 +55,3 @@ export const Circles: FunctionComponent<CirclesProps> = ({
     </svg>
   </SvgWrapper>
 )
-

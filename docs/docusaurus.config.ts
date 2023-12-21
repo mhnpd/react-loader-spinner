@@ -25,13 +25,11 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en']
+    locales: ['en'],
   },
 
   // plugins: ['@docusaurus/plugin-google-analytics'],
-  plugins: [
-    '@docusaurus/theme-live-codeblock',
-  ],
+  plugins: ['@docusaurus/theme-live-codeblock'],
 
   presets: [
     [
@@ -42,20 +40,20 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: './src/css/custom.css'
-        }
-      } satisfies Preset.Options
-    ]
+          customCss: './src/css/custom.css',
+        },
+      } satisfies Preset.Options,
+    ],
   ],
 
   themeConfig: {
@@ -72,22 +70,22 @@ const config: Config = {
       title: 'React Spinners',
       logo: {
         alt: 'React Spinners',
-        src: 'img/logo.svg'
+        src: 'img/logo.svg',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Documentation'
+          label: 'Documentation',
         },
         // {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/mhnpd/react-loader-spinner',
           label: 'GitHub',
-          position: 'right'
-        }
-      ]
+          position: 'right',
+        },
+      ],
     },
     footer: {
       style: 'dark',
@@ -97,9 +95,9 @@ const config: Config = {
           items: [
             {
               label: 'Documentation',
-              to: '/docs/intro'
-            }
-          ]
+              to: '/docs/intro',
+            },
+          ],
         },
         {},
         {
@@ -107,18 +105,18 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/mhnpd/react-loader-spinner'
-            }
-          ]
-        }
+              href: 'https://github.com/mhnpd/react-loader-spinner',
+            },
+          ],
+        },
       ],
       // copyright: `Copyright © ${new Date().getFullYear()}  `
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula
-    }
-  } satisfies Preset.ThemeConfig
+      darkTheme: prismThemes.dracula,
+    },
+  } satisfies Preset.ThemeConfig,
 }
 
 export default config

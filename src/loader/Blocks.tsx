@@ -4,13 +4,13 @@ import { SVG_NAMESPACE } from '../shared/constants'
 
 interface BlocksProps extends BaseProps {}
 
-export const Blocks:FunctionComponent<BlocksProps> = ({
+export const Blocks: FunctionComponent<BlocksProps> = ({
   visible = true,
   width = '80',
   height = '80',
-  wrapperClass='',
-  wrapperStyle={},
-  ariaLabel='blocks-loading',
+  wrapperClass = '',
+  wrapperStyle = {},
+  ariaLabel = 'blocks-loading',
 }): ReactElement | null => {
   return !visible ? null : (
     <svg

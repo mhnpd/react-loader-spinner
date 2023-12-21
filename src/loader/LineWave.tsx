@@ -1,6 +1,6 @@
 import React from 'react'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
-import { SvgWrapper } from '../shared/svg-wrapper';
+import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
 
 type Props = {
@@ -34,7 +34,7 @@ export const LineWave: React.FunctionComponent<Props> = ({
 }): React.ReactElement => {
   return (
     <SvgWrapper
-      style={wrapperStyle }
+      style={wrapperStyle}
       $visible={visible}
       className={wrapperClass}
       data-testid="line-wave-wrapper"
@@ -110,4 +110,3 @@ export const LineWave: React.FunctionComponent<Props> = ({
     </SvgWrapper>
   )
 }
-

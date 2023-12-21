@@ -26,7 +26,7 @@ export const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
 }): React.ReactElement => {
   return (
     <SvgWrapper
-      style={wrapperStyle }
+      style={wrapperStyle}
       $visible={visible}
       className={wrapperClass}
       data-testid="rotating-square-wrapper"
@@ -81,4 +81,3 @@ export const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
     </SvgWrapper>
   )
 }
-
