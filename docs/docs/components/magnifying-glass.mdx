@@ -2,22 +2,35 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { getPropsTableData } from '../../src/components/helpers'
+import { MagnifyingGlass } from 'react-loader-spinner'
 
 # MagnifyingGlass
 
-```jsx live
-<MagnifyingGlass
+<LiveProvider
+  code={`
+  render(<MagnifyingGlass
   visible={true}
   height="80"
   width="80"
-  ariaLabel="MagnifyingGlass-loading"
+  ariaLabel="magnifying-glass-loading"
   wrapperStyle={{}}
-  wrapperClass="MagnifyingGlass-wrapper"
+  wrapperClass="magnifying-glass-wrapper"
   glassColor="#c0efff"
   color="#e15b64"
-/>
-```
+  />)
+`}
+  scope={{ MagnifyingGlass }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+
+---
 
 ## Props
 

@@ -2,11 +2,15 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { MutatingDots } from 'react-loader-spinner'
 
 # Mutating Dots
 
-```jsx live
-<MutatingDots
+<LiveProvider
+  code={`
+  render(<MutatingDots
+  visible={true}
   height="100"
   width="100"
   color="#4fa94d"
@@ -15,9 +19,18 @@ import PropsTable from '../../src/components/props-table'
   ariaLabel="mutating-dots-loading"
   wrapperStyle={{}}
   wrapperClass=""
-  visible={true}
-/>
-```
+  />)
+`}
+  scope={{ MutatingDots }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+
+---
 
 ## Props
 

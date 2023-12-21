@@ -2,24 +2,33 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { Oval } from 'react-loader-spinner'
 
 # Oval
 
-```jsx live
-<Oval
-  height={80}
-  width={80}
+<LiveProvider
+  code={`
+  render(<Oval
+  visible={true}
+  height="80"
+  width="80"
   color="#4fa94d"
+  ariaLabel="oval-loading"
   wrapperStyle={{}}
   wrapperClass=""
-  visible={true}
-  ariaLabel="oval-loading"
-  secondaryColor="#4fa94d"
-  strokeWidth={2}
-  strokeWidthSecondary={2}
-/>
-```
+  />)
+`}
+  scope={{ Oval }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
 
+---
 ## Props
 
 <PropsTable

@@ -2,28 +2,37 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { CirclesWithBar } from 'react-loader-spinner'
 
 # Circles With Bar
 
-<CirclesWithBar />
 
----
-
-```jsx live
-<CirclesWithBar
+<LiveProvider
+  code={`
+  render(<CirclesWithBar
   height="100"
   width="100"
   color="#4fa94d"
+  outerCircleColor="#4fa94d"
+  innerCircleColor="#4fa94d"
+  barColor="#4fa94d"
+  ariaLabel="circles-with-bar-loading"
   wrapperStyle={{}}
   wrapperClass=""
   visible={true}
-  outerCircleColor=""
-  innerCircleColor=""
-  barColor=""
-  ariaLabel="circles-with-bar-loading"
-/>
-```
+  />)
+`}
+  scope={{ CirclesWithBar }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+
+---
 
 ## Props
 

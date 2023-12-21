@@ -2,28 +2,35 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { getPropsTableData } from '../../src/components/helpers'
-import { Discuss } from 'react-loader-spinner'
+import {Discuss} from 'react-loader-spinner'
 
 # Discuss
 
-<Discuss />
-
----
-
-```jsx live
-<Discuss
+<LiveProvider
+  code={`
+  render(<Discuss
   visible={true}
   height="80"
   width="80"
-  ariaLabel="comment-loading"
+  ariaLabel="discuss-loading"
   wrapperStyle={{}}
-  wrapperClass="comment-wrapper"
+  wrapperClass="discuss-wrapper"
   color="#fff"
   backgroundColor="#F4442E"
-/>
-```
+  />)
+`}
+  scope={{ Discuss }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
 
+---
 ## Props
 
 <PropsTable

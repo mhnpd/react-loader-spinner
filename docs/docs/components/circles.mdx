@@ -2,15 +2,15 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { getPropsTableData } from '../../src/components/helpers'
 import { Circles } from 'react-loader-spinner'
 
 # Circles
 
-<Circles />
-
-```jsx live
-<Circles
+<LiveProvider
+  code={`
+  render(<Circles
   height="80"
   width="80"
   color="#4fa94d"
@@ -18,8 +18,18 @@ import { Circles } from 'react-loader-spinner'
   wrapperStyle={{}}
   wrapperClass=""
   visible={true}
-/>
-```
+  />)
+`}
+  scope={{ Circles }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+
+---
 
 ### Props
 

@@ -2,17 +2,16 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { getPropsTableData } from '../../src/components/helpers'
 import { Audio } from 'react-loader-spinner'
 
 # Audio
 
-<Audio />
 
----
-
-```jsx
-<Audio
+<LiveProvider
+  code={`
+  render(<Audio
   height="100"
   width="100"
   color="#4fa94d"
@@ -20,8 +19,18 @@ import { Audio } from 'react-loader-spinner'
   wrapperStyle={{}}
   wrapperClass="wrapper-class"
   visible={true}
-/>
-```
+  />)
+`}
+  scope={{ Audio }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+
+---
 
 ### Props
 

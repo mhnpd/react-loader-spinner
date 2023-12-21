@@ -2,23 +2,37 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { Puff } from 'react-loader-spinner'
 
 # Puff
 
-```jsx live
-<Puff
+<LiveProvider
+  code={`
+  render(<Puff
+  visible={true}
   height="80"
   width="80"
-  radius={1}
   color="#4fa94d"
   ariaLabel="puff-loading"
   wrapperStyle={{}}
   wrapperClass=""
-  visible={true}
-/>
-```
+  />)
+`}
+  scope={{ Puff }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+
+---
 
 > This spinner is not supported by Safari. [See](https://github.com/mhnpd/react-loader-spinner/issues/150)
+
+---
 
 ## Props
 

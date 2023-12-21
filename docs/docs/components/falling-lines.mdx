@@ -2,21 +2,30 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { FallingLines } from 'react-loader-spinner'
 
 # Falling Lines
 
-## <FallingLines/>
-
-```jsx live
-<FallingLines
+<LiveProvider
+  code={`
+  render(<FallingLines
   color="#4fa94d"
   width="100"
   visible={true}
-  ariaLabel="falling-lines-loading"
-/>
-```
+  ariaLabel="falling-circles-loading"
+  />)
+`}
+  scope={{ FallingLines }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
 
+---
 ## Props
 
 <PropsTable

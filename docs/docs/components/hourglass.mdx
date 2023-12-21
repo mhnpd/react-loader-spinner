@@ -2,12 +2,15 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { getPropsTableData } from '../../src/components/helpers'
+import { Hourglass } from 'react-loader-spinner'
 
 # Hourglass
 
-```jsx live
-<Hourglass
+<LiveProvider
+  code={`
+  render(<Hourglass
   visible={true}
   height="80"
   width="80"
@@ -15,9 +18,18 @@ import { getPropsTableData } from '../../src/components/helpers'
   wrapperStyle={{}}
   wrapperClass=""
   colors={['#306cce', '#72a1ed']}
-/>
-```
+  />)
+`}
+  scope={{ Hourglass }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+
+---
 
 ## Props
-
 <PropsTable properties={[...getPropsTableData('hourglass', ['color'])]} />

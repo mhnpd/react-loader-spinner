@@ -2,17 +2,15 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { getPropsTableData } from '../../src/components/helpers'
 import { Comment } from 'react-loader-spinner'
 
 # Comment
 
-<Comment />
-
----
-
-```jsx live
-<Comment
+<LiveProvider
+  code={`
+  render(<Comment
   visible={true}
   height="80"
   width="80"
@@ -21,8 +19,18 @@ import { Comment } from 'react-loader-spinner'
   wrapperClass="comment-wrapper"
   color="#fff"
   backgroundColor="#F4442E"
-/>
-```
+  />)
+`}
+  scope={{ Comment }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+
+---
 
 ## Props
 

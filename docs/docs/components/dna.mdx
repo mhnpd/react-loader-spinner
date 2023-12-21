@@ -2,25 +2,33 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { getPropsTableData } from '../../src/components/helpers'
 import { DNA } from 'react-loader-spinner'
 
 # DNA
 
-<DNA />
-
----
-
-```jsx live
-<DNA
+<LiveProvider
+  code={`
+  render(<DNA
   visible={true}
   height="80"
   width="80"
   ariaLabel="dna-loading"
   wrapperStyle={{}}
   wrapperClass="dna-wrapper"
-/>
-```
+  />)
+`}
+  scope={{ DNA }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+
+---
 
 ## Props
 

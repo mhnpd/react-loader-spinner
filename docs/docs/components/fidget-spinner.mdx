@@ -2,27 +2,32 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { getPropsTableData } from '../../src/components/helpers'
 import { FidgetSpinner } from 'react-loader-spinner'
 
 # Fidget Spinner
 
-<FidgetSpinner />
-
----
-
-```jsx live
-<FidgetSpinner
+<LiveProvider
+  code={`
+  render(<FidgetSpinner
   visible={true}
   height="80"
   width="80"
-  ariaLabel="dna-loading"
+  ariaLabel="fidget-spinner-loading"
   wrapperStyle={{}}
-  wrapperClass="dna-wrapper"
-  ballColors={['#ff0000', '#00ff00', '#0000ff']}
-  backgroundColor="#F4442E"
-/>
-```
+  wrapperClass="fidget-spinner-wrapper"
+  />)
+`}
+  scope={{ FidgetSpinner }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+---
 
 ## Props
 

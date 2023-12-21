@@ -2,26 +2,33 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { getPropsTableData } from '../../src/components/helpers'
 import { Blocks } from 'react-loader-spinner'
 
 # Blocks
 
-<Blocks />
-
----
-
-```jsx live
-<Blocks
-  visible={true}
+<LiveProvider
+  code={`
+  render(<Blocks
   height="80"
   width="80"
+  color="#4fa94d"
   ariaLabel="blocks-loading"
   wrapperStyle={{}}
   wrapperClass="blocks-wrapper"
-/>
-```
-
+  visible={true}
+  />)
+`}
+  scope={{ Blocks }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+---
 ## Props
 
 <PropsTable properties={[...getPropsTableData('blocks', ['colors'])]} />

@@ -2,27 +2,35 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { getPropsTableData } from '../../src/components/helpers'
 import { Grid } from 'react-loader-spinner'
 
 # Grid
 
-<Grid />
-
----
-
-```jsx live
-<Grid
+<LiveProvider
+  code={`
+  render(<Grid
+  visible={true}
   height="80"
   width="80"
   color="#4fa94d"
   ariaLabel="grid-loading"
   radius="12.5"
   wrapperStyle={{}}
-  wrapperClass=""
-  visible={true}
-/>
-```
+  wrapperClass="grid-wrapper"
+  />)
+`}
+  scope={{ Grid }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+
+---
 
 ### Props
 

@@ -2,25 +2,34 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { getPropsTableData } from '../../src/components/helpers'
 import { ColorRing } from 'react-loader-spinner'
 
 # Color Ring
 
-## <ColorRing/>
-
-```jsx live
-<ColorRing
+<LiveProvider
+  code={`
+  render(<ColorRing
   visible={true}
   height="80"
   width="80"
-  ariaLabel="blocks-loading"
+  ariaLabel="color-ring-loading"
   wrapperStyle={{}}
-  wrapperClass="blocks-wrapper"
+  wrapperClass="color-ring-wrapper"
   colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
-/>
-```
+  />)
+`}
+  scope={{ ColorRing }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
 
+---
 ## Props
 
 <PropsTable

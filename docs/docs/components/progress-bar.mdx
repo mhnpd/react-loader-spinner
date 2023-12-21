@@ -2,21 +2,34 @@
 ---
 
 import PropsTable from '../../src/components/props-table'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { getPropsTableData } from '../../src/components/helpers'
+import { ProgressBar } from 'react-loader-spinner'
 
 # Progress Bar
 
-```jsx live
-<ProgressBar
+<LiveProvider
+  code={`
+  render(<ProgressBar
+  visible={true}
   height="80"
   width="80"
+  color="#4fa94d"
   ariaLabel="progress-bar-loading"
   wrapperStyle={{}}
-  wrapperClass="progress-bar-wrapper"
-  borderColor="#F4442E"
-  barColor="#51E5FF"
-/>
-```
+  wrapperClass=""
+  />)
+`}
+  scope={{ ProgressBar }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+
+---
 
 ## Props
 
