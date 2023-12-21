@@ -4,20 +4,31 @@
 import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { getPropsTableData } from '../../src/components/helpers'
+import { RotatingTriangles } from 'react-loader-spinner'
 
 # Rotating Triangles
 
-```jsx live
-<RotatingTriangles
+<LiveProvider
+  code={`
+  render(<RotatingTriangles
   visible={true}
   height="80"
   width="80"
-  ariaLabel="rotating-triangels-loading"
+  color="#4fa94d"
+  ariaLabel="rotating-triangles-loading"
   wrapperStyle={{}}
-  wrapperClass="rotating-triangels-wrapper"
-/>
-```
-
+  wrapperClass=""
+  />)
+`}
+  scope={{ RotatingTriangles }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+---
 ## Props
 
 <PropsTable

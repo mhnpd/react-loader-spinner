@@ -3,18 +3,34 @@
 
 import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { RotatingLines } from 'react-loader-spinner'
 
 # Rotating Lines
 
-```jsx live
-<RotatingLines
-  strokeColor="grey"
+<LiveProvider
+  code={`
+  render(<RotatingLines
+  visible={true}
+  height="96"
+  width="96"
+  color="grey"
   strokeWidth="5"
   animationDuration="0.75"
-  width="96"
-  visible={true}
-/>
-```
+  ariaLabel="rotating-lines-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  />)
+`}
+  scope={{ RotatingLines }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+
+---
 
 ## Props
 

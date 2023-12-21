@@ -3,22 +3,32 @@
 
 import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { RotatingSquare } from 'react-loader-spinner'
 
 # Rotating Square
 
-```jsx live
-<RotatingSquare
+<LiveProvider
+  code={`
+  render(<RotatingSquare
+  visible={true}
   height="100"
   width="100"
   color="#4fa94d"
   ariaLabel="rotating-square-loading"
-  strokeWidth="4"
   wrapperStyle={{}}
   wrapperClass=""
-  visible={true}
-/>
-```
+  />)
+`}
+  scope={{ RotatingSquare }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
 
+---
 ## Props
 
 <PropsTable
