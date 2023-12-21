@@ -1,13 +1,14 @@
 {
 	"compilerOptions": {
-		"target": "es6",
+		"target": "ES2015",
     "jsx": "react",
-		"module": "commonjs",
 		"declaration": true,
 		"sourceMap": true,
-		"outDir": "lib",
 		"strict": true,
     "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "lib": ["esnext","DOM"]
 	},
   "exclude": ["docs"]
 }

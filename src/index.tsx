@@ -1,71 +1,34 @@
-import { Audio } from './loader/Audio'
-import { BallTriangle } from './loader/BallTriangle'
-import { Bars } from './loader/Bars'
-import { Circles } from './loader/Circles'
-import { CirclesWithBar } from './loader/CirclesWithBar'
-import { Grid } from './loader/Grid'
-import { Hearts } from './loader/Hearts'
-import { InfinitySpin } from './loader/InfinitySpin'
-import { LineWave } from './loader/LineWave'
-import { MutatingDots } from './loader/MutatingDots'
-import { Oval } from './loader/Oval'
-import { Puff } from './loader/Puff'
-import { RevolvingDot } from './loader/RevolvingDot'
-import { Rings } from './loader/Rings'
-import { RotatingSquare } from './loader/RotatingSquare'
-import { RotatingLines } from './loader/RotatingLines'
-import { TailSpin } from './loader/TailSpin'
-import { ThreeCircles } from './loader/ThreeCircles'
-import { ThreeDots } from './loader/ThreeDots'
-import { Triangle } from './loader/Triangle'
-import { Watch } from './loader/Watch'
-import { FallingLines } from './loader/FallingLines'
-import { Vortex } from './loader/Vortex'
-import { RotatingTriangles } from './loader/RotatingTriangles'
-import { Radio } from './loader/Radio'
-import { ProgressBar } from './loader/ProgressBar'
-import { MagnifyingGlass } from './loader/MagnifyingGlass'
-import { FidgetSpinner } from './loader/FidgetSpinner'
-import { DNA } from './loader/DNA'
-import { Discuss } from './loader/Discuss'
-import { ColorRing } from './loader/ColorRing'
-import { Comment } from './loader/Comment'
-import { Blocks } from './loader/Blocks'
-import { Hourglass } from './loader/Hourglass'
-
-export {
-  Audio,
-  BallTriangle,
-  Bars,
-  Blocks,
-  Circles,
-  CirclesWithBar,
-  ColorRing,
-  Comment,
-  Discuss,
-  DNA,
-  Grid,
-  FallingLines,
-  FidgetSpinner,
-  Hearts,
-  InfinitySpin,
-  LineWave,
-  MagnifyingGlass,
-  MutatingDots,
-  Oval,
-  ProgressBar,
-  Puff,
-  Radio,
-  RevolvingDot,
-  RotatingSquare,
-  RotatingLines,
-  Rings,
-  TailSpin,
-  ThreeDots,
-  ThreeCircles,
-  Triangle,
-  RotatingTriangles,
-  Watch,
-  Vortex,
-  Hourglass
-}
+export { Audio } from './loader/Audio'
+export { BallTriangle } from './loader/BallTriangle'
+export { Bars } from './loader/Bars'
+export { Circles } from './loader/Circles'
+export { CirclesWithBar } from './loader/CirclesWithBar'
+export { Grid } from './loader/Grid'
+export { Hearts } from './loader/Hearts'
+export { InfinitySpin } from './loader/InfinitySpin'
+export { LineWave } from './loader/LineWave'
+export { MutatingDots } from './loader/MutatingDots'
+export { Oval } from './loader/Oval'
+export { Puff } from './loader/Puff'
+export { RevolvingDot } from './loader/RevolvingDot'
+export { Rings } from './loader/Rings'
+export { RotatingSquare } from './loader/RotatingSquare'
+export { RotatingLines } from './loader/RotatingLines'
+export { TailSpin } from './loader/TailSpin'
+export { ThreeCircles } from './loader/ThreeCircles'
+export { ThreeDots } from './loader/ThreeDots'
+export { Triangle } from './loader/Triangle'
+export { Watch } from './loader/Watch'
+export { FallingLines } from './loader/FallingLines'
+export { Vortex } from './loader/Vortex'
+export { RotatingTriangles } from './loader/RotatingTriangles'
+export { Radio } from './loader/Radio'
+export { ProgressBar } from './loader/ProgressBar'
+export { MagnifyingGlass } from './loader/MagnifyingGlass'
+export { FidgetSpinner } from './loader/FidgetSpinner'
+export { DNA } from './loader/DNA'
+export { Discuss } from './loader/Discuss'
+export { ColorRing } from './loader/ColorRing'
+export { Comment } from './loader/Comment'
+export { Blocks } from './loader/Blocks'
+export { Hourglass } from './loader/Hourglass'
