@@ -4,19 +4,32 @@
 import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { getPropsTableData } from '../../src/components/helpers'
+import { Radio } from 'react-loader-spinner'
 
 # Radio
 
-```jsx live
-<Radio
+<LiveProvider
+  code={`
+  render(<Radio
   visible={true}
   height="80"
   width="80"
+  color="#4fa94d"
   ariaLabel="radio-loading"
   wrapperStyle={{}}
-  wrapperClass="radio-wrapper"
-/>
-```
+  wrapperClass=""
+  />)
+`}
+  scope={{ Radio }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+
+---
 
 ## Props
 

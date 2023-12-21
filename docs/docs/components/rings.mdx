@@ -3,24 +3,34 @@
 
 import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { Rings } from 'react-loader-spinner'
 
 # Rings
 
-```jsx live
-<Rings
+<LiveProvider
+  code={`
+  render(<Rings
+  visible={true}
   height="80"
   width="80"
   color="#4fa94d"
-  radius="6"
+  ariaLabel="rings-loading"
   wrapperStyle={{}}
   wrapperClass=""
-  visible={true}
-  ariaLabel="rings-loading"
-/>
-```
+  />)
+`}
+  scope={{ Rings }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
 
 > This spinner is not supported by Safari. [See](https://github.com/mhnpd/react-loader-spinner/issues/150)
 
+---
 ## Props
 
 <PropsTable
