@@ -54,6 +54,7 @@ export const Whirl: FunctionComponent<WhirlProps> = ({
       viewBox="0 0 100 100"
       className={wrapperClass}
       preserveAspectRatio="xMidYMid"
+      data-testid="whirl"
     >
       <g transform="translate(50,50)">
         <g transform="scale(0.8)">
