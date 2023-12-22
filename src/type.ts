@@ -9,12 +9,15 @@ export type Style = {
   [key: string]: string
 }
 
-export interface BaseProps {
+export interface PrimaryProps {
   height?: string | number
   width?: string | number
-  color?: string
   ariaLabel?: string
   wrapperStyle?: Style
   wrapperClass?: string
   visible?: boolean
+}
+
+export interface BaseProps extends PrimaryProps {
+  color?: string
 }

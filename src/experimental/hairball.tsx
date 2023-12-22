@@ -1,24 +1,75 @@
 import React, { FC } from 'react'
+import { FourColorsSchema } from '../color-schemas/four-colors-schema'
+import { PrimaryProps } from '../type'
 
-interface HairballProps {
-  fillColor1?: string
-  fillColor2?: string
-  fillColor3?: string
-  fillColor4?: string
+export interface HairballCustomColor {
+  fillColor1: string
+  fillColor2: string
+  fillColor3: string
+  fillColor4: string
+}
+
+export const HairballPreset = {
+  sunset: 'sunset',
+  ocean: 'ocean',
+  forest: 'forest',
+  twilight: 'twilight',
+  dawn: 'dawn',
+  dusk: 'dusk',
+  midday: 'midday',
+  midnight: 'midnight',
+  sunrise: 'sunrise',
+  rainbow: 'rainbow',
+}
+
+export const HairballPresetColors = {
+  [HairballPreset.sunset]:FourColorsSchema.sunsetSchema,
+  [HairballPreset.ocean]: FourColorsSchema.oceanSchema,
+  [HairballPreset.forest]: FourColorsSchema.forestSchema,
+  [HairballPreset.twilight]: FourColorsSchema.twilightSchema,
+  [HairballPreset.dawn]: FourColorsSchema.dawnSchema,
+  [HairballPreset.dusk]: FourColorsSchema.duskSchema,
+  [HairballPreset.midday]: FourColorsSchema.middaySchema,
+  [HairballPreset.midnight]: FourColorsSchema.midnightSchema,
+  [HairballPreset.sunrise]: FourColorsSchema.sunriseSchema,
+  [HairballPreset.rainbow]: FourColorsSchema.rainbowSchema,
+}
+
+export type HairBallColorSchema = keyof typeof HairballPreset
+
+export const HAIRBALL_DEFAULT_COLOR = HairballPresetColors.sunset
+
+
+export interface HairballProps extends PrimaryProps {
+  colors?: HairballCustomColor,
+  preset?: HairBallColorSchema,
   backgroundColor?: string
   speed?: number
-  visible?: boolean
+  width?: number
+  height?: number
 }
 
 export const Hairball: FC<HairballProps> = ({
-  fillColor1 = '#e15b64',
-  fillColor2 = '#f47e60',
-  fillColor3 = '#f8b26a',
-  fillColor4 = '#abbd81',
+  colors = HAIRBALL_DEFAULT_COLOR,
   backgroundColor = '#fff',
-  visible = true,
   speed = 2,
+  width = 100,
+  height = 100,
+  visible = true,
+  ariaLabel = 'Hairball loading',
+  wrapperClass = '',
+  wrapperStyle = {},
+  preset,
 }) => {
+  const colorSchema = preset ? HairballPresetColors[preset] : colors
+
+  const {
+    fillColor1 = HAIRBALL_DEFAULT_COLOR.fillColor1,
+    fillColor2 = HAIRBALL_DEFAULT_COLOR.fillColor2,
+    fillColor3 = HAIRBALL_DEFAULT_COLOR.fillColor3,
+    fillColor4 = HAIRBALL_DEFAULT_COLOR.fillColor4,
+  } = colorSchema
+
   if (!visible) {
     return null
   }
@@ -26,9 +77,11 @@ export const Hairball: FC<HairballProps> = ({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      style={{ margin: 'auto', background: backgroundColor, display: 'block' }}
-      width="200px"
-      height="200px"
+      style={{ margin: 'auto', background: backgroundColor, display: 'block', ...wrapperStyle }}
+      width={width}
+      height={height}
+      aria-label={ariaLabel}
+      className={wrapperClass}
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid"
       role="progressbar"
