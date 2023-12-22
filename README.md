@@ -44,6 +44,13 @@ import { Audio } from 'react-loader-spinner'
 />
 ```
 
+<iframe src="https://codesandbox.io/embed/86zm9s?view=Editor+%2B+Preview&module=%2Fpublic%2Findex.html"
+   style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;"
+   title="react-loader-spinner"
+   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+ ></iframe>
+
 ## License
 
 MIT
