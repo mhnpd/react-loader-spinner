@@ -5,29 +5,26 @@ import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { getPropsTableData } from '../../src/components/helpers'
 import {
-  Hairball,
-  HairballPreset,
-  HairballPresetColors
-} from '../../../src/experimental/hairball'
+  Whirl,
+  WhirlPreset,
+  WhirlPresetColors
+} from '../../../src/experimental/whirl.tsx'
 
-# Hairball
+# Whirl
 
 <LiveProvider
   code={`
-    // import { Hairball, HairballPreset } from 'react-loader-spinner';
-
-      render(
-        <Hairball
-        preset="dawn" // or preset={HairballPreset.sunset}
-        />
-      )
-
+  render(
+    <Whirl
+      preset='rainbow'
+      speedInSecond={2}
+      width='100'
+      height='100'
+    />)
 `}
-scope={{ Hairball }}
-noInline={true}
-
+  scope={{ Whirl }}
+  noInline={true}
 >
-
   <LivePreview />
   <br />
   <LiveEditor />
@@ -38,49 +35,56 @@ noInline={true}
 
 ## More Example:
 
-Here are some more examples of the Hairball component using different presets. It
+Here are some more examples of the Whirl component using different presets. It
 is recommended that you use the presets, as they are designed to work well with
-the Hairball component. However, you can also pass your own colors to the Hairball
+the Whirl component. However, you can also pass your own colors to the Whirl
 component. See the `colors` props section for more information.
 
 <div style={{ display: 'flex' }}>
-  <Hairball />
-  <Hairball preset={HairballPreset.midnight} />
-  <Hairball preset={HairballPreset.midday} />
-  <Hairball preset={HairballPreset.rainbow} />
-  <Hairball preset={HairballPreset.forest} />
-  <Hairball preset={HairballPreset.dawn} />
-  <Hairball preset={HairballPreset.dusk} />
-  <Hairball preset={HairballPreset.sunrise} />
+  <Whirl />
+  <Whirl speedInSecond={1} preset={WhirlPreset.midnight} />
+  <Whirl speedInSecond={2} preset={WhirlPreset.midday} />
+  <Whirl speedInSecond={3} preset={WhirlPreset.rainbow} />
+  <Whirl speedInSecond={4} preset={WhirlPreset.forest} />
+  <Whirl speedInSecond={5} preset={WhirlPreset.dawn} />
+  <Whirl speedInSecond={6} preset={WhirlPreset.dusk} />
+  <Whirl speedInSecond={7} preset={WhirlPreset.sunrise} />
 </div>
-
----
 
 ## Props
 
 <PropsTable
   properties={[
-    ...getPropsTableData('Hairball', ['colors']),
+    ...getPropsTableData('Whirl', ['colors', 'color']),
     {
       name: 'preset',
-      type: Object.keys(HairballPreset)
+      type: Object.keys(WhirlPreset)
         .map((preset) => `'${preset}'`)
         .join(' | '),
       default: 'undefined',
       description:
-        'The preset color schema to use. Please see Preset section for more information.'
+        'The preset to use for the Whirl component. See the presets section for more information.'
+    },
+    {
+      name: 'speedInSecond',
+      type: 'number',
+      default: '1',
+      description:
+        'The speed of the whirl in seconds. The higher the number, the slower the whirl.'
     },
     {
       name: 'colors',
-      type: '{fillColor1: string, fillColor2: string, fillColor3:string, fillColor4:string}',
+      type: 'object',
       default: 'undefined',
       description:
-        'An objects of colors to use in given structure. If this prop is provided, the preset prop will be ignored.'
+        'An object containing the colors to use for the Whirl component. See the custom colors section for more information.'
     }
   ]}
 />
 
 ## Presets
+
+---
 
 The following presets are available:
 
@@ -93,48 +97,49 @@ The following presets are available:
     </tr>
   </thead>
   <tbody>
-    {Object.keys(HairballPresetColors).map((preset, index) => (
+    {Object.keys(WhirlPreset).map((preset) => (
       <tr key={preset}>
+        {console.log(WhirlPresetColors[preset])}
         <td>{preset}</td>
         <td>
           <div style={{ display: 'flex' }}>
             <div
               style={{
-                backgroundColor: HairballPresetColors[preset].fillColor1,
+                backgroundColor: WhirlPresetColors[preset].fillColor1,
                 width: '20px',
                 height: '20px'
               }}
             ></div>
             <div
               style={{
-                backgroundColor: HairballPresetColors[preset].fillColor2,
+                backgroundColor: WhirlPresetColors[preset].fillColor2,
                 width: '20px',
                 height: '20px'
               }}
             ></div>
             <div
               style={{
-                backgroundColor: HairballPresetColors[preset].fillColor3,
+                backgroundColor: WhirlPresetColors[preset].fillColor3,
                 width: '20px',
                 height: '20px'
               }}
             ></div>
             <div
               style={{
-                backgroundColor: HairballPresetColors[preset].fillColor4,
+                backgroundColor: WhirlPresetColors[preset].fillColor4,
                 width: '20px',
                 height: '20px'
               }}
             ></div>
           </div>
         </td>
-        <td>{`preset={HairballPreset.${preset}}`}</td>
+        <td>{`preset={WhirlPreset.${preset}}`}</td>
       </tr>
     ))}
   </tbody>
 </table>
 
-Each preset corresponds to a unique color schema. You can use these presets to easily change the color scheme of the Hairball component. Simply pass the name of the preset to the `preset` prop of the Hairball component, like this: `<Hairball preset={HairballPreset.sunset} />`.
+Each preset corresponds to a unique color schema. You can use these presets to easily change the color scheme of the Hairball component. Simply pass the name of the preset to the `preset` prop of the Hairball component, like this: `<Whirl preset={WhirlPreset.sunset} />`.
 
 ---
 
@@ -142,17 +147,18 @@ Each preset corresponds to a unique color schema. You can use these presets to e
 
 You can also pass your own colors to the Hairball component. To do this, pass an object to the `colors` prop of the Hairball component, like this:
 
-<Hairball
+<Whirl
   colors={{
     fillColor1: '#ff0000',
     fillColor2: '#00ff00',
     fillColor3: '#0000ff',
     fillColor4: '#ffff00'
   }}
+  speedInSecond={3}
 />
 
 ```jsx
-<Hairball
+<Whirl
   colors={{
     fillColor1: '#ff0000',
     fillColor2: '#00ff00',

@@ -54,7 +54,7 @@ export const FourColorsSchema = {
     fillColor3: '#9b59b6',
     fillColor4: '#34495e',
   },
-  [FourColorsSchemeNames.midday]: {
+  [FourColorsSchemeNames.midnight]: {
     fillColor1: '#34495e',
     fillColor2: '#16a085',
     fillColor3: '#27ae60',
