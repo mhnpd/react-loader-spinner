@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Oval } from '../../src'
 import { render, screen } from '@testing-library/react'

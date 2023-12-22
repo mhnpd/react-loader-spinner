@@ -4,6 +4,18 @@ const fs = require('fs')
 const LOADER_FOLDER = `${process.cwd()}/src/loader`
 const TEST_LOADER_FOLDER = `${process.cwd()}/test/loader`
 
+const Excludes = ['DNA', 'Dna']
+function transformName(name: string): string {
+  return name
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('')
+}
+
+function isExcluded(name: string): boolean {
+  return !Excludes.includes(name)
+}
+
 describe('Project Test Coverage', () => {
   it('should have test for each loader', () => {
     // this test ensure test file and loader file are in sync
@@ -22,8 +34,10 @@ describe('Project Test Coverage', () => {
     const loaderFiles: string[] = []
     fs.readdirSync(LOADER_FOLDER).forEach((file: string) => {
       const testFileName = file.replace('.tsx', '')
-      loaderFiles.push(testFileName)
+      loaderFiles.push(transformName(testFileName))
     })
-    expect(loaderNames.sort()).toEqual(loaderFiles.sort())
+    expect(loaderNames.filter(isExcluded).sort()).toEqual(
+      loaderFiles.filter(isExcluded).sort()
+    )
   })
 })

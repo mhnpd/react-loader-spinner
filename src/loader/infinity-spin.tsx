@@ -11,11 +11,7 @@ type Props = {
 const len = 242.776657104492
 const time = 1.6
 
-export const InfinitySpin: FunctionComponent<Props> = ({
-  color = DEFAULT_COLOR,
-  width = '200',
-}): React.ReactElement => {
-  const anim = keyframes`
+const anim = keyframes`
 12.5% {
   stroke-dasharray: ${len * 0.14}px, ${len}px;
   stroke-dashoffset: -${len * 0.11}px;
@@ -30,12 +26,16 @@ export const InfinitySpin: FunctionComponent<Props> = ({
 }
 `
 
-  const Path = styled.path`
-    stroke-dasharray: ${len * 0.01}px, ${len};
-    stroke-dashoffset: 0;
-    animation: ${anim} ${time}s linear infinite;
-  `
+const Path = styled.path`
+  stroke-dasharray: ${len * 0.01}px, ${len};
+  stroke-dashoffset: 0;
+  animation: ${anim} ${time}s linear infinite;
+`
 
+export const InfinitySpin: FunctionComponent<Props> = ({
+  color = DEFAULT_COLOR,
+  width = '200',
+}): React.ReactElement => {
   return (
     <svg
       xmlns={SVG_NAMESPACE}

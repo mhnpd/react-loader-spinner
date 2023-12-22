@@ -1,5 +1,5 @@
 import React from 'react'
-import { RevolvingDot } from '../../src
+import { RevolvingDot } from '../../src'
 import { render, screen } from '@testing-library/react'
 import { DEFAULT_COLOR } from '../../src/type'
 

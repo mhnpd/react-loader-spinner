@@ -9,15 +9,6 @@ type TriangleProps = BaseProps
 const VIEW_BOX_VALUES = '-3 -4 39 39'
 const POLYGON_POINTS = '16,0 32,32 0,32'
 
-export const Triangle: FunctionComponent<TriangleProps> = ({
-  height = 80,
-  width = 80,
-  color = DEFAULT_COLOR,
-  ariaLabel = 'triangle-loading',
-  wrapperStyle,
-  wrapperClass,
-  visible = true,
-}: TriangleProps): React.ReactElement => {
   /** Styles */
   const dash = keyframes`
 to {
@@ -32,6 +23,16 @@ to {
     transform-origin: 50% 65%;
   `
   /** Styles Ends */
+
+export const Triangle: FunctionComponent<TriangleProps> = ({
+  height = 80,
+  width = 80,
+  color = DEFAULT_COLOR,
+  ariaLabel = 'triangle-loading',
+  wrapperStyle,
+  wrapperClass,
+  visible = true,
+}: TriangleProps): React.ReactElement => {
 
   return (
     <SvgWrapper
