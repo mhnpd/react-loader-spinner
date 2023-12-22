@@ -24,23 +24,6 @@
     "no-console": 2,
     "@typescript-eslint/no-use-before-define": ["error"],
     "comma-dangle": "off",
-    "@typescript-eslint/comma-dangle": "off",
-    "tree-shaking/no-side-effects-in-initialization": [
-      2,
-      {
-        "noSideEffectsWhenCalled": [
-          {
-            "function": "Object.freeze"
-          },
-          {
-            "module": "react",
-            "functions": ["createContext", "createRef"]
-          },
-          {
-            "files": ["*.test.tsx", "*.test.ts"]
-          }
-        ]
-      }
-    ]
+    "@typescript-eslint/comma-dangle": "off"
   }
 }

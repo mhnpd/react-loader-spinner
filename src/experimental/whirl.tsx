@@ -45,7 +45,7 @@ export const Whirl: FunctionComponent<WhirlProps> = ({
       xmlnsXlink="http://www.w3.org/1999/xlink"
       style={{
         margin: 'auto',
-        background: background,
+        background,
         display: 'block',
         ...wrapperStyle
       }}
