@@ -1,43 +1,46 @@
 import * as Loaders from '../src/'
-const fs = require('fs')
+import {
+  readFilesFromFolder,
+  SOURCE_FOLDER,
+  TEST_FOLDER,
+  DOCS_FOLDER,
+  removeExtension,
+  transformNameToDash,
+} from './utils'
 
-const LOADER_FOLDER = `${process.cwd()}/src/loader`
-const TEST_LOADER_FOLDER = `${process.cwd()}/test/loader`
+const Spinners = readFilesFromFolder(SOURCE_FOLDER).map(removeExtension)
+const Tests = readFilesFromFolder(TEST_FOLDER).map(removeExtension)
+const Docs = readFilesFromFolder(DOCS_FOLDER)
+  .filter(i => !i.includes('.json'))
+  .map(removeExtension)
 
-const Excludes = ['DNA', 'Dna']
-function transformName(name: string): string {
-  return name
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join('')
-}
-
-function isExcluded(name: string): boolean {
-  return !Excludes.includes(name)
-}
+const exportedSpinner = Object.keys(Loaders).map(transformNameToDash)
 
 describe('Project Test Coverage', () => {
-  it('should have test for each loader', () => {
-    // this test ensure test file and loader file are in sync
-    const loaderTestFiles: string[] = []
-    fs.readdirSync(LOADER_FOLDER).forEach((file: string) => {
-      const testFileName = file.replace('.tsx', '.spec.tsx')
-      loaderTestFiles.push(testFileName)
-    })
-    const testFiles = fs.readdirSync(TEST_LOADER_FOLDER).sort()
-    expect(loaderTestFiles.sort()).toEqual(testFiles)
+  it('should have same number of loaders and tests', () => {
+    expect(Spinners.length).toEqual(Tests.length)
+    expect(Spinners.length).toEqual(Docs.length)
   })
 
-  it('Should export all defined loader from index file', () => {
-    // This test also insure that fileName and loader name are in sync
-    const loaderNames = Object.keys(Loaders)
-    const loaderFiles: string[] = []
-    fs.readdirSync(LOADER_FOLDER).forEach((file: string) => {
-      const testFileName = file.replace('.tsx', '')
-      loaderFiles.push(transformName(testFileName))
+  it('should have same names for loaders and tests', () => {
+    Spinners.forEach(spinner => {
+      expect(Tests).toContain(spinner)
     })
-    expect(loaderNames.filter(isExcluded).sort()).toEqual(
-      loaderFiles.filter(isExcluded).sort()
-    )
+
+    Spinners.forEach(spinner => {
+      expect(Docs).toContain(spinner)
+    })
+  })
+
+  it('should have same names for tests and docs', () => {
+    Tests.forEach(test => {
+      expect(Docs).toContain(test)
+    })
+  })
+
+  it('should have same names for exported spinners and tests', () => {
+    exportedSpinner.forEach(spinner => {
+      expect(Spinners).toContain(spinner)
+    })
   })
 })

@@ -9,20 +9,20 @@ type TriangleProps = BaseProps
 const VIEW_BOX_VALUES = '-3 -4 39 39'
 const POLYGON_POINTS = '16,0 32,32 0,32'
 
-  /** Styles */
-  const dash = keyframes`
+/** Styles */
+const dash = keyframes`
 to {
    stroke-dashoffset: 136;
  }
 `
-  const Polygon = styled.polygon`
-    stroke-dasharray: 17;
-    animation: ${dash} 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
-  `
-  const SVG = styled.svg`
-    transform-origin: 50% 65%;
-  `
-  /** Styles Ends */
+const Polygon = styled.polygon`
+  stroke-dasharray: 17;
+  animation: ${dash} 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+`
+const SVG = styled.svg`
+  transform-origin: 50% 65%;
+`
+/** Styles Ends */
 
 export const Triangle: FunctionComponent<TriangleProps> = ({
   height = 80,
@@ -33,7 +33,6 @@ export const Triangle: FunctionComponent<TriangleProps> = ({
   wrapperClass,
   visible = true,
 }: TriangleProps): React.ReactElement => {
-
   return (
     <SvgWrapper
       style={wrapperStyle}
