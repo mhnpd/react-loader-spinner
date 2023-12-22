@@ -18,7 +18,7 @@ export const HAIRBALL_DEFAULT_COLOR = FourColorsSchema.sunset
 
 export interface HairballProps extends PrimaryProps {
   colors?: HairballCustomColor
-  preset?: HairballPresetType
+  preset?: HairballPresetType | string
   backgroundColor?: string
   speed?: number
   width?: number
@@ -37,14 +37,12 @@ export const Hairball: FC<HairballProps> = ({
   wrapperStyle = {},
   preset,
 }) => {
-  const colorSchema = FourColorsSchema.sunset
-  return null
   const {
     fillColor1 = HairballPresetColors.dawn.fillColor1,
     fillColor2 = HairballPresetColors.dawn.fillColor2,
     fillColor3 = HairballPresetColors.dawn.fillColor3,
     fillColor4 = HairballPresetColors.dawn.fillColor4,
-  } = colorSchema
+  } = preset ? HairballPresetColors?.[preset] : colors
 
   if (!visible) {
     return null
@@ -66,6 +64,7 @@ export const Hairball: FC<HairballProps> = ({
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid"
       role="progressbar"
+      data-testid="hairball"
     >
       <g transform="translate(50,50)">
         <g transform="scale(0.8)">
