@@ -13,13 +13,13 @@ const FeatureList: FeatureItem[] = [
     title: 'TypeScript Compatibility',
     Svg: require('@site/static/img/typescript-support.svg').default,
     description:
-      'Our library is meticulously crafted in TypeScript, ensuring seamless compatibility with all contemporary web browsers."',
+      'Our library is meticulously crafted in TypeScript, ensuring seamless compatibility with all contemporary web browsers.',
   },
   {
     title: 'Highly Customizable',
     Svg: require('@site/static/img/customizable.svg').default,
     description:
-      'ou can effortlessly personalize the loader by supplying custom properties to the loader component',
+      'You can effortlessly personalize the loader by supplying custom properties to the loader component.',
   },
   {
     title: 'Light Weight',
