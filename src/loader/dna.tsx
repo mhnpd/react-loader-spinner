@@ -1,8 +1,21 @@
 import React, { FunctionComponent } from 'react'
 import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
+// tinycolor2 is a robust library that handles many edge cases (like different color formats)
+import tinycolor from 'tinycolor2'
 
-interface DNAProps extends Omit<BaseProps, 'color'> {}
+interface DNAProps extends Omit<BaseProps, 'color'> {
+  /**
+   * The primary color of the DNA loader strands.
+   * @default 'rgba(233, 12, 89, 0.51)'
+   */
+  dnaColorOne?: string
+  /**
+   * The secondary color of the DNA loader strands.
+   * @default '#46dff0'
+   */
+  dnaColorTwo?: string
+}
 
 export const DNA: FunctionComponent<DNAProps> = ({
   visible = true,
@@ -11,7 +24,19 @@ export const DNA: FunctionComponent<DNAProps> = ({
   wrapperClass = '',
   wrapperStyle = {},
   ariaLabel = 'dna-loading',
+  dnaColorOne = 'rgba(233, 12, 89, 0.51)',
+  dnaColorTwo = '#46dff0',
 }) => {
+
+  // Generated the animated shade for dnaColorOne: a brighter, fully opaque version
+  const animatedColorOne = tinycolor(dnaColorOne).lighten(15).setAlpha(1).toRgbString()
+
+  // Generate the animated shade for dnaColorTwo: a desaturated, faded version
+  const animatedColorTwo = tinycolor(dnaColorTwo)
+    .desaturate(60)
+    .setAlpha(0.15)
+    .toRgbString()
+
   return !visible ? null : (
     <svg
       xmlns={SVG_NAMESPACE}
@@ -29,7 +54,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         cx="6.451612903225806"
         cy="60.6229"
         r="3.41988"
-        fill="rgba(233, 12, 89, 0.5125806451612902)"
+        fill={dnaColorOne}
       >
         <animate
           attributeName="r"
@@ -52,13 +77,13 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="rgba(233, 12, 89, 0.5125806451612902);#ff0033;rgba(233, 12, 89, 0.5125806451612902)"
+          values={`${dnaColorOne};${animatedColorOne};${dnaColorOne}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-0.5s"
         ></animate>
       </circle>
-      <circle cx="6.451612903225806" cy="39.3771" r="2.58012" fill="#46dff0">
+      <circle cx="6.451612903225806" cy="39.3771" r="2.58012" fill={dnaColorTwo}>
         <animate
           attributeName="r"
           keyTimes="0;0.5;1"
@@ -80,7 +105,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="#46dff0;rgba(53, 58, 57, 0.1435483870967742);#46dff0"
+          values={`${dnaColorTwo};${animatedColorTwo};${dnaColorTwo}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-0.5s"
@@ -90,7 +115,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         cx="16.129032258064512"
         cy="68.1552"
         r="3.17988"
-        fill="rgba(233, 12, 89, 0.5125806451612902)"
+        fill={dnaColorOne}
       >
         <animate
           attributeName="r"
@@ -113,13 +138,13 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="rgba(233, 12, 89, 0.5125806451612902);#ff0033;rgba(233, 12, 89, 0.5125806451612902)"
+          values={`${dnaColorOne};${animatedColorOne};${dnaColorOne}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-0.7s"
         ></animate>
       </circle>
-      <circle cx="16.129032258064512" cy="31.8448" r="2.82012" fill="#46dff0">
+      <circle cx="16.129032258064512" cy="31.8448" r="2.82012" fill={dnaColorTwo}>
         <animate
           attributeName="r"
           keyTimes="0;0.5;1"
@@ -141,7 +166,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="#46dff0;rgba(53, 58, 57, 0.1435483870967742);#46dff0"
+          values={`${dnaColorTwo};${animatedColorTwo};${dnaColorTwo}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-0.7s"
@@ -151,7 +176,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         cx="25.806451612903224"
         cy="69.3634"
         r="2.93988"
-        fill="rgba(233, 12, 89, 0.5125806451612902)"
+        fill={dnaColorOne}
       >
         <animate
           attributeName="r"
@@ -174,13 +199,13 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="rgba(233, 12, 89, 0.5125806451612902);#ff0033;rgba(233, 12, 89, 0.5125806451612902)"
+          values={`${dnaColorOne};${animatedColorOne};${dnaColorOne}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-0.9s"
         ></animate>
       </circle>
-      <circle cx="25.806451612903224" cy="30.6366" r="3.06012" fill="#46dff0">
+      <circle cx="25.806451612903224" cy="30.6366" r="3.06012" fill={dnaColorTwo}>
         <animate
           attributeName="r"
           keyTimes="0;0.5;1"
@@ -202,7 +227,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="#46dff0;rgba(53, 58, 57, 0.1435483870967742);#46dff0"
+          values={`${dnaColorTwo};${animatedColorTwo};${dnaColorTwo}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-0.9s"
@@ -212,7 +237,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         cx="35.48387096774193"
         cy="65.3666"
         r="2.69988"
-        fill="rgba(233, 12, 89, 0.5125806451612902)"
+        fill={dnaColorOne}
       >
         <animate
           attributeName="r"
@@ -235,13 +260,13 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="rgba(233, 12, 89, 0.5125806451612902);#ff0033;rgba(233, 12, 89, 0.5125806451612902)"
+          values={`${dnaColorOne};${animatedColorOne};${dnaColorOne}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-1.1s"
         ></animate>
       </circle>
-      <circle cx="35.48387096774193" cy="34.6334" r="3.30012" fill="#46dff0">
+      <circle cx="35.48387096774193" cy="34.6334" r="3.30012" fill={dnaColorTwo}>
         <animate
           attributeName="r"
           keyTimes="0;0.5;1"
@@ -263,7 +288,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="#46dff0;rgba(53, 58, 57, 0.1435483870967742);#46dff0"
+          values={`${dnaColorTwo};${animatedColorTwo};${dnaColorTwo}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-1.1s"
@@ -273,7 +298,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         cx="45.16129032258064"
         cy="53.8474"
         r="2.45988"
-        fill="rgba(233, 12, 89, 0.5125806451612902)"
+        fill={dnaColorOne}
       >
         <animate
           attributeName="r"
@@ -296,13 +321,13 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="rgba(233, 12, 89, 0.5125806451612902);#ff0033;rgba(233, 12, 89, 0.5125806451612902)"
+          values={`${dnaColorOne};${animatedColorOne};${dnaColorOne}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-1.3s"
         ></animate>
       </circle>
-      <circle cx="45.16129032258064" cy="46.1526" r="3.54012" fill="#46dff0">
+      <circle cx="45.16129032258064" cy="46.1526" r="3.54012" fill={dnaColorTwo}>
         <animate
           attributeName="r"
           keyTimes="0;0.5;1"
@@ -324,7 +349,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="#46dff0;rgba(53, 58, 57, 0.1435483870967742);#46dff0"
+          values={`${dnaColorTwo};${animatedColorTwo};${dnaColorTwo}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-1.3s"
@@ -334,7 +359,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         cx="54.838709677419345"
         cy="39.3771"
         r="2.58012"
-        fill="rgba(233, 12, 89, 0.5125806451612902)"
+        fill={dnaColorOne}
       >
         <animate
           attributeName="r"
@@ -357,13 +382,13 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="rgba(233, 12, 89, 0.5125806451612902);#ff0033;rgba(233, 12, 89, 0.5125806451612902)"
+          values={`${dnaColorOne};${animatedColorOne};${dnaColorOne}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-1.5s"
         ></animate>
       </circle>
-      <circle cx="54.838709677419345" cy="60.6229" r="3.41988" fill="#46dff0">
+      <circle cx="54.838709677419345" cy="60.6229" r="3.41988" fill={dnaColorTwo}>
         <animate
           attributeName="r"
           keyTimes="0;0.5;1"
@@ -385,7 +410,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="#46dff0;rgba(53, 58, 57, 0.1435483870967742);#46dff0"
+          values={`${dnaColorTwo};${animatedColorTwo};${dnaColorTwo}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-1.5s"
@@ -395,7 +420,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         cx="64.51612903225805"
         cy="31.8448"
         r="2.82012"
-        fill="rgba(233, 12, 89, 0.5125806451612902)"
+        fill={dnaColorOne}
       >
         <animate
           attributeName="r"
@@ -418,13 +443,13 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="rgba(233, 12, 89, 0.5125806451612902);#ff0033;rgba(233, 12, 89, 0.5125806451612902)"
+          values={`${dnaColorOne};${animatedColorOne};${dnaColorOne}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-1.7s"
         ></animate>
       </circle>
-      <circle cx="64.51612903225805" cy="68.1552" r="3.17988" fill="#46dff0">
+      <circle cx="64.51612903225805" cy="68.1552" r="3.17988" fill={dnaColorTwo}>
         <animate
           attributeName="r"
           keyTimes="0;0.5;1"
@@ -446,7 +471,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="#46dff0;rgba(53, 58, 57, 0.1435483870967742);#46dff0"
+          values={`${dnaColorTwo};${animatedColorTwo};${dnaColorTwo}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-1.7s"
@@ -456,7 +481,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         cx="74.19354838709677"
         cy="30.6366"
         r="3.06012"
-        fill="rgba(233, 12, 89, 0.5125806451612902)"
+        fill={dnaColorOne}
       >
         <animate
           attributeName="r"
@@ -479,13 +504,13 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="rgba(233, 12, 89, 0.5125806451612902);#ff0033;rgba(233, 12, 89, 0.5125806451612902)"
+          values={`${dnaColorOne};${animatedColorOne};${dnaColorOne}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-1.9s"
         ></animate>
       </circle>
-      <circle cx="74.19354838709677" cy="69.3634" r="2.93988" fill="#46dff0">
+      <circle cx="74.19354838709677" cy="69.3634" r="2.93988" fill={dnaColorTwo}>
         <animate
           attributeName="r"
           keyTimes="0;0.5;1"
@@ -507,7 +532,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="#46dff0;rgba(53, 58, 57, 0.1435483870967742);#46dff0"
+          values={`${dnaColorTwo};${animatedColorTwo};${dnaColorTwo}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-1.9s"
@@ -517,7 +542,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         cx="83.87096774193547"
         cy="34.6334"
         r="3.30012"
-        fill="rgba(233, 12, 89, 0.5125806451612902)"
+        fill={dnaColorOne}
       >
         <animate
           attributeName="r"
@@ -540,13 +565,13 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="rgba(233, 12, 89, 0.5125806451612902);#ff0033;rgba(233, 12, 89, 0.5125806451612902)"
+          values={`${dnaColorOne};${animatedColorOne};${dnaColorOne}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-2.1s"
         ></animate>
       </circle>
-      <circle cx="83.87096774193547" cy="65.3666" r="2.69988" fill="#46dff0">
+      <circle cx="83.87096774193547" cy="65.3666" r="2.69988" fill={dnaColorTwo}>
         <animate
           attributeName="r"
           keyTimes="0;0.5;1"
@@ -568,7 +593,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="#46dff0;rgba(53, 58, 57, 0.1435483870967742);#46dff0"
+          values={`${dnaColorTwo};${animatedColorTwo};${dnaColorTwo}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-2.1s"
@@ -578,7 +603,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         cx="93.54838709677418"
         cy="46.1526"
         r="3.54012"
-        fill="rgba(233, 12, 89, 0.5125806451612902)"
+        fill={dnaColorOne}
       >
         <animate
           attributeName="r"
@@ -601,13 +626,13 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="rgba(233, 12, 89, 0.5125806451612902);#ff0033;rgba(233, 12, 89, 0.5125806451612902)"
+          values={`${dnaColorOne};${animatedColorOne};${dnaColorOne}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-2.3s"
         ></animate>
       </circle>
-      <circle cx="93.54838709677418" cy="53.8474" r="2.45988" fill="#46dff0">
+      <circle cx="93.54838709677418" cy="53.8474" r="2.45988" fill={dnaColorTwo}>
         <animate
           attributeName="r"
           keyTimes="0;0.5;1"
@@ -629,7 +654,7 @@ export const DNA: FunctionComponent<DNAProps> = ({
         <animate
           attributeName="fill"
           keyTimes="0;0.5;1"
-          values="#46dff0;rgba(53, 58, 57, 0.1435483870967742);#46dff0"
+          values={`${dnaColorTwo};${animatedColorTwo};${dnaColorTwo}`}
           dur="2s"
           repeatCount="indefinite"
           begin="-2.3s"
