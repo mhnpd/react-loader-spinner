@@ -6,6 +6,7 @@ interface OvalProps extends BaseProps {
   strokeWidth?: string | number
   strokeWidthSecondary?: string | number
   secondaryColor?: string
+  animationDuration?: string | number
 }
 
 /**
@@ -53,6 +54,7 @@ export const Oval: FunctionComponent<OvalProps> = ({
   visible = true,
   strokeWidth = 2,
   strokeWidthSecondary,
+  animationDuration = 1,
 }): ReactElement => (
   <SvgWrapper
     style={wrapperStyle}
@@ -94,7 +96,7 @@ export const Oval: FunctionComponent<OvalProps> = ({
               type="rotate"
               from="0 0 0"
               to="360 0 0"
-              dur="1s"
+              dur={`${animationDuration}s`}
               repeatCount="indefinite"
             />
           </path>
