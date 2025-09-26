@@ -39,8 +39,7 @@
     "docs:clear": "docusaurus clear docs",
     "docs:swizzle": "docusaurus swizzle",
     "docs:write-translations": "docusaurus write-translations",
-    "docs:write-heading-ids": "docusaurus write-heading-ids",
-    "docs:typecheck": "tsc -p docs/tsconfig.json --noEmit"
+    "docs:write-heading-ids": "docusaurus write-heading-ids"
   },
   "devDependencies": {
     "@docusaurus/core": "3.9.1",
