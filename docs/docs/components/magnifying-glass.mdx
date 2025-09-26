@@ -1,9 +1,8 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
+import AutoPropsTable from '../../src/components/auto-props-table'
 import { MagnifyingGlass } from 'react-loader-spinner'
 
 # MagnifyingGlass
@@ -34,20 +33,4 @@ import { MagnifyingGlass } from 'react-loader-spinner'
 
 ## Props
 
-<PropsTable
-  properties={[
-    ...getPropsTableData('magnifying-glass', ['colors']),
-    {
-      name: 'glassColor',
-      type: 'string',
-      default: '#c0efff',
-      description: 'Color of the magnifying glass lensed area',
-    },
-    {
-      name: 'color',
-      type: 'string',
-      default: '#e15b64',
-      description: 'Color of the magnifying glass frame',
-    },
-  ]}
-/>
+<AutoPropsTable component="MagnifyingGlass" exclude={["gradientType", "gradientAngle", "colors"]} />

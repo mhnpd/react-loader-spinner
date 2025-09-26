@@ -1,9 +1,8 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
+import AutoPropsTable from '../../src/components/auto-props-table'
 import { Hourglass } from 'react-loader-spinner'
 
 # Hourglass
@@ -33,4 +32,4 @@ import { Hourglass } from 'react-loader-spinner'
 
 ## Props
 
-<PropsTable properties={[...getPropsTableData('hourglass', ['color'])]} />
+<AutoPropsTable component="Hourglass" exclude={["gradientType", "gradientAngle", "colors"]} />

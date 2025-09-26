@@ -1,9 +1,8 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
+import AutoPropsTable from '../../src/components/auto-props-table'
 import { RotatingTriangles } from 'react-loader-spinner'
 
 # Rotating Triangles
@@ -30,17 +29,7 @@ import { RotatingTriangles } from 'react-loader-spinner'
 </LiveProvider>
 --- ## Props
 
-<PropsTable
-  properties={[
-    ...getPropsTableData('rotating-triangels', ['colors']),
-    {
-      name: 'colors',
-      type: 'object',
-      default: "['#1B5299', '#EF8354', '#DB5461'],",
-      description: 'Customize colors of the component.',
-    },
-  ]}
-/>
+<AutoPropsTable component="RotatingTriangles" exclude={["gradientType", "gradientAngle", "colors"]} />
 
 ## More Example
 

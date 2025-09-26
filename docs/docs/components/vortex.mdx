@@ -1,9 +1,8 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
+import AutoPropsTable from '../../src/components/auto-props-table'
 import { Vortex } from 'react-loader-spinner'
 
 # Vortex
@@ -33,14 +32,4 @@ import { Vortex } from 'react-loader-spinner'
 
 ## Props
 
-<PropsTable
-  properties={[
-    ...getPropsTableData('vortex', ['colors']),
-    {
-      name: 'colors',
-      type: 'array',
-      default: '["red", "green", "blue", "yellow", "orange", "purple"]',
-      description: 'An array of colors to use for the vortex',
-    },
-  ]}
-/>
+<AutoPropsTable component="Vortex" exclude={["gradientType", "gradientAngle"]} />

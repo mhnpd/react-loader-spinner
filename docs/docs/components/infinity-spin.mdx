@@ -1,8 +1,8 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import AutoPropsTable from '../../src/components/auto-props-table'
 import { InfinitySpin } from 'react-loader-spinner'
 
 # Infinity Spin
@@ -27,20 +27,4 @@ import { InfinitySpin } from 'react-loader-spinner'
 
 ## Props
 
-<PropsTable
-  properties={[
-    {
-      name: 'width',
-      type: 'number',
-      default: '100',
-      description: 'Width of the spin',
-    },
-    {
-      name: 'color',
-      type: 'string',
-      default: '#4fa94d',
-      description:
-        'Color of the path. Default is #4fa94d. You can use hex, rgb, rgba, hsl, hsla, named colors.',
-    },
-  ]}
-/>
+<AutoPropsTable component="InfinitySpin" exclude={["gradientType", "gradientAngle", "colors"]} />

@@ -4,42 +4,47 @@ sidebar_position: 1
 
 # Welcome
 
-Enhance your React applications with delightful loading animations using `react-loader-spinner`. This library provides a simple and versatile solution to add loading spinners to your projects. Whether you're a TypeScript enthusiast or need highly customizable loaders, `react-loader-spinner` has got you covered.
+Bring polished, delightful loading experiences to your React applications with `react-loader-spinner`. The library offers a broad collection of production‑ready loaders that are easy to drop in, theme, and optimize—whether you write plain JavaScript or strict TypeScript.
 
-# Getting Started
+## Getting Started
 
 ### Installation
 
-```
-$ npm install react-loader-spinner --save
-
-#or
-
-$ yarn add react-loader-spinner
+```bash
+npm install react-loader-spinner
+# or
+yarn add react-loader-spinner
 ```
 
-## Usage
+### Basic Usage
 
-Integrate the loader into your project with ease:
-
-```jsx
+```tsx
 import { Audio } from 'react-loader-spinner'
-;<Audio
-  height="80"
-  width="80"
-  radius="9"
-  color="green"
-  ariaLabel="three-dots-loading"
-  wrapperStyle
-  wrapperClass
-/>
+
+export function Example() {
+  return (
+    <Audio
+      height={80}
+      width={80}
+      radius={9}
+      color="green"
+      ariaLabel="audio-loading"
+      wrapperStyle={{}}
+      wrapperClass=""
+    />
+  )
+}
 ```
 
-### Key Features 🎸 🚀 👽:
+### Key Features
 
-- TypeScript Compatibility: Seamlessly integrate with TypeScript for enhanced code quality.
-- Highly Customizable: Tailor the loaders to suit your project's unique style and requirements.
-- Lightweight and Dependency-Free: Keep your project lean and efficient without additional dependencies.
-- Cross-browser Support: Ensure a consistent loading experience across all modern web browsers.
-- Rich Animation Library: Access a wide range of dynamic animations to captivate your users.
-- Accessibility-Focused: Enhance user experience with accessible loader elements.
+- Fully Typed: First‑class TypeScript support for safer integrations.
+- Highly Customizable: Adjust size, color, speed, and appearance per use‑case.
+- Lightweight Footprint: Minimal overhead with tree‑shakable builds.
+- Cross‑Browser Compatible: Works consistently across all modern browsers.
+- Diverse Animation Set: Wide variety of loaders for different UX contexts.
+- Accessibility‑Aware: ARIA labels and semantics to support assistive tech.
+
+---
+
+Continue exploring the docs to see all available loaders and advanced usage patterns.

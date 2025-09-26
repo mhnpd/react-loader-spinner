@@ -1,0 +1,57 @@
+[
+  {
+    "name": "wrapperClass",
+    "required": false,
+    "type": "enum",
+    "description": ""
+  },
+  {
+    "name": "color",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "#4fa94d"
+  },
+  {
+    "name": "strokeWidth",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "4"
+  },
+  {
+    "name": "height",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "100"
+  },
+  {
+    "name": "width",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "100"
+  },
+  {
+    "name": "ariaLabel",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "rotating-square-loading"
+  },
+  {
+    "name": "wrapperStyle",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "{}"
+  },
+  {
+    "name": "visible",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "true"
+  }
+]

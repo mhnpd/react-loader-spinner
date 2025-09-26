@@ -1,9 +1,8 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
+import AutoPropsTable from '../../src/components/auto-props-table'
 import { Bars } from 'react-loader-spinner'
 
 # Bars
@@ -33,4 +32,4 @@ import { Bars } from 'react-loader-spinner'
 
 ## Props
 
-<PropsTable properties={[...getPropsTableData('bars', 'colors')]} />
+<AutoPropsTable component="Bars" exclude={["gradientType", "gradientAngle", "colors"]} />

@@ -1,0 +1,68 @@
+[
+  {
+    "name": "wrapperStyle",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "{}"
+  },
+  {
+    "name": "visible",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "true"
+  },
+  {
+    "name": "wrapperClass",
+    "required": false,
+    "type": "enum",
+    "description": ""
+  },
+  {
+    "name": "height",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "100"
+  },
+  {
+    "name": "width",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "100"
+  },
+  {
+    "name": "color",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "#4fa94d"
+  },
+  {
+    "name": "outerCircleColor",
+    "required": false,
+    "type": "enum",
+    "description": ""
+  },
+  {
+    "name": "innerCircleColor",
+    "required": false,
+    "type": "enum",
+    "description": ""
+  },
+  {
+    "name": "middleCircleColor",
+    "required": false,
+    "type": "enum",
+    "description": ""
+  },
+  {
+    "name": "ariaLabel",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "three-circles-loading"
+  }
+]

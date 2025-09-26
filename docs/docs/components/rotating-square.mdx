@@ -1,8 +1,8 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import AutoPropsTable from '../../src/components/auto-props-table'
 import { RotatingSquare } from 'react-loader-spinner'
 
 # Rotating Square
@@ -32,60 +32,7 @@ import { RotatingSquare } from 'react-loader-spinner'
 
 ## Props
 
-<PropsTable
-  properties={[
-    {
-      name: 'height',
-      type: 'number | string',
-      default: '100',
-      description: 'Height of the spinner',
-    },
-    {
-      name: 'width',
-      type: 'number | string',
-      default: '100',
-      description: 'Width of the spinner',
-    },
-    {
-      name: 'color',
-      type: 'string',
-      default: '#4fa94d',
-      description: 'Color of the spinner',
-    },
-    {
-      name: 'ariaLabel',
-      type: 'string',
-      default: 'rotating-square-loading',
-      description: 'Aria label of the spinner',
-    },
-    {
-      name: 'strokeWidth',
-      type: 'number | string',
-      default: '4',
-      description: 'Stroke width of the spinner',
-    },
-    {
-      name: 'wrapperStyle',
-      type: 'object',
-      default: '{}',
-      description:
-        'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
-    },
-    {
-      name: 'wrapperClass',
-      type: 'string',
-      default: '',
-      description:
-        'Class of the wrapper element. It can be used for custom styling.',
-    },
-    {
-      name: 'visible',
-      type: 'boolean',
-      default: 'true',
-      description: 'Whether the spinner is visible',
-    },
-  ]}
-/>
+<AutoPropsTable component="RotatingSquare" exclude={["gradientType", "gradientAngle", "colors"]} />
 
 ## More examples
 

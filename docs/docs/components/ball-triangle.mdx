@@ -1,9 +1,8 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
+import AutoPropsTable from '../../src/components/auto-props-table'
 import { BallTriangle } from 'react-loader-spinner'
 
 # Ball Triangle
@@ -34,4 +33,4 @@ import { BallTriangle } from 'react-loader-spinner'
 
 ### Props
 
-<PropsTable properties={[...getPropsTableData('ball-triangle', 'colors')]} />
+<AutoPropsTable component="BallTriangle" exclude={["gradientType", "gradientAngle", "colors"]} />

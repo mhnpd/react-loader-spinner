@@ -1,0 +1,16 @@
+[
+  {
+    "name": "color",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "#4fa94d"
+  },
+  {
+    "name": "width",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "200"
+  }
+]

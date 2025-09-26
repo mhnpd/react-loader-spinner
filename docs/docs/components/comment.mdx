@@ -1,9 +1,8 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
+import AutoPropsTable from '../../src/components/auto-props-table'
 import { Comment } from 'react-loader-spinner'
 
 # Comment
@@ -34,20 +33,4 @@ import { Comment } from 'react-loader-spinner'
 
 ## Props
 
-<PropsTable
-  properties={[
-    ...getPropsTableData('comment', ['colors']),
-    {
-      name: 'color',
-      type: 'string',
-      default: '#fff',
-      description: 'The color of the comment dots',
-    },
-    {
-      name: 'backgroundColor',
-      type: 'string',
-      default: '#ff6d00',
-      description: 'The background color of the comment box',
-    },
-  ]}
-/>
+<AutoPropsTable component="Comment" exclude={["gradientType", "gradientAngle", "colors"]} />

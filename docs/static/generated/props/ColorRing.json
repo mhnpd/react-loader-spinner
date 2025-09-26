@@ -1,0 +1,62 @@
+[
+  {
+    "name": "colors",
+    "required": false,
+    "type": "enum",
+    "description": "Provide multiple colors to render a gradient instead of a solid color.\nWhen 2 or more colors are supplied a gradient <defs> will be injected and\nthe primary color reference (fill or stroke) becomes url(#gradientId).",
+    "defaultValue": "['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']"
+  },
+  {
+    "name": "gradientType",
+    "required": false,
+    "type": "enum",
+    "description": "Type of gradient (linear or radial). Defaults to linear."
+  },
+  {
+    "name": "gradientAngle",
+    "required": false,
+    "type": "enum",
+    "description": "Angle (in degrees) applied via rotate() transform for linear gradients."
+  },
+  {
+    "name": "height",
+    "required": false,
+    "type": "enum",
+    "description": "Height of the SVG (number interpreted as px).",
+    "defaultValue": "80"
+  },
+  {
+    "name": "width",
+    "required": false,
+    "type": "enum",
+    "description": "Width of the SVG (number interpreted as px).",
+    "defaultValue": "80"
+  },
+  {
+    "name": "ariaLabel",
+    "required": false,
+    "type": "enum",
+    "description": "Accessible label announced to screen readers (mapped to aria-label).",
+    "defaultValue": "color-ring-loading"
+  },
+  {
+    "name": "wrapperStyle",
+    "required": false,
+    "type": "enum",
+    "description": "Inline style object applied to the wrapper element.",
+    "defaultValue": "{}"
+  },
+  {
+    "name": "wrapperClass",
+    "required": false,
+    "type": "enum",
+    "description": "CSS class applied to the wrapper for custom styling."
+  },
+  {
+    "name": "visible",
+    "required": false,
+    "type": "enum",
+    "description": "When false, the loader is not rendered.",
+    "defaultValue": "true"
+  }
+]

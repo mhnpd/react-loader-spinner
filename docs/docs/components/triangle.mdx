@@ -1,8 +1,8 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import AutoPropsTable from '../../src/components/auto-props-table'
 import { Triangle } from 'react-loader-spinner'
 
 # Triangle
@@ -32,52 +32,4 @@ import { Triangle } from 'react-loader-spinner'
 
 ## Props
 
-<PropsTable
-  properties={[
-    {
-      name: 'height',
-      type: 'number | string',
-      default: '80',
-      description: 'Height of the triangle',
-    },
-    {
-      name: 'width',
-      type: 'number | string',
-      default: '80',
-      description: 'Width of the triangle',
-    },
-    {
-      name: 'color',
-      type: 'string',
-      default: '#4fa94d',
-      description: 'Color of the triangle',
-    },
-    {
-      name: 'ariaLabel',
-      type: 'string',
-      default: 'triangle-loading',
-      description:
-        'Aria label of the triangle. Will be used for the `aria-label` attribute of the wrapper element',
-    },
-    {
-      name: 'wrapperStyle',
-      type: 'object',
-      default: '{}',
-      description:
-        'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
-    },
-    {
-      name: 'wrapperClass',
-      type: 'string',
-      default: 'undefined',
-      description:
-        'Class name of the wrapper element. It can be used for custom styling.',
-    },
-    {
-      name: 'visible',
-      type: 'boolean',
-      default: 'true',
-      description: 'Whether the triangle is visible',
-    },
-  ]}
-/>
+<AutoPropsTable component="Triangle" exclude={["gradientType", "gradientAngle", "colors"]} />

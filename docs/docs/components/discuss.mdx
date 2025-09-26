@@ -1,9 +1,8 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
+import AutoPropsTable from '../../src/components/auto-props-table'
 import { Discuss } from 'react-loader-spinner'
 
 # Discuss
@@ -34,14 +33,4 @@ import { Discuss } from 'react-loader-spinner'
 
 ## Props
 
-<PropsTable
-  properties={[
-    ...getPropsTableData('discuss', ['colors']),
-    {
-      name: 'colors',
-      type: 'array',
-      default: `['#ff727d', '#ff727d']`,
-      description: 'The colors of the the rings',
-    },
-  ]}
-/>
+<AutoPropsTable component="Discuss" exclude={["gradientType", "gradientAngle", "colors"]} />
