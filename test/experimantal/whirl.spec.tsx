@@ -18,7 +18,7 @@ describe('Whirl', () => {
   test('applies wrapperStyle correctly', () => {
     render(<Whirl wrapperStyle={{ backgroundColor: 'red' }} />);
     const svgElement = screen.getByTestId('whirl');
-    expect(svgElement).toHaveStyle('background-color: red');
+  expect(svgElement).toHaveStyle('background-color: rgb(255, 0, 0)');
   });
 
   test('does not render when visible is false', () => {

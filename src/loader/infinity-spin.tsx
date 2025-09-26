@@ -53,7 +53,7 @@ export const InfinitySpin: FunctionComponent<Props> = ({
 
   <Path
     data-testid="infinity-spin-path-1"
-    stroke="url(#gradientColor)"
+    stroke={color}
     fill="none"
     strokeWidth="4"
     strokeLinecap="round"
@@ -65,7 +65,7 @@ export const InfinitySpin: FunctionComponent<Props> = ({
     data-testid="infinity-spin-path-2"
     opacity="0.07"
     fill="none"
-    stroke="url(#gradientColor)"
+    stroke={color}
     strokeWidth="4"
     strokeLinecap="round"
     strokeLinejoin="round"
