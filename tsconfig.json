@@ -10,5 +10,5 @@
     "moduleResolution": "node",
     "lib": ["esnext", "DOM"]
   },
-  "exclude": ["docs"]
+  "exclude": ["dist", "node_modules", "docs"]
 }

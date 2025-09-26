@@ -1,4 +1,5 @@
 import { themes as prismThemes } from 'prism-react-renderer'
+import * as path from 'path'
 import type { Config } from '@docusaurus/types'
 import type * as Preset from '@docusaurus/preset-classic'
 
@@ -29,7 +30,26 @@ const config: Config = {
   },
 
   // plugins: ['@docusaurus/plugin-google-analytics'],
-  plugins: ['@docusaurus/theme-live-codeblock'],
+  plugins: [
+    '@docusaurus/theme-live-codeblock',
+    function swapSourceOrDist() {
+      return {
+        name: 'rls-alias-plugin',
+        configureWebpack() {
+          const useDist = process.env.DOCS_USE_DIST === 'true'
+          return {
+            resolve: {
+              alias: {
+                'react-loader-spinner': useDist
+                  ? path.resolve(__dirname, '..', 'dist')
+                  : path.resolve(__dirname, '..', 'src'),
+              },
+            },
+          }
+        },
+      }
+    },
+  ],
 
   presets: [
     [
