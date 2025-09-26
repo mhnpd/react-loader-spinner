@@ -53,7 +53,7 @@ export const FallingLines: FunctionComponent<FallingLinesProps> = ({
           repeatCount="indefinite"
         />
       </rect>
-      <rect y="25" width="10" height="50" rx="4" ry="4" fill={color}>
+  <rect y="25" width="10" height="50" rx="4" ry="4" fill={color} opacity={0}>
         <animate
           attributeName="x"
           values="10;100"
@@ -86,6 +86,7 @@ export const FallingLines: FunctionComponent<FallingLinesProps> = ({
         rx="4"
         ry="4"
         fill={color}
+        opacity={0}
         data-testid="falling-lines-rect-2"
       >
         <animate
