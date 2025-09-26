@@ -12,7 +12,7 @@
 </p>
 </div>
 
-`react-spinner-loader` provides simple React SVG spinner component which can be implemented for async await operation before data loads to the view.
+`react-loader-spinner` provides simple React SVG spinner components which can be implemented for async/await operations before data loads in the view.
 
 ### Installation
 
@@ -33,18 +33,31 @@ yarn add react-loader-spinner
 > No css import is required
 
 ```jsx
-import { Audio } from 'react-loader-spinner'
-;<Audio
+import { Audio } from 'react-loader-spinner';
+
+<Audio
   height="80"
   width="80"
   radius="9"
   color="green"
   ariaLabel="loading"
+/>
   wrapperStyle
   wrapperClass
 />
 ```
 
+#### Individual (deep) imports
+
+Each loader can also be imported directly (useful for some bundlers / tree‑shaking scenarios):
+
+```jsx
+import { Audio } from 'react-loader-spinner/audio'
+
+// other examples:
+// import { Oval } from 'react-loader-spinner/oval'
+// import { ThreeDots } from 'react-loader-spinner/three-dots'
+```
 
 ## License
 
