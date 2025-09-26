@@ -1,9 +1,7 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
 import { Circles } from 'react-loader-spinner'
 
 # Circles
@@ -33,4 +31,4 @@ import { Circles } from 'react-loader-spinner'
 
 ### Props
 
-<PropsTable properties={[...getPropsTableData('circles', ['colors'])]} />
+<AutoPropsTable component="Circles" exclude={["gradientType", "gradientAngle", "colors"]} />

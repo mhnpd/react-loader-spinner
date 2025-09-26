@@ -1,9 +1,9 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { MutatingDots } from 'react-loader-spinner'
+import AutoPropsTable from '../../src/components/auto-props-table'
 
 # Mutating Dots
 
@@ -34,65 +34,4 @@ import { MutatingDots } from 'react-loader-spinner'
 
 ## Props
 
-<PropsTable
-  properties={[
-    {
-      name: 'height',
-      type: 'number | string',
-      default: '100',
-      description: 'Height of the dots. Minimum height should be 100px',
-    },
-    {
-      name: 'width',
-      type: 'number | string',
-      default: '100',
-      description: 'Width of the dots. Minimum width should be 100px',
-    },
-    {
-      name: 'color',
-      type: 'string',
-      default: '#4fa94d',
-      description: 'Color of the dots',
-    },
-    {
-      name: 'secondaryColor',
-      type: 'string',
-      default: '#4fa94d',
-      description:
-        'Secondary color for second dot. If not set, will use the color prop',
-    },
-    {
-      name: 'radius',
-      type: 'number | string',
-      default: '12.5',
-      description: 'Radius of the dots',
-    },
-    {
-      name: 'ariaLabel',
-      type: 'string',
-      default: 'mutating-dots-loading',
-      description:
-        'Aria label of the mutating dots container. Will be used for the aria-label attribute of the container',
-    },
-    {
-      name: 'wrapperStyle',
-      type: 'object',
-      default: '{}',
-      description:
-        'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
-    },
-    {
-      name: 'wrapperClass',
-      type: 'string',
-      default: 'undefiend',
-      description:
-        'Class of the wrapper element. It can be used for custom styling. It will override the default style.',
-    },
-    {
-      name: 'visible',
-      type: 'boolean',
-      default: 'true',
-      description: 'Visibility of the dots',
-    },
-  ]}
-/>
+<AutoPropsTable component="MutatingDots" exclude={["gradientType", "gradientAngle", "colors"]} />

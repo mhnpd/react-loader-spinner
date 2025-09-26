@@ -1,9 +1,8 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
+import AutoPropsTable from '../../src/components/auto-props-table'
 import { ColorRing } from 'react-loader-spinner'
 
 # Color Ring
@@ -33,23 +32,7 @@ import { ColorRing } from 'react-loader-spinner'
 
 ## Props
 
-<PropsTable
-  properties={[
-    ...getPropsTableData('color-ring', ['colors']),
-    {
-      name: 'colors',
-      type: 'array',
-      default: `[
-      "#e15b64",
-      "#f47e60",
-      "#f8b26a",
-      "#abbd81",
-      "#849b87"
-      ]`,
-      description: 'Array of colors to be used in the ring',
-    },
-  ]}
-/>
+<AutoPropsTable component="ColorRing" exclude={["gradientType", "gradientAngle"]} />
 
 ## More example:
 

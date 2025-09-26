@@ -1,9 +1,7 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
 import { ProgressBar } from 'react-loader-spinner'
 
 # Progress Bar
@@ -33,20 +31,4 @@ import { ProgressBar } from 'react-loader-spinner'
 
 ## Props
 
-<PropsTable
-  properties={[
-    ...getPropsTableData('progress-bar', ['colors']),
-    {
-      name: 'borderColor',
-      type: 'string',
-      default: '#51E5FF',
-      description: 'Color of the border of the progress bar',
-    },
-    {
-      name: 'barColor',
-      type: 'string',
-      default: '#F4442E',
-      description: 'Color of the progress bar',
-    },
-  ]}
-/>
+<AutoPropsTable component="ProgressBar" exclude={["gradientType", "gradientAngle", "colors"]} />

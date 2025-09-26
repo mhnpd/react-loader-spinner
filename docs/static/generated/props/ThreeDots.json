@@ -3,7 +3,7 @@
     "name": "radius",
     "required": false,
     "type": "enum",
-    "description": "",
+    "description": "The radius of the dots",
     "defaultValue": "9"
   },
   {

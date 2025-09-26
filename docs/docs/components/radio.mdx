@@ -1,9 +1,7 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
 import { Radio } from 'react-loader-spinner'
 
 # Radio
@@ -33,17 +31,7 @@ import { Radio } from 'react-loader-spinner'
 
 ## Props
 
-<PropsTable
-  properties={[
-    ...getPropsTableData('radio', ['colors']),
-    {
-      name: 'colors',
-      type: 'object',
-      default: '[#4fa94d, #4fa94d, #4fa94d]',
-      description: 'Customize colors of the component.',
-    },
-  ]}
-/>
+<AutoPropsTable component="Radio" exclude={["gradientType", "gradientAngle", "colors"]} />
 
 ## More Example
 

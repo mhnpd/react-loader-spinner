@@ -1,9 +1,8 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
+import AutoPropsTable from '../../src/components/auto-props-table'
 import { Blocks } from 'react-loader-spinner'
 
 # Blocks
@@ -30,4 +29,4 @@ import { Blocks } from 'react-loader-spinner'
 </LiveProvider>
 --- ## Props
 
-<PropsTable properties={[...getPropsTableData('blocks', ['colors'])]} />
+<AutoPropsTable component="Blocks" exclude={["gradientType", "gradientAngle", "colors"]} />

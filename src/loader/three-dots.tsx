@@ -4,6 +4,7 @@ import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
 
 interface ThreeDotsProps extends BaseProps {
+  /** The radius of the dots */
   radius?: string | number
 }
 

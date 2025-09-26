@@ -1,9 +1,7 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
 import {
   Hairball,
   HairballPreset,
@@ -58,27 +56,7 @@ component. See the `colors` props section for more information.
 
 ## Props
 
-<PropsTable
-  properties={[
-    ...getPropsTableData('Hairball', ['colors']),
-    {
-      name: 'preset',
-      type: Object.keys(HairballPreset)
-        .map((preset) => `'${preset}'`)
-        .join(' | '),
-      default: 'undefined',
-      description:
-        'The preset color schema to use. Please see Preset section for more information.'
-    },
-    {
-      name: 'colors',
-      type: '{fillColor1: string, fillColor2: string, fillColor3:string, fillColor4:string}',
-      default: 'undefined',
-      description:
-        'An objects of colors to use in given structure. If this prop is provided, the preset prop will be ignored.'
-    }
-  ]}
-/>
+<AutoPropsTable component="Hairball" exclude={["gradientType", "gradientAngle", "colors"]} />
 
 ## Presets
 

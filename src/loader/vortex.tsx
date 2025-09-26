@@ -3,6 +3,8 @@ import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
 
 interface VortexProps extends Omit<BaseProps, 'color'> {
+  /** Customize colors of the component. There should be 6 colors provided. */
+  // If less than 6 colors are provided, the remaining colors will default to the first color.
   colors?: [string, string, string, string, string, string]
 }
 

@@ -1,10 +1,9 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
 import { FidgetSpinner } from 'react-loader-spinner'
+import AutoPropsTable from '../../src/components/auto-props-table'
 
 # Fidget Spinner
 
@@ -31,26 +30,6 @@ import { FidgetSpinner } from 'react-loader-spinner'
 
 ## Props
 
-<PropsTable
-  properties={[
-    ...getPropsTableData('fidget spinner', ['colors']),
-    {
-      name: 'ballColors',
-      type: 'array',
-      default: '["#ff0000", "#00ff00", "#0000ff"]',
-      description: 'Array of colors for the balls',
-    },
-    {
-      name: 'backgroundColor',
-      type: 'string',
-      default: '"#F4442E"',
-      description: 'Background color of the spinner',
-    },
-  ]}
-/>
+<AutoPropsTable component="FidgetSpinner" exclude={["gradientType", "gradientAngle", "colors"]} />
 
-## More Example
 
----
-
-<FidgetSpinner />

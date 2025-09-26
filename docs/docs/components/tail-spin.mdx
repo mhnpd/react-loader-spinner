@@ -1,7 +1,6 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { TailSpin } from 'react-loader-spinner'
 
@@ -31,59 +30,6 @@ import { TailSpin } from 'react-loader-spinner'
 
 ---
 
-## Props
+### Props
 
-<PropsTable
-  properties={[
-    {
-      name: 'height',
-      type: 'number | string',
-      default: '80',
-      description: 'Height of the spinner.',
-    },
-    {
-      name: 'width',
-      type: 'number | string',
-      default: '80',
-      description: 'Width of the spinner.',
-    },
-    {
-      name: 'color',
-      type: 'string',
-      default: '#4fa94d',
-      description: 'Color of the spinner.',
-    },
-    {
-      name: 'ariaLabel',
-      type: 'string',
-      default: 'tail-spin-loading',
-      description: 'Aria label of the spinner.',
-    },
-    {
-      name: 'radius',
-      type: 'number | string',
-      default: '1',
-      description: 'Radius of the spinner. Max radius is 10',
-    },
-    {
-      name: 'wrapperStyle',
-      type: 'object',
-      default: '{}',
-      description:
-        'Styles to be applied to the wrapper. It should be a valid CSS object. It can be used for custom styling. It will override the default style.',
-    },
-    {
-      name: 'wrapperClass',
-      type: 'string',
-      default: '',
-      description:
-        'Class of the wrapper element. It can be used for custom styling.',
-    },
-    {
-      name: 'visible',
-      type: 'boolean',
-      default: 'true',
-      description: 'Whether the spinner is visible.',
-    },
-  ]}
-/>
+<AutoPropsTable component="TailSpin" exclude={["gradientType", "gradientAngle", "colors"]} />

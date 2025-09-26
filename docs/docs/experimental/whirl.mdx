@@ -1,9 +1,7 @@
 ---
 ---
 
-import PropsTable from '../../src/components/props-table'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { getPropsTableData } from '../../src/components/helpers'
 import {
   Whirl,
   WhirlPreset,
@@ -56,34 +54,7 @@ component. See the `colors` props section for more information.
 
 ## Props
 
-<PropsTable
-  properties={[
-    ...getPropsTableData('Whirl', ['colors', 'color']),
-    {
-      name: 'preset',
-      type: Object.keys(WhirlPreset)
-        .map((preset) => `'${preset}'`)
-        .join(' | '),
-      default: 'undefined',
-      description:
-        'The preset to use for the Whirl component. See the presets section for more information.'
-    },
-    {
-      name: 'speedInSecond',
-      type: 'number',
-      default: '1',
-      description:
-        'The speed of the whirl in seconds. The higher the number, the slower the whirl.'
-    },
-    {
-      name: 'colors',
-      type: 'object',
-      default: 'undefined',
-      description:
-        'An object containing the colors to use for the Whirl component. See the custom colors section for more information.'
-    }
-  ]}
-/>
+<AutoPropsTable component="Whirl" exclude={["gradientType", "gradientAngle", "colors"]} />
 
 ## Presets
 

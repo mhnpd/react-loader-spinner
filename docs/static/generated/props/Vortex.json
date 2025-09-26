@@ -3,7 +3,7 @@
     "name": "colors",
     "required": false,
     "type": "enum",
-    "description": "Provide multiple colors to render a gradient instead of a solid color.\nWhen 2 or more colors are supplied a gradient <defs> will be injected and\nthe primary color reference (fill or stroke) becomes url(#gradientId).",
+    "description": "Customize colors of the component. There should be 6 colors provided.",
     "defaultValue": "['#1B5299', '#EF8354', '#DB5461', '#1B5299', '#EF8354', '#DB5461']"
   },
   {
