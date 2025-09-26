@@ -1,15 +1,13 @@
 import React, { useCallback, FunctionComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
+import { SvgWrapper } from '../shared/svg-wrapper'
 
-type Props = {
-  width?: string
-  visible?: boolean
-  strokeWidth?: string
+interface Props extends BaseProps {
+  strokeWidth?: string | number
+  animationDuration?: string | number
   strokeColor?: string
-  animationDuration?: string
-  ariaLabel?: string
 }
 
 const POINTS = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330]
@@ -19,13 +17,13 @@ to {
    transform: rotate(360deg);
  }
 `
-const Svg = styled.svg`
-  animation: ${spin} 0.75s steps(12, end) infinite;
-  animation-duration: 0.75s;
+
+const Svg = styled.svg<{ $animationDuration: string | number }>`
+  animation: ${spin} ${props => (String(props.$animationDuration).endsWith('s') ? String(props.$animationDuration) : `${props.$animationDuration}s`)} steps(12, end) infinite;
 `
 
-const Polyline = styled.polyline`
-  stroke-width: ${props => props.width}px;
+const Polyline = styled.polyline<{ $strokeWidth: string | number }>`
+  stroke-width: ${props => `${props.$strokeWidth}px`};
   stroke-linecap: round;
 
   &:nth-child(12n + 0) {
@@ -74,12 +72,16 @@ const Polyline = styled.polyline`
 `
 
 export const RotatingLines: FunctionComponent<Props> = ({
-  strokeColor = DEFAULT_COLOR,
-  strokeWidth = '5',
-  animationDuration = '0.75',
-  width = '96',
+  height = 96,
+  width = 96,
+  color = DEFAULT_COLOR,
+  strokeWidth = 5,
+  animationDuration = 0.75,
+  strokeColor,
   visible = true,
   ariaLabel = 'rotating-lines-loading',
+  wrapperStyle,
+  wrapperClass,
 }): React.ReactElement | null => {
   const lines = useCallback(
     () =>
@@ -88,24 +90,38 @@ export const RotatingLines: FunctionComponent<Props> = ({
         <Polyline
           key={point}
           points="24,12 24,4"
-          width={strokeWidth}
+          $strokeWidth={strokeWidth}
           transform={`rotate(${point}, 24, 24)`}
         />
       )),
     [strokeWidth]
   )
-  return !visible ? null : (
-    <Svg
-      xmlns={SVG_NAMESPACE}
-      viewBox="0 0 48 48"
-      width={width}
-      stroke={strokeColor}
-      speed={animationDuration}
-      data-testid="rotating-lines-svg"
+
+  if (!visible) return null
+
+  return (
+    <SvgWrapper
+      style={wrapperStyle}
+      $visible={visible}
+      className={wrapperClass}
       aria-label={ariaLabel}
+      data-testid="rotating-lines-loading"
       {...DEFAULT_WAI_ARIA_ATTRIBUTE}
     >
-      {lines()}
-    </Svg>
+      <Svg
+        xmlns={SVG_NAMESPACE}
+        viewBox="0 0 48 48"
+        width={width}
+        height={height}
+        stroke={strokeColor ?? color}
+        $animationDuration={animationDuration}
+        speed={String(animationDuration)}
+        aria-label={ariaLabel}
+        data-testid="rotating-lines-svg"
+        {...DEFAULT_WAI_ARIA_ATTRIBUTE}
+      >
+        {lines()}
+      </Svg>
+    </SvgWrapper>
   )
 }
