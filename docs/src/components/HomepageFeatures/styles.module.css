@@ -1,15 +1,122 @@
 .features {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.featuresHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.featuresHeader h2 {
+  font-size: 2.5rem;
+  color: #2e8555;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.featuresHeader p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2e8555, #4fa94d);
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(46, 133, 85, 0.15);
+}
+
+.featureIcon {
   display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 120px;
+  width: 120px;
+  filter: drop-shadow(0 4px 8px rgba(46, 133, 85, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover .featureSvg {
+  transform: scale(1.1);
+}
+
+.featureContent {
+  text-align: center;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2e8555;
+  margin-bottom: 0.5rem;
+}
+
+.featureHighlight {
+  display: inline-block;
+  background: linear-gradient(135deg, #4fa94d, #2e8555);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.featureDescription {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .table {
   width: 100%;
+}
+
+@media screen and (max-width: 996px) {
+  .features {
+    padding: 3rem 0;
+  }
+  
+  .featuresHeader h2 {
+    font-size: 2rem;
+  }
+  
+  .featureCard {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .featureSvg {
+    height: 100px;
+    width: 100px;
+  }
 }

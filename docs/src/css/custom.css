@@ -15,6 +15,8 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --ifm-heading-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -27,4 +29,99 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Import Inter font for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Global improvements */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced button styles */
+.button {
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.button--primary {
+  background: linear-gradient(135deg, #2e8555 0%, #4fa94d 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(46, 133, 85, 0.3);
+}
+
+.button--primary:hover {
+  background: linear-gradient(135deg, #277148 0%, #359962 100%);
+  box-shadow: 0 6px 20px rgba(46, 133, 85, 0.4);
+  transform: translateY(-2px);
+}
+
+.button--secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.button--secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.button--outline {
+  border: 2px solid var(--ifm-color-primary);
+  background: transparent;
+}
+
+.button--outline:hover {
+  background: var(--ifm-color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(46, 133, 85, 0.3);
+}
+
+/* Improved navbar */
+.navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Enhanced code blocks */
+.prism-code {
+  border-radius: 12px;
+}
+
+/* Smooth animations */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Enhanced footer */
+.footer {
+  background: linear-gradient(135deg, #2e8555 0%, #1a8870 100%);
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] .navbar {
+  background: rgba(24, 25, 26, 0.95);
+}
+
+[data-theme='dark'] .button--secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='dark'] .button--secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
 }
