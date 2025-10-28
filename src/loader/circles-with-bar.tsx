@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react'
+import { FunctionComponent } from 'react'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
@@ -49,7 +49,7 @@ interface CirclesWithBarProps {
  * and a wave bars. outer circle, inner circle and bar
  * color can be set from props.
  */
-export const CirclesWithBar: React.FunctionComponent<CirclesWithBarProps> = ({
+export const CirclesWithBar: FunctionComponent<CirclesWithBarProps> = ({
   wrapperStyle = {},
   visible = true,
   wrapperClass = '',
@@ -60,7 +60,7 @@ export const CirclesWithBar: React.FunctionComponent<CirclesWithBarProps> = ({
   innerCircleColor,
   barColor,
   ariaLabel = 'circles-with-bar-loading',
-}): React.ReactElement => {
+}) => {
   return (
     <SvgWrapper
       style={wrapperStyle}

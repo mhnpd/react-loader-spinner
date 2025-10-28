@@ -63,7 +63,7 @@ const Path = styled.path`
 export const InfinitySpin: FunctionComponent<InfinitySpinProps> = ({
   color = DEFAULT_COLOR,
   width = '200',
-}): React.ReactElement => {
+}) => {
   return (
    <svg
   xmlns={SVG_NAMESPACE}

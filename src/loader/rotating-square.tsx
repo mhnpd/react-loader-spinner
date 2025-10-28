@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react'
+import { FunctionComponent } from 'react'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
@@ -38,7 +38,7 @@ interface RotatingSquareProps {
   gradientAngle?: number
 }
 
-export const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
+export const RotatingSquare: FunctionComponent<RotatingSquareProps> = ({
   wrapperClass = '',
   color = DEFAULT_COLOR,
   height = 100,
@@ -47,7 +47,7 @@ export const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
   ariaLabel = 'rotating-square-loading',
   wrapperStyle = {},
   visible = true,
-}): React.ReactElement => {
+}) => {
   return (
     <SvgWrapper
       style={wrapperStyle}

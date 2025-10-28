@@ -106,7 +106,7 @@ export const RotatingLines: FunctionComponent<RotatingLinesProps> = ({
   ariaLabel = 'rotating-lines-loading',
   wrapperStyle,
   wrapperClass,
-}): React.ReactElement | null => {
+}) => {
   const lines = useCallback(
     () =>
       POINTS.map(point => (

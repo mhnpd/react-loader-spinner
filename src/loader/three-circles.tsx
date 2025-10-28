@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react'
+import { FunctionComponent, CSSProperties } from 'react'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
@@ -37,7 +37,7 @@ interface ThreeCirclesProps {
  * @description contains three circles rotating in opposite direction
  * outer circle, middle circle and inner circle color can be set from props.
  */
-export const ThreeCircles: React.FunctionComponent<ThreeCirclesProps> = ({
+export const ThreeCircles: FunctionComponent<ThreeCirclesProps> = ({
   wrapperStyle = {},
   visible = true,
   wrapperClass = '',
@@ -48,7 +48,7 @@ export const ThreeCircles: React.FunctionComponent<ThreeCirclesProps> = ({
   outerCircleColor,
   innerCircleColor,
   middleCircleColor,
-}): React.ReactElement => {
+}) => {
   return (
     <SvgWrapper
       style={wrapperStyle}

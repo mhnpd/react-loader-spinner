@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react'
+import { FunctionComponent, CSSProperties } from 'react'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
@@ -46,7 +46,7 @@ interface LineWaveProps {
  * @description contains three lines in a wave motion
  * line colors are changeable
  */
-export const LineWave: React.FunctionComponent<LineWaveProps> = ({
+export const LineWave: FunctionComponent<LineWaveProps> = ({
   wrapperStyle = {},
   visible = true,
   wrapperClass = '',
@@ -57,7 +57,7 @@ export const LineWave: React.FunctionComponent<LineWaveProps> = ({
   firstLineColor,
   middleLineColor,
   lastLineColor,
-}): React.ReactElement => {
+}) => {
   return (
     <SvgWrapper
       style={wrapperStyle}

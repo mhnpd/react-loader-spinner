@@ -63,7 +63,7 @@ export const Triangle: FunctionComponent<TriangleProps> = ({
   wrapperStyle,
   wrapperClass,
   visible = true,
-}: TriangleProps): React.ReactElement => {
+}: TriangleProps) => {
   return (
     <SvgWrapper
       style={wrapperStyle}

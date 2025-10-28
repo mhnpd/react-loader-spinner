@@ -40,7 +40,7 @@ export const FallingLines: FunctionComponent<FallingLinesProps> = ({
   color = DEFAULT_COLOR,
   width = '100',
   visible = true,
-}): React.ReactElement | null => {
+}) => {
   return visible ? (
     <svg
       xmlns={SVG_NAMESPACE}
