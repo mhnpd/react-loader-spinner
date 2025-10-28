@@ -3,15 +3,39 @@ import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
 
-type RotatingSquareProps = {
-  wrapperClass?: string
-  color?: string
-  strokeWidth?: string | number
+/**
+ * Props for the RotatingSquare loader component.
+ * 
+ * The RotatingSquare loader displays a square with rotating animation.
+ * 
+ * @interface RotatingSquareProps
+ */
+interface RotatingSquareProps {
+  /** Height of the SVG (number interpreted as px). */
   height?: string | number
+  /** Width of the SVG (number interpreted as px). */
   width?: string | number
+  /** Primary color applied to the loader. */
+  color?: string
+  /** Stroke width of the square outline. Affects the thickness of the square border. */
+  strokeWidth?: string | number
+  /** Accessible label announced to screen readers. */
   ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
   wrapperStyle?: Style
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
   visible?: boolean
+  /** 
+   * Provide multiple colors to render a gradient instead of a solid color.
+   * When 2 or more colors are supplied a gradient will be applied to the loader.
+   */
+  colors?: string[]
+  /** Type of gradient (linear or radial). Defaults to linear. */
+  gradientType?: 'linear' | 'radial'
+  /** Angle (in degrees) applied via rotate() transform for linear gradients. */
+  gradientAngle?: number
 }
 
 export const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({

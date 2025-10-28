@@ -8,8 +8,7 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "moduleResolution": "bundler",
-    "lib": ["esnext", "DOM"],
-    "ignoreDeprecations": "6.0"
+    "lib": ["esnext", "DOM"]
   },
   "exclude": ["dist", "node_modules", "docs"]
 }

@@ -3,9 +3,37 @@ import styled, { keyframes } from 'styled-components'
 import { DEFAULT_COLOR } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
 
-type Props = {
-  color?: string 
-  width?: string
+/**
+ * Props for the InfinitySpin loader component.
+ * 
+ * The InfinitySpin loader displays an infinity symbol with spinning animation.
+ * 
+ * @interface InfinitySpinProps
+ */
+interface InfinitySpinProps {
+  /** Height of the SVG (number interpreted as px). */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). */
+  width?: string | number
+  /** Primary color applied to the loader. */
+  color?: string
+  /** Accessible label announced to screen readers. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
+  /** 
+   * Provide multiple colors to render a gradient instead of a solid color.
+   * When 2 or more colors are supplied a gradient will be applied to the loader.
+   */
+  colors?: string[]
+  /** Type of gradient (linear or radial). Defaults to linear. */
+  gradientType?: 'linear' | 'radial'
+  /** Angle (in degrees) applied via rotate() transform for linear gradients. */
+  gradientAngle?: number
 }
 
 const len = 242.776657104492
@@ -32,7 +60,7 @@ const Path = styled.path`
   animation: ${anim} ${time}s linear infinite;
 `
 
-export const InfinitySpin: FunctionComponent<Props> = ({
+export const InfinitySpin: FunctionComponent<InfinitySpinProps> = ({
   color = DEFAULT_COLOR,
   width = '200',
 }): React.ReactElement => {

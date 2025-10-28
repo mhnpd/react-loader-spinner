@@ -1,8 +1,32 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
 
-interface BlocksProps extends BaseProps {}
+/**
+ * Props for the Blocks loader component.
+ * 
+ * The Blocks loader displays a grid of animated square blocks that appear and disappear
+ * in a wave-like pattern. The blocks fill in with color sequentially to create
+ * a dynamic loading animation resembling falling tetris blocks.
+ * 
+ * @interface BlocksProps
+ */
+interface BlocksProps {
+  /** Height of the SVG (number interpreted as px). Defaults to '80'. */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). Defaults to '80'. */
+  width?: string | number
+  /** Primary color applied to the blocks. Can be overridden by colors array. */
+  color?: string
+  /** Accessible label announced to screen readers. Defaults to 'blocks-loading'. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
+}
 
 export const Blocks: FunctionComponent<BlocksProps> = ({
   visible = true,

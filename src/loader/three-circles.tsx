@@ -1,26 +1,43 @@
 import React from 'react'
-import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
+import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
 
-type Props = {
-  wrapperStyle?: Style
-  visible?: boolean
-  wrapperClass?: string
+/**
+ * Props for the ThreeCircles loader component.
+ * 
+ * The ThreeCircles loader displays three circles with animated movement patterns.
+ * 
+ * @interface ThreeCirclesProps
+ */
+interface ThreeCirclesProps {
+  /** Height of the SVG (number interpreted as px). */
   height?: string | number
+  /** Width of the SVG (number interpreted as px). */
   width?: string | number
+  /** Primary color applied to the loader. */
   color?: string
+  /** Color of the outer circle. Overrides default color. */
   outerCircleColor?: string
-  innerCircleColor?: string
+  /** Color of the middle circle. Overrides default color. */
   middleCircleColor?: string
+  /** Color of the inner circle. Overrides default color. */
+  innerCircleColor?: string
+  /** Accessible label announced to screen readers. */
   ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
 }
 
 /**
  * @description contains three circles rotating in opposite direction
  * outer circle, middle circle and inner circle color can be set from props.
  */
-export const ThreeCircles: React.FunctionComponent<Props> = ({
+export const ThreeCircles: React.FunctionComponent<ThreeCirclesProps> = ({
   wrapperStyle = {},
   visible = true,
   wrapperClass = '',

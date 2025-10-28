@@ -1,42 +1,30 @@
 [
   {
-    "name": "colors",
-    "required": false,
-    "type": "enum",
-    "description": "Provide multiple colors to render a gradient instead of a solid color.\nWhen 2 or more colors are supplied a gradient <defs> will be injected and\nthe primary color reference (fill or stroke) becomes url(#gradientId).",
-    "defaultValue": "['#306cce', '#72a1ed']"
-  },
-  {
-    "name": "gradientType",
-    "required": false,
-    "type": "enum",
-    "description": "Type of gradient (linear or radial). Defaults to linear."
-  },
-  {
-    "name": "gradientAngle",
-    "required": false,
-    "type": "enum",
-    "description": "Angle (in degrees) applied via rotate() transform for linear gradients."
-  },
-  {
     "name": "height",
     "required": false,
     "type": "enum",
-    "description": "Height of the SVG (number interpreted as px).",
+    "description": "Height of the SVG (number interpreted as px). Defaults to '80'.",
     "defaultValue": "80"
   },
   {
     "name": "width",
     "required": false,
     "type": "enum",
-    "description": "Width of the SVG (number interpreted as px).",
+    "description": "Width of the SVG (number interpreted as px). Defaults to '80'.",
     "defaultValue": "80"
+  },
+  {
+    "name": "colors",
+    "required": false,
+    "type": "enum",
+    "description": "Array of two colors for the hourglass gradient. Defaults to ['#306cce', '#72a1ed'].",
+    "defaultValue": "['#306cce', '#72a1ed']"
   },
   {
     "name": "ariaLabel",
     "required": false,
     "type": "enum",
-    "description": "Accessible label announced to screen readers (mapped to aria-label).",
+    "description": "Accessible label announced to screen readers. Defaults to 'hourglass-loading'.",
     "defaultValue": "hourglass-loading"
   },
   {
@@ -56,7 +44,19 @@
     "name": "visible",
     "required": false,
     "type": "enum",
-    "description": "When false, the loader is not rendered.",
+    "description": "When false, the loader is not rendered. Defaults to true.",
     "defaultValue": "true"
+  },
+  {
+    "name": "gradientType",
+    "required": false,
+    "type": "enum",
+    "description": "Type of gradient (linear or radial). Defaults to linear."
+  },
+  {
+    "name": "gradientAngle",
+    "required": false,
+    "type": "enum",
+    "description": "Angle (in degrees) applied via rotate() transform for linear gradients."
   }
 ]

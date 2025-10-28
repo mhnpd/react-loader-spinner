@@ -1,10 +1,43 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
 import { useGradient } from '../shared/gradient'
 
-interface CirclesProps extends BaseProps {}
+/**
+ * Props for the Circles loader component.
+ * 
+ * The Circles loader displays a series of circular dots arranged in a circle
+ * that animate with different opacity and scaling effects. Each dot fades in and out
+ * in sequence to create a rotating loading animation.
+ * 
+ * @interface CirclesProps
+ */
+interface CirclesProps {
+  /** Height of the SVG (number interpreted as px). Defaults to 80. */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). Defaults to 80. */
+  width?: string | number
+  /** Primary color applied to the circles. Defaults to DEFAULT_COLOR. */
+  color?: string
+  /** Accessible label announced to screen readers. Defaults to 'circles-loading'. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
+  /** 
+   * Provide multiple colors to render a gradient instead of a solid color.
+   * When 2 or more colors are supplied a gradient will be applied to the circles.
+   */
+  colors?: string[]
+  /** Type of gradient (linear or radial). Defaults to linear. */
+  gradientType?: 'linear' | 'radial'
+  /** Angle (in degrees) applied via rotate() transform for linear gradients. */
+  gradientAngle?: number
+}
 
 export const Circles: FunctionComponent<CirclesProps> = ({
   height = 80,

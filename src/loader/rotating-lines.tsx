@@ -1,12 +1,36 @@
 import React, { useCallback, FunctionComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
 import { SvgWrapper } from '../shared/svg-wrapper'
 
-interface Props extends BaseProps {
+/**
+ * Props for the RotatingLines loader component.
+ * 
+ * The RotatingLines loader displays rotating lines in a circular pattern.
+ * 
+ * @interface RotatingLinesProps
+ */
+interface RotatingLinesProps {
+  /** Height of the SVG (number interpreted as px). */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). */
+  width?: string | number
+  /** Primary color applied to the loader. Defaults to DEFAULT_COLOR. */
+  color?: string
+  /** Accessible label announced to screen readers. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
+  /** Stroke width of the rotating lines. */
   strokeWidth?: string | number
+  /** Duration of the rotation animation in seconds. */
   animationDuration?: string | number
+  /** Color of the stroke for the lines. */
   strokeColor?: string
 }
 
@@ -71,7 +95,7 @@ const Polyline = styled.polyline<{ $strokeWidth: string | number }>`
   }
 `
 
-export const RotatingLines: FunctionComponent<Props> = ({
+export const RotatingLines: FunctionComponent<RotatingLinesProps> = ({
   height = 96,
   width = 96,
   color = DEFAULT_COLOR,

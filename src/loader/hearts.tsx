@@ -1,7 +1,32 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
-interface HeartsProps extends BaseProps {}
+
+/**
+ * Props for the Hearts loader component.
+ * 
+ * The Hearts loader displays three animated heart shapes that pulsate and fade
+ * in and out with different timing to create a romantic loading animation.
+ * Each heart scales and changes opacity in a staggered pattern.
+ * 
+ * @interface HeartsProps
+ */
+interface HeartsProps {
+  /** Height of the SVG (number interpreted as px). Defaults to 80. */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). Defaults to 80. */
+  width?: string | number
+  /** Primary color applied to the hearts. Defaults to DEFAULT_COLOR. */
+  color?: string
+  /** Accessible label announced to screen readers. Defaults to 'hearts-loading'. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
+}
 
 export const Hearts: FunctionComponent<HeartsProps> = ({
   height = 80,

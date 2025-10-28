@@ -1,37 +1,5 @@
 [
   {
-    "name": "borderColor",
-    "required": false,
-    "type": "enum",
-    "description": "",
-    "defaultValue": "#F4442E"
-  },
-  {
-    "name": "barColor",
-    "required": false,
-    "type": "enum",
-    "description": "",
-    "defaultValue": "#51E5FF"
-  },
-  {
-    "name": "colors",
-    "required": false,
-    "type": "enum",
-    "description": "Provide multiple colors to render a gradient instead of a solid color.\nWhen 2 or more colors are supplied a gradient <defs> will be injected and\nthe primary color reference (fill or stroke) becomes url(#gradientId)."
-  },
-  {
-    "name": "gradientType",
-    "required": false,
-    "type": "enum",
-    "description": "Type of gradient (linear or radial). Defaults to linear."
-  },
-  {
-    "name": "gradientAngle",
-    "required": false,
-    "type": "enum",
-    "description": "Angle (in degrees) applied via rotate() transform for linear gradients."
-  },
-  {
     "name": "height",
     "required": false,
     "type": "enum",
@@ -46,10 +14,30 @@
     "defaultValue": "80"
   },
   {
+    "name": "color",
+    "required": false,
+    "type": "enum",
+    "description": "Primary color applied to the loader."
+  },
+  {
+    "name": "borderColor",
+    "required": false,
+    "type": "enum",
+    "description": "Color of the progress bar border. Defaults to '#F4442E'.",
+    "defaultValue": "#F4442E"
+  },
+  {
+    "name": "barColor",
+    "required": false,
+    "type": "enum",
+    "description": "Color of the progress bar fill. Defaults to '#51E5FF'.",
+    "defaultValue": "#51E5FF"
+  },
+  {
     "name": "ariaLabel",
     "required": false,
     "type": "enum",
-    "description": "Accessible label announced to screen readers (mapped to aria-label).",
+    "description": "Accessible label announced to screen readers.",
     "defaultValue": "progress-bar-loading"
   },
   {
@@ -69,7 +57,25 @@
     "name": "visible",
     "required": false,
     "type": "enum",
-    "description": "When false, the loader is not rendered.",
+    "description": "When false, the loader is not rendered. Defaults to true.",
     "defaultValue": "true"
+  },
+  {
+    "name": "colors",
+    "required": false,
+    "type": "enum",
+    "description": "Provide multiple colors to render a gradient instead of a solid color.\nWhen 2 or more colors are supplied a gradient will be applied to the loader."
+  },
+  {
+    "name": "gradientType",
+    "required": false,
+    "type": "enum",
+    "description": "Type of gradient (linear or radial). Defaults to linear."
+  },
+  {
+    "name": "gradientAngle",
+    "required": false,
+    "type": "enum",
+    "description": "Angle (in degrees) applied via rotate() transform for linear gradients."
   }
 ]

@@ -1,12 +1,39 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
 
-interface OvalProps extends BaseProps {
+/**
+ * Props for the Oval loader component.
+ * 
+ * The Oval loader displays a circular loading animation with two arcs:
+ * a full circle in the background and a quarter circle that rotates to show progress.
+ * The animation creates a smooth spinning effect.
+ * 
+ * @interface OvalProps
+ */
+interface OvalProps {
+  /** Height of the SVG (number interpreted as px). Defaults to 80. */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). Defaults to 80. */
+  width?: string | number
+  /** Primary color applied to the rotating arc. Defaults to DEFAULT_COLOR. */
+  color?: string
+  /** Stroke width of the rotating arc. Defaults to 2. */
   strokeWidth?: string | number
+  /** Stroke width of the background circle. Uses strokeWidth if not provided. */
   strokeWidthSecondary?: string | number
+  /** Color of the background circle. Defaults to DEFAULT_COLOR. */
   secondaryColor?: string
+  /** Duration of the rotation animation in seconds. Defaults to 1. */
   animationDuration?: string | number
+  /** Accessible label announced to screen readers. Defaults to 'oval-loading'. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
 }
 
 /**

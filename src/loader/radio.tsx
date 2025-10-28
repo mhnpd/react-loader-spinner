@@ -1,9 +1,31 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
 
-interface RadioProps extends Omit<BaseProps, 'color'> {
+/**
+ * Props for the Radio loader component.
+ * 
+ * The Radio loader displays a circular animation with three colored segments
+ * that rotate around the center, resembling radio waves or signal indicators.
+ * Each segment can have a different color.
+ * 
+ * @interface RadioProps
+ */
+interface RadioProps {
+  /** Height of the SVG (number interpreted as px). Defaults to '80'. */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). Defaults to '80'. */
+  width?: string | number
+  /** Array of three colors for the radio segments. Defaults to [DEFAULT_COLOR, DEFAULT_COLOR, DEFAULT_COLOR]. */
   colors?: [string, string, string]
+  /** Accessible label announced to screen readers. Defaults to 'radio-loading'. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
 }
 
 export const Radio: FunctionComponent<RadioProps> = ({

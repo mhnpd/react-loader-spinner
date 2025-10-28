@@ -2,11 +2,38 @@ import React, { FunctionComponent } from 'react'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
 
-type FallingLinesProps = {
+/**
+ * Props for the FallingLines loader component.
+ * 
+ * The FallingLines loader displays animated vertical lines that fall down
+ * in a cascading pattern, creating a rain-like loading animation effect.
+ * 
+ * @interface FallingLinesProps
+ */
+interface FallingLinesProps {
+  /** Height of the SVG (number interpreted as px). Defaults to '100'. */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). Defaults to '100'. */
+  width?: string | number
+  /** Primary color applied to the falling lines. Defaults to DEFAULT_COLOR. */
   color?: string
-  width?: string
-  height?: string
+  /** Accessible label announced to screen readers. Defaults to 'falling-lines-loading'. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
   visible?: boolean
+  /** 
+   * Provide multiple colors to render a gradient instead of a solid color.
+   * When 2 or more colors are supplied a gradient will be applied to the lines.
+   */
+  colors?: string[]
+  /** Type of gradient (linear or radial). Defaults to linear. */
+  gradientType?: 'linear' | 'radial'
+  /** Angle (in degrees) applied via rotate() transform for linear gradients. */
+  gradientAngle?: number
 }
 
 export const FallingLines: FunctionComponent<FallingLinesProps> = ({

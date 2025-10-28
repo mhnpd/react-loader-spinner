@@ -1,8 +1,37 @@
 import React, { ReactElement, FunctionComponent } from 'react'
-import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface ColorRingProps extends Omit<BaseProps, 'color'> {
-  colors?: [string, string, string, string, string]
+/**
+ * Props for the ColorRing loader component.
+ * 
+ * The ColorRing loader displays a circular ring with animated color segments.
+ * 
+ * @interface ColorRingProps
+ */
+interface ColorRingProps {
+  /** Height of the SVG (number interpreted as px). */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). */
+  width?: string | number
+  /** Primary color applied to the loader. */
+  color?: string
+  /** Accessible label announced to screen readers. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
+  /** 
+   * Provide multiple colors to render a gradient instead of a solid color.
+   * When 2 or more colors are supplied a gradient will be applied to the loader.
+   */
+  colors?: string[]
+  /** Type of gradient (linear or radial). Defaults to linear. */
+  gradientType?: 'linear' | 'radial'
+  /** Angle (in degrees) applied via rotate() transform for linear gradients. */
+  gradientAngle?: number
 }
 
 export const ColorRing: FunctionComponent<ColorRingProps> = ({

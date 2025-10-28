@@ -1,9 +1,33 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
 
-interface BarsProps extends BaseProps {}
+/**
+ * Props for the Bars loader component.
+ * 
+ * The Bars loader displays five animated vertical bars that move up and down
+ * in a wave-like pattern, creating a loading animation similar to audio equalizer bars.
+ * Each bar has a different animation timing to create a dynamic visual effect.
+ * 
+ * @interface BarsProps
+ */
+interface BarsProps {
+  /** Height of the SVG (number interpreted as px). Defaults to 80. */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). Defaults to 80. */
+  width?: string | number
+  /** Primary color applied to the bars. Defaults to DEFAULT_COLOR. */
+  color?: string
+  /** Accessible label announced to screen readers. Defaults to 'bars-loading'. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
+}
 
 export const Bars: FunctionComponent<BarsProps> = ({
   height = 80,

@@ -1,10 +1,41 @@
 import React, { FunctionComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
 
-type TriangleProps = BaseProps
+/**
+ * Props for the Triangle loader component.
+ * 
+ * The Triangle loader displays a triangular shape with animated elements.
+ * 
+ * @interface TriangleProps
+ */
+interface TriangleProps {
+  /** Height of the SVG (number interpreted as px). */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). */
+  width?: string | number
+  /** Primary color applied to the loader. */
+  color?: string
+  /** Accessible label announced to screen readers. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
+  /** 
+   * Provide multiple colors to render a gradient instead of a solid color.
+   * When 2 or more colors are supplied a gradient will be applied to the loader.
+   */
+  colors?: string[]
+  /** Type of gradient (linear or radial). Defaults to linear. */
+  gradientType?: 'linear' | 'radial'
+  /** Angle (in degrees) applied via rotate() transform for linear gradients. */
+  gradientAngle?: number
+}
 
 const VIEW_BOX_VALUES = '-3 -4 39 39'
 const POLYGON_POINTS = '16,0 32,32 0,32'

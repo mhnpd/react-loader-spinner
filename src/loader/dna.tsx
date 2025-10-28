@@ -1,20 +1,35 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
 // tinycolor2 is a robust library that handles many edge cases (like different color formats)
 import tinycolor from 'tinycolor2'
 
-interface DNAProps extends Omit<BaseProps, 'color'> {
-  /**
-   * The primary color of the DNA loader strands.
-   * @default 'rgba(233, 12, 89, 0.51)'
-   */
+/**
+ * Props for the DNA loader component.
+ * 
+ * The DNA loader displays a double helix animation resembling DNA strands
+ * with two configurable colors for the primary and secondary strands.
+ * The animation shows the iconic twisted ladder structure of DNA.
+ * 
+ * @interface DNAProps
+ */
+interface DNAProps {
+  /** Height of the SVG (number interpreted as px). Defaults to 80. */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). Defaults to 80. */
+  width?: string | number
+  /** The primary color of the DNA loader strands. Defaults to 'rgba(233, 12, 89, 0.51)'. */
   dnaColorOne?: string
-  /**
-   * The secondary color of the DNA loader strands.
-   * @default '#46dff0'
-   */
+  /** The secondary color of the DNA loader strands. Defaults to '#46dff0'. */
   dnaColorTwo?: string
+  /** Accessible label announced to screen readers. Defaults to 'dna-loading'. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
 }
 
 export const DNA: FunctionComponent<DNAProps> = ({

@@ -1,24 +1,5 @@
 [
   {
-    "name": "colors",
-    "required": false,
-    "type": "enum",
-    "description": "Customize colors of the component. There should be 6 colors provided.",
-    "defaultValue": "['#1B5299', '#EF8354', '#DB5461', '#1B5299', '#EF8354', '#DB5461']"
-  },
-  {
-    "name": "gradientType",
-    "required": false,
-    "type": "enum",
-    "description": "Type of gradient (linear or radial). Defaults to linear."
-  },
-  {
-    "name": "gradientAngle",
-    "required": false,
-    "type": "enum",
-    "description": "Angle (in degrees) applied via rotate() transform for linear gradients."
-  },
-  {
     "name": "height",
     "required": false,
     "type": "enum",
@@ -33,10 +14,16 @@
     "defaultValue": "80"
   },
   {
+    "name": "color",
+    "required": false,
+    "type": "enum",
+    "description": "Primary color applied to the loader."
+  },
+  {
     "name": "ariaLabel",
     "required": false,
     "type": "enum",
-    "description": "Accessible label announced to screen readers (mapped to aria-label).",
+    "description": "Accessible label announced to screen readers.",
     "defaultValue": "vortex-loading"
   },
   {
@@ -55,7 +42,26 @@
     "name": "visible",
     "required": false,
     "type": "enum",
-    "description": "When false, the loader is not rendered.",
+    "description": "When false, the loader is not rendered. Defaults to true.",
     "defaultValue": "true"
+  },
+  {
+    "name": "colors",
+    "required": false,
+    "type": "enum",
+    "description": "Provide multiple colors to render a gradient instead of a solid color.\nWhen 2 or more colors are supplied a gradient will be applied to the loader.",
+    "defaultValue": "['#1B5299', '#EF8354', '#DB5461', '#1B5299', '#EF8354', '#DB5461']"
+  },
+  {
+    "name": "gradientType",
+    "required": false,
+    "type": "enum",
+    "description": "Type of gradient (linear or radial). Defaults to linear."
+  },
+  {
+    "name": "gradientAngle",
+    "required": false,
+    "type": "enum",
+    "description": "Angle (in degrees) applied via rotate() transform for linear gradients."
   }
 ]

@@ -1,29 +1,65 @@
 [
   {
-    "name": "color",
+    "name": "height",
     "required": false,
     "type": "enum",
-    "description": "",
-    "defaultValue": "#4fa94d"
+    "description": "Height of the SVG (number interpreted as px). Defaults to '100'."
   },
   {
     "name": "width",
     "required": false,
     "type": "enum",
-    "description": "",
+    "description": "Width of the SVG (number interpreted as px). Defaults to '100'.",
     "defaultValue": "100"
   },
   {
-    "name": "height",
+    "name": "color",
     "required": false,
     "type": "enum",
-    "description": ""
+    "description": "Primary color applied to the falling lines. Defaults to DEFAULT_COLOR.",
+    "defaultValue": "#4fa94d"
+  },
+  {
+    "name": "ariaLabel",
+    "required": false,
+    "type": "enum",
+    "description": "Accessible label announced to screen readers. Defaults to 'falling-lines-loading'."
+  },
+  {
+    "name": "wrapperStyle",
+    "required": false,
+    "type": "enum",
+    "description": "Inline style object applied to the wrapper element."
+  },
+  {
+    "name": "wrapperClass",
+    "required": false,
+    "type": "enum",
+    "description": "CSS class applied to the wrapper for custom styling."
   },
   {
     "name": "visible",
     "required": false,
     "type": "enum",
-    "description": "",
+    "description": "When false, the loader is not rendered. Defaults to true.",
     "defaultValue": "true"
+  },
+  {
+    "name": "colors",
+    "required": false,
+    "type": "enum",
+    "description": "Provide multiple colors to render a gradient instead of a solid color.\nWhen 2 or more colors are supplied a gradient will be applied to the lines."
+  },
+  {
+    "name": "gradientType",
+    "required": false,
+    "type": "enum",
+    "description": "Type of gradient (linear or radial). Defaults to linear."
+  },
+  {
+    "name": "gradientAngle",
+    "required": false,
+    "type": "enum",
+    "description": "Angle (in degrees) applied via rotate() transform for linear gradients."
   }
 ]

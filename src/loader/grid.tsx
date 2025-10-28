@@ -1,8 +1,38 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
 
-interface GridProps extends BaseProps {
+/**
+ * Props for the Grid loader component.
+ * 
+ * The Grid loader shows a grid of squares that appear and disappear in a pattern.
+ * 
+ * @interface GridProps
+ */
+interface GridProps {
+  /** Height of the SVG (number interpreted as px). */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). */
+  width?: string | number
+  /** Primary color applied to the loader. Defaults to DEFAULT_COLOR. */
+  color?: string
+  /** Accessible label announced to screen readers. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
+  /** 
+   * Provide multiple colors to render a gradient instead of a solid color.
+   * When 2 or more colors are supplied a gradient will be applied to the loader.
+   */
+  colors?: string[]
+  /** Type of gradient (linear or radial). Defaults to linear. */
+  gradientType?: 'linear' | 'radial'
+  /** Angle (in degrees) applied via rotate() transform for linear gradients. */
+  gradientAngle?: number
   radius?: string | number
 }
 

@@ -1,10 +1,31 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
 
-interface FidgetSpinnerProps extends Omit<BaseProps, 'color'> {
+/**
+ * Props for the FidgetSpinner loader component.
+ * 
+ * The FidgetSpinner loader displays a fidget spinner with rotating animation.
+ * 
+ * @interface FidgetSpinnerProps
+ */
+interface FidgetSpinnerProps {
+  /** Height of the SVG (number interpreted as px). */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). */
+  width?: string | number
+  /** Background color of the fidget spinner. Defaults to DEFAULT_COLOR. */
   backgroundColor?: string
-  ballColors?: [string, string, string]
+  /** Array of colors for the spinner balls. Defaults to ['#fc636b', '#6a67ce', '#ffb900']. */
+  ballColors?: string[]
+  /** Accessible label announced to screen readers. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
 }
 
 export const FidgetSpinner: FunctionComponent<FidgetSpinnerProps> = ({

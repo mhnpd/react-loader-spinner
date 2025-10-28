@@ -1,8 +1,30 @@
 import React, { FunctionComponent } from 'react'
-import { BaseProps, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
-interface HourglassProps extends Omit<BaseProps, 'color'> {
+/**
+ * Props for the Hourglass loader component.
+ * 
+ * The Hourglass loader displays a classic hourglass animation with sand
+ * flowing from the top chamber to the bottom chamber. Features two
+ * customizable colors for the gradient effect.
+ * 
+ * @interface HourglassProps
+ */
+interface HourglassProps {
+  /** Height of the SVG (number interpreted as px). Defaults to '80'. */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). Defaults to '80'. */
+  width?: string | number
+  /** Array of two colors for the hourglass gradient. Defaults to ['#306cce', '#72a1ed']. */
   colors?: [string, string]
+  /** Accessible label announced to screen readers. Defaults to 'hourglass-loading'. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
 }
 
 export const Hourglass: FunctionComponent<HourglassProps> = ({

@@ -1,37 +1,5 @@
 [
   {
-    "name": "glassColor",
-    "required": false,
-    "type": "enum",
-    "description": "",
-    "defaultValue": "#c0efff"
-  },
-  {
-    "name": "color",
-    "required": false,
-    "type": "enum",
-    "description": "Primary color applied to fill or stroke.",
-    "defaultValue": "#e15b64"
-  },
-  {
-    "name": "colors",
-    "required": false,
-    "type": "enum",
-    "description": "Provide multiple colors to render a gradient instead of a solid color.\nWhen 2 or more colors are supplied a gradient <defs> will be injected and\nthe primary color reference (fill or stroke) becomes url(#gradientId)."
-  },
-  {
-    "name": "gradientType",
-    "required": false,
-    "type": "enum",
-    "description": "Type of gradient (linear or radial). Defaults to linear."
-  },
-  {
-    "name": "gradientAngle",
-    "required": false,
-    "type": "enum",
-    "description": "Angle (in degrees) applied via rotate() transform for linear gradients."
-  },
-  {
     "name": "height",
     "required": false,
     "type": "enum",
@@ -46,10 +14,17 @@
     "defaultValue": "80"
   },
   {
+    "name": "color",
+    "required": false,
+    "type": "enum",
+    "description": "Primary color applied to the loader. Defaults to DEFAULT_COLOR.",
+    "defaultValue": "#e15b64"
+  },
+  {
     "name": "ariaLabel",
     "required": false,
     "type": "enum",
-    "description": "Accessible label announced to screen readers (mapped to aria-label).",
+    "description": "Accessible label announced to screen readers.",
     "defaultValue": "magnifying-glass-loading"
   },
   {
@@ -69,7 +44,32 @@
     "name": "visible",
     "required": false,
     "type": "enum",
-    "description": "When false, the loader is not rendered.",
+    "description": "When false, the loader is not rendered. Defaults to true.",
     "defaultValue": "true"
+  },
+  {
+    "name": "colors",
+    "required": false,
+    "type": "enum",
+    "description": "Provide multiple colors to render a gradient instead of a solid color.\nWhen 2 or more colors are supplied a gradient will be applied to the loader."
+  },
+  {
+    "name": "gradientType",
+    "required": false,
+    "type": "enum",
+    "description": "Type of gradient (linear or radial). Defaults to linear."
+  },
+  {
+    "name": "gradientAngle",
+    "required": false,
+    "type": "enum",
+    "description": "Angle (in degrees) applied via rotate() transform for linear gradients."
+  },
+  {
+    "name": "glassColor",
+    "required": false,
+    "type": "enum",
+    "description": "",
+    "defaultValue": "#c0efff"
   }
 ]

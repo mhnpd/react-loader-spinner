@@ -1,9 +1,33 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
 
-interface AudioProps extends BaseProps {}
+/**
+ * Props for the Audio loader component.
+ * 
+ * The Audio loader displays an animated visualization similar to audio equalizer bars,
+ * with four vertical bars that animate up and down at different intervals to create
+ * a dynamic audio visualization effect.
+ * 
+ * @interface AudioProps
+ */
+interface AudioProps {
+  /** Height of the SVG (number interpreted as px). Defaults to '100'. */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). Defaults to '100'. */
+  width?: string | number
+  /** Primary color applied to the audio bars. Defaults to DEFAULT_COLOR. */
+  color?: string
+  /** Accessible label announced to screen readers. Defaults to 'audio-loading'. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
+}
 
 export const Audio: FunctionComponent<AudioProps> = ({
   height = '100',

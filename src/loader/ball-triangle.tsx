@@ -1,10 +1,34 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import { BaseProps, DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
+import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'
 
-interface BallTriangleProps extends BaseProps {
+/**
+ * Props for the BallTriangle loader component.
+ * 
+ * The BallTriangle loader displays three animated balls positioned at the corners
+ * of a triangle. Each ball moves in a circular path, creating a dynamic triangular
+ * loading animation with smooth rotation and scaling effects.
+ * 
+ * @interface BallTriangleProps
+ */
+interface BallTriangleProps {
+  /** Height of the SVG (number interpreted as px). Defaults to 100. */
+  height?: string | number
+  /** Width of the SVG (number interpreted as px). Defaults to 100. */
+  width?: string | number
+  /** Primary color applied to the balls. Defaults to DEFAULT_COLOR. */
+  color?: string
+  /** Radius of each ball in the triangle. Defaults to 5. */
   radius?: string | number
+  /** Accessible label announced to screen readers. Defaults to 'ball-triangle-loading'. */
+  ariaLabel?: string
+  /** Inline style object applied to the wrapper element. */
+  wrapperStyle?: { [key: string]: string }
+  /** CSS class applied to the wrapper for custom styling. */
+  wrapperClass?: string
+  /** When false, the loader is not rendered. Defaults to true. */
+  visible?: boolean
 }
 
 export const BallTriangle: FunctionComponent<BallTriangleProps> = ({
