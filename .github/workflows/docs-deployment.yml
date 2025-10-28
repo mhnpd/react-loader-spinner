@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Documentation to GitHub Pages
 
 on:
   push:
@@ -6,28 +6,52 @@ on:
       - master
     paths:
       - 'docs/**'
+      - 'src/**'
+      - 'scripts/**'
+      - 'package.json'
       - '.github/workflows/docs-deployment.yml'
+  workflow_dispatch:
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
       - name: Install Dependencies
-        run: cd docs && npm install
+        run: npm ci
 
-      - name: Build
-        run: cd docs && npm run build
+      - name: Build Documentation
+        run: npm run docs:build
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./docs/build
+          path: ./docs/build
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
