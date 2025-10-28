@@ -86,7 +86,6 @@ export const RotatingLines: FunctionComponent<Props> = ({
   const lines = useCallback(
     () =>
       POINTS.map(point => (
-        // eslint-disable-next-line @typescript-eslint/no-use-before-define
         <Polyline
           key={point}
           points="24,12 24,4"

@@ -42,7 +42,7 @@ export const Hairball: FC<HairballProps> = ({
     fillColor2 = HairballPresetColors.dawn.fillColor2,
     fillColor3 = HairballPresetColors.dawn.fillColor3,
     fillColor4 = HairballPresetColors.dawn.fillColor4,
-  } = preset ? HairballPresetColors?.[preset] : colors
+  } = preset ? HairballPresetColors[preset] : colors
 
   if (!visible) {
     return null
