@@ -21,7 +21,7 @@ interface HeartsProps {
   /** Accessible label announced to screen readers. Defaults to 'hearts-loading'. */
   ariaLabel?: string
   /** Inline style object applied to the wrapper element. */
-  wrapperStyle?: { [key: string]: string }
+  wrapperStyle?: React.CSSProperties
   /** CSS class applied to the wrapper for custom styling. */
   wrapperClass?: string
   /** When false, the loader is not rendered. Defaults to true. */
