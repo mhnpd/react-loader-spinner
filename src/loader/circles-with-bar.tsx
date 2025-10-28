@@ -1,4 +1,4 @@
-import React from 'react'
+import { CSSProperties } from 'react'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE, Style } from '../type'
 import { SvgWrapper } from '../shared/svg-wrapper'
 import { SVG_NAMESPACE } from '../shared/constants'

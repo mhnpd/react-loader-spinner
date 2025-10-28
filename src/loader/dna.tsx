@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import { FunctionComponent, CSSProperties } from 'react'
 import { DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
 // tinycolor2 is a robust library that handles many edge cases (like different color formats)
@@ -25,7 +25,7 @@ interface DNAProps {
   /** Accessible label announced to screen readers. Defaults to 'dna-loading'. */
   ariaLabel?: string
   /** Inline style object applied to the wrapper element. */
-  wrapperStyle?: React.CSSProperties
+  wrapperStyle?: CSSProperties
   /** CSS class applied to the wrapper for custom styling. */
   wrapperClass?: string
   /** When false, the loader is not rendered. Defaults to true. */

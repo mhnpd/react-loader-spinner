@@ -1,4 +1,4 @@
-import React, { ReactElement, FunctionComponent } from 'react'
+import { ReactElement, FunctionComponent, CSSProperties } from 'react'
 import { DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 
 /**
@@ -18,7 +18,7 @@ interface ColorRingProps {
   /** Accessible label announced to screen readers. */
   ariaLabel?: string
   /** Inline style object applied to the wrapper element. */
-  wrapperStyle?: React.CSSProperties
+  wrapperStyle?: CSSProperties
   /** CSS class applied to the wrapper for custom styling. */
   wrapperClass?: string
   /** When false, the loader is not rendered. Defaults to true. */

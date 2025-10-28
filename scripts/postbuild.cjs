@@ -17,10 +17,10 @@ for (const [from, to] of mappings) {
   const dest = path.join(dist, to)
   if (fs.existsSync(src)) {
     fs.copyFileSync(src, dest)
-    // eslint-disable-next-line no-console
+     
     console.log(`[postbuild] Copied ${from} -> ${to}`)
   } else {
-    // eslint-disable-next-line no-console
+     
     console.warn(`[postbuild] Source file missing: ${from}`)
   }
 }
