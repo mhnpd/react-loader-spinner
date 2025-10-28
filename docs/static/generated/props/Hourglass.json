@@ -46,17 +46,5 @@
     "type": "enum",
     "description": "When false, the loader is not rendered. Defaults to true.",
     "defaultValue": "true"
-  },
-  {
-    "name": "gradientType",
-    "required": false,
-    "type": "enum",
-    "description": "Type of gradient (linear or radial). Defaults to linear."
-  },
-  {
-    "name": "gradientAngle",
-    "required": false,
-    "type": "enum",
-    "description": "Angle (in degrees) applied via rotate() transform for linear gradients."
   }
 ]
