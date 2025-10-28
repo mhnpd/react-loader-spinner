@@ -1,11 +1,13 @@
 name: Execute Necessary Tests
 
-# This workflow gets triggered on push events except for the 'docs' branch, and on pull request events.
+# This workflow gets triggered on push events to any branch and on pull request events.
 on:
   push:
-    branches-ignore:
-      - 'docs'
+    branches:
+      - '**'
   pull_request:
+    branches:
+      - '**'
 
 jobs:
   # The 'Test' job

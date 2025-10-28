@@ -31,6 +31,7 @@
     "prettier": "prettier --write .",
     "clean": "rimraf dist/",
     "test": "jest --no-cache",
+    "prepublishOnly": "npm run lint && npm run typecheck && npm run test && npm run build",
     "start": "npm run docs:start",
     "docs:gen-props": "node scripts/generate-props-docs.cjs",
     "docs:start": "npm run docs:gen-props && docusaurus start docs",
@@ -92,6 +93,11 @@
   "engines": {
     "node": ">= 12"
   },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {

@@ -1,32 +1,44 @@
+# Development files
+src/
+test/
+docs/
+scripts/
+logo/
+example/
+
+# Configuration files
+.github/
+.vscode/
+.idea/
+.editorconfig
+.eslintrc.json
+.prettierignore
+.prettierrc.json
+.gitignore
+.npmignore
+jest.config.js
+tsconfig.json
+tsup.config.ts
+eslint.config.js
+doczrc.js
+_config.yml
+renovate.json
+
+# Documentation
+Contributing.md
+Contribution.md
+.docz/
+
+# Build artifacts
+*.log
 *.swp
 *~
 *.iml
-.*.haste_cache.*
 .DS_Store
-.idea
-.babelrc
-.eslintrc.json
+.*.haste_cache.*
 npm-debug.log
-lib
-.storybook
-stories
-.gitignore
-docs
-src
-scripts
-.vscode
-_config.yml
-.editorconfig
-example
-.github
-.idea
-logo
-test
-jest.config.js
-tsconfig.json
-doczrc.js
-Contribution.md
-.docz
+
+# Keep only dist/ in the published package
 
 
 
