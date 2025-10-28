@@ -1,70 +1,262 @@
-![release](https://badgen.net/github/release/mhnpd/react-loader-spinner)
-![tag](https://badgen.net/github/tag/mhnpd/react-loader-spinner)
-![stars](https://badgen.net/github/stars/mhnpd/react-loader-spinner)
-![issue](https://badgen.net/github/issues/mhnpd/react-loader-spinner)
-![open-issues](https://badgen.net/github/open-issues/mhnpd/react-loader-spinner)
-![commits](https://badgen.net/github/commits/mhnpd/react-loader-spinner)
-![commits](https://badgen.net/github/assets-dl/mhnpd/react-loader-spinner)
+<div align="center">
+  <img src="/logo/logo.png" alt="React Loader Spinner" width="200"/>
+  
+  # React Loader Spinner
+  
+  [![npm version](https://badgen.net/npm/v/react-loader-spinner)](https://www.npmjs.com/package/react-loader-spinner)
+  [![downloads](https://badgen.net/npm/dt/react-loader-spinner)](https://www.npmjs.com/package/react-loader-spinner)
+  ![stars](https://badgen.net/github/stars/mhnpd/react-loader-spinner)
+  ![release](https://badgen.net/github/release/mhnpd/react-loader-spinner)
+  ![issues](https://badgen.net/github/open-issues/mhnpd/react-loader-spinner)
+  ![license](https://badgen.net/github/license/mhnpd/react-loader-spinner)
 
-<div style="text-align:center;">
-<p>
-  <img src="/logo/logo.png" alt="title"/>
-</p>
+**Simple, lightweight React SVG spinner components**  
+ Perfect for async operations and loading states
+
+[📚 Documentation](https://mhnpd.github.io/react-loader-spinner/) • [🎨 Live Demo](https://mhnpd.github.io/react-loader-spinner/docs/category/components/) • [💻 CodeSandbox](https://codesandbox.io/p/sandbox/react-loader-spinner-86zm9s)
+
 </div>
 
-`react-loader-spinner` provides simple React SVG spinner components which can be implemented for async/await operations before data loads in the view.
+---
 
-### Installation
+## ✨ Features
+
+- 🎯 **35+ Beautiful Spinners** - Wide variety of loading animations
+- 🎨 **Fully Customizable** - Colors, sizes, and styles
+- 📦 **Lightweight** - Zero dependencies (except React)
+- 🌲 **Tree-shakeable** - Import only what you need
+- 💪 **TypeScript** - Full type definitions included
+- ⚡ **React 17, 18 & 19** - Compatible with all modern React versions
+- 🎭 **No CSS Required** - Pure SVG animations
+- ♿ **Accessible** - ARIA labels and semantic HTML
+
+## 📦 Installation
 
 ```bash
-npm install react-loader-spinner --save
-# or
+npm install react-loader-spinner
+```
+
+Or using yarn:
+
+```bash
 yarn add react-loader-spinner
 ```
 
-### Documentation:
-
-1. [Getting Started](https://mhnpd.github.io/react-loader-spinner/docs/intro)
-2. [Spinners](https://mhnpd.github.io/react-loader-spinner/docs/category/components/)
-3. [Code Sandbox Example](https://codesandbox.io/p/sandbox/react-loader-spinner-86zm9s?file=%2Fsrc%2Fstyles.css%3A8%2C23&layout=%257B%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522rootPanelGroup%2522%253A%257B%2522direction%2522%253A%2522horizontal%2522%252C%2522contentType%2522%253A%2522UNKNOWN%2522%252C%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522id%2522%253A%2522ROOT_LAYOUT%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522UNKNOWN%2522%252C%2522direction%2522%253A%2522vertical%2522%252C%2522id%2522%253A%2522clqggrep400063p6gzbl599ai%2522%252C%2522sizes%2522%253A%255B100%252C0%255D%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522EDITOR%2522%252C%2522direction%2522%253A%2522horizontal%2522%252C%2522id%2522%253A%2522EDITOR%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522contentType%2522%253A%2522EDITOR%2522%252C%2522id%2522%253A%2522clqggrep400023p6ghzsimx31%2522%257D%255D%257D%252C%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522SHELLS%2522%252C%2522direction%2522%253A%2522horizontal%2522%252C%2522id%2522%253A%2522SHELLS%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522contentType%2522%253A%2522SHELLS%2522%252C%2522id%2522%253A%2522clqggrep400033p6g3eer5i1g%2522%257D%255D%252C%2522sizes%2522%253A%255B100%255D%257D%255D%257D%252C%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522DEVTOOLS%2522%252C%2522direction%2522%253A%2522vertical%2522%252C%2522id%2522%253A%2522DEVTOOLS%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522contentType%2522%253A%2522DEVTOOLS%2522%252C%2522id%2522%253A%2522clqggrep400053p6gnojd5tz3%2522%257D%255D%252C%2522sizes%2522%253A%255B100%255D%257D%255D%252C%2522sizes%2522%253A%255B53.65943417458956%252C46.34056582541044%255D%257D%252C%2522tabbedPanels%2522%253A%257B%2522clqggrep400023p6ghzsimx31%2522%253A%257B%2522id%2522%253A%2522clqggrep400023p6ghzsimx31%2522%252C%2522tabs%2522%253A%255B%257B%2522id%2522%253A%2522clqgh245x00023p6gdkh2fmc9%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522type%2522%253A%2522FILE%2522%252C%2522initialSelections%2522%253A%255B%257B%2522startLineNumber%2522%253A16%252C%2522startColumn%2522%253A19%252C%2522endLineNumber%2522%253A16%252C%2522endColumn%2522%253A19%257D%255D%252C%2522filepath%2522%253A%2522%252Fsrc%252FApp.js%2522%252C%2522state%2522%253A%2522IDLE%2522%257D%252C%257B%2522id%2522%253A%2522clqgh5glr00023p6gb7gaz27h%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522type%2522%253A%2522FILE%2522%252C%2522initialSelections%2522%253A%255B%257B%2522startLineNumber%2522%253A8%252C%2522startColumn%2522%253A23%252C%2522endLineNumber%2522%253A8%252C%2522endColumn%2522%253A23%257D%255D%252C%2522filepath%2522%253A%2522%252Fsrc%252Fstyles.css%2522%252C%2522state%2522%253A%2522IDLE%2522%257D%255D%252C%2522activeTabId%2522%253A%2522clqgh5glr00023p6gb7gaz27h%2522%257D%252C%2522clqggrep400053p6gnojd5tz3%2522%253A%257B%2522id%2522%253A%2522clqggrep400053p6gnojd5tz3%2522%252C%2522activeTabId%2522%253A%2522clqghx88q001i3p6gpjtn1qsu%2522%252C%2522tabs%2522%253A%255B%257B%2522type%2522%253A%2522UNASSIGNED_PORT%2522%252C%2522port%2522%253A0%252C%2522id%2522%253A%2522clqghx88q001i3p6gpjtn1qsu%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522path%2522%253A%2522%252F%2522%257D%255D%257D%252C%2522clqggrep400033p6g3eer5i1g%2522%253A%257B%2522tabs%2522%253A%255B%255D%252C%2522id%2522%253A%2522clqggrep400033p6g3eer5i1g%2522%257D%257D%252C%2522showDevtools%2522%253Atrue%252C%2522showShells%2522%253Afalse%252C%2522showSidebar%2522%253Atrue%252C%2522sidebarPanelSize%2522%253A15%257D)
-
-### Usage
-
-> No css import is required
+## 🚀 Quick Start
 
 ```jsx
-import { Audio } from 'react-loader-spinner';
+import { Audio } from 'react-loader-spinner'
 
-<Audio
+function App() {
+  return (
+    <Audio
+      height="80"
+      width="80"
+      color="#4fa94d"
+      ariaLabel="audio-loading"
+      wrapperStyle={{}}
+      wrapperClass="wrapper-class"
+      visible={true}
+    />
+  )
+}
+```
+
+## 📖 Documentation
+
+Visit our **[complete documentation](https://mhnpd.github.io/react-loader-spinner/)** for:
+
+- **[Getting Started Guide](https://mhnpd.github.io/react-loader-spinner/docs/intro)** - Installation and basic usage
+- **[All Components](https://mhnpd.github.io/react-loader-spinner/docs/category/components/)** - Browse all 35+ spinner components
+- **[API Reference](https://mhnpd.github.io/react-loader-spinner/docs/intro)** - Detailed prop documentation
+- **[Live Examples](https://mhnpd.github.io/react-loader-spinner/docs/category/components/)** - Interactive demos
+
+## 🎨 Available Spinners
+
+<details>
+<summary><b>View all 35+ spinners</b></summary>
+
+- Audio
+- Ball Triangle
+- Bars
+- Blocks
+- Circles
+- Circles With Bar
+- Circular Progress
+- Color Ring
+- Comment
+- Discuss
+- DNA
+- Falling Lines
+- Fidget Spinner
+- Grid
+- Hearts
+- Hourglass
+- Infinity Spin
+- Line Wave
+- Magnifying Glass
+- Mutating Dots
+- Oval
+- Progress Bar
+- Puff
+- Radio
+- Revolving Dot
+- Rings
+- Rotating Lines
+- Rotating Square
+- Rotating Triangles
+- Tail Spin
+- Three Circles
+- Three Dots
+- Triangle
+- Vortex
+- Watch
+
+</details>
+
+## 💡 Usage Examples
+
+### Basic Usage
+
+```jsx
+import { Oval } from 'react-loader-spinner'
+
+;<Oval
+  height={80}
+  width={80}
+  color="#4fa94d"
+  visible={true}
+  ariaLabel="oval-loading"
+  secondaryColor="#4fa94d"
+  strokeWidth={2}
+  strokeWidthSecondary={2}
+/>
+```
+
+### With Custom Styling
+
+```jsx
+import { ThreeDots } from 'react-loader-spinner'
+
+;<ThreeDots
   height="80"
   width="80"
   radius="9"
-  color="green"
-  ariaLabel="loading"
-/>
-  wrapperStyle
-  wrapperClass
+  color="#4fa94d"
+  ariaLabel="three-dots-loading"
+  wrapperStyle={{ margin: '20px' }}
+  wrapperClass="custom-loader"
+  visible={true}
 />
 ```
 
-#### Individual (deep) imports
-
-Each loader can also be imported directly (useful for some bundlers / tree‑shaking scenarios):
+### Conditional Rendering
 
 ```jsx
-import { Audio } from 'react-loader-spinner/audio'
+import { TailSpin } from 'react-loader-spinner'
 
-// other examples:
-// import { Oval } from 'react-loader-spinner/oval'
-// import { ThreeDots } from 'react-loader-spinner/three-dots'
+function MyComponent() {
+  const [loading, setLoading] = useState(true)
+
+  return (
+    <div>
+      <TailSpin
+        height="80"
+        width="80"
+        color="#4fa94d"
+        ariaLabel="tail-spin-loading"
+        visible={loading}
+      />
+    </div>
+  )
+}
 ```
 
-## License
+### Tree-shaking with Direct Imports
 
-MIT
+For optimal bundle size, import components directly:
 
-## Contributors
+```jsx
+// Direct import (better for tree-shaking)
+import { Audio } from 'react-loader-spinner/dist/esm/loader/audio'
+
+// Or use named imports (also tree-shakeable)
+import { Audio, Oval, ThreeDots } from 'react-loader-spinner'
+```
+
+## 🎯 Common Props
+
+All spinner components accept these common props:
+
+| Prop           | Type               | Default            | Description               |
+| -------------- | ------------------ | ------------------ | ------------------------- |
+| `height`       | `string \| number` | `"100"`            | Height of the spinner     |
+| `width`        | `string \| number` | `"100"`            | Width of the spinner      |
+| `color`        | `string`           | `"#4fa94d"`        | Primary color             |
+| `visible`      | `boolean`          | `true`             | Show/hide the spinner     |
+| `ariaLabel`    | `string`           | Component-specific | Accessibility label       |
+| `wrapperStyle` | `CSSProperties`    | `{}`               | Inline styles for wrapper |
+| `wrapperClass` | `string`           | `""`               | CSS class for wrapper     |
+
+> **Note:** Individual components may have additional specific props. Check the [documentation](https://mhnpd.github.io/react-loader-spinner/docs/category/components/) for each component.
+
+## 🔧 TypeScript Support
+
+This package includes TypeScript definitions out of the box:
+
+```tsx
+import { Audio } from 'react-loader-spinner'
+import type { CSSProperties } from 'react'
+
+const wrapperStyle: CSSProperties = {
+  display: 'flex',
+  justifyContent: 'center',
+}
+
+;<Audio height="80" width="80" color="blue" wrapperStyle={wrapperStyle} />
+```
+
+## 🌐 Browser Support
+
+- ✅ Chrome (latest)
+- ✅ Firefox (latest)
+- ✅ Safari (latest)
+- ✅ Edge (latest)
+- ✅ Modern mobile browsers
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](./Contributing.md) for details.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+MIT © [Mohan Upadhyay](https://mohanpd.com.np)
+
+## 🙏 Contributors
+
+Thanks goes to these wonderful people:
 
 <a href="https://github.com/mhnpd/react-loader-spinner/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=mhnpd/react-loader-spinner" />
 </a>
+
+## 🔗 Links
+
+- [📚 Full Documentation](https://mhnpd.github.io/react-loader-spinner/)
+- [🐛 Report Bug](https://github.com/mhnpd/react-loader-spinner/issues)
+- [💡 Request Feature](https://github.com/mhnpd/react-loader-spinner/issues)
+- [📦 npm Package](https://www.npmjs.com/package/react-loader-spinner)
+
+---
+
+<div align="center">
+  Made with ❤️ by <a href="https://mohanpd.com.np">Mohan Upadhyay</a>
+  
+  ⭐ Star us on GitHub — it helps!
+</div>
