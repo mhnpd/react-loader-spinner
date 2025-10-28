@@ -1,0 +1,37 @@
+---
+---
+
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import AutoPropsTable from '../../src/components/auto-props-table'
+import { CircularProgress } from 'react-loader-spinner'
+
+# CircularProgress
+
+<LiveProvider
+  code={`
+  render(<CircularProgress
+  height="100"
+  width="100"
+  color="#4fa94d"
+  ariaLabel="circular-progress-loading"
+  wrapperStyle={{}}
+  wrapperClass="wrapper-class"
+  visible={true}
+  strokeWidth={2}
+  animationDuration={1}
+  />)
+`}
+  scope={{ CircularProgress }}
+  noInline={true}
+>
+  <LivePreview />
+  <br />
+  <LiveEditor />
+  <LiveError />
+</LiveProvider>
+
+---
+
+### Props
+
+<AutoPropsTable component="CircularProgress" exclude={["gradientType", "gradientAngle", "colors"]} />
