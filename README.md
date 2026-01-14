@@ -7,6 +7,7 @@
   [![downloads](https://badgen.net/npm/dt/react-loader-spinner)](https://www.npmjs.com/package/react-loader-spinner)
   ![stars](https://badgen.net/github/stars/mhnpd/react-loader-spinner)
   ![release](https://badgen.net/github/release/mhnpd/react-loader-spinner)
+  [![last publish](https://badgen.net/npm/last-publish/react-loader-spinner)](https://www.npmjs.com/package/react-loader-spinner)
   ![issues](https://badgen.net/github/open-issues/mhnpd/react-loader-spinner)
   ![license](https://badgen.net/github/license/mhnpd/react-loader-spinner)
 
@@ -120,7 +121,6 @@ Visit our **[complete documentation](https://mhnpd.github.io/react-loader-spinne
 
 ```jsx
 import { Oval } from 'react-loader-spinner'
-
 ;<Oval
   height={80}
   width={80}
@@ -137,7 +137,6 @@ import { Oval } from 'react-loader-spinner'
 
 ```jsx
 import { ThreeDots } from 'react-loader-spinner'
-
 ;<ThreeDots
   height="80"
   width="80"
