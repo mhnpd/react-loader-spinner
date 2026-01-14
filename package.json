@@ -23,6 +23,10 @@
     "spinner",
     "react"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhnpd/react-loader-spinner"
+  },
   "scripts": {
     "build": "rimraf dist && tsup && node scripts/postbuild.cjs",
     "watch": "tsup --watch",
