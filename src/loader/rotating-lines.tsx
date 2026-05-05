@@ -1,5 +1,5 @@
 import { useCallback, FunctionComponent, CSSProperties } from 'react'
-import styled, { keyframes } from 'styled-components'
+import { keyframes, styled } from 'styled-components'
 import { DEFAULT_COLOR, DEFAULT_WAI_ARIA_ATTRIBUTE } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
 import { SvgWrapper } from '../shared/svg-wrapper'
