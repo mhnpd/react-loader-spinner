@@ -1,5 +1,5 @@
 import { FunctionComponent, CSSProperties } from 'react'
-import styled, { keyframes } from 'styled-components'
+import { keyframes, styled } from 'styled-components'
 import { DEFAULT_COLOR } from '../type'
 import { SVG_NAMESPACE } from '../shared/constants'
 
